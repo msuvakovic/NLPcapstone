@@ -1,0 +1,115 @@
+
+CapStone_Harness.ipynb
+CapStone_Harness.ipynb_
+Files
+..
+Drop files to upload them to session storage.
+Disk
+202.95 GB available
+
+[1]
+0s
+!unzip -q prompt_opt_harness.zip
+
+[2]
+8s
+!pip install -q openai
+
+[3]
+9s
+from getpass import getpass
+import os
+os.environ["GROQ_API_KEY"] = getpass("Groq API key: ")
+Groq API key: ··········
+
+[4]
+0s
+%cd prompt_opt_harness
+/content/prompt_opt_harness
+
+[5]
+5m
+!python3 run_groq_demo.py
+Running Zero-shot...
+  logged to logs/zero-shot_20260901T220646Z.json
+Running Human-written...
+  logged to logs/human-written_20260901T220744Z.json
+Running OPRO...
+  logged to logs/opro_20260901T221011Z.json
+Running EvoPrompt-lite...
+  logged to logs/evoprompt-lite_20260901T221233Z.json
+
+Model: openai/gpt-oss-20b (via Groq)
+Method         | Dev  | Src Test | OOD:amazon | OOD:tweets | OOD Gap | Worst-Case | Variance | API Calls | Gain/Call
+---------------+------+----------+------------+------------+---------+------------+----------+-----------+----------
+Zero-shot      | 1.00 | 1.00     | 1.00       | 1.00       | +0.00   | 1.00       | 0.000    | 28        | +0.0000  
+Human-written  | 1.00 | 1.00     | 1.00       | 1.00       | +0.00   | 1.00       | 0.000    | 28        | +0.0000  
+OPRO           | 1.00 | 1.00     | 1.00       | 1.00       | +0.00   | 1.00       | 0.000    | 63        | +0.0000  
+EvoPrompt-lite | 1.00 | 1.00     | 1.00       | 1.00       | +0.00   | 1.00       | 0.000    | 63        | +0.0000  
+
+[6]
+6s
+!pip install -q datasets
+
+[8]
+0s
+
+patched
+
+[10]
+0s
+
+patched
+
+[11]
+22m
+!python3 run_groq_real_data.py
+Loading real data (30 examples/split)...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+README.md: 100% 23.9k/23.9k [00:00<00:00, 11.5MB/s]
+
+sentiment/train-00000-of-00001.parquet: downloading bytes:  29% 1.11M/3.78M [00:01<00:02, 1.25MB/s, 12.5kB/s  ]
+sentiment/train-00000-of-00001.parquet: downloading bytes:  92% 3.47M/3.78M [00:01<00:00, 4.45MB/s,  108kB/s  ]
+sentiment/train-00000-of-00001.parquet: downloading bytes: 100% 3.77M/3.77M [00:01<00:00, 2.41MB/s,  357kB/s  ]
+sentiment/train-00000-of-00001.parquet: reconstructing file: 100% 3.78M/3.78M [00:01<00:00, 2.42MB/s,  361kB/s  ]
+
+sentiment/test-00000-of-00001.parquet: downloading bytes:  52% 469k/901k [00:00<00:00, 735kB/s, 4.22kB/s  ]
+sentiment/test-00000-of-00001.parquet: downloading bytes: 100% 898k/898k [00:00<00:00, 993kB/s, 87.8kB/s  ]
+sentiment/test-00000-of-00001.parquet: reconstructing file: 100% 901k/901k [00:00<00:00, 996kB/s, 88.3kB/s  ]
+
+sentiment/validation-00000-of-00001.parq(…): downloading bytes:  48% 79.7k/167k [00:00<00:00, 94.0kB/s]
+sentiment/validation-00000-of-00001.parq(…): downloading bytes: 100% 167k/167k [00:00<00:00, 188kB/s, 16.4kB/s  ] 
+sentiment/validation-00000-of-00001.parq(…): reconstructing file: 100% 167k/167k [00:00<00:00, 187kB/s, 16.4kB/s  ]
+Generating train split: 100% 45615/45615 [00:00<00:00, 875548.82 examples/s]
+Generating test split: 100% 12284/12284 [00:00<00:00, 883193.01 examples/s]
+Generating validation split: 100% 2000/2000 [00:00<00:00, 418113.34 examples/s]
+Filter: 100% 12284/12284 [00:00<00:00, 261425.74 examples/s]
+Running Zero-shot...
+  logged to logs/zero-shot_20260901T222331Z.json
+Running Human-written...
+  logged to logs/human-written_20260901T222806Z.json
+Running OPRO...
+  logged to logs/opro_20260901T223347Z.json
+Running EvoPrompt-lite...
+  logged to logs/evoprompt-lite_20260901T224151Z.json
+
+Model: openai/gpt-oss-20b (via Groq) | data: SST-2 -> amazon_polarity / tweet_eval
+Method         | Dev  | Src Test | OOD:amazon | OOD:tweets | OOD Gap | Worst-Case | Variance | API Calls | Gain/Call
+---------------+------+----------+------------+------------+---------+------------+----------+-----------+----------
+Zero-shot      | 0.87 | 0.97     | 0.90       | 0.93       | +0.05   | 0.90       | 0.000    | 120       | +0.0000  
+Human-written  | 0.87 | 0.97     | 0.90       | 0.97       | +0.03   | 0.90       | 0.001    | 120       | +0.0000  
+OPRO           | 0.93 | 0.97     | 0.90       | 0.97       | +0.03   | 0.90       | 0.001    | 151       | +0.0000  
+EvoPrompt-lite | 0.93 | 0.97     | 0.90       | 0.97       | +0.03   | 0.90       | 0.001    | 213       | +0.0000  
+
+[12]
+0s
+!zip -rq prompt_opt_harness_results.zip prompt_opt_harness
+
+[13]
+0s
+from google.colab import files
+files.download('prompt_opt_harness_results.zip')
+
+Colab paid products
+-
+Cancel contracts here
