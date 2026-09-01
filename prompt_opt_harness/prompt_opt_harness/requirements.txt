@@ -1,0 +1,7 @@
+# The offline demo (demo.py, tests/smoke_test.py) uses only the standard library.
+# Uncomment what you need once you switch to a real backend or add a real optimizer:
+
+# openai>=1.0          # OpenAIBackend
+# anthropic>=0.40       # AnthropicBackend
+# dspy>=3.2.1,<3.3      # GEPA / MIPROv2, per optimizers/dspy_adapters.py
+# dspy[optuna]>=3.2.1,<3.3  # MIPROv2's Bayesian search backend
