@@ -24,6 +24,19 @@ class LLMCallStats:
         self.wall_time += elapsed
 
 
+def _with_retries(call, max_retries: int = 5, base_delay: float = 2.0):
+    for attempt in range(max_retries + 1):
+        try:
+            return call()
+        except Exception as e:
+            status = getattr(e, "status_code", None) or getattr(getattr(e, "response", None), "status_code", None)
+            if status != 429 or attempt == max_retries:
+                raise
+            delay = base_delay * (2 ** attempt)
+            print(f"Rate limited, retrying in {delay:.0f}s...")
+            time.sleep(delay)
+
+
 class LLMBackend(abc.ABC):
     def __init__(self) -> None:
         self.stats = LLMCallStats()
@@ -48,12 +61,14 @@ class OpenAIBackend(LLMBackend):
         self.temperature = temperature
 
     def _generate(self, prompt: str) -> str:
-        resp = self.client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=self.temperature,
-        )
-        return resp.choices[0].message.content or ""
+        def call():
+            resp = self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=self.temperature,
+            )
+            return resp.choices[0].message.content or ""
+        return _with_retries(call)
 
 
 class OpenAICompatibleBackend(LLMBackend):
@@ -69,12 +84,14 @@ class OpenAICompatibleBackend(LLMBackend):
         self.temperature = temperature
 
     def _generate(self, prompt: str) -> str:
-        resp = self.client.chat.completions.create(
-            model=self.model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=self.temperature,
-        )
-        return resp.choices[0].message.content or ""
+        def call():
+            resp = self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=self.temperature,
+            )
+            return resp.choices[0].message.content or ""
+        return _with_retries(call)
 
 
 class GroqBackend(OpenAICompatibleBackend):
@@ -100,12 +117,14 @@ class AnthropicBackend(LLMBackend):
         self.max_tokens = max_tokens
 
     def _generate(self, prompt: str) -> str:
-        resp = self.client.messages.create(
-            model=self.model,
-            max_tokens=self.max_tokens,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return "".join(block.text for block in resp.content if hasattr(block, "text"))
+        def call():
+            resp = self.client.messages.create(
+                model=self.model,
+                max_tokens=self.max_tokens,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            return "".join(block.text for block in resp.content if hasattr(block, "text"))
+        return _with_retries(call)
 
 
 # MockBackend: offline stand-in, no real LLM. Answers classification calls with
