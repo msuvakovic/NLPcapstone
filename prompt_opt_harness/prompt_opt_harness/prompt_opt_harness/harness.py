@@ -6,6 +6,7 @@ from typing import Callable, Dict, List, Tuple, Type
 from .datasets import Dataset
 from .metrics import cost_normalized_gain, cross_domain_variance, ood_gap, worst_case_accuracy
 from .optimizers.base import Optimizer, evaluate
+from .tasks import SENTIMENT_TASK, Task
 
 
 @dataclass
@@ -30,14 +31,15 @@ def run_experiment(
     dataset: Dataset,
     budget: int,
     seed: int = 0,
+    task: Task = SENTIMENT_TASK,
 ) -> RunResult:
     backend = backend_factory()
-    optimizer = optimizer_cls(backend, budget=budget, seed=seed)
+    optimizer = optimizer_cls(backend, budget=budget, seed=seed, task=task)
 
     best = optimizer.optimize(dataset.base_instruction, dataset.source.dev)
 
-    source_test_acc = evaluate(backend, best.instruction, dataset.source.test)
-    ood_accs = {domain: evaluate(backend, best.instruction, examples) for domain, examples in dataset.ood.items()}
+    source_test_acc = evaluate(backend, best.instruction, dataset.source.test, task=task)
+    ood_accs = {domain: evaluate(backend, best.instruction, examples, task=task) for domain, examples in dataset.ood.items()}
     ood_values = list(ood_accs.values())
 
     return RunResult(

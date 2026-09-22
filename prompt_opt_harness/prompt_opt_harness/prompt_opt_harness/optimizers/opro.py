@@ -16,7 +16,7 @@ class OPRO(Optimizer):
         while self.backend.stats.calls < self.budget:
             top = sorted(self.history, key=lambda c: c.dev_score, reverse=True)[:HISTORY_KEPT]
             history_block = "\n".join(f"Instruction: {c.instruction}\nScore: {c.dev_score:.2f}\n" for c in top)
-            meta_prompt = META_TEMPLATE.format(history_block=history_block)
+            meta_prompt = META_TEMPLATE.format(task_name=self.task.name, history_block=history_block)
 
             new_instruction = self.backend.generate(meta_prompt).strip()
             if self.backend.stats.calls >= self.budget:

@@ -51,9 +51,34 @@ def test_accuracy_in_range():
     print("test_accuracy_in_range: OK")
 
 
+def test_reasoning_extraction():
+    from prompt_opt_harness.tasks import extract_number, REASONING_TASK
+
+    assert extract_number("Let's see... Answer: 42") == 42.0
+    assert extract_number("The total is 1,204 apples. Answer: 1,204") == 1204.0
+    assert extract_number("no numbers here") is None
+    assert REASONING_TASK.is_correct("blah blah Answer: 8", "8")
+    assert not REASONING_TASK.is_correct("blah blah Answer: 9", "8")
+    print("test_reasoning_extraction: OK")
+
+
+def test_reasoning_dataset_shape():
+    from prompt_opt_harness.datasets import load_demo_reasoning_dataset
+
+    d = load_demo_reasoning_dataset()
+    assert len(d.source.dev) == 6
+    assert len(d.source.test) == 6
+    assert set(d.ood.keys()) == {"svamp_style", "multistep"}
+    for ex in d.source.dev + d.source.test:
+        assert ex.label.lstrip("-").isdigit()
+    print("test_reasoning_dataset_shape: OK")
+
+
 if __name__ == "__main__":
     test_metrics_math()
     test_determinism()
     test_budget_is_respected()
     test_accuracy_in_range()
+    test_reasoning_extraction()
+    test_reasoning_dataset_shape()
     print("\nAll smoke tests passed.")

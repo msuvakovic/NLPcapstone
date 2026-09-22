@@ -12,7 +12,7 @@ class EvoPromptLite(Optimizer):
         population = [Candidate(instruction=task_desc)]
 
         while len(population) < self.population_size and self.backend.stats.calls < self.budget:
-            mutation_prompt = MUTATION_TEMPLATE.format(parent=population[-1].instruction)
+            mutation_prompt = MUTATION_TEMPLATE.format(task_name=self.task.name, parent=population[-1].instruction)
             child_instruction = self.backend.generate(mutation_prompt).strip()
             population.append(Candidate(instruction=child_instruction))
 
@@ -27,6 +27,7 @@ class EvoPromptLite(Optimizer):
                 break
 
             meta_prompt = CROSSOVER_TEMPLATE.format(
+                task_name=self.task.name,
                 parent_a=parents[0].instruction, score_a=parents[0].dev_score,
                 parent_b=parents[1].instruction, score_b=parents[1].dev_score,
             )

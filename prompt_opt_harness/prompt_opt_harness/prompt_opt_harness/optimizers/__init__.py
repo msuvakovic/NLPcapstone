@@ -1,7 +1,7 @@
 from .base import Candidate, Optimizer
 from .opro import OPRO
 from .evoprompt import EvoPromptLite
-from .baselines import ZeroShotBaseline, HumanWrittenBaseline
+from .baselines import ZeroShotBaseline, HumanWrittenBaseline, HumanWrittenReasoningBaseline
 
 __all__ = [
     "Candidate",
@@ -10,4 +10,5 @@ __all__ = [
     "EvoPromptLite",
     "ZeroShotBaseline",
     "HumanWrittenBaseline",
+    "HumanWrittenReasoningBaseline",
 ]

@@ -171,6 +171,8 @@ class MockBackend(LLMBackend):
         self.source_domain = source_domain
 
     def _generate(self, prompt: str) -> str:
+        if "Answer: <number>" in prompt:
+            raise NotImplementedError("MockBackend only supports the sentiment task, use GroqBackend for reasoning")
         classify_match = _CLASSIFY_TEXT_RE.search(prompt)
         if classify_match:
             return self._classify(prompt, classify_match.group(1))
