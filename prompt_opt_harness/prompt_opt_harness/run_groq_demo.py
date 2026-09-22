@@ -10,6 +10,7 @@ from prompt_opt_harness.report import build_report
 MODEL = "openai/gpt-oss-20b"
 BUDGET = 40
 SEED = 42
+EVAL_MODELS = ["openai/gpt-oss-20b","openai/gpt-oss-120b","llama-3.3-70b-versatile","llama-3.1-8b-instant"]
 
 
 def main() -> None:
@@ -17,7 +18,12 @@ def main() -> None:
 
     def backend_factory():
         return GroqBackend(model=MODEL)
-
+    def eval_backend_factory(Evals):
+        returndict = {}
+        for x in Evals:
+            toinsert = {x,GroqBackend(model=x)}
+            returndict.update(toinsert)
+        return returndict
     methods = [
         ("Zero-shot", ZeroShotBaseline, 1),
         ("Human-written", HumanWrittenBaseline, 1),

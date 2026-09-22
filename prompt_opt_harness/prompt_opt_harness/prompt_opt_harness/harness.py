@@ -6,6 +6,14 @@ from typing import Callable, Dict, List, Tuple, Type
 from .datasets import Dataset
 from .metrics import cost_normalized_gain, cross_domain_variance, ood_gap, worst_case_accuracy
 from .optimizers.base import Optimizer, evaluate
+from .llm_backends import LLMBackend
+
+
+
+
+
+
+
 
 
 @dataclass
@@ -30,7 +38,7 @@ def run_experiment(
     dataset: Dataset,
     budget: int,
     seed: int = 0,
-) -> RunResult:
+    ) -> RunResult:
     backend = backend_factory()
     optimizer = optimizer_cls(backend, budget=budget, seed=seed)
 
@@ -53,6 +61,43 @@ def run_experiment(
         wall_time=backend.stats.wall_time,
         candidate_pool=[(c.instruction, c.dev_score) for c in optimizer.history],
     )
+
+
+def run_experiment_cross_train(
+    name: str,
+    optimizer_cls: Type[Optimizer],
+    backend_factory: Callable[[], object],
+    eval_backend_factory: Callable[[], Dict[str, LLMBackend]],
+    dataset: Dataset,
+    budget: int,
+    seed: int = 0,
+    ) -> Dict[str, RunResult]:
+    backend = backend_factory()
+    optimizer = optimizer()
+    best = optimizer.optimize(dataset.base_instruction, dataset.source.dev)
+    candidate_pool = [(c.instruction, c.dev_score) for c in optimizer.history]
+    results = {}
+    for model_name, eval_backend in eval_backend_factory().items():
+        source_test_acc = evaluate(eval_backend, best.instruction, dataset.source.test)
+        ood_accs = {domain: evaluate(eval_backend, best.instruction, examples) for domain, examples in dataset.ood.items()}
+        ood_values = list(ood_accs.values())
+
+        results[model_name] = RunResult(
+            name=f"{name} @ {model_name}",
+            best_instruction=best.instruction,
+            dev_score=best.dev_score,
+            source_test_acc=source_test_acc,
+            ood_accs=ood_accs,
+            ood_gap=ood_gap(source_test_acc, ood_values),
+            worst_case_acc=worst_case_accuracy(ood_values),
+            variance=cross_domain_variance(ood_values),
+            api_calls=backend.stats.calls,
+            wall_time=backend.stats.wall_time,
+            candidate_pool=candidate_pool,
+        )
+    return results
+        
+
 
 
 def cost_normalized_gains(results: List[RunResult], reference: RunResult) -> Dict[str, float]:
