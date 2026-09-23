@@ -1,0 +1,21 @@
+{
+  "name": "Zero-shot @ openai/gpt-oss-120b",
+  "best_instruction": "",
+  "dev_score": 0.9,
+  "source_test_acc": 1.0,
+  "ood_accs": {
+    "amazon": 0.9333333333333333,
+    "tweets": 0.9
+  },
+  "ood_gap": 0.08333333333333326,
+  "worst_case_acc": 0.9,
+  "variance": 0.00027777777777777767,
+  "api_calls": 30,
+  "wall_time_sec": 6.285954119000962,
+  "candidate_pool": [
+    {
+      "instruction": "",
+      "dev_score": 0.9
+    }
+  ]
+}

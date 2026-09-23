@@ -1,0 +1,21 @@
+{
+  "name": "Zero-shot @ qwen/qwen3.6-27b",
+  "best_instruction": "",
+  "dev_score": 0.9,
+  "source_test_acc": 0.9666666666666667,
+  "ood_accs": {
+    "amazon": 0.9333333333333333,
+    "tweets": 0.9666666666666667
+  },
+  "ood_gap": 0.01666666666666672,
+  "worst_case_acc": 0.9333333333333333,
+  "variance": 0.00027777777777777767,
+  "api_calls": 30,
+  "wall_time_sec": 6.285954119000962,
+  "candidate_pool": [
+    {
+      "instruction": "",
+      "dev_score": 0.9
+    }
+  ]
+}

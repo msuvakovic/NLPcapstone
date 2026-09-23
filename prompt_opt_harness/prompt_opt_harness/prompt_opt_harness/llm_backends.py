@@ -58,7 +58,8 @@ class OpenAIBackend(LLMBackend):
 
 class OpenAICompatibleBackend(LLMBackend):
     # works with any provider exposing an OpenAI-style /chat/completions endpoint
-    def __init__(self, model: str, base_url: str, api_key_env: str | None = None, temperature: float = 0.0):
+    def __init__(self, model: str, base_url: str, api_key_env: str | None = None, temperature: float = 0.0,
+                 reasoning_effort: str | None = None):
         super().__init__()
         import openai
         api_key = os.environ.get(api_key_env, "not-needed") if api_key_env else "not-needed"
@@ -67,21 +68,35 @@ class OpenAICompatibleBackend(LLMBackend):
         self.client = openai.OpenAI(api_key=api_key, base_url=base_url)
         self.model = model
         self.temperature = temperature
+        self.reasoning_effort = reasoning_effort  # None = provider default
 
     def _generate(self, prompt: str) -> str:
+        extra = {"reasoning_effort": self.reasoning_effort} if self.reasoning_effort else None
         resp = self.client.chat.completions.create(
             model=self.model,
             messages=[{"role": "user", "content": prompt}],
             temperature=self.temperature,
+            extra_body=extra,
         )
         return resp.choices[0].message.content or ""
 
 
 class GroqBackend(OpenAICompatibleBackend):
     # free tier, no credit card. console.groq.com for a key, export GROQ_API_KEY
-    def __init__(self, model: str = "openai/gpt-oss-20b", temperature: float = 0.0):
+    # reasoning tokens are billed as output, so default to the cheapest setting each family allows:
+    # gpt-oss takes low/medium/high, qwen3 takes none/default. Pass reasoning_effort to override.
+    def __init__(self, model: str = "openai/gpt-oss-20b", temperature: float = 0.0,
+                 reasoning_effort: str | None = "auto"):
+        if reasoning_effort == "auto":
+            if model.startswith("openai/gpt-oss"):
+                reasoning_effort = "low"
+            elif model.startswith("qwen/qwen3"):
+                reasoning_effort = "none"
+            else:
+                reasoning_effort = None
         super().__init__(model=model, base_url="https://api.groq.com/openai/v1",
-                          api_key_env="GROQ_API_KEY", temperature=temperature)
+                          api_key_env="GROQ_API_KEY", temperature=temperature,
+                          reasoning_effort=reasoning_effort)
 
 
 class OllamaBackend(OpenAICompatibleBackend):

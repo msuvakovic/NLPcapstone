@@ -1,0 +1,21 @@
+{
+  "name": "Human-written @ openai/gpt-oss-120b",
+  "best_instruction": "Read the text and decide whether the overall sentiment is Positive or Negative. Consider the overall tone of the text, not just individual words.",
+  "dev_score": 0.8666666666666667,
+  "source_test_acc": 0.9666666666666667,
+  "ood_accs": {
+    "amazon": 0.9,
+    "tweets": 0.9333333333333333
+  },
+  "ood_gap": 0.04999999999999993,
+  "worst_case_acc": 0.9,
+  "variance": 0.00027777777777777767,
+  "api_calls": 30,
+  "wall_time_sec": 5.381387128003553,
+  "candidate_pool": [
+    {
+      "instruction": "Read the text and decide whether the overall sentiment is Positive or Negative. Consider the overall tone of the text, not just individual words.",
+      "dev_score": 0.8666666666666667
+    }
+  ]
+}

@@ -73,7 +73,7 @@ def run_experiment_cross_train(
     seed: int = 0,
     ) -> Dict[str, RunResult]:
     backend = backend_factory()
-    optimizer = optimizer()
+    optimizer = optimizer_cls(backend, budget=budget, seed=seed)
     best = optimizer.optimize(dataset.base_instruction, dataset.source.dev)
     candidate_pool = [(c.instruction, c.dev_score) for c in optimizer.history]
     results = {}

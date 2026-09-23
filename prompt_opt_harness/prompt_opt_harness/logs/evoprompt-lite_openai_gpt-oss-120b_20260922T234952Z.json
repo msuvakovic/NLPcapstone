@@ -1,0 +1,33 @@
+{
+  "name": "EvoPrompt-lite @ openai/gpt-oss-120b",
+  "best_instruction": "Classify the sentiment of the following text as Positive or Negative.",
+  "dev_score": 0.8666666666666667,
+  "source_test_acc": 0.9666666666666667,
+  "ood_accs": {
+    "amazon": 0.9,
+    "tweets": 1.0
+  },
+  "ood_gap": 0.01666666666666672,
+  "worst_case_acc": 0.9,
+  "variance": 0.0024999999999999988,
+  "api_calls": 123,
+  "wall_time_sec": 21.553251660996466,
+  "candidate_pool": [
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative.",
+      "dev_score": 0.8666666666666667
+    },
+    {
+      "instruction": "Classify the sentiment of the following text as either Positive or Negative, and respond with just that label.",
+      "dev_score": 0.8666666666666667
+    },
+    {
+      "instruction": "Classify the sentiment of the following text as either Positive or Negative, and reply with only that label.",
+      "dev_score": 0.8666666666666667
+    },
+    {
+      "instruction": "Classify the sentiment of the given text as either Positive or Negative, and respond with only that single label.",
+      "dev_score": 0.8666666666666667
+    }
+  ]
+}

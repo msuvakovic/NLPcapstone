@@ -1,0 +1,25 @@
+{
+  "name": "OPRO @ openai/gpt-oss-120b",
+  "best_instruction": "Classify the overall sentiment of the following text as **Positive** or **Negative** by considering the author\u2019s tone, choice of words, and emotional impact; ignore any neutral facts or side comments.",
+  "dev_score": 0.9,
+  "source_test_acc": 0.9666666666666667,
+  "ood_accs": {
+    "amazon": 0.9,
+    "tweets": 0.9333333333333333
+  },
+  "ood_gap": 0.04999999999999993,
+  "worst_case_acc": 0.9,
+  "variance": 0.00027777777777777767,
+  "api_calls": 61,
+  "wall_time_sec": 10.841502882001805,
+  "candidate_pool": [
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative.",
+      "dev_score": 0.8666666666666667
+    },
+    {
+      "instruction": "Classify the overall sentiment of the following text as **Positive** or **Negative** by considering the author\u2019s tone, choice of words, and emotional impact; ignore any neutral facts or side comments.",
+      "dev_score": 0.9
+    }
+  ]
+}
