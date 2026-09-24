@@ -51,9 +51,24 @@ def test_accuracy_in_range():
     print("test_accuracy_in_range: OK")
 
 
+def test_ood_weighted_ranking_prefers_robust_prompt():
+    from prompt_opt_harness.optimizers.base import Optimizer
+
+    opt = Optimizer(backend=None, budget=10, seed=0)
+    dev_score_a = 0.95
+    ood_a = {"amazon": 0.2, "tweets": 0.2}
+
+    dev_score_b = 0.90
+    ood_b = {"amazon": 0.9, "tweets": 0.9}
+
+    assert opt.ood_rank_score(dev_score_a, ood_a) < opt.ood_rank_score(dev_score_b, ood_b)
+    print("test_ood_weighted_ranking_prefers_robust_prompt: OK")
+
+
 if __name__ == "__main__":
     test_metrics_math()
     test_determinism()
     test_budget_is_respected()
     test_accuracy_in_range()
+    test_ood_weighted_ranking_prefers_robust_prompt()
     print("\nAll smoke tests passed.")

@@ -25,3 +25,7 @@ def worst_case_accuracy(ood_accs: Iterable[float]) -> float:
 
 def cost_normalized_gain(gain: float, api_calls: int) -> float:
     return gain / api_calls if api_calls else 0.0
+
+
+def cost_normalized_gain_usd(gain: float, cost_usd: float) -> float:
+    return gain / cost_usd if cost_usd else 0.0

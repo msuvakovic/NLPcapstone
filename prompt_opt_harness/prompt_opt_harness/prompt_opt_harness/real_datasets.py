@@ -7,7 +7,19 @@ from .datasets import Dataset, DomainSplit, Example
 
 def _require_datasets_lib():
     try:
-        import datasets  # noqa: F401
+        import importlib
+        import sys
+        import os
+        # Temporarily remove this package's directory from sys.path so the
+        # external `datasets` package (huggingface) isn't shadowed by the
+        # repo-local `datasets.py` module.
+        orig_path = sys.path.copy()
+        try:
+            pkg_dir = os.path.abspath(os.path.dirname(__file__))
+            sys.path = [p for p in sys.path if not (p and os.path.abspath(p).startswith(pkg_dir))]
+            importlib.import_module("datasets")
+        finally:
+            sys.path = orig_path
     except ImportError as exc:
         raise ImportError("pip install datasets") from exc
 

@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import List
 
 from .harness import RunResult, cost_normalized_gains
+from .metrics import cost_normalized_gain_usd
 
 
 def build_report(results: List[RunResult]) -> str:
@@ -14,7 +15,7 @@ def build_report(results: List[RunResult]) -> str:
     gains = cost_normalized_gains(results, reference)
 
     headers = ["Method", "Dev", "Src Test"] + [f"OOD:{d}" for d in ood_domains] + [
-        "OOD Gap", "Worst-Case", "Variance", "API Calls", "Gain/Call",
+        "OOD Gap", "Worst-Case", "Variance", "API Calls", "Gain/Call", "Est Cost (USD)", "Gain/USD", "Words"
     ]
     rows = []
     for r in results:
@@ -28,6 +29,9 @@ def build_report(results: List[RunResult]) -> str:
             f"{r.variance:.3f}",
             str(r.api_calls),
             f"{gains[r.name]:+.4f}",
+            f"{getattr(r, 'estimated_cost_usd', 0.0):.4f}",
+            f"{cost_normalized_gain_usd(r.source_test_acc - reference.source_test_acc, getattr(r, 'estimated_cost_usd', 0.0)):+.4f}",
+            str(r.prompt_words)
         ]
         rows.append(row)
 

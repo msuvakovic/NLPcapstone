@@ -8,7 +8,7 @@ class EvoPromptLite(Optimizer):
     name = "EvoPrompt-lite"
     population_size = 4
 
-    def optimize(self, task_desc: str, dev_examples) -> Candidate:
+    def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
         population = [Candidate(instruction=task_desc)]
 
         while len(population) < self.population_size and self.backend.stats.calls < self.budget:

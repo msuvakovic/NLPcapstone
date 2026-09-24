@@ -6,7 +6,7 @@ from .base import Candidate, Optimizer
 class FixedPromptBaseline(Optimizer):
     instruction = ""
 
-    def optimize(self, task_desc: str, dev_examples) -> Candidate:
+    def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
         candidate = Candidate(self.instruction, self._dev_score(self.instruction, dev_examples))
         self.history.append(candidate)
         return candidate

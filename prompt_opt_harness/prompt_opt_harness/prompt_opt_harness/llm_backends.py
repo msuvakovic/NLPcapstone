@@ -16,13 +16,69 @@ class LLMCallStats:
     input_tokens: int = 0
     output_tokens: int = 0
     wall_time: float = 0.0
+    per_call: List[Dict] = None
+    _elapsed_times: List[float] = None
+    tokenizer_name: str | None = None
 
     def record(self, prompt: str, response: str, elapsed: float) -> None:
+        if self.per_call is None:
+            self.per_call = []
+        if self._elapsed_times is None:
+            self._elapsed_times = []
         self.calls += 1
-        self.input_tokens += len(prompt.split())
-        self.output_tokens += len(response.split())
+        # Try to use tiktoken for token-accurate accounting when available.
+        call_input_tokens = 0
+        call_output_tokens = 0
+        try:
+            import tiktoken
+            # Best-effort model detection: caller may have added `model` attribute to stats
+            model = getattr(self, "_model_for_token_count", None)
+            try:
+                if model:
+                    # when model_hint is actually a tokenizer name (e.g. cl100k_base)
+                    try:
+                        enc = tiktoken.encoding_for_model(model)
+                    except Exception:
+                        enc = tiktoken.get_encoding(model) if isinstance(model, str) else tiktoken.get_encoding("cl100k_base")
+                else:
+                    enc = tiktoken.get_encoding("cl100k_base")
+            except Exception:
+                enc = tiktoken.get_encoding("cl100k_base")
+            call_input_tokens = len(enc.encode(prompt))
+            call_output_tokens = len(enc.encode(response))
+            # record tokenizer used
+            self.tokenizer_name = getattr(enc, "name", None) or getattr(enc, "_name", None)
+        except Exception:
+            # Fallback: approximate by whitespace-token count
+            call_input_tokens = len(prompt.split())
+            call_output_tokens = len(response.split())
+        # update cumulative counters
+        self.input_tokens += call_input_tokens
+        self.output_tokens += call_output_tokens
         self.wall_time += elapsed
+        self._elapsed_times.append(elapsed)
+        # store a per-call trace for later analysis
+        try:
+            self.per_call.append({
+                "prompt": prompt,
+                "response": response,
+                "elapsed": elapsed,
+                "input_tokens": call_input_tokens,
+                "output_tokens": call_output_tokens,
+            })
+        except Exception:
+            # ensure tracing never breaks a run
+            pass
 
+    def latency_percentiles(self) -> Dict[str, float]:
+        if not self._elapsed_times:
+            return {"p50": 0.0, "p90": 0.0, "p99": 0.0}
+        arr = sorted(self._elapsed_times)
+        n = len(arr)
+        def pct(p):
+            idx = min(n - 1, max(0, int(p * n)))
+            return arr[idx]
+        return {"p50": pct(0.50), "p90": pct(0.90), "p99": pct(0.99)}
 
 class LLMBackend(abc.ABC):
     def __init__(self) -> None:
@@ -33,10 +89,50 @@ class LLMBackend(abc.ABC):
         ...
 
     def generate(self, prompt: str) -> str:
-        start = time.perf_counter()
-        response = self._generate(prompt)
-        self.stats.record(prompt, response, time.perf_counter() - start)
-        return response
+        # Retry-on-slow behavior: if a call takes longer than `LLM_SLOW_THRESHOLD` seconds,
+        # retry up to `LLM_RETRIES` times. We only record the final accepted call to stats
+        # to avoid skewing per-call metrics with transient timeouts / cold-starts.
+        retries = int(os.environ.get("LLM_RETRIES", "2"))
+        slow_threshold = float(os.environ.get("LLM_SLOW_THRESHOLD", "30"))
+        last_exc = None
+        for attempt in range(1, retries + 2):
+            start = time.perf_counter()
+            try:
+                response = self._generate(prompt)
+            except Exception as e:
+                last_exc = e
+                elapsed = time.perf_counter() - start
+                if attempt <= retries:
+                    time.sleep(0.5 * attempt)
+                    continue
+                raise
+            elapsed = time.perf_counter() - start
+            # If this attempt was unusually slow, retry if attempts remain.
+            if elapsed > slow_threshold and attempt <= retries:
+                print(f"LLMBackend.generate: slow call (elapsed={elapsed:.1f}s), retrying ({attempt}/{retries})")
+                time.sleep(0.5 * attempt)
+                continue
+            # Attach model hint to stats for better token counting (best-effort)
+            if hasattr(self, "model"):
+                model_hint = getattr(self, "model")
+                # map known provider model names to a tokenizer encoding when appropriate
+                MODEL_TOKENIZER_HINTS = {
+                    "gemma": "cl100k_base",
+                    "ollama": "cl100k_base",
+                    "gpt": None,
+                }
+                if isinstance(model_hint, str):
+                    low = model_hint.lower()
+                    for key, hint in MODEL_TOKENIZER_HINTS.items():
+                        if key in low:
+                            model_hint = hint or model_hint
+                            break
+            setattr(self.stats, "_model_for_token_count", model_hint if 'model_hint' in locals() else None)
+            self.stats.record(prompt, response, elapsed)
+            return response
+        if last_exc:
+            raise last_exc
+        return ""
 
 
 class OpenAIBackend(LLMBackend):

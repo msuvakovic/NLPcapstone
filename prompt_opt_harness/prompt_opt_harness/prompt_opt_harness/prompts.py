@@ -30,3 +30,61 @@ MUTATION_TEMPLATE = """Slightly modify the following instruction for a sentiment
 classification task to try to improve it:
 Instruction: {parent}
 Respond with only the new candidate instruction, nothing else."""
+
+REFLECTION_TEMPLATE = """You are an expert prompt engineer. You wrote an instruction for a sentiment classification task, but it failed on some examples.
+Instruction: {instruction}
+
+Failed example:
+Text: {text}
+True Label: {label}
+Predicted Label: {prediction}
+
+Why did the instruction fail? Keep your reflection brief (1-2 sentences)."""
+
+
+REFLECTIVE_MUTATION_TEMPLATE = """You are evolving instructions for a sentiment classification task.
+Parent Instruction: {parent}
+
+Reflection on failures:
+{reflection}
+
+Using the reflection, write ONE new child instruction that improves upon the parent.
+Respond with only the new candidate instruction, nothing else."""
+
+PARAPHRASE_TEMPLATE = """Paraphrase the following instruction while keeping its core meaning intact. Do not change the underlying task.
+Original Instruction: {instruction}
+Respond with only the paraphrased instruction, nothing else."""
+
+
+TEXTGRAD_CRITIQUE_TEMPLATE = """You are an expert prompt engineer. The following instruction failed on a batch of examples.
+Instruction: {instruction}
+
+Failures:
+{failures_block}
+
+Analyze the batch of failures to compute a "textual gradient": a concise summary of what is fundamentally wrong with the instruction and how it should shift its focus. Keep it under 3 sentences."""
+
+
+TEXTGRAD_UPDATE_TEMPLATE = """You are an expert prompt engineer. You are updating an instruction using a textual gradient.
+Current Instruction: {instruction}
+Textual Gradient (Critique): {gradient}
+
+Apply the gradient to fix the instruction. Respond with only the new instruction, nothing else."""
+
+OPRO_META_TEMPLATES = [
+    """You are improving an instruction for a sentiment classification task.
+Here are previous instructions and their scores:
+{history_block}
+Write ONE new instruction that might score higher than all of the above.
+Respond with only the new candidate instruction, nothing else.""",
+    """You are improving an instruction for a sentiment classification task.
+Here are previous instructions and their scores:
+{history_block}
+Write ONE new instruction that focuses on being concise and direct while maintaining accuracy.
+Respond with only the new candidate instruction, nothing else.""",
+    """You are improving an instruction for a sentiment classification task.
+Here are previous instructions and their scores:
+{history_block}
+Write ONE new instruction that adds a specific reasoning step or focuses on nuances like tone and sarcasm.
+Respond with only the new candidate instruction, nothing else.""",
+]

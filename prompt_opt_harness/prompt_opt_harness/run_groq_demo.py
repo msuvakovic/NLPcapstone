@@ -4,7 +4,7 @@ from prompt_opt_harness.datasets import load_demo_dataset
 from prompt_opt_harness.harness import run_experiment
 from prompt_opt_harness.llm_backends import GroqBackend
 from prompt_opt_harness.logger import save_run
-from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, OPRO, ZeroShotBaseline
+from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, OPRO, ZeroShotBaseline, GEPA, create_dro_optimizer, create_regularized_optimizer, create_sapo_optimizer, TextGrad
 from prompt_opt_harness.report import build_report
 
 MODEL = "openai/gpt-oss-20b"
@@ -23,6 +23,11 @@ def main() -> None:
         ("Human-written", HumanWrittenBaseline, 1),
         ("OPRO", OPRO, BUDGET),
         ("EvoPrompt-lite", EvoPromptLite, BUDGET),
+        ("GEPA", GEPA, BUDGET),
+        ("TextGrad", TextGrad, BUDGET),
+        ("DRO-OPRO", create_dro_optimizer(OPRO), BUDGET),
+        ("Reg-OPRO", create_regularized_optimizer(OPRO), BUDGET),
+        ("SAPO-OPRO", create_sapo_optimizer(OPRO), BUDGET),
     ]
 
     results = []
