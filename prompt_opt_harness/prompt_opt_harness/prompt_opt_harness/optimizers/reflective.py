@@ -27,7 +27,7 @@ class ReflectiveOptimizer(Optimizer):
 
         while self.backend.stats.calls < self.budget:
             # get per-example results and find a failing example
-            per_example = evaluate_per_example(self.backend, current.instruction, dev_examples)
+            per_example = evaluate_per_example(self.backend, current.instruction, dev_examples, self.task)
             failures = [t for t in per_example if not t[2]]
             if not failures:
                 break

@@ -1,0 +1,24 @@
+{
+  "recorded_utc": "2026-09-30T02:35:19.668798+00:00",
+  "execution_workers": 4,
+  "initial_workers": 12,
+  "reason_for_change": "Cloud HTTP 429 responses; subsequent requests use bounded concurrency and exponential retry backoff.",
+  "early_attempts": "Interrupted first search runs reused exact successful requests; no target results were inspected.",
+  "scoring_changes": "GEPA adapter compatibility repaired using offline fake-model integration test before real GEPA search.",
+  "final_comparisons": "Native OPRO; native GEPA versus stable selection; ESPO-inspired mean versus stable selection; multi-source GEPA native versus worst-source-group selection.",
+  "accuracy_claim_scope": "Single model, three search seeds, one frozen split; empirical pilot.",
+  "gepa_cache_repair": "First GEPA run invalidated: list-based train and validation loaders shared integer cache IDs. Replaced with globally unique hashed IDs, checked with opposite train/validation-score regression. Independent per-example validation verification now required. One completed and one partial run archived in invalidated_gepa_cache_ids before any final-test evaluation.",
+  "windows_logging_repair": "Last multi-source run interrupted by GEPA default cp1252 log encoding on Unicode arrow. Added explicit UTF-8 logger plus UTF-8 workflow subprocesses; replayed interrupted search from exact cached responses with fresh logical budget accounting. Prior partial checkpoint retained in multi_gepa_2/gepa.",
+  "final_evaluation_concurrency": "Started with 4 workers. After the baseline completed and human-written evaluation encountered repeated 90-second cloud timeouts, resumed with 2 workers using identical frozen prompts, decoding and exact cached successful responses. No accuracy-based selection changes. After standalone counterbalanced timing, returned to 4 workers because it had the lowest observed mean latency. Intermediate 2-worker evaluation also encountered timeouts. No prompt or decoding changes.",
+  "timing_grid": "Before timing measurements, expanded counterbalanced grid to workers 1/2/3/4, 24 source requests per block and two repeats. Accuracy evaluation was stopped during the timing phase so concurrency could be selected from measured runtime before resuming the remaining frozen prompts. No timing outcomes used to set the grid.",
+  "timing_selected_concurrency": {
+    "workers": 4,
+    "reason": "Lowest mean wall time over two counterbalanced 24-request blocks, with zero failed attempts during timing; observed timing variability retained in report.",
+    "mean_seconds": {
+      "1": 61.51604055000644,
+      "2": 34.46417159999692,
+      "3": 30.788369449997845,
+      "4": 20.834028100005526
+    }
+  }
+}

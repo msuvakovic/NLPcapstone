@@ -1,0 +1,7 @@
+test_metrics_math: OK
+test_determinism: OK
+test_budget_is_respected: OK
+test_accuracy_in_range: OK
+test_ood_weighted_ranking_prefers_robust_prompt: OK
+
+All smoke tests passed.

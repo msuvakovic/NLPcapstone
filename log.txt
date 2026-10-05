@@ -1,3 +1,114 @@
+=== PROTOCOL, DRO AND TASK-SCHEMA FIXES | 2026-10-04 ===
+Validation: PASS. 11 protocol + 8 task/DRO + 21 reliability + 10 isolation + 15 benchmark + 5 smoke = 70 offline checks.
+No fresh model requests; no staging, commits or pushes.
+
+- Version-2 experiment manifests reject changes to model/endpoint, budgets, decoding, seeds, source code and dataset fingerprints before client creation.
+- Existing search/final files must match the frozen protocol fingerprint, including files skipped on resume.
+- Legacy unversioned experiments remain readable/replayable; new model runs require a new directory or an explicitly reviewed migration.
+- DRO candidates now share the same source subsets, independent of instruction wording, input order and Python hash seed. Subset IDs are logged.
+- Explicit immutable task schemas keep NLI/sentiment labels stable through prompt edits, parsing, optimization, reflection and final evaluation.
+- New harness results record task_spec and exact-label-v2-explicit-task; missing/wrong task labels fail before requests.
+
+Historical artifact audit: 1,156 distinct examples; 12 capped source-isolated searches; PASS.
+Saved OPRO replay: all 3 searches and final predictions match; 0 physical requests; 4,268 cache hits.
+Preserved OOD mean: 95.33%, not a new accuracy measurement. ESPO final evaluation remains incomplete.
+Branch checkpoint: source/tests/docs and selected evidence are ready for review; previously tracked .pyc files still need exclusion or untracking before a clean commit.
+Credentials and new runtime caches are ignored. No Git index or remote changes were made.
+Evidence: output/protocol_tasks_dro_2026-10-04/report.md, verification.json, replay/replay_summary.json.
+Prior log entries preserved below and in log_before_update.txt.
+
+=== HARNESS RELIABILITY FIXES 1-3 | 2026-10-04 ===
+Validation: PASS. 21 reliability tests + 10 isolation tests + 15 benchmark tests + 5 smoke checks.
+No fresh model requests. These are offline correctness checks, not new accuracy/speed measurements.
+
+- Exact full-prompt caching replaces semantic prediction reuse; aggregate/per-example scoring shares strict labels.
+- Malformed answer "Positive or Negative" now scores zero in the artificial regression (previously accepted).
+- A simulated 31-second successful response makes 1 attempt, instead of 3 attempts with only 1 reported.
+- Every failed/retried attempt contributes to calls and request duration; backoff time is separate.
+- SDK automatic retries disabled. Failed token usage is unknown; successful legacy counts remain estimates.
+- OPRO reserves complete scores and enforces its search attempt cap, including native retries.
+- Four distinct source examples with budget 1 now raise a budget error before any requests (previously 4 calls).
+- Partial candidates never enter selection; initial-score failure is explicit; SAPO/entropy extra calls reserved.
+- Search/final calls reported separately, including separate evaluation backends and excluding earlier runs.
+
+Controlled benchmark compatibility: all 3 saved OPRO searches and final predictions reproduced exactly.
+Replay: 0 physical model calls, 4,268 exact cache hits. Base prompt remains selected for every seed.
+Preserved results: SST-2 95.67%, Amazon 95.00%, tweets 95.67%, mean OOD 95.33%.
+Same 900 unique final examples reused across identical prompts; no new inference or independent replications.
+Other experimental optimizers still require a budget audit. Entropy sampling approximation remains unchanged.
+Evidence: output/harness_reliability_2026-10-04/report.md, verification.json, replay/replay_summary.json.
+Previous log contents are preserved below and backed up in log_before_reliability_update.txt.
+
+=== GEMMA OUTPUT-CAP EXPERIMENT | 2026-10-04 ===
+Scope: fixed base-prompt Positive/Negative sentiment classification, Gemma 4 31B.
+Selection: caps 1/2/4/8/16 on 24 balanced source-training examples.
+Confirmation: preselected caps 1 and 4 versus 16 on 64 separate source-validation examples.
+No final source or target test examples were used in this cap experiment.
+312 fresh model requests; 0 retries/failures; 3 offline cap tests and artifact verification passed.
+
+Cap | Confirmation accuracy | Macro F1 | Invalid labels | Limit finishes | Mean output tokens | Median latency
+1   | 96.88%                | 0.9687   | 0/64           | 64/64          | 1.00               | 2.52s
+4   | 96.88%                | 0.9687   | 0/64           | 0/64           | 2.00               | 2.46s
+16  | 96.88%                | 0.9687   | 0/64           | 0/64           | 2.00               | 2.46s
+
+All confirmation predictions matched exactly. A limit finish at cap 1 still returned a complete valid label.
+Cap 1 halves output-token usage but saves only 1.54% of total input-plus-output tokens in this sample.
+Cap 4 was the smallest TESTED cap with natural stopping; cap 3 was not tested.
+No latency improvement or billed-cost saving was established. This is a small source-only study.
+Recommended settings are scoped to the tested classifier. Do not apply cap 1 to prompt proposals/reflections or other tasks.
+Original frozen benchmark settings remain unchanged; these source-validation accuracies are not comparable to the earlier OOD mean.
+Evidence: output/token_caps_2026-10-04/report.md, summary.json, responses.json, recommended_settings.json, verification.json.
+
+=== VERIFIED UPDATE: OPRO DATA-LEAKAGE FIX | 2026-10-04 ===
+
+Optimizer name in this repository: OPRO (sometimes referred to as ORPO in discussion).
+Validation status: PASS. 10 data-isolation tests, 15 benchmark tests, and 5 smoke checks passed.
+The completed-search audit also verified 1,156 distinct examples and 12 source-isolated searches.
+
+FIXED:
+- run_experiment passes only source.dev to optimization. Final source/target data is evaluated after selection.
+- OPRO rejects non-None ood_examples in optimize and candidate scoring, including inherited wrappers.
+- Duplicate IDs or normalized text are rejected before backend creation; new logs identify source-dev-only-v1.
+- Search history resets per run, and proposal-template randomness uses the run seed.
+- OracleOPRO is disabled: its old implementation trained on final target tests.
+- Duplicate beam proposals no longer bypass the existing batch-budget stop.
+
+RESULT PROVENANCE:
+The patched OPRO was replayed using saved September 29 Gemma 4 31B responses and the controlled exact evaluator.
+Network requests were disabled: 0 new model calls, 4268 exact-cache hits.
+Candidate pools, validation vectors, selected prompts and final predictions matched all three clean source-only runs.
+This is not fresh cloud inference and does not isolate a before/after accuracy effect against older contaminated runs.
+Protocol: source selection = 64 SST-2 examples; 512 candidate/example evaluations per seed; at most 16 proposals.
+Final data: 300 SST-2 + 300 Amazon + 300 binary tweets, disjoint from optimization; one frozen partition.
+
+Method / seed | Source dev | Source test | Amazon | Tweets | OOD mean | Search evaluations | Proposals
+--------------+------------+-------------+--------+--------+----------+--------------------+----------
+OPRO / 0 | 96.88% | 95.67% | 95.00% | 95.67% | 95.33% | 512 | 14
+OPRO / 1 | 96.88% | 95.67% | 95.00% | 95.67% | 95.33% | 512 | 10
+OPRO / 2 | 96.88% | 95.67% | 95.00% | 95.67% | 95.33% | 512 | 8
+
+All seeds selected the unchanged base prompt: Classify the sentiment of the following text as Positive or Negative.
+Baseline final accuracy is therefore identical. Same-prompt cached predictions are reused: 900 unique final examples, not 2,700 independent examples.
+No accuracy improvement over the base prompt was established. ESPO-inspired final evaluation remains incomplete.
+
+RECURRENCE CHECKS:
+Changing target labels or target text leaves search prompts, candidate scores and selection unchanged, while final target scores respond correctly.
+Direct target injection, optimizer wrappers, stale candidate history and overlapping splits are covered by regressions.
+These safeguards cover the known paths; they cannot detect semantic paraphrases, model pretraining contamination or every future code change.
+The legacy evaluator still has optional semantic prediction reuse and batch-level budgeting; research results above use the exact controlled evaluator and hard evaluation cap.
+
+EVIDENCE (relative to this directory):
+output/leakage_fix_2026-10-04/replay_summary.json
+output/leakage_fix_2026-10-04/opro_seed_0.json (also seeds 1 and 2)
+output/leakage_fix_2026-10-04/validation.json and *_tests.txt
+output/leakage_fix_2026-10-04/direct_api_regression.json
+output/leakage_fix_2026-10-04/log_before_update.txt (byte-for-byte historical backup)
+README.md and tools/prompt_bench/README.md for implementation and offline commands.
+
+=== HISTORICAL OUTPUT BELOW: PRESERVED UNCHANGED, NOT REVALIDATED ===
+Target-assisted static/progressive and oracle comparisons below are not untouched OOD tests.
+Mock pipeline outputs are simulations, not real-model performance. Older model/dataset/sample settings differ.
+
 
 CapStone_Harness.ipynb
 CapStone_Harness.ipynb_
@@ -136,3 +247,17 @@ GEPA               | 0.83 | 0.50     | 0.88       | 0.50       | -0.19   | 0.50 
 EvoPrompt          | 1.00 | 0.67     | 0.50       | 0.88       | -0.02   | 0.50       | 0.035    | 224       | -0.0007   | 0.0000         | +0.0000  | 30   
 DRO                | 1.00 | 0.83     | 1.00       | 0.75       | -0.04   | 0.75       | 0.016    | 228       | +0.0000   | 0.0000         | +0.0000  | 53   
 Oracle Upper-Bound | 0.86 | 1.00     | 0.88       | 0.75       | +0.19   | 0.75       | 0.004    | 228       | +0.0007   | 0.0000         | +0.0000  | 74   
+
+[15]
+20s
+!python3 compare_nli.py
+=== NLI Benchmark: Progressive Widening Objective ===
+Method             | Dev  | Src Test | OOD:slate | OOD:telephone | OOD Gap | Worst-Case | Variance | API Calls | Gain/Call | Est Cost (USD) | Gain/USD | Words
+-------------------+------+----------+-----------+---------------+---------+------------+----------+-----------+-----------+----------------+----------+------
+Zero-shot          | 0.75 | 1.00     | 0.75      | 0.50          | +0.38   | 0.50       | 0.016    | 16        | +0.0000   | 0.0000         | +0.0000  | 0    
+OPRO               | 0.75 | 0.50     | 0.50      | 1.00          | -0.25   | 0.50       | 0.062    | 220       | -0.0023   | 0.0000         | +0.0000  | 17   
+Entropy-OPRO       | 0.96 | 1.00     | 1.00      | 1.00          | +0.00   | 1.00       | 0.000    | 270       | +0.0000   | 0.0000         | +0.0000  | 39   
+GEPA               | 1.00 | 1.00     | 0.75      | 0.50          | +0.38   | 0.50       | 0.016    | 30        | +0.0000   | 0.0000         | +0.0000  | 18   
+EvoPrompt          | 1.00 | 1.00     | 0.75      | 0.50          | +0.38   | 0.50       | 0.016    | 212       | +0.0000   | 0.0000         | +0.0000  | 18   
+DRO                | 1.00 | 1.00     | 0.50      | 1.00          | +0.25   | 0.50       | 0.062    | 232       | +0.0000   | 0.0000         | +0.0000  | 32   
+Oracle Upper-Bound | 0.83 | 0.75     | 1.00      | 0.75          | -0.12   | 0.75       | 0.016    | 220       | -0.0011   | 0.0000         | +0.0000  | 32   

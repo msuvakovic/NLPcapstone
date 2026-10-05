@@ -42,7 +42,7 @@ class EmbeddingBayesOpt(Optimizer):
     def _estimate_cost(self, instruction: str, sample_text: Optional[str]) -> float:
         try:
             if sample_text:
-                prompt = build_classification_prompt(instruction, sample_text)
+                prompt = build_classification_prompt(instruction, sample_text, self.task)
             else:
                 prompt = instruction
             if hasattr(self.backend, 'tokenize'):

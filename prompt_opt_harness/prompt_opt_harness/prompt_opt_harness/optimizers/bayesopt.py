@@ -35,7 +35,7 @@ class CostAwareBayesOpt(Optimizer):
         # Estimate cost by tokenizing a representative prompt with the sample_text if available
         try:
             if sample_text:
-                prompt = build_classification_prompt(instruction, sample_text)
+                prompt = build_classification_prompt(instruction, sample_text, self.task)
             else:
                 prompt = instruction
             # Use backend.tokenizer if available (some backends expose stats/tokenizer), else crude wc

@@ -13,7 +13,7 @@ class TextGrad(Optimizer):
 
         while self.backend.stats.calls < self.budget:
             # Re-evaluate to find failures
-            per_example_results = evaluate_per_example(self.backend, best_candidate.instruction, dev_examples)
+            per_example_results = evaluate_per_example(self.backend, best_candidate.instruction, dev_examples, self.task)
             if self.backend.stats.calls >= self.budget:
                 break
 

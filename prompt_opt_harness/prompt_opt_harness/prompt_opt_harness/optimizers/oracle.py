@@ -7,12 +7,6 @@ class OracleOPRO(OPRO):
     name = "Oracle-OPRO"
     
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
-        # Combine all data (source + all OOD domains) into one massive dev set
-        all_examples = list(dev_examples)
-        if ood_examples:
-            for examples in ood_examples.values():
-                all_examples.extend(examples)
-                
-        # Call standard OPRO optimize, but passing the combined examples as dev_examples
-        # and no OOD examples (so it purely optimizes for accuracy on everything)
-        return super().optimize(task_desc, all_examples, None)
+        raise ValueError("OracleOPRO is disabled: its old implementation trained on final "
+                         "target tests. A target-trained reference requires separate "
+                         "target development and test splits. Use OPRO for source-only runs.")

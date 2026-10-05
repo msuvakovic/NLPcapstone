@@ -6,8 +6,11 @@ import os
 import random
 import re
 import time
+from contextlib import contextmanager
 from dataclasses import dataclass
 from typing import Dict, List, Tuple
+
+from .budget import CallBudgetExceeded
 
 
 @dataclass
@@ -19,14 +22,30 @@ class LLMCallStats:
     per_call: List[Dict] = None
     _elapsed_times: List[float] = None
     tokenizer_name: str | None = None
+    failed_attempts: int = 0
+    unknown_usage_attempts: int = 0
+    backoff_time: float = 0.0
 
-    def record(self, prompt: str, response: str, elapsed: float) -> None:
+    def record(self, prompt: str, response: str, elapsed: float, *, error: Exception | None = None) -> None:
         if self.per_call is None:
             self.per_call = []
         if self._elapsed_times is None:
             self._elapsed_times = []
         self.calls += 1
-        # Try to use tiktoken for token-accurate accounting when available.
+        self.wall_time += elapsed
+        self._elapsed_times.append(elapsed)
+        if error is not None:
+            self.failed_attempts += 1
+            self.unknown_usage_attempts += 1
+            # A failed request's provider token usage is unknown, not zero.
+            self.per_call.append({
+                'prompt': prompt, 'response': None, 'elapsed': elapsed,
+                'input_tokens': None, 'output_tokens': None,
+                'status': 'error', 'error_type': type(error).__name__,
+                'token_usage': 'unknown',
+            })
+            return
+        # Local token estimates, not provider usage or billing measurements.
         call_input_tokens = 0
         call_output_tokens = 0
         try:
@@ -55,8 +74,6 @@ class LLMCallStats:
         # update cumulative counters
         self.input_tokens += call_input_tokens
         self.output_tokens += call_output_tokens
-        self.wall_time += elapsed
-        self._elapsed_times.append(elapsed)
         # store a per-call trace for later analysis
         try:
             self.per_call.append({
@@ -65,6 +82,8 @@ class LLMCallStats:
                 "elapsed": elapsed,
                 "input_tokens": call_input_tokens,
                 "output_tokens": call_output_tokens,
+                "status": "success",
+                "token_usage": "estimated",
             })
         except Exception:
             # ensure tracing never breaks a run
@@ -83,35 +102,52 @@ class LLMCallStats:
 class LLMBackend(abc.ABC):
     def __init__(self) -> None:
         self.stats = LLMCallStats()
+        self._call_limit = None
+
+    @contextmanager
+    def limit_calls(self, limit):
+        previous = self._call_limit
+        self._call_limit = min(previous, limit) if previous is not None else limit
+        try:
+            yield
+        finally:
+            self._call_limit = previous
+
+    def _check_call_limit(self):
+        if self._call_limit is not None and self.stats.calls >= self._call_limit:
+            raise CallBudgetExceeded('Search request budget exhausted (including retries)')
 
     @abc.abstractmethod
     def _generate(self, prompt: str) -> str:
         ...
 
     def generate(self, prompt: str) -> str:
-        # Retry-on-slow behavior: if a call takes longer than `LLM_SLOW_THRESHOLD` seconds,
-        # retry up to `LLM_RETRIES` times. We only record the final accepted call to stats
-        # to avoid skewing per-call metrics with transient timeouts / cold-starts.
-        retries = int(os.environ.get("LLM_RETRIES", "2"))
-        slow_threshold = float(os.environ.get("LLM_SLOW_THRESHOLD", "30"))
-        last_exc = None
+        # Never repeat a successful response just because it was slow. All
+        # attempts, including failures, contribute to the request/time counters.
+        retries = max(0, int(os.environ.get("LLM_RETRIES", "2")))
         for attempt in range(1, retries + 2):
+            self._check_call_limit()
             start = time.perf_counter()
             try:
                 response = self._generate(prompt)
+            except CallBudgetExceeded:
+                raise
             except Exception as e:
-                last_exc = e
                 elapsed = time.perf_counter() - start
+                self.stats.record(prompt, '', elapsed, error=e)
+                # Authentication, invalid parameters and other permanent HTTP
+                # errors must not spend the retry allowance.
+                status = getattr(e, 'status_code', getattr(e, 'code', None))
+                if isinstance(status, int) and status not in (408, 409, 429) and status < 500:
+                    raise
                 if attempt <= retries:
+                    self._check_call_limit()
+                    backoff_start = time.perf_counter()
                     time.sleep(0.5 * attempt)
+                    self.stats.backoff_time += time.perf_counter() - backoff_start
                     continue
                 raise
             elapsed = time.perf_counter() - start
-            # If this attempt was unusually slow, retry if attempts remain.
-            if elapsed > slow_threshold and attempt <= retries:
-                print(f"LLMBackend.generate: slow call (elapsed={elapsed:.1f}s), retrying ({attempt}/{retries})")
-                time.sleep(0.5 * attempt)
-                continue
             # Attach model hint to stats for better token counting (best-effort)
             if hasattr(self, "model"):
                 model_hint = getattr(self, "model")
@@ -130,16 +166,13 @@ class LLMBackend(abc.ABC):
             setattr(self.stats, "_model_for_token_count", model_hint if 'model_hint' in locals() else None)
             self.stats.record(prompt, response, elapsed)
             return response
-        if last_exc:
-            raise last_exc
-        return ""
 
 
 class OpenAIBackend(LLMBackend):
     def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0):
         super().__init__()
         import openai
-        self.client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+        self.client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"], max_retries=0)
         self.model = model
         self.temperature = temperature
 
@@ -160,7 +193,7 @@ class OpenAICompatibleBackend(LLMBackend):
         api_key = os.environ.get(api_key_env, "not-needed") if api_key_env else "not-needed"
         if api_key_env and api_key == "not-needed":
             raise RuntimeError(f"Set the {api_key_env} environment variable first.")
-        self.client = openai.OpenAI(api_key=api_key, base_url=base_url)
+        self.client = openai.OpenAI(api_key=api_key, base_url=base_url, max_retries=0)
         self.model = model
         self.temperature = temperature
 
@@ -191,7 +224,7 @@ class AnthropicBackend(LLMBackend):
     def __init__(self, model: str = "claude-3-5-haiku-20241022", max_tokens: int = 300):
         super().__init__()
         import anthropic
-        self.client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+        self.client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"], max_retries=0)
         self.model = model
         self.max_tokens = max_tokens
 
@@ -226,7 +259,7 @@ DOMAIN_CUE_FRAGMENTS = [
 BASE_ACCURACY = {
     "movie_reviews": 0.70,
     "amazon": 0.66,
-    "tweets": 0.60,
+    "tweets": 0.60, "fiction": 0.70, "telephone": 0.66, "slate": 0.60,
 }
 
 QUALITY_BONUS = 0.04
@@ -264,7 +297,7 @@ class MockBackend(LLMBackend):
         prob_correct = min(prob_correct, 0.97)
 
         correct = _pseudo_random(f"{text}::{full_prompt}") < prob_correct
-        return label if correct else ("Negative" if label == "Positive" else "Positive")
+        return label if correct else (("Negative" if label == "Positive" else "Positive") if label in ["Positive", "Negative"] else ("Contradiction" if label == "Entailment" else "Entailment"))
 
     def _propose_instruction(self, meta_prompt: str) -> str:
         referenced = _FRAGMENT_SOURCE_RE.findall(meta_prompt)

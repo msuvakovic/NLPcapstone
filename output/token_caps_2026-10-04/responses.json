@@ -1,0 +1,6242 @@
+[
+  {
+    "phase": "selection",
+    "id": "sst2:train:356",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 2,
+      "total_tokens": 78,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.567798000003677,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:13",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.048049599980004,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:867",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.622518099960871,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:356",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 2,
+      "total_tokens": 78,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.131112699978985,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:221",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 2,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3707080999738537,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:670",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3237957999808714,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:644",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 2,
+      "total_tokens": 81,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3452468999894336,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:149",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.396277799969539,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:354",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3310623000143096,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:54",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3742351999972016,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:638",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4276011000038125,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:672",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.3457673999946564,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:379",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.1151755999890156,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:867",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.080127299996093,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:136",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.653696699999273,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:136",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.364036299986765,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:638",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3366108000045642,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:777",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.34818189998623,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:149",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 1,
+      "total_tokens": 78,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.419646799971815,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:777",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3594275999930687,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:625",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3088474000105634,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:638",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.717298000003211,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:262",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 83,
+      "completion_tokens": 2,
+      "total_tokens": 85,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.341365300002508,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:13",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.820542400004342,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:672",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.378147799987346,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:764",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 1,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.400449300010223,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:308",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.406353099970147,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:670",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3677591000450775,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:379",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.372602100018412,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:356",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 1,
+      "total_tokens": 77,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3945335000171326,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:262",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 83,
+      "completion_tokens": 2,
+      "total_tokens": 85,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3232979000313208,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:649",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.670497700048145,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:764",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.441429700003937,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:262",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 83,
+      "completion_tokens": 2,
+      "total_tokens": 85,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3477306999848224,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:308",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 1,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.372062599984929,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:262",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 83,
+      "completion_tokens": 2,
+      "total_tokens": 85,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3455384999979287,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:54",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4571914999978617,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:379",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.37793179997243,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:428",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 1,
+      "total_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.371731999970507,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:722",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.343937600031495,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:764",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3527871999540366,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:89",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 1,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.8295305999927223,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:504",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.17156960000284,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:66",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.07111590000568,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:672",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.327429099997971,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:649",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.314461800036952,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:672",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 11.407631000038236,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:66",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 1,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 13.030215599981602,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:13",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 13.07475989998784,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:722",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 13.35796890000347,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:722",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.416652699990664,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:504",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.373575100034941,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:777",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.436241399962455,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:638",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.375129599997308,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:777",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4244071999564767,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:13",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.609408600023016,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:221",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 1,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.262873600004241,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:354",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.1087200999609195,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:670",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.972518599999603,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:722",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.357194400043227,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:308",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.099474199989345,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:136",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.375779599999078,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:356",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 2,
+      "total_tokens": 78,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.881244999996852,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:764",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 6.2843885999755,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:644",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 1,
+      "total_tokens": 80,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3351613000268117,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:670",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 1,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4182839999557473,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:54",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 1,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3452175999991596,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:625",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 1,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3133819000213407,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:13",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 1,
+      "total_tokens": 65,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3143086999771185,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:504",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4248452000319958,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:136",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3453151999856345,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:66",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3357491999631748,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:308",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3642590999952517,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:670",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.328356099955272,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:777",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3289477999787778,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:308",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4020698000094853,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:54",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3888537000166252,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:221",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 2,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.375132599961944,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:428",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3350530000170693,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:221",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 2,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3891975000151433,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:649",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4440793999820016,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:644",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 2,
+      "total_tokens": 81,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.72920649999287,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:149",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.2560969999758527,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:89",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.815888100012671,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:644",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 2,
+      "total_tokens": 81,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.446324199961964,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:89",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.418399700021837,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:354",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.5201856000348926,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:354",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3645401999820024,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:649",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4307772999745794,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:149",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4773029999923892,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:867",
+    "label": "Negative",
+    "cap": 8,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 6.444763999956194,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:221",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 2,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 6.538110599969514,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:625",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.73771640000632,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:649",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 6.113465300004464,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:428",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3791229999624193,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:54",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3933113999664783,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:428",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.357007500017062,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:379",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3654516999959014,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:428",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.343860399967525,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:638",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.465826899977401,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:644",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 79,
+      "completion_tokens": 2,
+      "total_tokens": 81,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3914269999950193,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:89",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.700575199967716,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:764",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.140864100016188,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:89",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.921765699982643,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:379",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 1,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3920237999991514,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:625",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3573087999830022,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:722",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.395831800007727,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:625",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 57,
+      "completion_tokens": 2,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3400334999896586,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:262",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 83,
+      "completion_tokens": 1,
+      "total_tokens": 84,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.413501200033352,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:672",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 1,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3597146999672987,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:867",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 1,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.40295060002245,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:136",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 1,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.355480999976862,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:66",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 6.049071500019636,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:356",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 76,
+      "completion_tokens": 2,
+      "total_tokens": 78,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 17.56904620002024,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:504",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 1,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 17.462723599979654,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:354",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 1,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 17.218599399959203,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:504",
+    "label": "Positive",
+    "cap": 8,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 13.137092799996026,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:867",
+    "label": "Negative",
+    "cap": 2,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 49,
+      "completion_tokens": 2,
+      "total_tokens": 51,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4265473000123166,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:149",
+    "label": "Positive",
+    "cap": 2,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.403692400024738,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "selection",
+    "id": "sst2:train:66",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3910283999866806,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:267",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 1,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3547412999905646,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:267",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.7847380000166595,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:245",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.098156799969729,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:844",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.01602159999311,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:194",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.329673600033857,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:727",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 1,
+      "total_tokens": 65,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3395990999997593,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:245",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.408219300035853,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:514",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3996037000324577,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:621",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 1,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.406485600047745,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:179",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 2,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.377974200004246,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:871",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3122474999981932,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:733",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 2,
+      "total_tokens": 77,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.356879100028891,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:7",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 7.869860299979337,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:678",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 7.880683200026397,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:844",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 7.853943799971603,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:727",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 7.449967699998524,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:349",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 2,
+      "total_tokens": 71,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3496934000286274,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:278",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 1,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3509715999825858,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:751",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 2,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.406345900031738,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:621",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3360902999993414,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:697",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3304276000126265,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:787",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 2,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.7922786000417545,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:219",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.1821628999896348,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:481",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 46,
+      "completion_tokens": 2,
+      "total_tokens": 48,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 7.293137900007423,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:433",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 2,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.447424999962095,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:854",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.28424399998039,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:809",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.264716500008944,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:871",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.425507400010247,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:411",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 63,
+      "completion_tokens": 2,
+      "total_tokens": 65,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3688568999641575,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:773",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 2,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4289591999840923,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:309",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 55,
+      "completion_tokens": 2,
+      "total_tokens": 57,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3267196000088006,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:127",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 2,
+      "total_tokens": 77,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.369211399985943,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:733",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.347906499984674,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:844",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4073665000032634,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:289",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 42,
+      "completion_tokens": 2,
+      "total_tokens": 44,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3865919999661855,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:854",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3292644000030123,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:616",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3803414999856614,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:474",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 1,
+      "total_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3981668999767862,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:538",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.842293299967423,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:369",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.379586199996993,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:369",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 9.525832100014668,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:711",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.00601180002559,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:840",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 20.49173820001306,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:804",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 85,
+      "completion_tokens": 2,
+      "total_tokens": 87,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 20.97191299998667,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:369",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 1,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 11.727704000019003,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:206",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 58,
+      "completion_tokens": 1,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 11.557465100020636,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:711",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 1,
+      "total_tokens": 65,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.858683799975552,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:206",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 58,
+      "completion_tokens": 2,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.797013700008392,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:733",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 2,
+      "total_tokens": 77,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.930595199984964,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:727",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 5.837346300017089,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:194",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.847832900006324,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:26",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 1,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.6444244000012986,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:492",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 1,
+      "total_tokens": 48,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.530094299989287,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:219",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.709899300010875,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:470",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 2,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.357711200020276,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:481",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 46,
+      "completion_tokens": 1,
+      "total_tokens": 47,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.780775099992752,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:65",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.83151370001724,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:621",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 62,
+      "completion_tokens": 2,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.6896233999868855,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:498",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 9.728790399967693,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:498",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 9.415209300001152,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:241",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 2,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.328242900024634,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:53",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 55,
+      "completion_tokens": 2,
+      "total_tokens": 57,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.7154453999828547,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:447",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 1,
+      "total_tokens": 68,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.1125287999748252,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:463",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.5044597999658436,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:241",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 1,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.563096099998802,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:470",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 1,
+      "total_tokens": 57,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.7491961999912746,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:604",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.569510700006504,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:219",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.8363183999899775,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:618",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 2,
+      "total_tokens": 68,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.9571867000195198,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:263",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 1,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.970958799996879,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:616",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.371247000002768,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:871",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.344906800019089,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:190",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 1,
+      "total_tokens": 78,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3207510000211187,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:637",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 2,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3663278999738395,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:298",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 2,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4784026999841444,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:809",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3885792000219226,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:787",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 1,
+      "total_tokens": 57,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3467270000255667,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:474",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.327587299980223,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:854",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3588135999743827,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:167",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3711716000107117,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:224",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 11.432549500023015,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:481",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 46,
+      "completion_tokens": 2,
+      "total_tokens": 48,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 12.068931499961764,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:569",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 1,
+      "total_tokens": 57,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 12.544799999974202,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:7",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 2,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 13.156873000029009,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:206",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 58,
+      "completion_tokens": 2,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.787322999967728,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:65",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 1,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.615067300037481,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:835",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.580884199996945,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:835",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.575233299983665,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:433",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 1,
+      "total_tokens": 68,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.366193199995905,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:298",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 1,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.323106700030621,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:26",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 2,
+      "total_tokens": 75,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.353507499967236,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:245",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 2,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3563104000058956,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:569",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 2,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.346078700036742,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:263",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.366412700037472,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:309",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 55,
+      "completion_tokens": 1,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.329174200014677,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:411",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 63,
+      "completion_tokens": 2,
+      "total_tokens": 65,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3963351999991573,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:538",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.365062700002454,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:194",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.42191420000745,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:349",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 1,
+      "total_tokens": 70,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3686410000082105,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:278",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.075413900020067,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:247",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 82,
+      "completion_tokens": 2,
+      "total_tokens": 84,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3641925999545492,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:514",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 1,
+      "total_tokens": 75,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.761124100012239,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:422",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 2,
+      "total_tokens": 80,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.102822999993805,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:411",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 63,
+      "completion_tokens": 1,
+      "total_tokens": 64,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.5704684999655,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:26",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 73,
+      "completion_tokens": 2,
+      "total_tokens": 75,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3899320000200532,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:167",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4014445999637246,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:291",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3452366000274196,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:224",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.396596300008241,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:291",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3520852999645285,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:445",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 1,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.382628899998963,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:127",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 1,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3883350000251085,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:291",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.459391999989748,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:296",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 2,
+      "total_tokens": 72,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3615287999855354,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:809",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3685402999981306,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:615",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3360998000134714,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:267",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.34607720002532,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:755",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.14128649997292,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:190",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.101977700018324,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:678",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 2,
+      "total_tokens": 74,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.431495699973311,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:840",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 10.260316999978386,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:773",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 1,
+      "total_tokens": 48,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3474078999715857,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:751",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 1,
+      "total_tokens": 48,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.8433312000124715,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:615",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 1,
+      "total_tokens": 78,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.129827100026887,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:773",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 2,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.642541099980008,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:804",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 85,
+      "completion_tokens": 1,
+      "total_tokens": 86,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 7.486126700008754,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:103",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 2,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 17.51797429996077,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:127",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 75,
+      "completion_tokens": 2,
+      "total_tokens": 77,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 17.7671753000468,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:102",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 58,
+      "completion_tokens": 2,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 17.75120999995852,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:422",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 1,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 12.053419000003487,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:247",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 82,
+      "completion_tokens": 2,
+      "total_tokens": 84,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4361867000116035,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:755",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 1,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3273225000011735,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:604",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3645710999844596,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:179",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 1,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.475222399982158,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:751",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 2,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.38240569998743,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:604",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3595922000240535,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:7",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 53,
+      "completion_tokens": 1,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3820104000042193,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:57",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 2,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.340445800044108,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:492",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 2,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.396106800006237,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:447",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 2,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.107648400007747,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:57",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 2,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.8505551000125706,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:102",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 58,
+      "completion_tokens": 2,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.425086500006728,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:296",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 1,
+      "total_tokens": 71,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.808890199987218,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:65",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 60,
+      "completion_tokens": 2,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.3576560000074096,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:447",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 2,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.6268964000046253,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:474",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 2,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.6540705999941565,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:349",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 69,
+      "completion_tokens": 2,
+      "total_tokens": 71,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.808875899994746,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:422",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 78,
+      "completion_tokens": 2,
+      "total_tokens": 80,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.061880699999165,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:470",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 2,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.235789400001522,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:57",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 1,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3253101999871433,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:840",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.387548999977298,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:538",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.376988900010474,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:102",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 0,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 58,
+      "completion_tokens": 1,
+      "total_tokens": 59,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3513932999921963,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:278",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 2,
+      "total_tokens": 63,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3617241000174545,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:463",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 1,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3852301000151783,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:445",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 2,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.354121699987445,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:241",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 2,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.370508699968923,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:296",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 70,
+      "completion_tokens": 2,
+      "total_tokens": 72,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.363588800013531,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:309",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 55,
+      "completion_tokens": 2,
+      "total_tokens": 57,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.520584299985785,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:678",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 72,
+      "completion_tokens": 1,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.006723799975589,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:53",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 55,
+      "completion_tokens": 2,
+      "total_tokens": 57,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.203893399972003,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:298",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 2,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.620870399987325,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:514",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 74,
+      "completion_tokens": 2,
+      "total_tokens": 76,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.814210099983029,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:492",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 47,
+      "completion_tokens": 2,
+      "total_tokens": 49,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.167896799976006,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:569",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 2,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 4.636526199989021,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:289",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 42,
+      "completion_tokens": 2,
+      "total_tokens": 44,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.377733600034844,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:697",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 1,
+      "total_tokens": 60,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.7028098999871872,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:289",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 42,
+      "completion_tokens": 1,
+      "total_tokens": 43,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.789301099954173,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:103",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 2,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.787583600031212,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:637",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 2,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3725049999775365,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:103",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 54,
+      "completion_tokens": 1,
+      "total_tokens": 55,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.5606689999694936,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:835",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 2,
+      "total_tokens": 73,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3692144000087865,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:755",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4029672000324354,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:445",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 2,
+      "total_tokens": 54,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.462137399998028,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:697",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.363616299990099,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:167",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 51,
+      "completion_tokens": 1,
+      "total_tokens": 52,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.1494982999865897,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:616",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 68,
+      "completion_tokens": 1,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.896938699996099,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:804",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 85,
+      "completion_tokens": 2,
+      "total_tokens": 87,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.335123900033068,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:263",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 59,
+      "completion_tokens": 2,
+      "total_tokens": 61,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 14.218435399990994,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:618",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 1,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 13.607239600038156,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:433",
+    "label": "Positive",
+    "cap": 16,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 67,
+      "completion_tokens": 2,
+      "total_tokens": 69,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 13.666603300021961,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:711",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 64,
+      "completion_tokens": 2,
+      "total_tokens": 66,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3590948000201024,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:618",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 66,
+      "completion_tokens": 2,
+      "total_tokens": 68,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.816128300037235,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:615",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.104249299969524,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:463",
+    "label": "Negative",
+    "cap": 16,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 65,
+      "completion_tokens": 2,
+      "total_tokens": 67,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 3.8191987000172958,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:190",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 77,
+      "completion_tokens": 2,
+      "total_tokens": 79,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.352816200000234,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:498",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 61,
+      "completion_tokens": 1,
+      "total_tokens": 62,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.328214500041213,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:224",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 71,
+      "completion_tokens": 1,
+      "total_tokens": 72,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3252597999526188,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:53",
+    "label": "Positive",
+    "cap": 1,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 55,
+      "completion_tokens": 1,
+      "total_tokens": 56,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3855626999866217,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:637",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 52,
+      "completion_tokens": 1,
+      "total_tokens": 53,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.3431610999978147,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:247",
+    "label": "Negative",
+    "cap": 1,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 82,
+      "completion_tokens": 1,
+      "total_tokens": 83,
+      "prompt_tokens_details": {
+        "cached_tokens": 64
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.353735299955588,
+    "finish_reason": "length"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:179",
+    "label": "Positive",
+    "cap": 4,
+    "prediction": "Positive",
+    "correct": 1,
+    "text": "Positive",
+    "usage": {
+      "prompt_tokens": 48,
+      "completion_tokens": 2,
+      "total_tokens": 50,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4038949999958277,
+    "finish_reason": "stop"
+  },
+  {
+    "phase": "confirmation",
+    "id": "sst2:val:787",
+    "label": "Negative",
+    "cap": 4,
+    "prediction": "Negative",
+    "correct": 1,
+    "text": "Negative",
+    "usage": {
+      "prompt_tokens": 56,
+      "completion_tokens": 2,
+      "total_tokens": 58,
+      "prompt_tokens_details": {
+        "cached_tokens": 32
+      }
+    },
+    "model": "gemma4:31b",
+    "seconds": 2.4125404999940656,
+    "finish_reason": "stop"
+  }
+]

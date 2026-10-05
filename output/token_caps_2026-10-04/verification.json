@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "unique_requests": 312,
+  "source_examples": 88,
+  "final_test_examples_used": 0,
+  "malformed_labels": 0,
+  "failed_attempts": 0,
+  "protocol_grid_complete": true
+}

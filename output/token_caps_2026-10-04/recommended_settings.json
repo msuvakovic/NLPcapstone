@@ -1,0 +1,17 @@
+{
+  "model": "gemma4:31b-cloud",
+  "scope": "Exact tested base-prompt Positive/Negative sentiment classification",
+  "max_tokens": 1,
+  "temperature": 0.0,
+  "seed": 12345,
+  "require_exact_label_validation": true,
+  "expected_finish_reason": "length",
+  "alternative_max_tokens_for_natural_stop": 4,
+  "proposal_and_reflection_caps": "unchanged",
+  "confirmation_examples": 64,
+  "accuracy": 0.96875,
+  "macro_f1": 0.9687194525904204,
+  "output_token_reduction_fraction": 0.5,
+  "observed_total_token_reduction_fraction": 0.015432843019049916,
+  "limitation": "Small source-only confirmation; no OOD or rare-failure guarantee; no verified latency or billing saving"
+}

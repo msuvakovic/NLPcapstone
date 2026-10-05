@@ -1,0 +1,49 @@
+....Iteration 0: Base program full valset score: 1.0 over 2 / 2 examples
+Iteration 1: Selected program 0 score: 1.0
+Iteration 1: Proposed new text for instruction: Improved training instruction.
+Iteration 1: Accepted candidate (subsample score 4.0 -> 8.0); running full eval.
+Iteration 1: Valset score for new program: 0.0 (coverage 2 / 2)
+Iteration 1: Val aggregate for new program: 0.0
+Iteration 1: Valset pareto front aggregate score: 1.0
+Iteration 1: Best valset aggregate score so far: 1.0
+Iteration 1: Best program as per aggregate score on valset: 0
+Iteration 1: Best score on valset: 1.0
+Iteration 1: Linear pareto front program index: 0
+Iteration 1: New program candidate index: 1
+Iteration 2: No merge candidates found
+Iteration 2: Selected program 0 score: 1.0
+Iteration 2: Proposed new text for instruction: Improved training instruction.
+Iteration 2: Accepted candidate (subsample score 4.0 -> 8.0); running full eval.
+Iteration 2: Valset score for new program: 0.0 (coverage 2 / 2)
+Iteration 2: Val aggregate for new program: 0.0
+Iteration 2: Valset pareto front aggregate score: 1.0
+Iteration 2: Best valset aggregate score so far: 1.0
+Iteration 2: Best program as per aggregate score on valset: 0
+Iteration 2: Best score on valset: 1.0
+Iteration 2: Linear pareto front program index: 0
+Iteration 2: New program candidate index: 2
+...Iteration 0: Base program full valset score: 0.5 over 2 / 2 examples
+Iteration 1: Selected program 0 score: 0.5
+Iteration 1: Proposed new text for instruction: Use the improved sentiment instruction. Positive \u2192 positive.
+Iteration 1: Accepted candidate (subsample score 4.0 -> 8.0); running full eval.
+Iteration 1: Found a better program on the valset with score 1.0.
+Iteration 1: Valset score for new program: 1.0 (coverage 2 / 2)
+Iteration 1: Val aggregate for new program: 1.0
+Iteration 1: Valset pareto front aggregate score: 1.0
+Iteration 1: Best valset aggregate score so far: 1.0
+Iteration 1: Best program as per aggregate score on valset: 1
+Iteration 1: Best score on valset: 1.0
+Iteration 1: Linear pareto front program index: 1
+Iteration 1: New program candidate index: 1
+Iteration 2: No merge candidates found
+Iteration 2: Selected program 1 score: 1.0
+Iteration 2: Proposed new text for instruction: Use the improved sentiment instruction. Positive \u2192 positive.
+Iteration 2: New subsample score 8.0 is not better than old score 8.0, skipping
+Iteration 3: Selected program 1 score: 1.0
+Iteration 3: Proposed new text for instruction: Use the improved sentiment instruction. Positive \u2192 positive.
+Iteration 3: New subsample score 8.0 is not better than old score 8.0, skipping
+........
+----------------------------------------------------------------------
+Ran 15 tests in 0.276s
+
+OK

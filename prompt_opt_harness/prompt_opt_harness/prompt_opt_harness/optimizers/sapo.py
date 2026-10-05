@@ -9,6 +9,11 @@ def create_sapo_optimizer(base_optimizer_cls: Type[Optimizer], num_perturbations
     
     class SAPOWrapper(base_optimizer_cls):
         name = f"SAPO-{base_optimizer_cls.name}"
+
+        def _evaluation_calls(self, dev_examples) -> int:
+            if not dev_examples:
+                return 0
+            return (num_perturbations + 1) * super()._evaluation_calls(dev_examples) + num_perturbations
         
         def _dev_score(self, instruction: str, dev_examples) -> float:
             if not dev_examples:

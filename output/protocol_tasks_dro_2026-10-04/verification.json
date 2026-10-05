@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "checks": {
+    "protocol": 11,
+    "tasks_and_dro": 8,
+    "reliability": 21,
+    "isolation": 10,
+    "benchmark": 15,
+    "smoke": 5
+  },
+  "total_checks": 70,
+  "fresh_model_calls": 0,
+  "historical_examples_audited": 1156,
+  "historical_searches_audited": 12,
+  "replay_seeds": 3,
+  "replay_cache_hits": 4268,
+  "python_files_parsed": 20,
+  "documentation_links_verified": 55,
+  "source_sha256": {
+    "tools/prompt_bench/protocol.py": "4c1cdb651ac0aadbf54d45a224d90f2dbfe83b2d349cece16da3dc251c0cd6f0",
+    "tools/prompt_bench/run.py": "2a50da271c8e1fbd0b912775b1e4a3a3cfcc59d2e6be1e7126eebabd9d43a123",
+    "tools/prompt_bench/data.py": "b32deb8de88ee33610c1fa0fd484ec0a4530db13de1af0691de56941aa36b0a1",
+    "tools/prompt_bench/latency.py": "d4d960a85357a8be52ae064ec882db2c4e6c8a453b7a6bcb470adf008c85330f",
+    "tools/prompt_bench/workflow.py": "d8719d194c06ad466264a5d72dafeeb7410ea6919749a7c92113ce87c746eac7",
+    "tools/prompt_bench/verify.py": "5615a140c89256ec74064a5148729a88c7d8ac66dd9eb1aeb0362d70bf671554",
+    "tools/prompt_bench/test_protocol.py": "09b42918344ff57aabf7a67bea907a8493ec4ab229f05078b0dc81bc95dc7bc1",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/tasks.py": "8b9f7c500ea9bb6abda6c6d5955cafdb4f738f6760965eb210c986025a186102",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/prompts.py": "073cd9adcdafe727bd60774ec97edeefc5236cccfbde6e27c7404f0a3cd4d4ee",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/datasets.py": "f3618fc4bfb991a029a65ebe598ecc281d58d274d7ffef11b1cdf4fd58f5359f",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/harness.py": "d9b6646a84c6e7946e1985cd1fcae6a7cf5c29f9789bc14278661c6497918ceb",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/base.py": "27cd4b996bf984eeb768b7887bd1a5b23e3d875a834ebadea4a434e3951f6792",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/dro.py": "dd2104060e28d6952bd11108792fc0cf7d6304443aa91a0981e9c08dcb8dbb53",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/entropy.py": "af429ef2c4fb7410f8b12ff580f7461c9a5d6bd730c75476a664fd0869b7b6f9",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/gepa.py": "6426928ed5fb208c31b0b30509ae492dde660e426ba1a39a8ffb49ab602c9209",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/textgrad.py": "f4dc8d6eea03b6a3626f7e485c009090e7c76a49afc636314f21c286ccc09ab0",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/reflective.py": "f78813d1644d21eb7b3880547da130d657cbb2f6da32eaddd70bb6429603fa30",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/bayesopt.py": "292c73e35d7fc6fbc2a764008e62ff62aa6fb61782357ce1a97cb06a61c83c2a",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/bayesopt_emb.py": "c83e6411362e9d5fdd2cf967414ad73f53462783a5749542286cc9c6fe1ee57d",
+    "prompt_opt_harness/prompt_opt_harness/tests/test_tasks_and_dro.py": "6a80ea1f867ec817edabea1d6c01b48735b0daae318a92cc6d482b9661b6a7ee"
+  },
+  "git_actions": {
+    "staged": false,
+    "committed": false,
+    "pushed": false
+  },
+  "limitations": [
+    "No fresh model performance measurement",
+    "Legacy experiment execution is blocked without an explicit migration",
+    "Already tracked bytecode still needs commit cleanup"
+  ]
+}

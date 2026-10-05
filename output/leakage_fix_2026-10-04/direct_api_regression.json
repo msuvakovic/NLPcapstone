@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "kind": "Offline control-flow regression; artificial scores",
+  "conclusion": "Target feedback is rejected before calls; source-only selection is invariant.",
+  "records": [
+    {
+      "source_only": false,
+      "target_favors": "Base instruction",
+      "rejected": true
+    },
+    {
+      "source_only": false,
+      "target_favors": "Revised instruction",
+      "rejected": true
+    },
+    {
+      "source_only": true,
+      "target_favors": "Base instruction",
+      "selected": "Base instruction",
+      "source_score": 0.5
+    },
+    {
+      "source_only": true,
+      "target_favors": "Revised instruction",
+      "selected": "Base instruction",
+      "source_score": 0.5
+    }
+  ]
+}

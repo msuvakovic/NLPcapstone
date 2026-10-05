@@ -3,6 +3,38 @@
 Implements the harness from the capstone proposal: dataset loader, optimizer
 wrapper, OOD evaluator, logger/reporter.
 
+## Current data-isolation contract (October 4, 2026)
+
+`run_experiment` validates disjoint IDs and normalized texts before backend creation, then passes only `source.dev` to the optimizer. Final source and OOD sets are scored only after prompt selection. OPRO rejects any non-`None` `ood_examples` argument and ranks exclusively on source development scores. New run JSON includes `evaluation_protocol: source-dev-only-v1`. Its inherited DRO, regularized, SAPO and entropy wrappers share that target-input guard.
+
+`OracleOPRO` is disabled until separate target-development and final-test splits exist. `compare_runs.py` and `compare_nli.py` are now source-only mock pipeline checks; their historical target-score-based comparisons should not be interpreted as untouched OOD results.
+
+Run `python -B tests/test_data_isolation.py` to check the boundaries without model requests. From the repository root, `python -B tools/prompt_bench/replay_opro.py` verifies the repaired search using saved real responses with network access disabled. See the [root README](../../README.md) and [root log](../../log.txt) for results and provenance.
+
+## Scoring, retries and OPRO budgets (October 4, 2026)
+
+`evaluate()` and `evaluate_per_example()` share exact per-batch caching and complete-label parsing. Similar texts always get separate requests. Valid labels come from an explicit `TaskSpec`: Positive/Negative by default, or Entailment/Contradiction for binary NLI. Parsing is case-insensitive, with surrounding whitespace, optional matching quotes and one optional terminal period/exclamation mark. Explanations, partial words, multiple labels and labels from another task are invalid. Per-example predictions remain lowercase, with `INVALID` for malformed responses. Scoring never loads an embedding model.
+
+`LLMBackend.generate()` accepts successful responses even when slow; `LLM_SLOW_THRESHOLD` no longer triggers retries. `LLM_RETRIES` still controls failure retries (default 2). Every failed or successful attempt contributes to `calls`, request time and traces. Permanent HTTP client errors are not retried; SDK automatic retries are disabled. Failed traces have unknown token usage, and successful token counts remain local estimates. `wall_time` is summed request time; `backoff_time` records retry waits separately, not total experiment elapsed time.
+
+OPRO's `budget` is a per-search attempt cap, including retries and proposals, separate from final evaluation. It reserves whole scores before requesting proposals. If the initial score cannot fit, `CallBudgetExceeded` is raised before any request; if retries consume the allowance later, only fully scored candidates remain eligible. SAPO/entropy wrappers reserve their extra scoring requests. Custom backends must count every attempt in `stats.calls`, and custom scoring wrappers must implement `_evaluation_calls()` when they make extra calls. Other optimizer classes are not covered by OPRO's search guard.
+
+Run results expose `search_api_calls`, `evaluation_api_calls`, `failed_attempts`, `unknown_usage_attempts`, `backoff_time` and `scoring_protocol: exact-label-v2-explicit-task`. Costs include both search and evaluation backends, exclude earlier calls on reused backends, and keep failed-request tokens explicitly unmeasured. Historical logs retain their original semantics, including the earlier `exact-label-v1` marker.
+
+Run `python -B tests/test_harness_reliability.py` for 21 offline regressions. The [validation report](../../output/harness_reliability_2026-10-04/report.md) includes the saved-response replay; no fresh model inference was needed to validate these fixes. The entropy sampler's whitespace approximation remains an experiment, not genuine temperature-controlled sampling.
+
+## Explicit tasks and reproducible DRO subsets
+
+`Dataset.task` fixes the output schema independently of prompt wording. The NLI demo sets `BINARY_NLI`; other existing datasets default to `SENTIMENT`. The harness checks every dataset label before backend creation and passes the task through optimization, reflection, entropy scoring and final evaluation. `RunResult.task_spec` records the schema. Direct callers must pass the task explicitly for NLI:
+
+```python
+from prompt_opt_harness.tasks import BINARY_NLI
+optimizer = OPRO(backend, budget=100, task=BINARY_NLI)
+score = evaluate(backend, instruction, examples, task=BINARY_NLI)
+```
+
+The DRO wrapper now draws subsets from sorted source IDs using only the configured seed. Every candidate faces identical subsets, independent of instruction wording, input order or Python's process hash seed. Selected subset IDs are recorded in `optimizer_metadata.source_subset_ids`. This remains a source-subset robustness experiment, not a method trained on actual target domains. Run `python -B tests/test_tasks_and_dro.py` for eight offline invariance tests.
+
 ## Run it
 
 No API keys needed, uses a mock backend:
@@ -14,12 +46,13 @@ python3 tests/smoke_test.py
 
 ## What's actually built
 
-OPRO and EvoPrompt-lite are real implementations, both work against any
-`LLMBackend`. Zero-shot and human-written baselines are done. GEPA, MIPROv2,
-and TextGrad are not implemented, just stubbed in `optimizers/dspy_adapters.py`
-with notes on how to wire them up (they're DSPy teleprompters, need a
-`dspy.Signature`/`Module` and a metric function, different shape of work
-than OPRO/EvoPrompt).
+OPRO and EvoPrompt-lite work against `LLMBackend`; zero-shot and human-written
+baselines are implemented. Local GEPA and TextGrad classes are simplified
+experimental implementations, with additional experimental wrappers in
+`optimizers/`. Official GEPA 0.1.4 and an ESPO-inspired adaptation are integrated
+in the separate [controlled benchmark](../../tools/prompt_bench/README.md).
+`optimizers/dspy_adapters.py` contains integration notes/stubs, not that official
+standalone GEPA implementation.
 
 `OpenAIBackend`, `AnthropicBackend`, `GroqBackend`, `OllamaBackend` are real
 API wrappers. The harness itself (budget tracking, OOD eval, logging,
@@ -39,10 +72,8 @@ bigger bump but only on the source domain. Candidate generation is biased
 toward whichever fragment looks like the bigger dev-set win, same as what a
 real optimizer does when it's just chasing accuracy.
 
-Run `demo.py` a few times, it's seeded so the output doesn't change. OPRO
-converges on a prompt full of cinematography/plot language and posts a real
-OOD gap on amazon/tweets. Numbers from this backend are a pipeline check,
-not a result.
+The source-domain bonus deliberately simulates overfitting. Numbers from this
+backend are pipeline checks, not measured language-model performance.
 
 ## Running with a real model
 
@@ -119,6 +150,6 @@ harness's `evaluate()` like any other optimizer's output.
 
 ## Not done
 
-- Cross-model transfer (optimize on one model, eval on another)
+- Broad real-model transfer experiments; the harness already supports a separate evaluation backend
 - Reasoning/code tasks (GSM8K, MBPP, etc.) — demo is sentiment only
-- Oracle upper-bound baseline (optimizer run directly on each OOD domain)
+- Target-trained reference with separate target-development and final-test sets (the old oracle is disabled)

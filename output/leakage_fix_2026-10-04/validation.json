@@ -1,0 +1,14 @@
+[
+  {
+    "check": "isolation_tests",
+    "exit_code": 0
+  },
+  {
+    "check": "benchmark_tests",
+    "exit_code": 0
+  },
+  {
+    "check": "smoke_tests",
+    "exit_code": 0
+  }
+]

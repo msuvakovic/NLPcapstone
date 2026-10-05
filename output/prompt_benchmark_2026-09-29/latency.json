@@ -1,0 +1,1082 @@
+[
+  {
+    "repetition": 0,
+    "workers": 1,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 2.5223764999973355
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 2.3362943999964045
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 2.3644624999869848
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 2.4589317999925697
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.407999600007315
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.355319199996302
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 2.4622957999963546
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 2.3307340999890584
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 2.373638299992308
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.46811840000737
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.388551700001699
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 2.3639216999872588
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 2.4667610000033164
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 2.4889246999955503
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 2.7025630000134697
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 2.3757103999960236
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 2.338995400001295
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 2.366128800000297
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 2.381276499989326
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 2.373745799995959
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 2.3512423999927705
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 2.5232539999997243
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 2.365698199995677
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.613800299994182
+      }
+    ],
+    "wall_seconds": 58.190184300008696,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 58.18074449992855
+    }
+  },
+  {
+    "repetition": 0,
+    "workers": 2,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 2.3680724000005284
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 2.885150699992664
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 2.346818299993174
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 2.3367136000015307
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.4176862000022084
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.3790836999978637
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 5.50969079999777
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 5.633641999986139
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 2.35839809999743
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.376184300010209
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.5168477999977767
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 2.531033999999636
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 2.428289899995434
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 2.364325499991537
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 2.3485901999956695
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 2.342185100002098
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 2.368451799993636
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 2.3889753999974346
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 2.388845300010871
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 2.589851600001566
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 5.766877799993381
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 5.3782280000014
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 2.461740500002634
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.424875800003065
+      }
+    ],
+    "wall_seconds": 35.63258629999473,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 70.91055879996566
+    }
+  },
+  {
+    "repetition": 0,
+    "workers": 3,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 2.8616310999932466
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 2.3720821000024443
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 3.313352199998917
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 2.3900055999984033
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.412420100008603
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.377150400003302
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 2.36205740000878
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 2.401459299988346
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 2.413126800005557
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.384348500010674
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.424257699996815
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 2.3691438999958336
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 2.3925380000000587
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 2.384543099993607
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 2.54535179999948
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 2.379069199989317
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 2.396125100000063
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 2.4388497000036296
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 4.909184700009064
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 4.92871200000809
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 6.327172400007839
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 3.1923926000017673
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 3.3134090000094147
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.3808933999971487
+      }
+    ],
+    "wall_seconds": 24.167277000000468,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 69.6692761000304
+    }
+  },
+  {
+    "repetition": 0,
+    "workers": 4,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 4.284242300011101
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 3.846034399990458
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 3.2281202000012854
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 4.885199199998169
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.5266432000062196
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.377128200008883
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 2.3550736000033794
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 2.360111500005587
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 2.3940557000023546
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.4024160000117263
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.359379600005923
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 2.356236599996919
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 2.3544857000088086
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 2.380823600004078
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 10.68274200000451
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 10.634171700003208
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 9.9832802000019
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 9.944923999995808
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 2.416549200002919
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 2.3814951999956975
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 2.9034066000021994
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 2.8521222999988822
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 2.4076396000018576
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.3784738999966066
+      }
+    ],
+    "wall_seconds": 24.99851960000524,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 96.69475450005848
+    }
+  },
+  {
+    "repetition": 1,
+    "workers": 4,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 2.384668300001067
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 3.2017459999915445
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 2.816828199996962
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 3.5904638999927556
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.882277900003828
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.6818056000047363
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 2.763723600000958
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 2.6610100000107195
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 2.441502199988463
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.7805135999951744
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.9316150000086054
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 3.1579519000079017
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 2.3555053000018233
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 2.4009032000030857
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 2.4941721000068355
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 2.371338299999479
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 2.449819099987508
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 2.3972504999983357
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 2.335934200003976
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 2.5080452999973204
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 2.3931681999965804
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 2.392919999998412
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 2.3957599999994272
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.3782169000041904
+      }
+    ],
+    "wall_seconds": 16.669536600005813,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 63.16713929999969
+    }
+  },
+  {
+    "repetition": 1,
+    "workers": 3,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 3.170617800002219
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 2.606017600002815
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 3.6854751000064425
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 2.406990000003134
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.325596599999699
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.3584832000051392
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 8.840685599992867
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 8.590583700002753
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 9.9621019000042
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.8138980000076117
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.792916799997329
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 5.275383800006239
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 5.0123778999986826
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 6.316062699988834
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 2.4705986000044504
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 2.3407906999927945
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 2.36347399999795
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 2.3862298000021838
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 10.045433400009642
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 9.01312180000241
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 8.927259300005971
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 2.3961990999960108
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 2.4836691999953473
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.3416251000016928
+      }
+    ],
+    "wall_seconds": 37.40946189999522,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 110.92559170002642
+    }
+  },
+  {
+    "repetition": 1,
+    "workers": 2,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 2.4623133999994025
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 2.8384897999931127
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 2.3999429999967106
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 2.3761764999944717
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.362679699988803
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.362971499998821
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 2.4088618000096176
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 2.422135500004515
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 2.378455700003542
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.41554799998994
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.397032600012608
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 6.6894630000024335
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 5.215311100007966
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 2.3783827000006568
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 2.382515899997088
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 2.367425700009335
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 2.372890099999495
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 2.3837652999936836
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 2.321998600004008
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 2.3654198000003817
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 2.701044000001275
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 2.378243500003009
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 2.5001847999956226
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.31477630000154
+      }
+    ],
+    "wall_seconds": 33.295756899999105,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 65.19602830000804
+    }
+  },
+  {
+    "repetition": 1,
+    "workers": 1,
+    "rows": [
+      {
+        "id": "sst2:train:722",
+        "prediction": "Negative",
+        "seconds": 2.4933724000002258
+      },
+      {
+        "id": "sst2:train:777",
+        "prediction": "Positive",
+        "seconds": 2.4638642000063555
+      },
+      {
+        "id": "sst2:train:356",
+        "prediction": "Negative",
+        "seconds": 2.376252800007933
+      },
+      {
+        "id": "sst2:train:670",
+        "prediction": "Negative",
+        "seconds": 2.422460100002354
+      },
+      {
+        "id": "sst2:train:149",
+        "prediction": "Positive",
+        "seconds": 2.3340858000010485
+      },
+      {
+        "id": "sst2:train:764",
+        "prediction": "Negative",
+        "seconds": 2.343861700006528
+      },
+      {
+        "id": "sst2:train:638",
+        "prediction": "Positive",
+        "seconds": 2.379942600004142
+      },
+      {
+        "id": "sst2:train:221",
+        "prediction": "Negative",
+        "seconds": 2.44245289999526
+      },
+      {
+        "id": "sst2:train:262",
+        "prediction": "Negative",
+        "seconds": 2.3896595999976853
+      },
+      {
+        "id": "sst2:train:625",
+        "prediction": "Positive",
+        "seconds": 2.4093244000105187
+      },
+      {
+        "id": "sst2:train:672",
+        "prediction": "Negative",
+        "seconds": 2.3654019000096014
+      },
+      {
+        "id": "sst2:train:66",
+        "prediction": "Positive",
+        "seconds": 4.470804700002191
+      },
+      {
+        "id": "sst2:train:89",
+        "prediction": "Positive",
+        "seconds": 4.5901513999997405
+      },
+      {
+        "id": "sst2:train:867",
+        "prediction": "Negative",
+        "seconds": 2.3762615000014193
+      },
+      {
+        "id": "sst2:train:54",
+        "prediction": "Negative",
+        "seconds": 2.3595646000030683
+      },
+      {
+        "id": "sst2:train:428",
+        "prediction": "Positive",
+        "seconds": 2.4698505999986082
+      },
+      {
+        "id": "sst2:train:504",
+        "prediction": "Positive",
+        "seconds": 2.362804300006246
+      },
+      {
+        "id": "sst2:train:308",
+        "prediction": "Negative",
+        "seconds": 2.3946635000029346
+      },
+      {
+        "id": "sst2:train:136",
+        "prediction": "Negative",
+        "seconds": 2.4027407999965362
+      },
+      {
+        "id": "sst2:train:649",
+        "prediction": "Negative",
+        "seconds": 4.893440900006681
+      },
+      {
+        "id": "sst2:train:379",
+        "prediction": "Negative",
+        "seconds": 2.846255900003598
+      },
+      {
+        "id": "sst2:train:644",
+        "prediction": "Positive",
+        "seconds": 2.5429111999983434
+      },
+      {
+        "id": "sst2:train:354",
+        "prediction": "Positive",
+        "seconds": 2.383666900001117
+      },
+      {
+        "id": "sst2:train:13",
+        "prediction": "Negative",
+        "seconds": 2.3249358000030043
+      }
+    ],
+    "wall_seconds": 64.84189680000418,
+    "resources": {
+      "actual_calls": 24,
+      "failed_attempts": 0,
+      "cache_hits": 0,
+      "input_tokens": 1489,
+      "output_tokens": 48,
+      "request_seconds": 64.83873050006514
+    }
+  }
+]

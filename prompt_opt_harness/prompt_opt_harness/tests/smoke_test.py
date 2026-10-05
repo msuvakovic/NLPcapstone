@@ -38,7 +38,7 @@ def test_budget_is_respected():
     for budget in (10, 20, 40):
         r = run_experiment("OPRO", OPRO, backend_factory(dataset), dataset, budget=budget, seed=0)
         search_calls = r.api_calls - 22  # 22 = fixed post-hoc eval (6 test + 8 + 8 OOD)
-        assert search_calls <= budget + len(dataset.source.dev), (budget, search_calls)
+        assert search_calls <= budget, (budget, search_calls)
     print("test_budget_is_respected: OK")
 
 

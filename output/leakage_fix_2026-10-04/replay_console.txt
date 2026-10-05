@@ -1,0 +1,83 @@
+  Evaluated 64 examples; evaluation usage 64/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 128/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 192/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 256/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 320/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 384/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 448/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 512/512; session requests=0, failed attempts=0
+  Evaluated 900 examples; evaluation usage 900/900; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 64/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 128/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 192/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 256/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 320/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 384/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 448/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 512/512; session requests=0, failed attempts=0
+  Evaluated 900 examples; evaluation usage 900/900; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 64/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 128/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 192/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 256/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 320/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 384/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 448/512; session requests=0, failed attempts=0
+  Evaluated 64 examples; evaluation usage 512/512; session requests=0, failed attempts=0
+  Evaluated 900 examples; evaluation usage 900/900; session requests=0, failed attempts=0
+{
+  "result": "PASS",
+  "model": "gemma4:31b-cloud",
+  "kind": "Post-fix cache-only real-response replay",
+  "source_artifacts": "C:\\Users\\alber\\NLPcapstone\\output\\prompt_benchmark_2026-09-29",
+  "runs": [
+    {
+      "seed": 0,
+      "selected_prompt": "Classify the sentiment of the following text as Positive or Negative.",
+      "accuracy": {
+        "sst2": 0.9566666666666667,
+        "amazon": 0.95,
+        "tweets": 0.9566666666666667
+      },
+      "source_validation_accuracy": 0.96875,
+      "search_evaluations": 512,
+      "proposal_calls": 14
+    },
+    {
+      "seed": 1,
+      "selected_prompt": "Classify the sentiment of the following text as Positive or Negative.",
+      "accuracy": {
+        "sst2": 0.9566666666666667,
+        "amazon": 0.95,
+        "tweets": 0.9566666666666667
+      },
+      "source_validation_accuracy": 0.96875,
+      "search_evaluations": 512,
+      "proposal_calls": 10
+    },
+    {
+      "seed": 2,
+      "selected_prompt": "Classify the sentiment of the following text as Positive or Negative.",
+      "accuracy": {
+        "sst2": 0.9566666666666667,
+        "amazon": 0.95,
+        "tweets": 0.9566666666666667
+      },
+      "source_validation_accuracy": 0.96875,
+      "search_evaluations": 512,
+      "proposal_calls": 8
+    }
+  ],
+  "transport": {
+    "actual_calls": 0,
+    "failed_attempts": 0,
+    "cache_hits": 4268,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "request_seconds": 0.0
+  },
+  "source_hashes": {
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/harness.py": "514b89dded55a5a675c1c521ce7e10dc6700e2c4809fdbb4410d46d763a53ae0",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/opro.py": "42f3f3591676f22c7b1809e8e86e288cdb06e1c4aad5c061da6bff3b3c1e0268"
+  }
+}

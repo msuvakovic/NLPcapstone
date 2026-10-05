@@ -1,0 +1,20 @@
+Offline FakeClient test: emitted request counters are simulated, not model requests.
+
+..........START SEARCH single_opro_0
+DONE SEARCH single_opro_0 candidates 1 val 0.5 evals 2 seconds 2.3
+SESSION RESOURCES {'actual_calls': 2, 'cache_hits': 0, 'failed_attempts': 0, 'input_tokens': 0, 'output_tokens': 0, 'request_seconds': 0.0}
+START FINAL 1 / 2 prompt 3544e528e123
+FINAL PROGRESS 3544e528e123 6 / 6
+DONE FINAL 3544e528e123
+START FINAL 2 / 2 prompt 95031222bb05
+FINAL PROGRESS 95031222bb05 6 / 6
+DONE FINAL 95031222bb05
+SESSION RESOURCES {'actual_calls': 12, 'cache_hits': 0, 'failed_attempts': 0, 'input_tokens': 0, 'output_tokens': 0, 'request_seconds': 0.0}
+RESUME: already completed single_opro_0
+SESSION RESOURCES {'actual_calls': 0, 'cache_hits': 0, 'failed_attempts': 0, 'input_tokens': 0, 'output_tokens': 0, 'request_seconds': 0.0}
+SESSION RESOURCES {'actual_calls': 0, 'cache_hits': 0, 'failed_attempts': 0, 'input_tokens': 0, 'output_tokens': 0, 'request_seconds': 0.0}
+.
+----------------------------------------------------------------------
+Ran 11 tests in 2.888s
+
+OK

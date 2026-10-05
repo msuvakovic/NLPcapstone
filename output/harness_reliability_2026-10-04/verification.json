@@ -1,0 +1,36 @@
+{
+  "result": "PASS",
+  "kind": "Offline regression and saved-response compatibility validation",
+  "checks": {
+    "reliability_tests": 21,
+    "isolation_tests": 10,
+    "benchmark_tests": 15,
+    "smoke_checks": 5
+  },
+  "total_checks": 51,
+  "fresh_model_requests": 0,
+  "replay": {
+    "seeds": 3,
+    "cache_hits": 4268,
+    "predictions_match": true
+  },
+  "local_documentation_links_checked": 47,
+  "source_sha256": {
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/budget.py": "266bbab6372e9adae35233eb5fd0addb79f077da6e57510f71d957dcfb547714",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/base.py": "19d7f828eb28f358fad8928cd765344ee0eb65900d38e7e8568df35a856f7624",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/opro.py": "8ff59563a5f4b7c0c6dd244072705cac2af9640356336effcf7c697ea0e8d490",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/sapo.py": "aeacfba2ed18231522b3885a8a767330df534170d2288c6c1113b157613e0a9b",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/optimizers/entropy.py": "d33c64aea80dfca17dbc8842ff8c7e8e750afdb5dbaf13cbc07459e037846037",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/llm_backends.py": "26013809c5edab74eefa957728df54bc0648a4e25177cbbd3a6f980185ccf1d9",
+    "prompt_opt_harness/prompt_opt_harness/prompt_opt_harness/harness.py": "978ffa1f43a5214480ec930be86c6f6960c3c5ce40b8c46c80a51b801cd1c4c9",
+    "prompt_opt_harness/prompt_opt_harness/tests/test_harness_reliability.py": "b55802957786511700c3c14c5d213c4b0089d0de68c098c4f2c43d04dabc3722",
+    "tools/prompt_bench/methods.py": "250e7bf22a241bdbe1d4595610c8165a80c7facca821f7b4ff0a6bd12c073a68",
+    "tools/prompt_bench/leakage_check.py": "8773b286fc66d26b843938dd82de63babeb74232daa7a1deac8f097b3835c83e",
+    "tools/prompt_bench/replay_opro.py": "700f714c2291d83437b998cd6f5768990fd1f5c51e75d77ed41ae02e5e5d9478"
+  },
+  "limitations": [
+    "No new real-model accuracy or speed measurement",
+    "Hard search budget scope: OPRO and inherited wrappers",
+    "Legacy token totals are estimates and omit unknown failed-request usage"
+  ]
+}

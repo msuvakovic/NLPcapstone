@@ -1,0 +1,159 @@
+{
+  "scope": "September 21 saved individual runs with classification traces",
+  "caveat": "Exact replay is strong evidence of mock provenance, not model performance.",
+  "files": 20,
+  "all_files_match": true,
+  "classification_traces": 1186,
+  "exact_mock_matches": 1186,
+  "records": [
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/cross-model_(opro)_20260921T191719Z.json",
+      "classification_traces": 44,
+      "exact_mock_matches": 44,
+      "all_match": true,
+      "reported_wall_seconds": 0.0009644998935982585
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/cross-model_(opro)_20260921T191919Z.json",
+      "classification_traces": 66,
+      "exact_mock_matches": 66,
+      "all_match": true,
+      "reported_wall_seconds": 0.000777600216679275
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/dro-opro_20260921T191718Z.json",
+      "classification_traces": 66,
+      "exact_mock_matches": 66,
+      "all_match": true,
+      "reported_wall_seconds": 0.0011990003986284137
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/dro-opro_20260921T191919Z.json",
+      "classification_traces": 66,
+      "exact_mock_matches": 66,
+      "all_match": true,
+      "reported_wall_seconds": 0.0008428002474829555
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/evoprompt-lite_20260921T191718Z.json",
+      "classification_traces": 58,
+      "exact_mock_matches": 58,
+      "all_match": true,
+      "reported_wall_seconds": 0.001671800040639937
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/evoprompt-lite_20260921T191919Z.json",
+      "classification_traces": 58,
+      "exact_mock_matches": 58,
+      "all_match": true,
+      "reported_wall_seconds": 0.000861199339851737
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/gepa_20260921T191718Z.json",
+      "classification_traces": 58,
+      "exact_mock_matches": 58,
+      "all_match": true,
+      "reported_wall_seconds": 0.0013500003842636943
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/gepa_20260921T191919Z.json",
+      "classification_traces": 58,
+      "exact_mock_matches": 58,
+      "all_match": true,
+      "reported_wall_seconds": 0.0007856000447645783
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/human-written_20260921T191718Z.json",
+      "classification_traces": 28,
+      "exact_mock_matches": 28,
+      "all_match": true,
+      "reported_wall_seconds": 0.0005598000716418028
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/human-written_20260921T191919Z.json",
+      "classification_traces": 28,
+      "exact_mock_matches": 28,
+      "all_match": true,
+      "reported_wall_seconds": 0.00028059969190508127
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/opro_20260921T191718Z.json",
+      "classification_traces": 66,
+      "exact_mock_matches": 66,
+      "all_match": true,
+      "reported_wall_seconds": 0.0013610994210466743
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/opro_20260921T191919Z.json",
+      "classification_traces": 88,
+      "exact_mock_matches": 88,
+      "all_match": true,
+      "reported_wall_seconds": 0.0010625999420881271
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/reg-opro_20260921T191718Z.json",
+      "classification_traces": 88,
+      "exact_mock_matches": 88,
+      "all_match": true,
+      "reported_wall_seconds": 0.0021884003654122353
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/reg-opro_20260921T191919Z.json",
+      "classification_traces": 66,
+      "exact_mock_matches": 66,
+      "all_match": true,
+      "reported_wall_seconds": 0.00081289978697896
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/sapo-opro_20260921T191719Z.json",
+      "classification_traces": 88,
+      "exact_mock_matches": 88,
+      "all_match": true,
+      "reported_wall_seconds": 0.001927399542182684
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/sapo-opro_20260921T191919Z.json",
+      "classification_traces": 88,
+      "exact_mock_matches": 88,
+      "all_match": true,
+      "reported_wall_seconds": 0.0011489001335576177
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/textgrad_20260921T191718Z.json",
+      "classification_traces": 58,
+      "exact_mock_matches": 58,
+      "all_match": true,
+      "reported_wall_seconds": 0.0012155002914369106
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/textgrad_20260921T191919Z.json",
+      "classification_traces": 58,
+      "exact_mock_matches": 58,
+      "all_match": true,
+      "reported_wall_seconds": 0.0009166999952867627
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/zero-shot_20260921T191718Z.json",
+      "classification_traces": 28,
+      "exact_mock_matches": 28,
+      "all_match": true,
+      "reported_wall_seconds": 0.001458400278352201
+    },
+    {
+      "file": "prompt_opt_harness/prompt_opt_harness/logs/zero-shot_20260921T191919Z.json",
+      "classification_traces": 28,
+      "exact_mock_matches": 28,
+      "all_match": true,
+      "reported_wall_seconds": 0.0003362002316862345
+    }
+  ],
+  "real_sweep": {
+    "file": "prompt_opt_harness/logs/compare_real_ollama_multiseed_20260915T203141Z.json",
+    "runs": 25,
+    "unchanged_base_prompt": 24,
+    "recorded_backends": [
+      "Ollama"
+    ],
+    "interpretation": "Gaps for unchanged prompts cannot be attributed to newly learned prompt rules; domain difficulty and sampling remain possible explanations."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "model": "gemma4:31b-cloud",
+  "workers": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "repetitions": 2,
+  "sample_ids": [
+    "sst2:train:722",
+    "sst2:train:777",
+    "sst2:train:356",
+    "sst2:train:670",
+    "sst2:train:149",
+    "sst2:train:764",
+    "sst2:train:638",
+    "sst2:train:221",
+    "sst2:train:262",
+    "sst2:train:625",
+    "sst2:train:672",
+    "sst2:train:66",
+    "sst2:train:89",
+    "sst2:train:867",
+    "sst2:train:54",
+    "sst2:train:428",
+    "sst2:train:504",
+    "sst2:train:308",
+    "sst2:train:136",
+    "sst2:train:649",
+    "sst2:train:379",
+    "sst2:train:644",
+    "sst2:train:354",
+    "sst2:train:13"
+  ],
+  "prompt_hash": "3544e528e123fff1aab2fbc1c1822c25b6e1a27598244e6c8d342d420c9129a0",
+  "order": "ascending then descending",
+  "client_cache": false
+}

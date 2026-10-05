@@ -13,6 +13,7 @@ from .ensemble import EnsembleOptimizer
 from .bayesopt import CostAwareBayesOpt
 from .bayesopt_emb import EmbeddingBayesOpt
 from .oracle import OracleOPRO
+from .entropy import create_entropy_regularized_optimizer
 
 __all__ = [
     "Candidate",
@@ -32,4 +33,5 @@ __all__ = [
     "CostAwareBayesOpt",
     "EmbeddingBayesOpt",
     "OracleOPRO",
+    "create_entropy_regularized_optimizer",
 ]

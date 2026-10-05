@@ -1,12 +1,27 @@
 from __future__ import annotations
-import math
 import random
 from typing import Type
 
-from .base import Candidate, Optimizer, evaluate_per_example
+from .base import Optimizer, evaluate_per_example
+
+
+def source_subsets(dev_examples, seed, num_splits, split_ratio):
+    """The same source IDs face every candidate, independent of process hash seed."""
+    ids = sorted(ex.id for ex in dev_examples)
+    if len(set(ids)) != len(ids):
+        raise ValueError('DRO requires unique source example IDs')
+    if not ids:
+        return ()
+    rng = random.Random(seed)
+    size = max(1, int(len(ids) * split_ratio))
+    return tuple(tuple(rng.sample(ids, size)) for _ in range(num_splits))
 
 def create_dro_optimizer(base_optimizer_cls: Type[Optimizer], num_splits: int = 3, split_ratio: float = 0.5) -> Type[Optimizer]:
-    """Creates a DRO-wrapped optimizer class that overrides the dev_score method to compute worst-case accuracy across random splits."""
+    """Worst accuracy over fixed source subsets; not actual domain-group DRO."""
+    if not isinstance(num_splits, int) or isinstance(num_splits, bool) or num_splits < 1:
+        raise ValueError('num_splits must be a positive integer')
+    if not 0 < split_ratio <= 1:
+        raise ValueError('split_ratio must be in (0, 1]')
     
     class DROWrapper(base_optimizer_cls):
         name = f"DRO-{base_optimizer_cls.name}"
@@ -15,22 +30,11 @@ def create_dro_optimizer(base_optimizer_cls: Type[Optimizer], num_splits: int = 
             if not dev_examples:
                 return 0.0
             
-            # Evaluate all examples
-            per_example_results = evaluate_per_example(self.backend, instruction, dev_examples)
-            
-            # Create random splits (bootstrapping without replacement for simplicity)
-            split_size = max(1, int(len(dev_examples) * split_ratio))
-            
-            # Use self.seed for reproducible splits per run, combined with some hash of the instruction
-            # so different instructions get different splits, but deterministically
-            rng = random.Random(self.seed + hash(instruction))
-            
-            split_scores = []
-            for _ in range(num_splits):
-                sampled = rng.sample(per_example_results, split_size)
-                correct_count = sum(1 for res in sampled if res[2])
-                split_scores.append(correct_count / split_size)
-                
-            return min(split_scores)
+            # Validate and choose the subsets before making any model requests.
+            self.source_subset_ids = source_subsets(dev_examples, self.seed, num_splits, split_ratio)
+            rows = evaluate_per_example(self.backend, instruction, dev_examples, self.task)
+            correctness = {ex.id: correct for ex, _, correct in rows}
+            return min(sum(correctness[eid] for eid in group) / len(group)
+                       for group in self.source_subset_ids)
 
     return DROWrapper

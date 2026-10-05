@@ -1,0 +1,253 @@
+{
+  "protocol": {
+    "model": "gemma4:31b-cloud",
+    "instruction": "Classify the sentiment of the following text as Positive or Negative.",
+    "temperature": 0.0,
+    "seed": 12345,
+    "caps": [
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "reference_cap": 16,
+    "workers": 4,
+    "selection_ids": [
+      "sst2:train:777",
+      "sst2:train:149",
+      "sst2:train:638",
+      "sst2:train:625",
+      "sst2:train:66",
+      "sst2:train:89",
+      "sst2:train:428",
+      "sst2:train:504",
+      "sst2:train:308",
+      "sst2:train:644",
+      "sst2:train:354",
+      "sst2:train:13",
+      "sst2:train:722",
+      "sst2:train:356",
+      "sst2:train:670",
+      "sst2:train:764",
+      "sst2:train:221",
+      "sst2:train:262",
+      "sst2:train:672",
+      "sst2:train:867",
+      "sst2:train:54",
+      "sst2:train:136",
+      "sst2:train:649",
+      "sst2:train:379"
+    ],
+    "confirmation_ids": [
+      "sst2:val:755",
+      "sst2:val:463",
+      "sst2:val:621",
+      "sst2:val:871",
+      "sst2:val:492",
+      "sst2:val:447",
+      "sst2:val:7",
+      "sst2:val:615",
+      "sst2:val:224",
+      "sst2:val:711",
+      "sst2:val:291",
+      "sst2:val:840",
+      "sst2:val:835",
+      "sst2:val:53",
+      "sst2:val:278",
+      "sst2:val:604",
+      "sst2:val:219",
+      "sst2:val:854",
+      "sst2:val:298",
+      "sst2:val:445",
+      "sst2:val:474",
+      "sst2:val:733",
+      "sst2:val:678",
+      "sst2:val:787",
+      "sst2:val:618",
+      "sst2:val:247",
+      "sst2:val:309",
+      "sst2:val:422",
+      "sst2:val:411",
+      "sst2:val:727",
+      "sst2:val:349",
+      "sst2:val:103",
+      "sst2:val:697",
+      "sst2:val:206",
+      "sst2:val:637",
+      "sst2:val:616",
+      "sst2:val:57",
+      "sst2:val:263",
+      "sst2:val:369",
+      "sst2:val:267",
+      "sst2:val:538",
+      "sst2:val:26",
+      "sst2:val:241",
+      "sst2:val:809",
+      "sst2:val:190",
+      "sst2:val:433",
+      "sst2:val:179",
+      "sst2:val:498",
+      "sst2:val:470",
+      "sst2:val:127",
+      "sst2:val:167",
+      "sst2:val:751",
+      "sst2:val:102",
+      "sst2:val:65",
+      "sst2:val:804",
+      "sst2:val:569",
+      "sst2:val:514",
+      "sst2:val:773",
+      "sst2:val:481",
+      "sst2:val:245",
+      "sst2:val:194",
+      "sst2:val:296",
+      "sst2:val:844",
+      "sst2:val:289"
+    ],
+    "split_hash": "9f0b3f3513f75ca9ac10ef99a5a9cd5ce0f37c97f3b45932d8d56cfcbd3711ac",
+    "selection_rule": "Smallest cap with valid labels, identical reference predictions and no accuracy/F1 loss. Also report smallest such cap with no length finishes.",
+    "confirmation_rule": "Freeze both selected caps before confirmation; compare against cap 16.",
+    "request_limit": 400,
+    "scope": "Base-prompt binary sentiment classification only; no optimizer proposal/reflection changes.",
+    "timing": "Randomized interleaved caps, four workers. Successful-request latency only; provider caching/load uncontrolled. Application cache is new for this experiment; resumes reuse original records."
+  },
+  "selection": {
+    "1": {
+      "n": 24,
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.916083916083916,
+      "invalid": 0,
+      "limit_finishes": 24,
+      "matches_baseline": 24,
+      "completion_tokens": 1.0,
+      "prompt_tokens": 62.041666666666664,
+      "median_seconds": 2.393278650008142,
+      "p95_seconds": 16.590341829962554,
+      "returned_models": {
+        "gemma4:31b": 24
+      }
+    },
+    "2": {
+      "n": 24,
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.916083916083916,
+      "invalid": 0,
+      "limit_finishes": 24,
+      "matches_baseline": 24,
+      "completion_tokens": 2.0,
+      "prompt_tokens": 62.041666666666664,
+      "median_seconds": 2.4270742000080645,
+      "p95_seconds": 11.879853929983785,
+      "returned_models": {
+        "gemma4:31b": 24
+      }
+    },
+    "4": {
+      "n": 24,
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.916083916083916,
+      "invalid": 0,
+      "limit_finishes": 0,
+      "matches_baseline": 24,
+      "completion_tokens": 2.0,
+      "prompt_tokens": 62.041666666666664,
+      "median_seconds": 2.407936800009338,
+      "p95_seconds": 6.258750104979844,
+      "returned_models": {
+        "gemma4:31b": 24
+      }
+    },
+    "8": {
+      "n": 24,
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.916083916083916,
+      "invalid": 0,
+      "limit_finishes": 0,
+      "matches_baseline": 24,
+      "completion_tokens": 2.0,
+      "prompt_tokens": 62.041666666666664,
+      "median_seconds": 2.401315449969843,
+      "p95_seconds": 12.133243479990037,
+      "returned_models": {
+        "gemma4:31b": 24
+      }
+    },
+    "16": {
+      "n": 24,
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.916083916083916,
+      "invalid": 0,
+      "limit_finishes": 0,
+      "matches_baseline": 24,
+      "completion_tokens": 2.0,
+      "prompt_tokens": 62.041666666666664,
+      "median_seconds": 2.498744300013641,
+      "p95_seconds": 6.023897525016218,
+      "returned_models": {
+        "gemma4:31b": 24
+      }
+    }
+  },
+  "chosen": {
+    "minimum_valid_cap": 1,
+    "minimum_natural_stop_cap": 4,
+    "reference_cap": 16
+  },
+  "confirmation": {
+    "1": {
+      "n": 64,
+      "accuracy": 0.96875,
+      "macro_f1": 0.9687194525904204,
+      "invalid": 0,
+      "limit_finishes": 64,
+      "matches_baseline": 64,
+      "completion_tokens": 1.0,
+      "prompt_tokens": 62.796875,
+      "median_seconds": 2.517945699975826,
+      "p95_seconds": 12.004561750005813,
+      "returned_models": {
+        "gemma4:31b": 64
+      }
+    },
+    "4": {
+      "n": 64,
+      "accuracy": 0.96875,
+      "macro_f1": 0.9687194525904204,
+      "invalid": 0,
+      "limit_finishes": 0,
+      "matches_baseline": 64,
+      "completion_tokens": 2.0,
+      "prompt_tokens": 62.796875,
+      "median_seconds": 2.460764699993888,
+      "p95_seconds": 11.303952070017107,
+      "returned_models": {
+        "gemma4:31b": 64
+      }
+    },
+    "16": {
+      "n": 64,
+      "accuracy": 0.96875,
+      "macro_f1": 0.9687194525904204,
+      "invalid": 0,
+      "limit_finishes": 0,
+      "matches_baseline": 64,
+      "completion_tokens": 2.0,
+      "prompt_tokens": 62.796875,
+      "median_seconds": 2.457294699997874,
+      "p95_seconds": 13.426952530012922,
+      "returned_models": {
+        "gemma4:31b": 64
+      }
+    }
+  },
+  "minimum_valid_cap_confirmed": true,
+  "transport_this_execution": {
+    "actual_calls": 312,
+    "failed_attempts": 0,
+    "cache_hits": 0,
+    "input_tokens": 19502,
+    "output_tokens": 536,
+    "request_seconds": 1285.2839197993162
+  }
+}

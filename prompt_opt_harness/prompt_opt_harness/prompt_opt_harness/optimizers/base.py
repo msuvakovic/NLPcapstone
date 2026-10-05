@@ -1,9 +1,11 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from typing import List, Optional, Tuple, Dict
 
 from ..prompts import build_classification_prompt
+from ..tasks import SENTIMENT, TaskSpec
 
 
 @dataclass
@@ -14,65 +16,50 @@ class Candidate:
     ood_score: Optional[float] = None
 
 
-def evaluate(backend, instruction: str, examples) -> float:
-    if not examples:
-        return 0.0
-    correct = 0
-    # simple dedupe/cache to avoid re-sending identical prompts
+def parse_label(raw: str, task: TaskSpec = SENTIMENT) -> str:
+    """Accept a complete label, optionally quoted or followed by one ./!.
+
+    Keep lowercase predictions for existing reflection consumers. Explanations,
+    partial words and multiple labels are invalid, even if their prefix matches.
+    """
+    labels = '|'.join(re.escape(label.casefold()) for label in task.labels)
+    match = re.fullmatch(rf'''(?:({labels})|(["'])({labels})\2)[.!]?''', raw.strip().casefold())
+    return (match[1] or match[3]) if match else 'INVALID'
+
+
+def evaluate_per_example(backend, instruction: str, examples, task: TaskSpec = SENTIMENT) -> List[Tuple[object, str, bool]]:
+    """Score exact prompts once per batch; never reuse a similar text's answer."""
+    examples = list(examples)
+    allowed = {label.casefold() for label in task.labels}
+    if any(ex.label.strip().casefold() not in allowed for ex in examples):
+        raise ValueError(f'Example label outside task {task.name}; pass the explicit TaskSpec')
+    prompts = [build_classification_prompt(instruction, ex.text, task) for ex in examples]
+    # Budgeted optimizers must afford the whole batch before sending anything.
+    if hasattr(backend, 'require_calls'):
+        backend.require_calls(len(set(prompts)))
     cache = {}
-    # Try to enable embedding-based semantic dedupe if sentence-transformers is available.
-    embedder = None
-    np = None
-    try:
-        from sentence_transformers import SentenceTransformer
-        import numpy as np
-        embedder = SentenceTransformer("all-MiniLM-L6-v2")
-    except Exception:
-        embedder = None
-    embeddings = []
-    emb_prompts = []
-    sim_threshold = 0.92
-    for ex in examples:
-        prompt = build_classification_prompt(instruction, ex.text)
-        if prompt in cache:
-            prediction = cache[prompt]
-        else:
-            # semantic dedupe: check previous prompts for high similarity
-            if embedder is not None:
-                try:
-                    v = embedder.encode(prompt, convert_to_numpy=True)
-                    if embeddings:
-                        sims = np.dot(embeddings, v) / (np.linalg.norm(embeddings, axis=1) * (np.linalg.norm(v) + 1e-12))
-                        best_idx = int(np.argmax(sims))
-                        if sims[best_idx] >= sim_threshold:
-                            # reuse prediction from most similar prompt
-                            prediction = cache[emb_prompts[best_idx]]
-                            cache[prompt] = prediction
-                            if prediction.startswith(ex.label.lower()[:3]):
-                                correct += 1
-                            continue
-                except Exception:
-                    # fall back to exact dedupe
-                    pass
-            prediction = backend.generate(prompt).strip().lower()
-            cache[prompt] = prediction
-            if embedder is not None:
-                try:
-                    embeddings.append(v)
-                    emb_prompts.append(prompt)
-                except Exception:
-                    pass
-        if prediction.startswith(ex.label.lower()[:3]):
-            correct += 1
-    return correct / len(examples)
+    results = []
+    for ex, prompt in zip(examples, prompts):
+        if prompt not in cache:
+            cache[prompt] = parse_label(backend.generate(prompt), task)
+        prediction = cache[prompt]
+        correct = prediction != 'INVALID' and prediction == ex.label.strip().casefold()
+        results.append((ex, prediction, correct))
+    return results
+
+
+def evaluate(backend, instruction: str, examples, task: TaskSpec = SENTIMENT) -> float:
+    rows = evaluate_per_example(backend, instruction, examples, task)
+    return sum(correct for _, _, correct in rows) / len(rows) if rows else 0.0
 
 
 class Optimizer:
     name = "base"
 
-    def __init__(self, backend, budget: int, seed: int = 0):
+    def __init__(self, backend, budget: int, seed: int = 0, task: TaskSpec = SENTIMENT):
         self.backend = backend
-        self.budget = budget  # max LLM calls for this run
+        self.task = task
+        self.budget = budget  # OPRO caps search attempts; final evaluation is separate.
         self.seed = seed
         self.history: List[Candidate] = []
 
@@ -93,56 +80,16 @@ class Optimizer:
         ood_score = self.ood_rank_score(dev_score, ood_accs)
         return (1.0 - progress) * dev_score + progress * ood_score
 
+    def _evaluation_calls(self, dev_examples) -> int:
+        """Requests for a full score, excluding unpredictable retries.
+
+        Sampling/paraphrase wrappers must include their extra requests. Adapters
+        with a separate evaluator budget can override this reservation.
+        """
+        return len({ex.text for ex in dev_examples})
+
     def _dev_score(self, instruction: str, dev_examples) -> float:
-        return evaluate(self.backend, instruction, dev_examples)
+        return evaluate(self.backend, instruction, dev_examples, self.task)
 
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
         raise NotImplementedError
-
-def evaluate_per_example(backend, instruction: str, examples) -> List[Tuple[object, str, bool]]:
-    if not examples:
-        return []
-    results = []
-    cache = {}
-    # same embedding dedupe strategy as evaluate()
-    embedder = None
-    np = None
-    try:
-        from sentence_transformers import SentenceTransformer
-        import numpy as np
-        embedder = SentenceTransformer("all-MiniLM-L6-v2")
-    except Exception:
-        embedder = None
-    embeddings = []
-    emb_prompts = []
-    sim_threshold = 0.92
-    for ex in examples:
-        prompt = build_classification_prompt(instruction, ex.text)
-        if prompt in cache:
-            prediction = cache[prompt]
-        else:
-            if embedder is not None:
-                try:
-                    v = embedder.encode(prompt, convert_to_numpy=True)
-                    if embeddings:
-                        sims = np.dot(embeddings, v) / (np.linalg.norm(embeddings, axis=1) * (np.linalg.norm(v) + 1e-12))
-                        best_idx = int(np.argmax(sims))
-                        if sims[best_idx] >= sim_threshold:
-                            prediction = cache[emb_prompts[best_idx]]
-                            cache[prompt] = prediction
-                            is_correct = prediction.startswith(ex.label.lower()[:3])
-                            results.append((ex, prediction, is_correct))
-                            continue
-                except Exception:
-                    pass
-            prediction = backend.generate(prompt).strip().lower()
-            cache[prompt] = prediction
-            if embedder is not None:
-                try:
-                    embeddings.append(v)
-                    emb_prompts.append(prompt)
-                except Exception:
-                    pass
-        is_correct = prediction.startswith(ex.label.lower()[:3])
-        results.append((ex, prediction, is_correct))
-    return results

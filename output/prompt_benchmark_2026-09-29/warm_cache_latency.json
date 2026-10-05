@@ -1,0 +1,110 @@
+{
+  "workers": 4,
+  "rows": [
+    {
+      "id": "sst2:train:722",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:777",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:356",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:670",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:149",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:764",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:638",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:221",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:262",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:625",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:672",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:66",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:89",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:867",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:54",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:428",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:504",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:308",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:136",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:649",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:379",
+      "prediction": "Negative"
+    },
+    {
+      "id": "sst2:train:644",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:354",
+      "prediction": "Positive"
+    },
+    {
+      "id": "sst2:train:13",
+      "prediction": "Negative"
+    }
+  ],
+  "wall_seconds": 0.005492800002684817,
+  "resources": {
+    "actual_calls": 0,
+    "failed_attempts": 0,
+    "cache_hits": 24,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "request_seconds": 0.0
+  }
+}

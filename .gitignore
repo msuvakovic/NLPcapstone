@@ -1,0 +1,9 @@
+.benchmark_deps/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.venv/
+tmp/
+output/**/*.sqlite*
