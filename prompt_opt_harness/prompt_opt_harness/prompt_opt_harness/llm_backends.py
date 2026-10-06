@@ -30,10 +30,12 @@ def _with_retries(call, max_retries: int = 5, base_delay: float = 2.0):
             return call()
         except Exception as e:
             status = getattr(e, "status_code", None) or getattr(getattr(e, "response", None), "status_code", None)
-            if status != 429 or attempt == max_retries:
+            is_timeout = "timeout" in type(e).__name__.lower()
+            if not (status == 429 or is_timeout) or attempt == max_retries:
                 raise
             delay = base_delay * (2 ** attempt)
-            print(f"Rate limited, retrying in {delay:.0f}s...")
+            reason = "Timed out" if is_timeout else "Rate limited"
+            print(f"{reason}, retrying in {delay:.0f}s...")
             time.sleep(delay)
 
 
@@ -53,12 +55,13 @@ class LLMBackend(abc.ABC):
 
 
 class OpenAIBackend(LLMBackend):
-    def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0):
+    def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0, max_tokens: int = 512):
         super().__init__()
         import openai
         self.client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
         self.model = model
         self.temperature = temperature
+        self.max_tokens = max_tokens  # caps runaway generation, esp. for local models with no stop token
 
     def _generate(self, prompt: str) -> str:
         def call():
@@ -66,6 +69,7 @@ class OpenAIBackend(LLMBackend):
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=self.temperature,
+                max_tokens=self.max_tokens,
             )
             return resp.choices[0].message.content or ""
         return _with_retries(call)
@@ -73,7 +77,8 @@ class OpenAIBackend(LLMBackend):
 
 class OpenAICompatibleBackend(LLMBackend):
     # works with any provider exposing an OpenAI-style /chat/completions endpoint
-    def __init__(self, model: str, base_url: str, api_key_env: str | None = None, temperature: float = 0.0):
+    def __init__(self, model: str, base_url: str, api_key_env: str | None = None,
+                 temperature: float = 0.0, max_tokens: int = 512):
         super().__init__()
         import openai
         api_key = os.environ.get(api_key_env, "not-needed") if api_key_env else "not-needed"
@@ -82,6 +87,7 @@ class OpenAICompatibleBackend(LLMBackend):
         self.client = openai.OpenAI(api_key=api_key, base_url=base_url)
         self.model = model
         self.temperature = temperature
+        self.max_tokens = max_tokens
 
     def _generate(self, prompt: str) -> str:
         def call():
@@ -89,6 +95,7 @@ class OpenAICompatibleBackend(LLMBackend):
                 model=self.model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=self.temperature,
+                max_tokens=self.max_tokens,
             )
             return resp.choices[0].message.content or ""
         return _with_retries(call)
@@ -96,16 +103,16 @@ class OpenAICompatibleBackend(LLMBackend):
 
 class GroqBackend(OpenAICompatibleBackend):
     # free tier, no credit card. console.groq.com for a key, export GROQ_API_KEY
-    def __init__(self, model: str = "openai/gpt-oss-20b", temperature: float = 0.0):
+    def __init__(self, model: str = "openai/gpt-oss-20b", temperature: float = 0.0, max_tokens: int = 512):
         super().__init__(model=model, base_url="https://api.groq.com/openai/v1",
-                          api_key_env="GROQ_API_KEY", temperature=temperature)
+                          api_key_env="GROQ_API_KEY", temperature=temperature, max_tokens=max_tokens)
 
 
 class OllamaBackend(OpenAICompatibleBackend):
     # fully local: `ollama pull llama3.1` then `ollama serve`
-    def __init__(self, model: str = "llama3.1", temperature: float = 0.0):
+    def __init__(self, model: str = "llama3.1", temperature: float = 0.0, max_tokens: int = 512):
         super().__init__(model=model, base_url="http://localhost:11434/v1",
-                          api_key_env=None, temperature=temperature)
+                          api_key_env=None, temperature=temperature, max_tokens=max_tokens)
 
 
 class AnthropicBackend(LLMBackend):
