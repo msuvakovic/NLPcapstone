@@ -1,0 +1,20 @@
+{
+  "name": "GEPA",
+  "best_instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+  "dev_score": 1.0,
+  "source_test_acc": 0.8,
+  "ood_accs": {
+    "svamp": 0.8
+  },
+  "ood_gap": 0.0,
+  "worst_case_acc": 0.8,
+  "variance": 0.0,
+  "api_calls": 15,
+  "wall_time_sec": 32.89169031800702,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+      "dev_score": 1.0
+    }
+  ]
+}

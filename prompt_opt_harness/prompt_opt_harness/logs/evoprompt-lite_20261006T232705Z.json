@@ -1,0 +1,56 @@
+{
+  "name": "EvoPrompt-lite",
+  "best_instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+  "dev_score": 0.9666666666666667,
+  "source_test_acc": 0.9,
+  "ood_accs": {
+    "svamp": 0.8333333333333334
+  },
+  "ood_gap": 0.06666666666666665,
+  "worst_case_acc": 0.8333333333333334,
+  "variance": 0.0,
+  "api_calls": 369,
+  "wall_time_sec": 366.01040619891137,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Instruction: Solve the math word problem step-by-step and show all your work. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Instruction: Solve the math word problem step-by-step, showing all your work. Conclude with a line in the exact form: Answer: [number]",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Instruction: Solve the math word problem step-by-step, showing all calculations and reasoning. Conclude with a line in the exact form: Answer: [number]",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, showing all your work, and include explanations for each step. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, showing all your work, and include explanations for each step. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, showing all your work, and include explanations for each step. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, showing all your work, and include explanations for each step. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, showing all your work, and include explanations for each step. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, showing all your work, and include explanations for each step. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Zero-shot",
+  "best_instruction": "",
+  "dev_score": 0.9333333333333333,
+  "source_test_acc": 0.8666666666666667,
+  "ood_accs": {
+    "svamp": 0.8666666666666667
+  },
+  "ood_gap": 0.0,
+  "worst_case_acc": 0.8666666666666667,
+  "variance": 0.0,
+  "api_calls": 90,
+  "wall_time_sec": 104.26096699014306,
+  "candidate_pool": [
+    {
+      "instruction": "",
+      "dev_score": 0.9333333333333333
+    }
+  ]
+}

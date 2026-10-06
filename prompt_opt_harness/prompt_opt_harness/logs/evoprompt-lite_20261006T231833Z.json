@@ -1,0 +1,36 @@
+{
+  "name": "EvoPrompt-lite",
+  "best_instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+  "dev_score": 1.0,
+  "source_test_acc": 0.8,
+  "ood_accs": {
+    "svamp": 0.8
+  },
+  "ood_gap": 0.0,
+  "worst_case_acc": 0.8,
+  "variance": 0.0,
+  "api_calls": 40,
+  "wall_time_sec": 88.80290957354009,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+      "dev_score": 1.0
+    },
+    {
+      "instruction": "Instruction: Solve the math word problem step-by-step and show all your work. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 1.0
+    },
+    {
+      "instruction": "Instruction: Solve the math word problem step-by-step, showing all your work. Conclude with a line in the exact form: Answer: [number]",
+      "dev_score": 1.0
+    },
+    {
+      "instruction": "Instruction: Solve the math word problem step-by-step, showing all calculations and reasoning. Conclude with a line in the exact form: Answer: [number]",
+      "dev_score": 1.0
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, showing all your work, and include explanations for each step. Conclude with a line in the exact form: Answer: <number>",
+      "dev_score": 1.0
+    }
+  ]
+}

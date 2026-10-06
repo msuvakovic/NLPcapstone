@@ -1,0 +1,56 @@
+{
+  "name": "OPRO",
+  "best_instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide detailed explanations for each key step, including any assumptions made. Ensure your solution is easily understandable by a high school student. End with a line in the exact form: Answer: <number>",
+  "dev_score": 1.0,
+  "source_test_acc": 0.8333333333333334,
+  "ood_accs": {
+    "svamp": 0.8666666666666667
+  },
+  "ood_gap": -0.033333333333333326,
+  "worst_case_acc": 0.8666666666666667,
+  "variance": 0.0,
+  "api_calls": 369,
+  "wall_time_sec": 573.3889866746031,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation and units where applicable. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and justify key steps. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide a brief explanation for each key step. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide concise justifications for each key step. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide concise justifications for each key step. Ensure your solution is easily understandable by a high school student. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide detailed explanations for each key step, including any assumptions made. Ensure your solution is easily understandable by a high school student. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide detailed explanations for each key step, including any assumptions made. Ensure your solution is easily understandable by a high school student. End with a line in the exact form: Answer: <number>",
+      "dev_score": 1.0
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide detailed explanations for each key step, including any assumptions made. Ensure your solution is easily understandable by a high school student and that each step is logically connected to the next. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    }
+  ]
+}

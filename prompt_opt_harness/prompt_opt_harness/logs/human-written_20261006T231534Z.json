@@ -1,0 +1,20 @@
+{
+  "name": "Human-written",
+  "best_instruction": "Solve the word problem step by step, showing your work. On the final line, write the answer in the exact form: Answer: <number>",
+  "dev_score": 1.0,
+  "source_test_acc": 1.0,
+  "ood_accs": {
+    "svamp": 1.0
+  },
+  "ood_gap": 0.0,
+  "worst_case_acc": 1.0,
+  "variance": 0.0,
+  "api_calls": 15,
+  "wall_time_sec": 30.30484389560297,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the word problem step by step, showing your work. On the final line, write the answer in the exact form: Answer: <number>",
+      "dev_score": 1.0
+    }
+  ]
+}
