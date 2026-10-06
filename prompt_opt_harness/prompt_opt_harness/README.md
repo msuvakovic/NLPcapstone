@@ -6,13 +6,14 @@ wrapper, OOD evaluator, logger/reporter.
 
 Using the newly implemented DSPy optimizers alongside the original OPRO, we tested reasoning tasks (GSM8K -> SVAMP) on `qwen2.5:7b` via a local `OllamaBackend`.
 
-| Method        | Dev Score | Src Test (GSM8K) | OOD:svamp | OOD Gap | Worst-Case | Variance | API Calls |
-| :------------ | :-------: | :--------------: | :-------: | :-----: | :--------: | :------: | :-------: |
-| **Zero-shot**     | 0.93      | 0.87             | 0.87      | +0.00   | 0.87       | 0.000    | 90        |
-| **Human-written** | 0.97      | 0.87             | 0.93      | -0.07   | 0.93       | 0.000    | 90        |
-| **OPRO**          | 1.00      | 0.83             | 0.87      | -0.03   | 0.87       | 0.000    | 369       |
+| Method         | Dev Score | Src Test (GSM8K) | OOD:svamp | OOD Gap | Worst-Case | Variance | API Calls |
+| :------------- | :-------: | :--------------: | :-------: | :-----: | :--------: | :------: | :-------: |
+| **Zero-shot**      | 0.93      | 0.87             | 0.87      | +0.00   | 0.87       | 0.000    | 90        |
+| **Human-written**  | 0.97      | 0.87             | 0.93      | -0.07   | 0.93       | 0.000    | 90        |
+| **OPRO**           | 1.00      | 0.83             | 0.87      | -0.03   | 0.87       | 0.000    | 369       |
+| **EvoPrompt-lite** | 0.97      | 0.90             | 0.83      | +0.07   | 0.83       | 0.000    | 369       |
 
-As shown above, OPRO perfectly overfit the Dev Set (100%), but underperformed the Human-Written prompt on Out-Of-Distribution (OOD) transfer!
+As shown above, OPRO perfectly overfit the Dev Set (100%), but underperformed the Human-Written prompt on Out-Of-Distribution (OOD) transfer! EvoPrompt-lite avoided perfect overfitting on the dev set, performing slightly better on the source test set, but also generalized worse than a basic human-written baseline.
 
 
 
