@@ -1,0 +1,41 @@
+{
+  "name": "OPRO",
+  "best_instruction": "Classify the sentiment of the following text as Positive or Negative. Consider the overall tone of the text, not just individual words. Weigh comments about the cinematography and pacing heavily. Treat mentions of the cast's performance as strong sentiment signals.",
+  "dev_score": 1.0,
+  "source_test_acc": 0.8333333333333334,
+  "ood_accs": {
+    "amazon": 0.75,
+    "tweets": 0.5
+  },
+  "ood_gap": 0.20833333333333337,
+  "worst_case_acc": 0.5,
+  "variance": 0.015625,
+  "api_calls": 63,
+  "wall_time_sec": 0.000397468451410532,
+  "candidate_pool": [
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative.",
+      "dev_score": 0.8333333333333334
+    },
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative. Weigh comments about the cinematography and pacing heavily.",
+      "dev_score": 0.6666666666666666
+    },
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative. Consider the overall tone of the text, not just individual words. Weigh comments about the cinematography and pacing heavily.",
+      "dev_score": 0.6666666666666666
+    },
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative. Consider the overall tone of the text, not just individual words. Weigh comments about the cinematography and pacing heavily. Treat mentions of the cast's performance as strong sentiment signals.",
+      "dev_score": 1.0
+    },
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative. Consider the overall tone of the text, not just individual words. Think step by step before answering. Weigh comments about the cinematography and pacing heavily. Treat mentions of the cast's performance as strong sentiment signals.",
+      "dev_score": 1.0
+    },
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative. Consider the overall tone of the text, not just individual words. Think step by step before answering. Focus on how the writer describes the plot, acting, and directing. Weigh comments about the cinematography and pacing heavily. Treat mentions of the cast's performance as strong sentiment signals.",
+      "dev_score": 1.0
+    }
+  ]
+}

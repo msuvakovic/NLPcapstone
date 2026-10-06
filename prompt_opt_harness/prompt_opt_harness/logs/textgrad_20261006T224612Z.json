@@ -1,0 +1,21 @@
+{
+  "name": "TextGrad",
+  "best_instruction": "Classify the sentiment of the following text as Positive or Negative. Consider the overall tone of the text, not just individual words.",
+  "dev_score": 0.8333333333333334,
+  "source_test_acc": 1.0,
+  "ood_accs": {
+    "amazon": 0.625,
+    "tweets": 0.5
+  },
+  "ood_gap": 0.4375,
+  "worst_case_acc": 0.5,
+  "variance": 0.00390625,
+  "api_calls": 82,
+  "wall_time_sec": 0.0019816281273961067,
+  "candidate_pool": [
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative. Consider the overall tone of the text, not just individual words.",
+      "dev_score": 0.8333333333333334
+    }
+  ]
+}

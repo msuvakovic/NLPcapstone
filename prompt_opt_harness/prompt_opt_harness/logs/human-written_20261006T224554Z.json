@@ -1,0 +1,21 @@
+{
+  "name": "Human-written",
+  "best_instruction": "Read the text and decide whether the overall sentiment is Positive or Negative. Consider the overall tone of the text, not just individual words.",
+  "dev_score": 1.0,
+  "source_test_acc": 1.0,
+  "ood_accs": {
+    "amazon": 0.75,
+    "tweets": 0.75
+  },
+  "ood_gap": 0.25,
+  "worst_case_acc": 0.75,
+  "variance": 0.0,
+  "api_calls": 28,
+  "wall_time_sec": 0.00011459272354841232,
+  "candidate_pool": [
+    {
+      "instruction": "Read the text and decide whether the overall sentiment is Positive or Negative. Consider the overall tone of the text, not just individual words.",
+      "dev_score": 1.0
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Zero-shot",
+  "best_instruction": "",
+  "dev_score": 0.6666666666666666,
+  "source_test_acc": 0.8333333333333334,
+  "ood_accs": {
+    "amazon": 1.0,
+    "tweets": 0.625
+  },
+  "ood_gap": 0.02083333333333337,
+  "worst_case_acc": 0.625,
+  "variance": 0.03515625,
+  "api_calls": 28,
+  "wall_time_sec": 0.000177792739123106,
+  "candidate_pool": [
+    {
+      "instruction": "",
+      "dev_score": 0.6666666666666666
+    }
+  ]
+}

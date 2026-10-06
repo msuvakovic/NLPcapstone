@@ -1,0 +1,21 @@
+{
+  "name": "MIPROv2",
+  "best_instruction": "Classify the sentiment of the following text as Positive or Negative.\n\nGiven the input, generate the final output.",
+  "dev_score": 0.5,
+  "source_test_acc": 0.8333333333333334,
+  "ood_accs": {
+    "amazon": 0.875,
+    "tweets": 0.75
+  },
+  "ood_gap": 0.02083333333333337,
+  "worst_case_acc": 0.75,
+  "variance": 0.00390625,
+  "api_calls": 134,
+  "wall_time_sec": 0.0039401911199092865,
+  "candidate_pool": [
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative.\n\nGiven the input, generate the final output.",
+      "dev_score": 0.5
+    }
+  ]
+}
