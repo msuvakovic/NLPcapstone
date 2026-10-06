@@ -117,6 +117,41 @@ Both need a signature/module and metric function, not just a prompt string.
 Once you have `optimized.signature.instructions` it drops into this
 harness's `evaluate()` like any other optimizer's output.
 
+## Reasoning task
+
+Sentiment turned out to be too easy for gpt-oss-20b, everything saturated
+near 1.0. Added a second task: math word problems, GSM8K-style, scored by
+extracting the final number instead of matching a label string.
+
+`tasks.py` holds a `Task` (prompt builder + correctness check), one for each
+task. Every optimizer, `harness.run_experiment`, and `evaluate()` now take a
+`task=` argument, defaults to sentiment so nothing existing changes.
+
+```bash
+python3 run_groq_reasoning_demo.py        # toy word problems
+python3 run_groq_reasoning_real_data.py   # real GSM8K -> SVAMP, needs `pip install datasets`
+```
+
+All four `run_groq_*.py` scripts take `--backend groq|ollama`, `--model`, and
+`--budget` (the real-data ones also take `--n-per-split`). Ollama runs fully
+local, no API key:
+
+```bash
+python3 run_groq_reasoning_real_data.py --backend ollama
+python3 run_groq_reasoning_real_data.py --backend ollama --n-per-split 10 --budget 60   # quick run
+```
+
+Backends cap generation at 512 tokens and retry on 429s and timeouts. Without
+the cap a local model can ramble until the request times out.
+
+MockBackend still only supports sentiment (it's a scripted simulation, would
+need its own fragment model for math). It raises clearly instead of silently
+producing garbage if you point it at the reasoning task, use a real backend
+for that.
+
+Budget is 180 now instead of 40, at n=30/split, 40 wasn't enough for the
+optimizer to get more than one search step in.
+
 ## Not done
 
 - Cross-model transfer (optimize on one model, eval on another)
