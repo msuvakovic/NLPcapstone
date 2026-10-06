@@ -192,6 +192,9 @@ class MockBackend(LLMBackend):
         return label if correct else ("Negative" if label == "Positive" else "Positive")
 
     def _propose_instruction(self, meta_prompt: str) -> str:
+        # Mocking DSPy JSON output structure for optimization
+        import json
+        
         referenced = _FRAGMENT_SOURCE_RE.findall(meta_prompt)
         all_fragments = QUALITY_FRAGMENTS + DOMAIN_CUE_FRAGMENTS
         present = {frag for instr in referenced for frag in all_fragments if frag in instr}
@@ -204,4 +207,17 @@ class MockBackend(LLMBackend):
 
         from .prompts import BASE_INSTRUCTION
         ordered = [BASE_INSTRUCTION] + [f for f in all_fragments if f in present]
-        return " ".join(ordered)
+        proposed = " ".join(ordered)
+
+        # For DSPy MIPROv2, GEPA, COPRO etc. they often expect JSON format wrapping the instruction.
+        is_json = "{" in meta_prompt or "format" in meta_prompt.lower()
+        if is_json:
+            return json.dumps({
+                "proposed_instruction": proposed,
+                "proposed_prefix_for_output_field": "Output:",
+                "instruction": proposed,
+                "instructions": proposed,
+                "observations": proposed,
+                "output": proposed
+            })
+        return proposed
