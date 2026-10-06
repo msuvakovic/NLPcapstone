@@ -21,6 +21,7 @@ def parse_args():
     parser.add_argument("--backend", choices=["groq", "ollama"], default="groq")
     parser.add_argument("--model", default=None)
     parser.add_argument("--budget", type=int, default=BUDGET)
+    parser.add_argument("--n-per-split", type=int, default=N_PER_SPLIT)
     return parser.parse_args()
 
 
@@ -28,8 +29,8 @@ def main() -> None:
     args = parse_args()
     model = args.model or DEFAULT_MODEL[args.backend]
 
-    print(f"Loading real data ({N_PER_SPLIT} examples/split)...")
-    dataset = load_real_reasoning_dataset(n_per_split=N_PER_SPLIT, seed=SEED)
+    print(f"Loading real data ({args.n_per_split} examples/split)...")
+    dataset = load_real_reasoning_dataset(n_per_split=args.n_per_split, seed=SEED)
 
     def backend_factory():
         return OllamaBackend(model=model) if args.backend == "ollama" else GroqBackend(model=model)
