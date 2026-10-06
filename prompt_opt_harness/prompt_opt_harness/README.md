@@ -14,12 +14,7 @@ python3 tests/smoke_test.py
 
 ## What's actually built
 
-OPRO and EvoPrompt-lite are real implementations, both work against any
-`LLMBackend`. Zero-shot and human-written baselines are done. GEPA, MIPROv2,
-and TextGrad are not implemented, just stubbed in `optimizers/dspy_adapters.py`
-with notes on how to wire them up (they're DSPy teleprompters, need a
-`dspy.Signature`/`Module` and a metric function, different shape of work
-than OPRO/EvoPrompt).
+OPRO, EvoPrompt-lite, GEPA, MIPROv2, and TextGrad are real implementations, and all work against any `LLMBackend`. Zero-shot and human-written baselines are done. The DSPy optimizers (GEPA, MIPROv2, TextGrad) dynamically map the datasets to `dspy.Signature`s for seamless running in this harness.
 
 `OpenAIBackend`, `AnthropicBackend`, `GroqBackend`, `OllamaBackend` are real
 API wrappers. The harness itself (budget tracking, OOD eval, logging,
@@ -70,6 +65,8 @@ tweet_eval/sentiment (OOD) from Hugging Face. Not the exact datasets named
 in the proposal (real SemEval-2017 tweets and the McAuley Amazon corpus
 would need their own loader), but close and one line to swap later.
 
+Reasoning tasks (GSM8K -> SVAMP) are supported and implemented via `real_datasets_reasoning.py` and run via `run_groq_reasoning_real_data.py`.
+
 Note: HF renamed some of these repos recently (`glue` → `nyu-mll/glue`,
 `amazon_polarity` → `fancyzhx/amazon_polarity`, `tweet_eval` →
 `cardiffnlp/tweet_eval`). Already fixed here, just flagging in case you hit
@@ -95,30 +92,7 @@ Dataset(
 )
 ```
 
-## GEPA / MIPROv2 via DSPy
-
-```bash
-pip install "dspy>=3.2.1,<3.3"
-```
-
-```python
-import dspy
-dspy.configure(lm=dspy.LM("openai/gpt-4o-mini", api_key=...))
-
-from dspy.teleprompt import MIPROv2
-teleprompter = MIPROv2(metric=your_metric, auto="light")
-optimized = teleprompter.compile(your_dspy_module, trainset=trainset)
-
-gepa = dspy.GEPA(metric=your_metric, auto="light", reflection_lm=dspy.LM("openai/gpt-5"))
-optimized = gepa.compile(your_dspy_module, trainset=trainset, valset=devset)
-```
-
-Both need a signature/module and metric function, not just a prompt string.
-Once you have `optimized.signature.instructions` it drops into this
-harness's `evaluate()` like any other optimizer's output.
-
 ## Not done
 
 - Cross-model transfer (optimize on one model, eval on another)
-- Reasoning/code tasks (GSM8K, MBPP, etc.) — demo is sentiment only
 - Oracle upper-bound baseline (optimizer run directly on each OOD domain)
