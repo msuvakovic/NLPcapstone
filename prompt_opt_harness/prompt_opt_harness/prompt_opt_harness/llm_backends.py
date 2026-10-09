@@ -5,6 +5,7 @@ import hashlib
 import os
 import random
 import re
+import threading
 import time
 from dataclasses import dataclass
 from typing import Dict, List, Tuple
@@ -24,9 +25,108 @@ class LLMCallStats:
         self.wall_time += elapsed
 
 
-def _with_retries(call, max_retries: int = 5, base_delay: float = 2.0):
+class BudgetExceeded(RuntimeError):
+    """Raised before a model request would exceed an optimizer's call budget."""
+
+
+class _RequestBudget:
+    def __init__(self, budget: int, parent=None):
+        self.budget = budget
+        self.calls = 0
+        self.rejected_calls = 0
+        self.parent = parent
+        self.lock = parent.lock if parent is not None else threading.Lock()
+
+    def reserve(self) -> None:
+        with self.lock:
+            chain = []
+            current = self
+            while current is not None:
+                chain.append(current)
+                current = current.parent
+            for state in chain:
+                if state.calls >= state.budget:
+                    self.rejected_calls += 1
+                    raise BudgetExceeded(f"optimization request budget exhausted ({state.budget})")
+            for state in chain:
+                state.calls += 1
+
+
+class BudgetedBackend:
+    """Count and cap every model request made during one optimization phase."""
+
+    def __init__(self, backend, budget: int):
+        if budget < 0:
+            raise ValueError("budget must be non-negative")
+        self.parent_wrapper = backend if isinstance(backend, BudgetedBackend) else None
+        self.backend = backend.backend if self.parent_wrapper else backend
+        parent_state = self.parent_wrapper._state if self.parent_wrapper else getattr(self.backend, "_request_budget", None)
+        self._state = _RequestBudget(budget, parent=parent_state)
+        self._previous_request_budget = getattr(self.backend, "_request_budget", None)
+        self.backend._request_budget = self._state
+        self._closed = False
+
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        state.pop("_lock", None)
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+        self._lock = threading.Lock()
+
+    def __deepcopy__(self, memo):
+        # DSPy clones LMs for rollouts. Return a distinct wrapper that shares
+        # the same locked counter/parent, rather than copying or resetting cap.
+        clone = object.__new__(type(self))
+        memo[id(self)] = clone
+        clone.backend = self.backend
+        clone.parent_wrapper = self.parent_wrapper
+        clone._state = self._state
+        clone._previous_request_budget = self._previous_request_budget
+        clone._closed = self._closed
+        return clone
+
+    @property
+    def stats(self):
+        return self.backend.stats
+
+    @property
+    def remaining_calls(self) -> int:
+        return self.budget - self.calls
+
+    @property
+    def budget(self) -> int:
+        return self._state.budget
+
+    @property
+    def calls(self) -> int:
+        return self._state.calls
+
+    @property
+    def total_calls(self) -> int:
+        # Ancestor state is incremented atomically for every nested request,
+        # so the outermost state already represents the aggregate total.
+        return self.parent_wrapper.total_calls if self.parent_wrapper else self._state.calls
+
+    @property
+    def rejected_calls(self) -> int:
+        return self._state.rejected_calls
+
+    def close(self) -> None:
+        if not self._closed:
+            self.backend._request_budget = self._previous_request_budget
+            self._closed = True
+
+    def generate(self, prompt: str) -> str:
+        return self.backend.generate(prompt)
+
+
+def _with_retries(call, max_retries: int = 5, base_delay: float = 2.0, before_attempt=None):
     for attempt in range(max_retries + 1):
         try:
+            if before_attempt is not None:
+                before_attempt()
             return call()
         except Exception as e:
             status = getattr(e, "status_code", None) or getattr(getattr(e, "response", None), "status_code", None)
@@ -42,6 +142,12 @@ def _with_retries(call, max_retries: int = 5, base_delay: float = 2.0):
 class LLMBackend(abc.ABC):
     def __init__(self) -> None:
         self.stats = LLMCallStats()
+        self.max_retries = 5
+        self._request_budget = None
+
+    def _reserve_request(self) -> None:
+        if self._request_budget is not None:
+            self._request_budget.reserve()
 
     @abc.abstractmethod
     def _generate(self, prompt: str) -> str:
@@ -49,12 +155,15 @@ class LLMBackend(abc.ABC):
 
     def generate(self, prompt: str) -> str:
         start = time.perf_counter()
+        if not getattr(self, "_request_attempts_managed", False):
+            self._reserve_request()
         response = self._generate(prompt)
         self.stats.record(prompt, response, time.perf_counter() - start)
         return response
 
 
 class OpenAIBackend(LLMBackend):
+    _request_attempts_managed = True
     def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0, max_tokens: int = 512):
         super().__init__()
         import openai
@@ -72,10 +181,11 @@ class OpenAIBackend(LLMBackend):
                 max_tokens=self.max_tokens,
             )
             return resp.choices[0].message.content or ""
-        return _with_retries(call)
+        return _with_retries(call, max_retries=self.max_retries, before_attempt=self._reserve_request)
 
 
 class OpenAICompatibleBackend(LLMBackend):
+    _request_attempts_managed = True
     # works with any provider exposing an OpenAI-style /chat/completions endpoint
     def __init__(self, model: str, base_url: str, api_key_env: str | None = None,
                  temperature: float = 0.0, max_tokens: int = 512):
@@ -98,7 +208,7 @@ class OpenAICompatibleBackend(LLMBackend):
                 max_tokens=self.max_tokens,
             )
             return resp.choices[0].message.content or ""
-        return _with_retries(call)
+        return _with_retries(call, max_retries=self.max_retries, before_attempt=self._reserve_request)
 
 
 class GroqBackend(OpenAICompatibleBackend):
@@ -116,6 +226,7 @@ class OllamaBackend(OpenAICompatibleBackend):
 
 
 class AnthropicBackend(LLMBackend):
+    _request_attempts_managed = True
     def __init__(self, model: str = "claude-3-5-haiku-20241022", max_tokens: int = 300):
         super().__init__()
         import anthropic
@@ -131,7 +242,7 @@ class AnthropicBackend(LLMBackend):
                 messages=[{"role": "user", "content": prompt}],
             )
             return "".join(block.text for block in resp.content if hasattr(block, "text"))
-        return _with_retries(call)
+        return _with_retries(call, max_retries=self.max_retries, before_attempt=self._reserve_request)
 
 
 # MockBackend: offline stand-in, no real LLM. Answers classification calls with

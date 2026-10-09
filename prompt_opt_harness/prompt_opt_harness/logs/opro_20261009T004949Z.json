@@ -1,0 +1,56 @@
+{
+  "name": "OPRO",
+  "best_instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+  "dev_score": 0.9666666666666667,
+  "source_test_acc": 0.9,
+  "ood_accs": {
+    "svamp": 0.9
+  },
+  "ood_gap": 0.0,
+  "worst_case_acc": 0.9,
+  "variance": 0.0,
+  "api_calls": 338,
+  "optimization_calls": 278,
+  "optimization_budget": 300,
+  "optimizer_budget_exhausted": false,
+  "evaluation_calls": 60,
+  "wall_time_sec": 334.18033239012584,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9666666666666667
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation and units where applicable. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and justify key steps. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide a brief explanation for each key step. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide concise justifications for each key step. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide concise justifications for each key step. Ensure your solution is easily understandable by a high school student. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide concise justifications for each key step. Ensure your solution is easily understandable by a high school student. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    },
+    {
+      "instruction": "Solve the math word problem step-by-step, clearly showing all calculations and reasoning. Use proper mathematical notation, units where applicable, and provide concise justifications for each key step. Ensure your solution is easily understandable by a high school student. End with a line in the exact form: Answer: <number>",
+      "dev_score": 0.9333333333333333
+    }
+  ]
+}

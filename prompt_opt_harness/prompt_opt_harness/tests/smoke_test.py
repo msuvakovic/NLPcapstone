@@ -1,11 +1,12 @@
 import sys
+import copy
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from prompt_opt_harness.datasets import load_demo_dataset
 from prompt_opt_harness.harness import run_experiment
-from prompt_opt_harness.llm_backends import MockBackend
+from prompt_opt_harness.llm_backends import BudgetExceeded, BudgetedBackend, MockBackend
 from prompt_opt_harness.metrics import cross_domain_variance, ood_gap, worst_case_accuracy
 from prompt_opt_harness.optimizers import OPRO, ZeroShotBaseline
 
@@ -37,14 +38,133 @@ def test_budget_is_respected():
     dataset = load_demo_dataset()
     for budget in (10, 20, 40):
         r = run_experiment("OPRO", OPRO, backend_factory(dataset), dataset, budget=budget, seed=0)
-        search_calls = r.api_calls - 22  # 22 = fixed post-hoc eval (6 test + 8 + 8 OOD)
-        assert search_calls <= budget + len(dataset.source.dev), (budget, search_calls)
+        assert r.optimization_calls <= budget, (budget, r.optimization_calls)
+        assert r.api_calls == r.optimization_calls + 22  # fixed post-hoc evaluation
     print("test_budget_is_respected: OK")
+
+
+def test_budgeted_backend_stops_before_overrun():
+    dataset = load_demo_dataset()
+    backend = MockBackend(dataset.lookup(), source_domain=dataset.source_domain)
+    limited = BudgetedBackend(backend, budget=2)
+    limited.generate("first")
+    limited.generate("second")
+    try:
+        limited.generate("must not be sent")
+    except BudgetExceeded:
+        pass
+    else:
+        raise AssertionError("expected hard budget to reject a third request")
+    assert limited.calls == 2
+    assert backend.stats.calls == 2
+
+
+def test_deepcopied_budgeted_backend_shares_hard_cap():
+    dataset = load_demo_dataset()
+    backend = MockBackend(dataset.lookup(), source_domain=dataset.source_domain)
+    limited = BudgetedBackend(backend, budget=1)
+    clone = copy.deepcopy(limited)
+    assert clone is not limited
+    assert clone._state is limited._state
+    assert clone._state.lock is limited._state.lock
+    clone.generate("one call")
+    try:
+        limited.generate("over budget")
+    except BudgetExceeded:
+        pass
+    else:
+        raise AssertionError("deep-copied adapter bypassed shared call cap")
+    assert limited.calls == 1
+    assert limited.rejected_calls == 1
+
+
+def test_nested_budget_enforces_both_limits_and_counts_requests_once():
+    dataset = load_demo_dataset()
+    backend = MockBackend(dataset.lookup(), source_domain=dataset.source_domain)
+    outer = BudgetedBackend(backend, budget=8)
+    inner = BudgetedBackend(outer, budget=3)
+    for _ in range(3):
+        inner.generate("nested request")
+    assert inner.calls == 3
+    assert outer.calls == 3
+    assert outer.total_calls == 3
+    assert backend.stats.calls == 3
+    inner.close()
+    outer.close()
+
+
+def test_budgeted_backend_disables_billable_retries_during_optimization():
+    class RetryBackend:
+        def __init__(self):
+            self.stats = type("Stats", (), {"calls": 0})()
+            self.max_retries = 5
+
+        def generate(self, prompt):
+            return str(self.max_retries)
+
+    backend = RetryBackend()
+    limited = BudgetedBackend(backend, budget=1)
+    assert backend.max_retries == 5
+    assert limited.generate("one") == "5"
+    limited.close()
+    assert backend.max_retries == 5
+
+
+def test_nested_optimizer_budget_respects_parent_and_final_eval_reserve():
+    dataset = load_demo_dataset()
+    backend = MockBackend(dataset.lookup(), source_domain=dataset.source_domain)
+    parent = BudgetedBackend(backend, budget=12)
+    child = BudgetedBackend(parent, budget=6)
+    for _ in range(6):
+        child.generate("nested request")
+    assert child.calls == 6
+    assert parent.calls == 6
+    assert parent.remaining_calls == 6
+    parent.close()
+    child.close()
+
+
+def test_evolutionary_optimizers_reserve_full_candidate_evaluation():
+    from prompt_opt_harness.optimizers import EvoPromptLite
+
+    dataset = load_demo_dataset()
+    for optimizer in (OPRO, EvoPromptLite):
+        result = run_experiment(
+            optimizer.__name__, optimizer, backend_factory(dataset), dataset, budget=20, seed=7
+        )
+        assert result.optimization_calls <= 20
+        assert result.api_calls == result.optimization_calls + 22
+
+
+def test_dspy_optimizers_obey_hard_call_budget():
+    from prompt_opt_harness.optimizers import GEPA, MIPROv2
+
+    dataset = load_demo_dataset()
+    for optimizer in (GEPA, MIPROv2):
+        result = run_experiment(
+            optimizer.__name__, optimizer, backend_factory(dataset), dataset,
+            budget=12, seed=7,
+        )
+        assert result.optimization_calls <= 12
+        assert result.api_calls == result.optimization_calls + 22
+
+
+def test_baseline_budget_counts_dev_scoring_separately_from_heldout():
+    dataset = load_demo_dataset()
+    result = run_experiment(
+        "Zero-shot", ZeroShotBaseline, backend_factory(dataset), dataset,
+        budget=len(dataset.source.dev), seed=0,
+    )
+    assert result.optimization_calls == len(dataset.source.dev)
+    assert result.api_calls == result.optimization_calls + 22
 
 
 def test_accuracy_in_range():
     dataset = load_demo_dataset()
-    r = run_experiment("Zero-shot", ZeroShotBaseline, backend_factory(dataset), dataset, budget=1, seed=0)
+    r = run_experiment(
+        "Zero-shot", ZeroShotBaseline, backend_factory(dataset), dataset,
+        budget=len(dataset.source.dev), seed=0,
+    )
     assert 0.0 <= r.source_test_acc <= 1.0
     for acc in r.ood_accs.values():
         assert 0.0 <= acc <= 1.0

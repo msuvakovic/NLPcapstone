@@ -14,7 +14,7 @@ def build_report(results: List[RunResult]) -> str:
     gains = cost_normalized_gains(results, reference)
 
     headers = ["Method", "Dev", "Src Test"] + [f"OOD:{d}" for d in ood_domains] + [
-        "OOD Gap", "Worst-Case", "Variance", "API Calls", "Gain/Call",
+        "OOD Gap", "Worst-Case", "Variance", "Opt Calls/Budget", "Eval Calls", "Budget Stop", "API Calls", "Gain/Call",
     ]
     rows = []
     for r in results:
@@ -26,6 +26,9 @@ def build_report(results: List[RunResult]) -> str:
             f"{r.ood_gap:+.2f}",
             f"{r.worst_case_acc:.2f}",
             f"{r.variance:.3f}",
+            f"{r.optimization_calls}/{r.optimization_budget}",
+            str(r.api_calls - r.optimization_calls),
+            "yes" if r.optimizer_budget_exhausted else "no",
             str(r.api_calls),
             f"{gains[r.name]:+.4f}",
         ]

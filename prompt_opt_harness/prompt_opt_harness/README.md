@@ -2,33 +2,151 @@
 
 Implements the harness from the capstone proposal: dataset loader, optimizer
 wrapper, OOD evaluator, logger/reporter.
-## Results (Qwen 2.5 7B, Budget=300)
 
-Using the newly implemented DSPy optimizers alongside the original OPRO, we tested reasoning tasks (GSM8K -> SVAMP) on `qwen2.5:7b` via a local `OllamaBackend`.
+## Pilot results: Qwen 2.5 7B, October 9, 2026
 
-| Method         | Dev Score | Src Test (GSM8K) | OOD:svamp | OOD Gap | Worst-Case | Variance | API Calls |
-| :------------- | :-------: | :--------------: | :-------: | :-----: | :--------: | :------: | :-------: |
-| **Zero-shot**      | 0.93      | 0.87             | 0.87      | +0.00   | 0.87       | 0.000    | 90        |
-| **Human-written**  | 0.97      | 0.87             | 0.93      | -0.07   | 0.93       | 0.000    | 90        |
-| **OPRO**           | 1.00      | 0.83             | 0.87      | -0.03   | 0.87       | 0.000    | 369       |
-| **EvoPrompt-lite** | 0.97      | 0.90             | 0.83      | +0.07   | 0.83       | 0.000    | 369       |
+Executed locally via Ollama on **one NVIDIA GB300**, sequentially, with
+`qwen2.5:7b` (local model ID `845dbda0ea48`), temperature 0 and a 512-token
+generation cap. Dataset sampling and optimizer seed: **42**. Source development
+data: 30 examples from `openai/gsm8k` (`main`, train); source test: 30 GSM8K test
+examples; OOD test: 30 examples from `MU-NLPC/Calc-svamp` (`default`, test).
 
-As shown above, OPRO perfectly overfit the Dev Set (100%), but underperformed the Human-Written prompt on Out-Of-Distribution (OOD) transfer! EvoPrompt-lite avoided perfect overfitting on the dev set, performing slightly better on the source test set, but also generalized worse than a basic human-written baseline.
+| Method | Dev | GSM8K test | SVAMP | Optimization calls / cap | Held-out calls | Total calls |
+| :-- | --: | --: | --: | --: | --: | --: |
+| Zero-shot | 0.933 | 0.867 | 0.867 | 30 / 30 | 60 | 90 |
+| Human-written | 0.967 | 0.867 | 0.933 | 30 / 30 | 60 | 90 |
+| OPRO | 0.967 | 0.900 | 0.900 | 278 / 300 | 60 | 338 |
+| EvoPrompt-lite | 0.967 | 0.900 | 0.867 | 278 / 300 | 60 | 338 |
+| GEPA (conservative search) | 0.933 | 0.867 | 0.900 | 102 / 300 | 60 | 162 |
+| MIPROv2 (conservative search) | 0.933 | 0.833 | 0.900 | 86 / 300 | 60 | 146 |
+
+The optimization cap includes development scoring, candidate proposals and
+DSPy reflection/task requests. Held-out evaluation is outside that cap.
+Baselines do no search: their 30 calls score the fixed prompt on development
+data. All six selected artifacts have `optimizer_budget_exhausted=false`.
+**300 is a maximum, not an equal amount of search actually consumed.**
+
+### Result provenance
+
+Selected compact artifacts under `logs/`:
+
+- `zero-shot_20261009T004302Z.json`
+- `human-written_20261009T004415Z.json`
+- `opro_20261009T004949Z.json`
+- `evoprompt-lite_20261009T005506Z.json`
+- `gepa_20261009T010718Z.json`
+- `miprov2_20261009T010937Z.json`
+
+The first four came from the corrected full run. GEPA and MIPROv2 were rerun
+individually after reducing their internal search settings; their earlier
+`gepa_20261009T010022Z.json` and `miprov2_20261009T010225Z.json` runs reached the
+request cap and evaluated fallback instructions. Those earlier rows are
+**excluded**. Historical logs are not interchangeable with this selected set.
+Runtime transcripts are kept locally in `run_logs/`, not committed.
+
+### Interpretation and limitations
+
+- Human-written has the highest observed SVAMP accuracy (28/30); this is not
+  evidence of statistically significant superiority. One example changes an
+  accuracy by 3.33 percentage points, and only one seed was run.
+- OPRO and EvoPrompt-lite selected the original reasoning instruction, not a
+  newly improved prompt. Their SVAMP scores differ despite identical selected
+  instructions, so temperature 0 has not established deterministic evaluation.
+  Do not infer optimizer gains from those differences.
+- GEPA and MIPROv2 return an instruction extracted from a compiled DSPy program.
+  The harness evaluates it with its ordinary prompt builder, **not the full
+  compiled program**. MIPRO demonstrations and DSPy formatting are not carried
+  into held-out evaluation. These are instruction-transfer pilots, not faithful
+  full-program benchmark results.
+- Conservative GEPA uses 67 metric calls; MIPRO uses two instruction candidates
+  and `num_trials=1` at this configuration (its log includes the default program
+  plus another evaluated trial). These small searches are not the auto-light
+  presets and should not be ranked as equivalent optimization effort.
+- Native TextGrad is unavailable in installed DSPy 3.2.1. It is explicitly
+  skipped; COPRO is no longer silently reported as TextGrad.
+- With one OOD domain, OOD-only variance is necessarily zero and worst-case OOD
+  accuracy simply equals SVAMP accuracy. Neither adds evidence of robustness.
+- Responses are capped at 512 tokens, and the scorer can fall back to the last
+  number when `Answer:` is absent. Truncation/formatting can therefore affect
+  accuracy. Provider-side SDK retries still need auditing: the wrapper accounts
+  for its explicit retries, but does not disable the SDK's own retry layer.
+
+### How to improve the experiment
+
+1. **Make the evaluated object consistent.** For an instruction-only comparison,
+   disable MIPRO demonstrations during search and use the same prompt format for
+   search and evaluation. Alternatively, save and evaluate each full DSPy program
+   end-to-end and label that as a separate experiment.
+2. **Validate request accounting end-to-end.** Disable SDK-internal retries or
+   account for each transport attempt; test failures/timeouts and compare counters
+   with server request logs. Mark capped/fallback runs invalid automatically.
+3. **Increase evaluation size and repeat seeds.** Separate search/training and
+   validation data within the source domain; keep source-test/OOD data untouched
+   during optimizer tuning. Report confidence intervals and paired comparisons,
+   and repeat evaluation of identical prompts to quantify inference variation.
+4. **Compare cost-quality curves.** Log exact search settings and proposal,
+   reflection, scoring, token and elapsed-time costs. Evaluate several budgets
+   rather than assume every optimizer spends the same 300 requests.
+5. **Audit answer validity.** Save per-example outputs and finish reasons;
+   distinguish wrong arithmetic, parse failures and truncation. Test a larger
+   common token cap without choosing settings based on OOD scores.
+6. **Expand domain coverage.** Add another math OOD domain and later sentiment/NLI
+   tasks. Implement real TextGrad through its own adapter before including it.
+   Cross-model transfer and OOD-trained oracle baselines remain stretch goals.
+
+### Reproduce this pilot on one GPU
+
+Run from the project directory containing this README. Install Ollama separately
+and use a fresh Python environment; the recorded direct Python dependency versions
+are DSPy 3.2.1, datasets 3.6.0, openai 2.54.0 and Optuna 5.0.0. Ollama was 0.40.1.
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install 'dspy[optuna]==3.2.1' 'datasets==3.6.0' 'openai==2.54.0' 'optuna==5.0.0' pytest
+CUDA_VISIBLE_DEVICES=0 ollama serve
+```
+
+In a second terminal, with the server running:
+
+```bash
+ollama pull qwen2.5:7b
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q tests/smoke_test.py
+.venv/bin/python run_groq_reasoning_real_data.py --backend ollama --model qwen2.5:7b --budget 300 --n-per-split 30
+# Targeted runs use the same seed/data sampling:
+.venv/bin/python run_groq_reasoning_real_data.py --backend ollama --model qwen2.5:7b --budget 300 --n-per-split 30 --methods GEPA MIPROv2
+```
+
+A rerun may differ numerically; preserve sampled IDs, model digests and full
+environment metadata in future runs. Current JSONs do not contain all that metadata.
+
+### Repository hygiene
+
+The root `.gitignore` excludes virtual environments, Python caches, local secrets,
+model weights/Ollama state and runtime transcripts. Only the six selected new
+result JSONs above are allowlisted; existing tracked historical JSONs are retained.
+Unselected/fallback results remain local. The large previously tracked Ollama log
+and bytecode are removed from the current index, **not deleted locally**. This does
+not purge them from existing Git history; no history rewrite is performed.
 
 
 
 ## Run it
 
-No API keys needed, uses a mock backend:
+No API keys needed for the mock smoke tests (DSPy tests require the optional
+DSPy dependency). The legacy demo also attempts DSPy/TextGrad methods and is
+not a standalone standard-library-only entry point:
 
 ```bash
-python3 demo.py
-python3 tests/smoke_test.py
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q tests/smoke_test.py
 ```
 
 ## What's actually built
 
-OPRO, EvoPrompt-lite, GEPA, MIPROv2, and TextGrad are real implementations, and all work against any `LLMBackend`. Zero-shot and human-written baselines are done. The DSPy optimizers (GEPA, MIPROv2, TextGrad) dynamically map the datasets to `dspy.Signature`s for seamless running in this harness.
+OPRO and EvoPrompt-lite implement instruction search; zero-shot and human-written
+baselines use fixed instructions. GEPA/MIPROv2 have DSPy adapters with shared request
+accounting and conservative settings. Their instruction-only transfer limitations
+are described above. TextGrad is conditional and unavailable under DSPy 3.2.1;
+requesting it raises rather than silently substituting COPRO.
 
 `OpenAIBackend`, `AnthropicBackend`, `GroqBackend`, `OllamaBackend` are real
 API wrappers. The harness itself (budget tracking, OOD eval, logging,
@@ -108,6 +226,10 @@ Dataset(
 
 ## GEPA / MIPROv2 via DSPy
 
+The following is a standalone DSPy example, not this harness's capped pilot
+configuration. Full-program evaluation requires saving/running the returned module;
+extracting just its instruction does not preserve demonstrations or formatting.
+
 ```bash
 pip install "dspy>=3.2.1,<3.3"
 ```
@@ -125,8 +247,8 @@ optimized = gepa.compile(your_dspy_module, trainset=trainset, valset=devset)
 ```
 
 Both need a signature/module and metric function, not just a prompt string.
-Once you have `optimized.signature.instructions` it drops into this
-harness's `evaluate()` like any other optimizer's output.
+The current adapter extracts `compiled_module.prog.signature.instructions` and
+evaluates that instruction separately; see the limitations and improvement plan.
 
 ## Reasoning task
 

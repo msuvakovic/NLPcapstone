@@ -7,6 +7,11 @@ class FixedPromptBaseline(Optimizer):
     instruction = ""
 
     def optimize(self, task_desc: str, dev_examples) -> Candidate:
+        if len(dev_examples) > self.budget:
+            raise ValueError(
+                f"budget ({self.budget}) must cover the dev evaluation "
+                f"({len(dev_examples)} calls)"
+            )
         candidate = Candidate(self.instruction, self._dev_score(self.instruction, dev_examples))
         self.history.append(candidate)
         return candidate

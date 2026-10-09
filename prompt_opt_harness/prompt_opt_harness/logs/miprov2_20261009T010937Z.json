@@ -1,0 +1,24 @@
+{
+  "name": "MIPROv2",
+  "best_instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+  "dev_score": 0.9333333333333333,
+  "source_test_acc": 0.8333333333333334,
+  "ood_accs": {
+    "svamp": 0.9
+  },
+  "ood_gap": -0.06666666666666665,
+  "worst_case_acc": 0.9,
+  "variance": 0.0,
+  "api_calls": 146,
+  "optimization_calls": 86,
+  "optimization_budget": 300,
+  "optimizer_budget_exhausted": false,
+  "evaluation_calls": 60,
+  "wall_time_sec": 113.33490583766252,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+      "dev_score": 0.9333333333333333
+    }
+  ]
+}

@@ -35,8 +35,8 @@ def main() -> None:
         return OllamaBackend(model=model) if args.backend == "ollama" else GroqBackend(model=model)
 
     methods = [
-        ("Zero-shot", ZeroShotBaseline, 1),
-        ("Human-written", HumanWrittenBaseline, 1),
+        ("Zero-shot", ZeroShotBaseline, len(dataset.source.dev)),
+        ("Human-written", HumanWrittenBaseline, len(dataset.source.dev)),
         ("OPRO", OPRO, args.budget),
         ("EvoPrompt-lite", EvoPromptLite, args.budget),
     ]

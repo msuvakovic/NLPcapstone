@@ -23,6 +23,10 @@ def save_run(result: RunResult, log_dir: str = "logs") -> str:
         "worst_case_acc": result.worst_case_acc,
         "variance": result.variance,
         "api_calls": result.api_calls,
+        "optimization_calls": result.optimization_calls,
+        "optimization_budget": result.optimization_budget,
+        "optimizer_budget_exhausted": result.optimizer_budget_exhausted,
+        "evaluation_calls": result.api_calls - result.optimization_calls,
         "wall_time_sec": result.wall_time,
         "candidate_pool": [{"instruction": i, "dev_score": s} for i, s in result.candidate_pool],
     }

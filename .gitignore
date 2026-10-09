@@ -1,0 +1,41 @@
+# Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local credentials and editor state
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+
+# Model weights, Ollama state, and dataset/provider caches
+.ollama/
+.cache/
+models/
+*.gguf
+*.safetensors
+*.pt
+*.pth
+
+# Bulky server output and local run transcripts (keep compact result JSONs)
+*.log
+run_logs/
+
+# Keep only explicitly selected new experiment results. Historical tracked
+# JSONs remain tracked; failed/intermediate local runs stay on disk, not in Git.
+/prompt_opt_harness/prompt_opt_harness/logs/*.json
+!/prompt_opt_harness/prompt_opt_harness/logs/zero-shot_20261009T004302Z.json
+!/prompt_opt_harness/prompt_opt_harness/logs/human-written_20261009T004415Z.json
+!/prompt_opt_harness/prompt_opt_harness/logs/opro_20261009T004949Z.json
+!/prompt_opt_harness/prompt_opt_harness/logs/evoprompt-lite_20261009T005506Z.json
+!/prompt_opt_harness/prompt_opt_harness/logs/gepa_20261009T010718Z.json
+!/prompt_opt_harness/prompt_opt_harness/logs/miprov2_20261009T010937Z.json

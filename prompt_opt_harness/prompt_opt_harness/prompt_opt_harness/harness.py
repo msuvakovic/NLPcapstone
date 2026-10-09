@@ -6,6 +6,7 @@ from typing import Callable, Dict, List, Tuple, Type
 from .datasets import Dataset
 from .metrics import cost_normalized_gain, cross_domain_variance, ood_gap, worst_case_accuracy
 from .optimizers.base import Optimizer, evaluate
+from .llm_backends import BudgetedBackend
 from .tasks import SENTIMENT_TASK, Task
 
 
@@ -20,6 +21,9 @@ class RunResult:
     worst_case_acc: float
     variance: float
     api_calls: int
+    optimization_calls: int
+    optimization_budget: int
+    optimizer_budget_exhausted: bool
     wall_time: float
     candidate_pool: List[Tuple[str, float]] = field(default_factory=list)
 
@@ -34,10 +38,13 @@ def run_experiment(
     task: Task = SENTIMENT_TASK,
 ) -> RunResult:
     backend = backend_factory()
-    optimizer = optimizer_cls(backend, budget=budget, seed=seed, task=task)
+    optimization_backend = BudgetedBackend(backend, budget=budget)
+    optimizer = optimizer_cls(optimization_backend, budget=budget, seed=seed, task=task)
 
     best = optimizer.optimize(dataset.base_instruction, dataset.source.dev)
 
+    optimization_calls = optimization_backend.total_calls
+    optimization_backend.close()
     source_test_acc = evaluate(backend, best.instruction, dataset.source.test, task=task)
     ood_accs = {domain: evaluate(backend, best.instruction, examples, task=task) for domain, examples in dataset.ood.items()}
     ood_values = list(ood_accs.values())
@@ -52,6 +59,9 @@ def run_experiment(
         worst_case_acc=worst_case_accuracy(ood_values),
         variance=cross_domain_variance(ood_values),
         api_calls=backend.stats.calls,
+        optimization_calls=optimization_calls,
+        optimization_budget=budget,
+        optimizer_budget_exhausted=getattr(optimizer, "budget_exhausted", False),
         wall_time=backend.stats.wall_time,
         candidate_pool=[(c.instruction, c.dev_score) for c in optimizer.history],
     )

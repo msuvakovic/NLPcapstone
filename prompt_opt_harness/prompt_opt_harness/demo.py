@@ -22,8 +22,8 @@ def main() -> None:
         return MockBackend(dataset.lookup(), source_domain=dataset.source_domain)
 
     methods = [
-        ("Zero-shot", ZeroShotBaseline, 1),
-        ("Human-written", HumanWrittenBaseline, 1),
+        ("Zero-shot", ZeroShotBaseline, len(dataset.source.dev)),
+        ("Human-written", HumanWrittenBaseline, len(dataset.source.dev)),
         ("OPRO", OPRO, BUDGET),
         ("EvoPrompt-lite", EvoPromptLite, BUDGET),
         ("GEPA", GEPA, BUDGET),

@@ -1,0 +1,24 @@
+{
+  "name": "GEPA",
+  "best_instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+  "dev_score": 0.9333333333333333,
+  "source_test_acc": 0.8666666666666667,
+  "ood_accs": {
+    "svamp": 0.9
+  },
+  "ood_gap": -0.033333333333333326,
+  "worst_case_acc": 0.9,
+  "variance": 0.0,
+  "api_calls": 162,
+  "optimization_calls": 102,
+  "optimization_budget": 300,
+  "optimizer_budget_exhausted": false,
+  "evaluation_calls": 60,
+  "wall_time_sec": 132.97510897601023,
+  "candidate_pool": [
+    {
+      "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+      "dev_score": 0.9333333333333333
+    }
+  ]
+}
