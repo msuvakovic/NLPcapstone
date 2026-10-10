@@ -4,6 +4,7 @@ import re
 from dataclasses import dataclass
 from typing import List, Optional, Tuple, Dict
 
+from ..budget import BudgetedBackend, CallBudgetExceeded
 from ..prompts import build_classification_prompt
 from ..tasks import SENTIMENT, TaskSpec
 
@@ -89,7 +90,86 @@ class Optimizer:
         return len({ex.text for ex in dev_examples})
 
     def _dev_score(self, instruction: str, dev_examples) -> float:
-        return evaluate(self.backend, instruction, dev_examples, self.task)
+        rows = evaluate_per_example(self.backend, instruction, dev_examples, self.task)
+        # Remember per-example outcomes so failure-driven optimizers (GEPA,
+        # TextGrad, Reflective) do not pay for a second pass over the same prompt.
+        self._rows_cache[instruction] = rows
+        return sum(correct for _, _, correct in rows) / len(rows) if rows else 0.0
+
+    # ------------------------------------------------------------------
+    # Shared search-budget guard (generalised from OPRO, Oct 2026).
+    #
+    # ``budget`` caps requests made during search, counted from the moment
+    # ``optimize`` starts (not the backend's lifetime total) and including
+    # retries. Final held-out evaluation uses the unwrapped backend and is not
+    # charged. A candidate enters ``history`` only after a complete score, so
+    # running out mid-step can never rank a partially evaluated prompt.
+    # ------------------------------------------------------------------
+
+    @property
+    def _rows_cache(self) -> Dict[str, list]:
+        if not hasattr(self, '_rows_cache_store'):
+            self._rows_cache_store = {}
+        return self._rows_cache_store
+
+    @staticmethod
+    def _reject_target_feedback(ood_examples):
+        if ood_examples is not None:
+            raise ValueError("Optimizers accept source dev data only; ood_examples must be None. "
+                             "Evaluate held-out targets after prompt selection.")
 
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
+        self._reject_target_feedback(ood_examples)
+        if not dev_examples:
+            raise ValueError(f'{self.name} needs nonempty source development data')
+        self.history = []
+        self._scored: Dict[str, Candidate] = {}
+        self._rows_cache_store = {}
+        original_backend = self.backend
+        self.backend = BudgetedBackend(original_backend, self.budget)
+        try:
+            return self._search(task_desc, list(dev_examples))
+        except CallBudgetExceeded:
+            # If even the seed prompt could not be fully scored, fail loudly
+            # rather than invent a score.
+            if not self.history:
+                raise
+            return self._best()
+        finally:
+            self.backend = original_backend
+
+    def _search(self, task_desc: str, dev_examples) -> Candidate:
         raise NotImplementedError
+
+    def _best(self) -> Candidate:
+        return max(self.history, key=lambda c: c.dev_score)
+
+    def _remaining(self) -> int:
+        return getattr(self.backend, 'remaining', float('inf'))
+
+    def _can_afford(self, generations: int = 0, scores: int = 1, dev_examples=()) -> bool:
+        """True if ``generations`` proposal calls plus ``scores`` full scores fit."""
+        return self._remaining() >= generations + scores * self._evaluation_calls(dev_examples)
+
+    def _generate(self, prompt: str) -> str:
+        return self.backend.generate(prompt).strip()
+
+    def _score(self, instruction: str, dev_examples) -> Candidate:
+        """Fully score ``instruction`` (or reuse its score) and record it."""
+        if instruction in self._scored:
+            return self._scored[instruction]
+        if hasattr(self.backend, 'require_calls'):
+            self.backend.require_calls(self._evaluation_calls(dev_examples))
+        candidate = Candidate(instruction=instruction,
+                              dev_score=self._dev_score(instruction, dev_examples))
+        self._scored[instruction] = candidate
+        self.history.append(candidate)
+        return candidate
+
+    def _failures(self, instruction: str, dev_examples):
+        """Per-example misses for an already-scored prompt; free when cached."""
+        rows = self._rows_cache.get(instruction)
+        if rows is None:
+            rows = evaluate_per_example(self.backend, instruction, dev_examples, self.task)
+            self._rows_cache[instruction] = rows
+        return [row for row in rows if not row[2]]

@@ -8,35 +8,25 @@ class EvoPromptLite(Optimizer):
     name = "EvoPrompt-lite"
     population_size = 4
 
-    def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
-        population = [Candidate(instruction=task_desc)]
+    def _search(self, task_desc: str, dev_examples) -> Candidate:
+        population = [self._score(task_desc, dev_examples)]
 
-        while len(population) < self.population_size and self.backend.stats.calls < self.budget:
-            mutation_prompt = MUTATION_TEMPLATE.format(parent=population[-1].instruction)
-            child_instruction = self.backend.generate(mutation_prompt).strip()
-            population.append(Candidate(instruction=child_instruction))
+        # Seed the population with mutations; each child is scored before the
+        # next mutation is requested, so the budget never strands an unscored child.
+        while len(population) < self.population_size and self._can_afford(1, 1, dev_examples):
+            child = self._generate(MUTATION_TEMPLATE.format(parent=population[-1].instruction))
+            population.append(self._score(child, dev_examples))
 
-        for candidate in population:
-            if candidate.dev_score is None:
-                candidate.dev_score = self._dev_score(candidate.instruction, dev_examples)
-        self.history.extend(population)
-
-        while self.backend.stats.calls < self.budget:
+        while self._can_afford(1, 1, dev_examples):
             parents = sorted(population, key=lambda c: c.dev_score, reverse=True)[:2]
             if len(parents) < 2:
                 break
-
             meta_prompt = CROSSOVER_TEMPLATE.format(
                 parent_a=parents[0].instruction, score_a=parents[0].dev_score,
                 parent_b=parents[1].instruction, score_b=parents[1].dev_score,
             )
-            child_instruction = self.backend.generate(meta_prompt).strip()
-            if self.backend.stats.calls >= self.budget:
-                break
-
-            child = Candidate(child_instruction, self._dev_score(child_instruction, dev_examples))
-            self.history.append(child)
+            child = self._score(self._generate(meta_prompt), dev_examples)
             population.append(child)
             population = sorted(population, key=lambda c: c.dev_score, reverse=True)[: self.population_size]
 
-        return max(self.history, key=lambda c: c.dev_score)
+        return self._best()
