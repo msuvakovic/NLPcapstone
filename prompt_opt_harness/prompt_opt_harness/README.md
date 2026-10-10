@@ -155,3 +155,18 @@ harness's `evaluate()` like any other optimizer's output.
 - Broad real-model transfer experiments; the harness already supports a separate evaluation backend
 - Reasoning/code tasks (GSM8K, MBPP, etc.) — demo is sentiment only
 - Target-trained reference with separate target-development and final-test sets (the old oracle is disabled)
+
+
+## Random-search baseline and prompt-trait analysis (October 9, 2026)
+
+`RandomSearch` (`optimizers/random_search.py`) is the APE/random-search control from the proposal. It asks for independent rewrites of the seed instruction (paraphrase, more concise, or more detailed, chosen by a seeded RNG), scores each on source dev, and keeps the best. No proposal sees a score, a failure or another candidate, so comparing it with OPRO/EvoPrompt/GEPA at the same budget shows how much of an optimizer's gain comes from its search signal rather than from evaluating more candidates. Each request carries a variant number so temperature-0 models still return different rewrites. It uses the shared budget guard and is included in `demo.py`.
+
+`prompt_opt_harness/traits.py` and `analyze_traits.py` address research questions Q2/Q3. For each logged run's selected prompt they measure length, sentences, guidance clauses (e.g. "ignore", "focus on", "unless"), whether the labels are named, whether examples are given, lexical diversity, **source-vocabulary rate** (share of content words that occur in source texts but in no OOD text: the domain-overfitting signal) and 4-word spans copied from source dev. They report Spearman correlations with OOD gap, relative OOD gap, worst-case accuracy and cross-domain variance.
+
+```bash
+python -B demo.py                                   # writes logs/
+python -B analyze_traits.py logs/ --dataset demo    # or --dataset real for SST-2 -> Amazon/Tweets runs
+python -B analyze_traits.py logs/ --dataset real --out trait_report.md --csv traits.csv
+```
+
+`--dataset` must match the dataset the runs used; its texts are used only to measure vocabulary and copied spans, never to score prompts. Demo logs come from `MockBackend`, so their correlations test the plumbing only. Meaningful correlations need real-model runs across several optimizers and seeds; the report flags fewer than 10 runs as descriptive. Tests: `python -B -m pytest tests/test_random_search_and_traits.py`.
