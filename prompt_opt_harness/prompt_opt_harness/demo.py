@@ -4,7 +4,7 @@ from prompt_opt_harness.datasets import load_demo_dataset
 from prompt_opt_harness.harness import run_experiment
 from prompt_opt_harness.llm_backends import MockBackend
 from prompt_opt_harness.logger import save_run
-from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, OPRO, ZeroShotBaseline, GEPA, create_dro_optimizer, create_regularized_optimizer, create_sapo_optimizer, TextGrad
+from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, OPRO, ZeroShotBaseline, GEPA, create_dro_optimizer, create_regularized_optimizer, create_sapo_optimizer, TextGrad, RandomSearch
 from prompt_opt_harness.report import build_report
 
 BUDGET = 40
@@ -35,6 +35,7 @@ def main() -> None:
     methods = [
         ("Zero-shot", ZeroShotBaseline, 1),
         ("Human-written", HumanWrittenBaseline, 1),
+        ("Random-search", RandomSearch, BUDGET),
         ("OPRO", OPRO, BUDGET),
         ("EvoPrompt-lite", EvoPromptLite, BUDGET),
         ("GEPA", GEPA, BUDGET),

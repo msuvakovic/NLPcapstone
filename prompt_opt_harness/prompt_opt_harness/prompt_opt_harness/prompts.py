@@ -90,3 +90,23 @@ Here are previous instructions and their scores:
 Write ONE new instruction that adds a specific reasoning step or focuses on nuances.
 Respond with only the new candidate instruction, nothing else.""",
 ]
+
+
+# Random-search (APE-style) baseline: independent rewrites of the seed
+# instruction with no feedback from dev scores. Each request carries a
+# distinct variant number so a temperature-0 model does not return the same
+# rewrite every time.
+RANDOM_SEARCH_TEMPLATES = [
+    """Rewrite the following instruction for a classification task in your own words. Keep the task and the allowed labels the same.
+Instruction: {instruction}
+(Variant #{variant})
+Respond with only the rewritten instruction, nothing else.""",
+    """Write a more concise version of the following instruction for a classification task. Keep the task and the allowed labels the same.
+Instruction: {instruction}
+(Variant #{variant})
+Respond with only the new instruction, nothing else.""",
+    """Write a more detailed version of the following instruction for a classification task, adding guidance that would help a reader label examples correctly. Keep the task and the allowed labels the same.
+Instruction: {instruction}
+(Variant #{variant})
+Respond with only the new instruction, nothing else.""",
+]
