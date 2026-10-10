@@ -33,6 +33,7 @@ def create_dro_optimizer(base_optimizer_cls: Type[Optimizer], num_splits: int = 
             # Validate and choose the subsets before making any model requests.
             self.source_subset_ids = source_subsets(dev_examples, self.seed, num_splits, split_ratio)
             rows = evaluate_per_example(self.backend, instruction, dev_examples, self.task)
+            self._rows_cache[instruction] = rows  # reused by failure-driven search
             correctness = {ex.id: correct for ex, _, correct in rows}
             return min(sum(correctness[eid] for eid in group) / len(group)
                        for group in self.source_subset_ids)
