@@ -14,6 +14,7 @@ from .bayesopt import CostAwareBayesOpt
 from .bayesopt_emb import EmbeddingBayesOpt
 from .oracle import OracleOPRO
 from .entropy import create_entropy_regularized_optimizer
+from .random_search import RandomSearch
 
 __all__ = [
     "Candidate",
@@ -34,4 +35,5 @@ __all__ = [
     "EmbeddingBayesOpt",
     "OracleOPRO",
     "create_entropy_regularized_optimizer",
+    "RandomSearch",
 ]
