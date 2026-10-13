@@ -2,11 +2,27 @@
 
 The project studies whether instructions optimized on source examples transfer to unseen domains. Project proposals and presentations are the PDFs in this directory. [log.txt](log.txt) contains the latest verified results followed by preserved historical output.
 
+**Default sentiment prompt, confirmed October 5, 2026:**
+`Classify the sentiment of the following text as Positive or Negative.`
+Use this base instruction for sentiment inference. The experimental variants
+remain available for explicitly requested research comparisons.
+
 ## Branch notes: `albert`
 
-Updated October 4, 2026. This section describes the `albert` branch **including its current uncommitted working-tree changes and local experiment artifacts**. The work focuses on trustworthy source-to-target evaluation, testing newer prompt optimizers, and reducing inference overhead. Implementation status and measured benefits are distinguished below.
+Updated October 13, 2026. This section describes the implementation and saved experiment evidence on `albert`. The work focuses on trustworthy source-to-target evaluation, testing newer prompt optimizers, and reducing inference overhead. Implementation status and measured benefits are distinguished below. Local response caches and optional dependency environments are not included in Git.
 
 ### Changes and implementations
+
+The October 7 DSPy integration adds explicit `DSPyGEPA`, `DSPyMIPROv2`, and
+`DSPyCOPRO` adapters with counted/capped search attempts, disjoint source
+training/validation, matching search/final prompt formatting, and recorded
+seeds/settings. COPRO is named correctly; MIPROv2 runs with no demonstrations
+in the selected task prompt. These are optional instruction-only adaptations;
+the base sentiment prompt remains the default. See the [DSPy setup and
+limitations](prompt_opt_harness/prompt_opt_harness/README.md#dspy-adapters-october-7-2026).
+Validation on October 7 passed 21 DSPy integration tests using the actual pinned
+compilers with an offline backend, plus 44 existing harness/isolation/task/smoke
+checks (65 total). No new Gemma performance result is claimed.
 
 | Area | Implementation on this branch | Main files |
 | --- | --- | --- |
@@ -22,6 +38,129 @@ Updated October 4, 2026. This section describes the `albert` branch **including 
 | Results and reproducibility | Preserve historical root-log entries, label simulated versus real-response results, and provide an offline replay that refuses new model requests. | [Root log](log.txt), [offline replay](tools/prompt_bench/replay_opro.py), [benchmark instructions](tools/prompt_bench/README.md) |
 
 The working tree also contains toy NLI examples and an entropy-regularized OPRO experiment. These have not established a real MultiNLI result or an accuracy benefit in the controlled sentiment pilot. The entropy wrapper's whitespace perturbations should not be interpreted as controlled high-temperature sampling.
+
+### Optimization-round experiment — October 13, 2026
+
+The [round-count runner](tools/prompt_bench/round_sweep.py) compares **0, 1, 2,
+4, 8 and 16 optimization rounds** across three search seeds. One round means
+one proposed rewrite attempt, including rejected or duplicate proposals. Each
+seed's earlier caps use checkpoints from the same 16-round trajectory. This
+tests the custom source-feedback optimizer; it does not establish an optimal
+round count for DSPy, GEPA or other algorithms.
+
+All checkpoint prompts freeze before a separate 64-example source set selects
+the smallest cap within 1 percentage point of the best mean accuracy. Final
+source/Amazon/tweet tests audit the frozen choices and never select the cap.
+The classifier stays at 16 output tokens so round count is the variable under
+test. The request cap is 4,000 attempts including retries and restarts.
+
+Fresh source samples come from SST-2's official training pool because previous
+experiments largely exhausted unused validation examples. Samples contain at
+least 12 words and exclude exact normalized texts and shared eight-word spans
+from recoverable previous data and current splits. This does not guarantee
+sentence-family or semantic independence. Earlier source percentages are not
+directly comparable. The test is a small pilot on one partition, not a proof of
+statistical equivalence or a universal stopping rule.
+
+See [runner instructions](tools/prompt_bench/README.md#optimization-round-pilot--october-13-2026)
+for execution and cache-only audit commands. The existing base instruction
+remains the default.
+
+**Completed result: extra rounds did not change the selected prompt.** All
+18 checkpoint choices retained the base and scored 95.31% on confirmation.
+The base already scored 32/32 on the source selection set, and ties retain it;
+this ceiling makes the pilot inconclusive about a general optimal round count.
+Zero rounds is the cheapest choice for this observed outcome.
+
+| Round cap | Source confirmation accuracy | Mean search input + output tokens per seed |
+| --- | ---: | ---: |
+| 0 | 95.31% | 0 |
+| 1 | 95.31% | 8,004 |
+| 2 | 95.31% | 10,861 |
+| 4 | 95.31% | 16,995 |
+| 8 | 95.31% | 31,131 |
+| 16 | 95.31% | 62,776 |
+
+Final base accuracy was **100% source (32/32), 96.88% Amazon (62/64), 93.75%
+tweets (60/64), and 95.31% mean OOD**, with zero invalid labels. Repeated seed
+rows reuse the same instruction and predictions; they are not independent
+replications. This run cannot establish whether rejected alternatives overfit.
+The overfitting regression test separately verifies that simulated selection
+gains can fail confirmation and leave the base selected.
+
+The run used **1,776 requests, zero failed attempts, 160 cache hits and 195,740
+returned tokens**. All **123 offline checks** passed, including 12 round-pilot
+regressions. A complete cache replay reconstructed all three searches and every
+held-out prediction without model requests. The standalone verifier serializes
+SQLite replay reads; the original execution source remains hash-locked.
+See [findings](output/round_sweep_2026-10-13/findings.md),
+[report](output/round_sweep_2026-10-13/report.md),
+[offline checks](output/round_sweep_2026-10-13/offline_tests.json), and
+[cache audit](output/round_sweep_2026-10-13/verification.json).
+
+### Fresh performance experiment — October 4, 2026
+
+The [improvement pilot](tools/prompt_bench/improvement_pilot.py) adds three
+controlled options: source-training examples in prompt proposals, staged
+candidate evaluation, and an independent source confirmation guard. The
+[search implementation](tools/prompt_bench/adaptive_search.py) compares an
+identical history-based proposal loop with/without feedback, then adds a
+16-to-32-example screening schedule. Full evaluation admits at most seven
+candidates including the base; staged evaluation can screen thirteen under the
+same 512-evaluation budget. These are custom component ablations, not new
+reference OPRO/GEPA reproductions.
+
+All proposal variants include concise rewrites and an 80-word limit. An
+independent 80-example confirmation set can reject a proposed replacement and
+retain the base, using a predeclared paired test with correction for the three
+comparisons. Both raw and guarded choices are frozen before final scoring.
+The dataset builder excludes normalized texts recovered from previous local
+manifests and logs. The small pilot uses one seed, 64/64 source training/selection
+examples, 80 confirmation examples, 64 final source examples, and 160 final
+examples each from Amazon and tweets.
+
+The request budget is **4,000 physical attempts across the entire experiment**,
+including retries and restarts. A SQLite ledger reserves each attempt before
+dispatch; exact-cache hits remain available when that cap is reached. The
+classification cap stays at 16 tokens. Equal search evaluation limits do not
+imply equal token costs, and small sample sizes may leave gains inconclusive.
+
+**90 offline checks passed**, including 15 new checks for the staged schedule,
+feedback isolation, confirmation decisions, artifact freezes, and persistent
+request accounting. See the [runner instructions](tools/prompt_bench/README.md)
+and [offline verification](output/improvement_pilot_2026-10-04/verification.json).
+The completed real-model pilot used **3,549 requests, zero failed API attempts**,
+and 328,842 returned input-plus-output tokens. The independent artifact audit
+passed 4,560 cache-backed checks with zero new model calls.
+
+| Fresh pilot method | Mean OOD accuracy | Change vs base | Search input + output tokens |
+| --- | ---: | ---: | ---: |
+| Base | 96.56% | -- | 0 |
+| Human-written | 95.94% | -0.62 pp | 0 |
+| History-only control | 96.88% | +0.31 pp | 40,007 |
+| Source-example feedback | 96.56% | 0.00 pp | 43,685 |
+| Feedback + staged evaluation | 96.56% | 0.00 pp | 48,104 |
+
+**No reliable OOD accuracy improvement was established.** The history-only
+control's gain is one additional correct target example out of 320; its paired
+95% interval includes zero (0.00 to +0.94 pp), and a one-sided exact paired test
+gives p=0.5. Feedback fixes one target error but introduces another. Racing's
+final predictions match the base. All three challengers have identical
+correctness to the base on the independent 80-example confirmation set, so
+every guarded variant retains the base and scores 96.56% OOD.
+
+Staged evaluation screened 13 candidates versus 7 within the same 512-evaluation
+budget, but used 20.24% more search tokens than the history-only control. This
+establishes broader screening, not an accuracy or cost improvement. The
+human-written control returned one invalid `Neutral` answer on a tweet, scored
+as incorrect; all other final prompts had zero invalid labels. Keep the base
+as the default. These are fresh test samples, so their percentages are not
+before/after comparisons with the historical 95.33% pilot.
+
+Evidence: [findings](output/improvement_pilot_2026-10-04/findings.md),
+[full results](output/improvement_pilot_2026-10-04/report.md),
+[metrics and macro-F1](output/improvement_pilot_2026-10-04/summary.json), and
+[artifact audit](output/improvement_pilot_2026-10-04/artifact_audit.json).
 
 ### Harness reliability fixes — October 4, 2026
 

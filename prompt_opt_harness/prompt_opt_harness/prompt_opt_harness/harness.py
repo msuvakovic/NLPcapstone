@@ -162,8 +162,9 @@ def run_experiment(
         unknown_usage_attempts=totals['unknown_usage_attempts'],
         backoff_time=totals['backoff_time'],
         task_spec=asdict(dataset.task),
-        optimizer_metadata=({'source_subset_ids': optimizer.source_subset_ids}
-                            if hasattr(optimizer, 'source_subset_ids') else {}),
+        optimizer_metadata=(dict(getattr(optimizer, 'metadata', {})) |
+                            ({'source_subset_ids': optimizer.source_subset_ids}
+                             if hasattr(optimizer, 'source_subset_ids') else {})),
     )
 
 

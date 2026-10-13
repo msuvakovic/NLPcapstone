@@ -1,0 +1,2 @@
+# Optional isolated environment: tools/prompt_bench uses a different GEPA version.
+dspy[optuna]==3.2.1

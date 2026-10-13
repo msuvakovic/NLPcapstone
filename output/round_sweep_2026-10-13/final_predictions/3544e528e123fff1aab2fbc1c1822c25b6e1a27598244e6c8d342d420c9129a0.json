@@ -1,0 +1,2889 @@
+{
+  "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+  "data_hash": "ed1eb1ccb15cd3a47a1658f0b10b5889af1c4defa7283e1bc31c027f5d8f2f3c",
+  "data": {
+    "instruction": "Classify the sentiment of the following text as Positive or Negative.",
+    "predictions": [
+      {
+        "id": "sst2:rounds:source_test:35330",
+        "text": "enjoy the big screen postcard that is a self-glorified martin lawrence lovefest",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 2,
+          "total_tokens": 60,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:4175",
+        "text": "at one man 's downfall , brought about by his lack of self-awareness",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 2,
+          "total_tokens": 58,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:16254",
+        "text": "the story 's scope and pageantry are mesmerizing , and mr. day-lewis roars with leonine power .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 65,
+          "completion_tokens": 2,
+          "total_tokens": 67,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:24382",
+        "text": "it all comes down to whether you can tolerate leon barlow .",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 53,
+          "completion_tokens": 2,
+          "total_tokens": 55,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:8416",
+        "text": "audacity to view one of shakespeare 's better known tragedies as a dark comedy",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 55,
+          "completion_tokens": 2,
+          "total_tokens": 57,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:4167",
+        "text": "'ve seen ( eddie ) murphy do the genial-rogue shtick to death , but because the plot is equally hackneyed",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 69,
+          "completion_tokens": 2,
+          "total_tokens": 71,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:55888",
+        "text": "some body often looks like an episode of the tv show blind date , only less technically proficient and without the pop-up comments .",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 66,
+          "completion_tokens": 2,
+          "total_tokens": 68,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:29458",
+        "text": "even if you 've seen `` stomp '' ( the stage show ) , you still have to see this !",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 62,
+          "completion_tokens": 2,
+          "total_tokens": 64,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:7325",
+        "text": "tadpole may be one of the most appealing movies ever made about an otherwise appalling , and downright creepy , subject -- a teenage boy in love with his stepmother .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 73,
+          "completion_tokens": 2,
+          "total_tokens": 75,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:52164",
+        "text": "this would-be ` james bond for the extreme generation ' pic is one big , dumb action movie .",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 61,
+          "completion_tokens": 2,
+          "total_tokens": 63,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:39582",
+        "text": "a little uneven to be the cat 's meow , but it 's good enough to be the purr .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 64,
+          "completion_tokens": 2,
+          "total_tokens": 66,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:54515",
+        "text": "it 's a fine , old-fashioned-movie movie , which is to say it 's unburdened by pretensions to great artistic significance .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 2,
+          "total_tokens": 72,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:33433",
+        "text": "managing to steal a movie not only from charismatic rising star jake gyllenhaal but also from accomplished oscar winners susan sarandon , dustin hoffman and holly hunter , yet newcomer ellen pompeo pulls off the feat with aplomb",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 88,
+          "completion_tokens": 2,
+          "total_tokens": 90,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:53081",
+        "text": "disreputable doings and exquisite trappings are dampened by a lackluster script and substandard performances .",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 2,
+          "total_tokens": 60,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:57028",
+        "text": "that it makes my big fat greek wedding look like an apartheid drama",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 53,
+          "completion_tokens": 2,
+          "total_tokens": 55,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:62391",
+        "text": "it 's easy to love robin tunney -- she 's pretty and she can act --",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 59,
+          "completion_tokens": 2,
+          "total_tokens": 61,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:34827",
+        "text": "while the humor aspects of ` jason x ' were far more entertaining than i had expected",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 2,
+          "total_tokens": 60,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:37114",
+        "text": "a funny and well-contructed black comedy where the old adage `` be careful what you wish for '' is given a full workout .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 68,
+          "completion_tokens": 2,
+          "total_tokens": 70,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:45864",
+        "text": "the film works as well as it does because of the performances .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 53,
+          "completion_tokens": 2,
+          "total_tokens": 55,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:8959",
+        "text": ", pinocchio never quite achieves the feel of a fanciful motion picture .",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 54,
+          "completion_tokens": 2,
+          "total_tokens": 56,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:51715",
+        "text": "it 's an interesting effort ( particularly for jfk conspiracy nuts ) , and",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 2,
+          "total_tokens": 58,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:61543",
+        "text": "fails to satisfactorily exploit its gender politics , genre thrills or inherent humor",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 53,
+          "completion_tokens": 2,
+          "total_tokens": 55,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:14851",
+        "text": "from its nauseating spinning credits sequence to a very talented but underutilized supporting cast",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 2,
+          "total_tokens": 58,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:62254",
+        "text": "a huge box-office hit in korea , shiri is a must for genre fans .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 2,
+          "total_tokens": 60,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:10935",
+        "text": "'s a long way from orwell 's dark , intelligent warning cry ( 1984 ) to the empty stud knockabout of equilibrium",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 2,
+          "total_tokens": 72,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:21211",
+        "text": "if the director had released the outtakes theatrically and used the film as a bonus feature on the dvd",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 61,
+          "completion_tokens": 2,
+          "total_tokens": 63,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:52981",
+        "text": "fully exploit the comic elements of the premise , making the proceedings more bizarre than actually amusing",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 57,
+          "completion_tokens": 2,
+          "total_tokens": 59,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:23022",
+        "text": "conrad l. hall 's cinematography will likely be nominated for an oscar next year",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 2,
+          "total_tokens": 60,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:879",
+        "text": "schaeffer is n't in this film , which may be why it works as well as it does .",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 2,
+          "total_tokens": 65,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:3315",
+        "text": "'s as sorry a mess as its director 's diabolical debut , mad cows",
+        "label": "Negative",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 2,
+          "total_tokens": 60,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:66829",
+        "text": "it embraces it , energizes it and takes big bloody chomps out of it",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 2,
+          "total_tokens": 58,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "sst2:rounds:source_test:5046",
+        "text": "originality in ` life ' to distance it from the pack of paint-by-number romantic comedies",
+        "label": "Positive",
+        "domain": "sst2",
+        "split": "source_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 59,
+          "completion_tokens": 2,
+          "total_tokens": 61,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:300892",
+        "text": "I father got one of these for Christmas this year. I tried it on one of my Dreamcast games and the game is now ruined. It will not even load in my Dreamcast. It also left permanent marks on the disc. I followed the instructions exactly as they were written. I would recommend trying this product only as a last resort (if your game is already ruined).",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 116,
+          "completion_tokens": 2,
+          "total_tokens": 118,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:93671",
+        "text": "We have tried countless other types of white noise machines for ourselves and our kids and this one is he first one we bought and the best. Really soothing.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 71,
+          "completion_tokens": 2,
+          "total_tokens": 73,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:292826",
+        "text": "The price was great. i have a cheap Uniden phone that i paid $20 for. It was a replacement for the same phone that i purchased a year prior. Usually it is cheaper just to buy another phone, but when i saw the price on amazon i couldnt believe it. it works like a champ and my phone no longer has 20 minute talk time! I am gong to buy another one for the first Uniden phone i purchased. Its like having a new phone for under $10!",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 2,
+          "total_tokens": 146,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:300196",
+        "text": "I had looked at several copper torches similar to these but which were much more expensive for a new patio. I was pleasantly surprised at how lovely they were when we received them. They are quite beautiful for the price.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 83,
+          "completion_tokens": 2,
+          "total_tokens": 85,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:126960",
+        "text": "I am a fan of Blake & Mortimer ever since i started reading them in the late 70's. The only problem is, to find their books in english is a real pain in the neck.I found 2 of their works in english but not the rest which is rather odd. I do hope they can translate the rest of their stories because they were very good & entertaining. esepcilay the secret of sword.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 128,
+          "completion_tokens": 2,
+          "total_tokens": 130,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:388350",
+        "text": "Overall it looked very nice when we opened it. However, it had several scratches and nicks. Also in spots, it looked as though there was no stain or finish applied -the bare \"Wood\" showed through. So we ordered a replacement which had the same problems. Since it does not seem possible that we just got two lemons; we have returned both and will not order a Powell product again. I am also disappointed that since we returned one defective item, no one checked the second before it was shipped.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 143,
+          "completion_tokens": 2,
+          "total_tokens": 145,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:147507",
+        "text": "The idea of giving classic Sabbath tunes the Blakmore's Night treatment does look good on paper. Unfortunately, the creators decided to rewrite the lyrics using OLD English! I don't mean Shakespere- I mean Beowulf! There is no reason they couldn't use the words we all know n love. This is too bad since the takes of \"national accrobat\" and \"planet caravan\" are good musically. Now, the novelty wears thin after the first track- not good for a 50+ minute CD. (Also, nothing for the Dio period is used",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 159,
+          "completion_tokens": 2,
+          "total_tokens": 161,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:336766",
+        "text": "This is a fun workout. It can be a little bit cheesy but it gives a good workout. I am not the kind of person that likes to go to the gym or do typical exercise routines so this is a great alternative.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 86,
+          "completion_tokens": 2,
+          "total_tokens": 88,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:156928",
+        "text": "Rainbeau Mars is an excellent instructor. Following this tape/DVD is similar to attending an actual yoga class. She conveys warmth, and knowledge with her instructions. I think women of any fitness level, and at any stage in their pregnancy will benefit by practicing this workout.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 94,
+          "completion_tokens": 2,
+          "total_tokens": 96,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:8371",
+        "text": "I ordered the Ben Hur DVD and it arrived with the middle piece broken that holds the DVD. So, the little broke off plastic pieces went to the buttom of the DVD and, of course, scratched it. For a classic movie like that for $30 it should be 4 DVD's and have some writing on the top. I waitet for the intermission part to be over after about 1 1/2 hours, and the movie never came back on.So, big, big lemon DVD - don't buy it!!!!Ben-Hur",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 154,
+          "completion_tokens": 2,
+          "total_tokens": 156,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:300186",
+        "text": "I bought this album for the one track that appeared on the film 'Eagle and shark'. I just loved it, and it took me ages to track the band down. I bought the most popular album by them, according to written reviews. After listening to it several times, I've found that I absolutely love every track! It goes everywhere with me in my truck. It's a shame that it was a little expensive, due to it being an import, but I still feel it was money well spent. If you like the samples that are available on A",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 154,
+          "completion_tokens": 2,
+          "total_tokens": 156,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:5018",
+        "text": "I bought them (Northanger Abbey, Persuasion, Mansfield Park and Emma) to complete my Jane Austen's collection, and honestly, didn't like the paper quality, it seems like they didn't even care for the presentation of them; it didn't look elegant, cheap to be more specific.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 104,
+          "completion_tokens": 2,
+          "total_tokens": 106,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:358661",
+        "text": "I boring read. I got grossed out during the beginning of the book. I figured the book would be a great read if the author developed the plot. Well of course it wasn't. I think the book belongs at the bottom of a trash can.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 93,
+          "completion_tokens": 2,
+          "total_tokens": 95,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:290939",
+        "text": "I thought this was a wonderful book and it held my interest though out the book. I was kind-of dispointed with the out come but I would definatly recomend it. Enjoy!!",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 78,
+          "completion_tokens": 2,
+          "total_tokens": 80,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:165644",
+        "text": "I saw him on the Jay Leno show and I liked his performance very much. I understand that this DVD was from 10 years ago but I was still a bit disappointed.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 76,
+          "completion_tokens": 2,
+          "total_tokens": 78,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:19011",
+        "text": "I travel frequently with numerous electronics, and as one finds out many times there aren't exactly a lot of extra sockets in the hotel rooms.I bought this because I thought it would be good with all the adapters that I have. It has been awesome. It doesnt take up too much room and frequently I just throw it in my day bookbag. I could not be happier with my purchase.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 120,
+          "completion_tokens": 2,
+          "total_tokens": 122,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:36575",
+        "text": "Ravi Zacharias misrepresents atheists to fit his own religious dogmas.I found the book tasteless in the extreme.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 64,
+          "completion_tokens": 2,
+          "total_tokens": 66,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:154081",
+        "text": "It seems this book has taken me soooo long to read - it just never picks up speed. It's one of those books that never seems to grab your attention. Too much description - too many wise cracks - too much information about pirates. IT DRAGS ON FOREVER...",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 97,
+          "completion_tokens": 2,
+          "total_tokens": 99,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:267111",
+        "text": "This is a definitely a case of \"you either get it or you don't.\" I didn't get it. Reviews on this film were so good, i figured it was a sure thing. But it made little sense from the start, with the narrative flopping back and forth for the sake of squirting blood and flying heads. It made no sense at all to me, even on a cartoon level. I'd say this is one for people with a special taste for squirting blood.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 2,
+          "total_tokens": 144,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:300706",
+        "text": "The product looked as it did in the photo. But when I tried to use it once opened there was no closing the tube. It is not difficult to use,it is impossible to use.If there is a trick to using this worthless contraption they need to pass it along.Don't waste your money.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 104,
+          "completion_tokens": 2,
+          "total_tokens": 106,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:95449",
+        "text": "The game may be wonderful, but I am not going to put with multiple authorization procedures! I go through that at work, to access sensitive information. THIS IS A GAME! EA, GET OVER YOURSELVES!",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 84,
+          "completion_tokens": 2,
+          "total_tokens": 86,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:104435",
+        "text": "I've never seen a politically incorrect cookbook until now. Miss Lady is a silly southern woman who gets attacks of vapors and nerves, while a wise, wonderful Black woman manages the house, cooks the meals, and doles out love the the kids.It has the stink of everything that people hate about the south.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 104,
+          "completion_tokens": 2,
+          "total_tokens": 106,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:339728",
+        "text": "This does not work with CFL bulbs, only incandescent bulbs. If used with a CFL, then it flickers like a strobe like and makes a scary sound.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 72,
+          "completion_tokens": 2,
+          "total_tokens": 74,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:394281",
+        "text": "This is just a piece of junk. It toasts unevenly and at times hardly at all. The fancy settings (bagel, waffles, etc.) don't mean much, as it doesn't seem to differentiate or be able to figure out just what it is toasting. It also takes a very long time to do what it thinks is the job. Bought this fairly recently and am so unhappy with it that I'm buying another toaster altogether. Don't waste your money on this one.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 2,
+          "total_tokens": 144,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:56875",
+        "text": "I have read a number of Grafton's alphabet mysteries and I found them to be good but a bit tedious (3 stars or so). However, I've taken to listening to them as books on tape and have found them to be quite enjoyable. Judy Kaye does a fantastic job as the voice of Kinsey (she has her wry sense of humor nailed - her voice perfectly matches Grafton's words - whovever cast Kaye as the voice of Milhone should get 5 stars) and I find the books to be quite enjoyable.I do agree with other reviewers that",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 156,
+          "completion_tokens": 2,
+          "total_tokens": 158,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:10634",
+        "text": "First of all it is a very short book about 40 pages, paper-back, and most of it is covered with pictures, also the book size is about 5\"x6\"; it's more like a brochure. That's fine if you want pictures, but it leaves little room for information. I certainly didn't expect to have the first half of the book giving pictures and descriptions of all of these different tree frogs, I bought it for the Red-eyes.The second half of the book (20 pages) gives little information. It doesn't even show cage set",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 163,
+          "completion_tokens": 2,
+          "total_tokens": 165,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:146821",
+        "text": "This video is very informative, it contains very good interviews, and some interesting footage. It stays on track and keeps you interested. After watching this video you will be open to the possibility of something very bizarre going on at Area 51, if you aren't already of course. I would recommend this video for anyone who has interest in Area 51, UFO's, or conspiracies in general.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 123,
+          "completion_tokens": 2,
+          "total_tokens": 125,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:128302",
+        "text": "Cable didn't work right out of the box...I spent good money on the rest of my gear and cables, so I guess I shouldn't cheap out on the subwoofer cable:( Going with a higher quality one next time!",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 87,
+          "completion_tokens": 2,
+          "total_tokens": 89,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:85951",
+        "text": "I think Doc Laura has written some fabulous books. And this is just one of many. The beauty is, each book it a tiny bit different so you really get a good morsal of truth in each one if you read it really really carefully. In this book, I've learned how to not have my husband leave me, and really, isn't that a pretty important thing? Especially when you have children!!!! You have a responsibility towards your children and the thing is, I'm my kid's mom so I especially have a responsibility. It d",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 154,
+          "completion_tokens": 2,
+          "total_tokens": 156,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:115936",
+        "text": "In regards to your \"Interview with the author\", \"The Readers Digest Magazine in the library,if you know what I mean\" NOT A PRETTY PICTURE,if you know what I mean!",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 79,
+          "completion_tokens": 2,
+          "total_tokens": 81,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:58270",
+        "text": "and the lemmings came out from woodwork and coughed up copious amount of dollars.1st off,godzilla is corny.she blows fire and whines.when shes fighting other corny beats it fun.the tv version are campy laughfests.the fact that this was gone after its 2nd weekend justifies the 1 star.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 114,
+          "completion_tokens": 2,
+          "total_tokens": 116,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:319376",
+        "text": "This is the first book of A. S. Byatt that I have read. I have only read half-way through, and was so frustrated that I wanted to read some other people's thoughts on this book. The book could be very interesting if it were not for SO MANY philisopical, and religious arguments the characters have between eachother and themselves, in much too much detail. Additionally, it is a very bleak book thus far, and I am not interested enough to continue. I have purchased POSSESION, and honestly do not loo",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 153,
+          "completion_tokens": 2,
+          "total_tokens": 155,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:86833",
+        "text": "As mentioned in the review, the mother sings a song \"I'll love you forever, I'll like you for always, As long as I'm living, my baby you'll be.\" When the child in the story is young, this is very appropriate. But when the child grows into manhood, the mother goes to his house at night. When she sees that all the lights are off, she uses a ladder to climb into his window, cuddle him and sing the song. This is sick! I'm not sure what this book is trying to promote, but I doubt that stalking, break",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 164,
+          "completion_tokens": 2,
+          "total_tokens": 166,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:72025",
+        "text": "As a fan of Blonde Redhead's work for quite some time, I bought this as soon as I had money to do so. I was so excited to hear this record. I loved their old stuff, I loved Misery...even with how different it was from the old stuff. It was just so beautifully done, I didn't care. 23, on the other hand, is just plain bad. The music definitely picks up where Misery left off, but it's really boring. The vocals are equally boring. There is no intensity at all to this. Not to mention that there is no",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 166,
+          "completion_tokens": 2,
+          "total_tokens": 168,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:3891",
+        "text": "I was a little dissapointed with this purchase because it claims to be hardcover but in actuality it is three ring punched and individual pages. It is complete and in very good condition though. I would still consider purchasing from this agent since the prices are very low.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 93,
+          "completion_tokens": 2,
+          "total_tokens": 95,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:328486",
+        "text": "I'd never used a water flosser before and was skeptical but after several tests I concluded that it did a better job than traditional flossing. The big problems is that first the water resevoir lid broke off (not aa big problem) but then the motor stopped running. I'm going to look for a different brand.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 108,
+          "completion_tokens": 2,
+          "total_tokens": 110,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:335256",
+        "text": "This is a good replacement for a genuine casio watchband. The price is right, delivery time was excellent and it fits as good as original. As a plus, two spring pins were included with the watchband as a surprise ( they were NOT advertized as included in the description before placing the order). The band is just a little SHORT for my liking, but does work nicely. I tend to wear my watch a bit on the loose side and when hooked in the second hole the sliding keeper does not stay put on the end of",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 2,
+          "total_tokens": 150,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:174400",
+        "text": "Sara Gilbert (from TV's \"Roseanne\") plays Cooper, a lonley teenager who befriends the new wild girl in school, Ivy, (Drew Barrymore). The two become best friends and Ivy eventually moves in with her. But Ivy isnt what she seems to be. Her sweet personality is only a mask covering her darker, evil side. Ivy has a plan to throw their friendship away and destroy Cooper's life. She starts by seducing her father, murdering her mother, and literally stealing Cooper's life from her. Once Cooper realize",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 0,
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 2,
+          "total_tokens": 154,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:268530",
+        "text": "As someone who spent many years playing poker, this book left me feeling unsatisified. The writing could only be described as perfunctory, as if the author needed money in a hurry. Much better is \"Shut Up and Deal.\" That book gave me an adrenalin rush that made we want to return to the felt table of my past.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 109,
+          "completion_tokens": 2,
+          "total_tokens": 111,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:2143",
+        "text": "I am sorry that I ever bought this thing, it is the most annoying \"toy\" I have ever bought. No matter where I put it or how I adjust it, it goes off all night long. This would be a great gadget in theory if we lived in an animal free (No squirrels) and bug free (no flying beetles, moths & etc.) world but seeing how that is not the case, it's really not good for anyone. Even the shadows of people and cars set this thing off. I thank god that I didn't buy two alert systems as I originally planned.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 161,
+          "completion_tokens": 2,
+          "total_tokens": 163,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:70790",
+        "text": "I grew up with this album and for a while i thought this album was a greatest hits because all the songs are amazing. karma chamelion is prob the best known culture club song in the world but the rest WOW! the other hits like church of the poison mind ( helen terrys voice on this will send shivers down and up your spine) miss me blind the other less known single is just soooooo dancable. and the heart stopping victims just goes beyond music and takes you to the dark side of your soul. the other ",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 2,
+          "total_tokens": 154,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:256449",
+        "text": "This book is truly the best!! I couldn't put it down once I've started it. The characters are simply wonderful, and I was crying throughout the end. Great work!!",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 78,
+          "completion_tokens": 2,
+          "total_tokens": 80,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:116615",
+        "text": "This book is a young adult book about people of Japanese ancestry, even those who were American citizens, being taken from their homes and placed in detention camps after Pearl Harbor. It is sensitively written.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 79,
+          "completion_tokens": 2,
+          "total_tokens": 81,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:393239",
+        "text": "Excellent quality & it fit my Ipod perfectly. My recommendation is: a BUY.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 57,
+          "completion_tokens": 2,
+          "total_tokens": 59,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:330662",
+        "text": "Turbotax Premier didn't work -- was sold incomplete and update needed, although not mentioned on the box. I am not on the net, so needed to wait for it USPS. After waiting 6 weeks (and tax time imminent) I finished my taxes manually and mailed it. I returned the disc to Intuit and requested full refund. THEN they sent me the upgrade. Too late, guys. Intuit now refuses to acknowledge me... Decide for yourself if they are an honest company.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 140,
+          "completion_tokens": 2,
+          "total_tokens": 142,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:362831",
+        "text": "this product is ok,..you can't fit much on it, it does add minimal overhead storage,you cannot fit a cooler/chairs/..I havn't found anything that it is useful for.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 83,
+          "completion_tokens": 2,
+          "total_tokens": 85,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:275407",
+        "text": "I've used these a few times when I suspected I might be pregnant and the results were negative. It's a fantastic bargain if they work and I have no complaints yet.8/22/09 Update: I used these for a few days before my period was due and each time it was negative. The day it was due, I took another one and was about it throw it away but thought I saw a faint line. I took a pregnancy test at a local WIC and it was negative so I thought I was imagining things. But the next day I took another to be s",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 162,
+          "completion_tokens": 2,
+          "total_tokens": 164,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:190497",
+        "text": "I purchased the Briel Apollo, with the expectation of making a great cup of espresso. I live in Miami, and expresso & cafe con leche are necessities. I wanted to get the same quality of coffee at home. When I was making my first capuccino, the steam nozzle worked for about 2 seconds and then the machine emitted a funny smell & now it won't heat up. I am very dissapointed. Seeing that other buyers have had the same problem, I would not reccommend this machine....",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 2,
+          "total_tokens": 148,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:157948",
+        "text": "but it didn't really help my neck problem. Not a defect of the collar, collars just don't work for everybody.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 0,
+        "usage": {
+          "prompt_tokens": 67,
+          "completion_tokens": 2,
+          "total_tokens": 69,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:99685",
+        "text": "This is the absolute worst printer I have ever had. It's complete garbage as many others have stated. This thing printed fine for a week, now and for the last year it won't print colors correct no matter how many cartridges I've replaced nor what color profile I try. Print jobs constantly get stuck and the ink doesn't last long. I won't be getting another ink jet from HP ever!",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 126,
+          "completion_tokens": 2,
+          "total_tokens": 128,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:359432",
+        "text": "I prefer the dw272 over \"ALL\" drywall screwguns for \"WOOD\"frames.On the other hand,at this price,how you a serious professional resist.You get a \"1\" ONE YEAR Manufactures warranty which is equal to a brand new Dewalt srewgun.Dewalt backs ALL thier products well.On top of that AMAZON.COM is #1 for customer satisfaction!!!!What are you waiting for,pruchase now & thank me later...",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 138,
+          "completion_tokens": 2,
+          "total_tokens": 140,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:180659",
+        "text": "This is a brilliant recording by one of India's premier master of the art of Tabla and Hindustani Tala system. Although Ustad Nizamuddin passed away many years back, this live recording belongs in the archives of all the lovers of Indian music.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 91,
+          "completion_tokens": 2,
+          "total_tokens": 93,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:61721",
+        "text": "I used this product years ago and loved it. I haven't been able to find in any store since and was excited to find it on amazon. When I received it in the mail I immediately opened it up at put some on. It tasted bad, like it was VERY old. Maybe the reason I haven't been able to find it is because it is a product no longer made?? I wonder if someone who sold Neurtrogena products is getting rid of old stock. Bummer!",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 2,
+          "total_tokens": 143,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:348793",
+        "text": "Bought this misting fan for my son for Father's Day. He loves it. He says it blows like a .... well you know. The box says it blows 7 MPH--but it has three speeds if you don't need it that high. It does oscillate. He had friends over for the 4th of July and they all wanted one. The kids had fun with the misting feature. It is just the right height for cooling when you are sitting. The misting makes the air feel 20 degrees cooler, and the breeze blows the mosquitos away. It's perfect for patios t",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 166,
+          "completion_tokens": 2,
+          "total_tokens": 168,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:81530",
+        "text": "Having read every book W.E.B. Griffin has written(including books published under assumed names) I feel like I could sometimes write these stories. I enjoy the descriptive nature of his books, except when they appear in several books in a series and you are forced to skip a few lines. Blood and Honor is a very good read. I now can describe every square inch of a Horche Convertable or a bottle of bourbon. W.E.B. Griffin's sense of timing is what makes this book good. I would prefer to see more of",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 154,
+          "completion_tokens": 2,
+          "total_tokens": 156,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:162526",
+        "text": "A very handy tool for identifying those hard to see urine spots on the carpet! For those dog owners out there who believe their dog would never urinate on their carpet this light is indispensable! A well made sturdy product.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 84,
+          "completion_tokens": 2,
+          "total_tokens": 86,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:348285",
+        "text": "Used this book to learn how to knit. Its very easy to understand and the step-by-step pictures really help illustrate the instructions. Still refer to the book repeatedly as a great reference to more complicated stitches and patterns.The book has very easy patterns to get you started on your knitting. So far have followed the patterns for wrist warmers, and mittens. Both were easy to follow and a delight to give as gifts.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 126,
+          "completion_tokens": 2,
+          "total_tokens": 128,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:14508",
+        "text": "I did not purchase this for a child, so the durability was not an issue, however, it does appear to be very well crafted. I loved Buckbeak in the Harry Potter film, \"The Prisoner of Azkaban\" and wanted to add him to my collection of Harry Potter books on my bookshelf. I am pleased with my purchase.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 110,
+          "completion_tokens": 2,
+          "total_tokens": 112,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:70787",
+        "text": "This anthology is a great tribute to the boys of Foghat. While I would have liked to have seen more of their work from Stone Blue and earlier, such as \"Chevorlet\" and \"Sweet Home Chicago\" instead of \"Live now, pay later\" and \"Somebody's been sleeping in my bed\", this still is a great CD for the money. Disk 1 is a travelog of the bands career through the seventies and disk 2 is the entire self-titled debut album remastered. The sound quality is great and the liner notes are enlightening ( such as",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 156,
+          "completion_tokens": 2,
+          "total_tokens": 158,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:388311",
+        "text": "We are still waiting for this book. Guess it won't make it. I will check to see if it pops up for sale someplace else but I expect I won't order anything else.",
+        "label": "Negative",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 80,
+          "completion_tokens": 2,
+          "total_tokens": 82,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:128232",
+        "text": "It's very worth reading. The content is very complete. I found it as insightful as Geneva Nights. I'd read it again.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 69,
+          "completion_tokens": 2,
+          "total_tokens": 71,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:184320",
+        "text": "Our oldest son is excited about nighttime devotions - good simple messages reinforced with an actions-driven poem or song.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 2,
+          "total_tokens": 65,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:56053",
+        "text": "Dear Mr. Henshaw by Beverly Cleary is a funny book, filled with surprises. I would give this book five stars. It is a book about a kid named Leigh who keeps writing to an author named Mr. Henshaw. Leigh's parents were recently divorced and Leigh is annoyed about it. The way Leigh's mother and father have been acting is making him sick. Leigh has no friends because he is the new kid in school. That makes me sad. Leigh then becomes friends with the janitor which is weird. Leigh keeps having food s",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 2,
+          "total_tokens": 154,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "amazon:rounds:amazon_test:114545",
+        "text": "The Porter Cable 6\" 40 tooth riptide blade cuts with minimal splintering and leaves a satin smooth edge. We use it for cutting Baltic Birch plywood, 1/4\" thru 3/4\", and have been very pleased with both the cutting results and durability.",
+        "label": "Positive",
+        "domain": "amazon",
+        "split": "amazon_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 99,
+          "completion_tokens": 2,
+          "total_tokens": 101,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:6222",
+        "text": "Anti-#Trump Riots are a Smoke Screen for an attempt by the #RadicalLeft to steamroll #Constitution #ElectoralCollege",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 67,
+          "completion_tokens": 2,
+          "total_tokens": 69,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:7910",
+        "text": "1st try 😭😭 #mannequinchallenge",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 52,
+          "completion_tokens": 2,
+          "total_tokens": 54,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8625",
+        "text": "@user as part of the #furfest hotel liaison team, THANK YOU for your incredible hospitality this weekend! You…",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 64,
+          "completion_tokens": 2,
+          "total_tokens": 66,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:4065",
+        "text": "GEORGE SOROS DID FOR HILLARY WILL MAKE YOU SICKWATCH VIDEO!!",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 55,
+          "completion_tokens": 2,
+          "total_tokens": 57,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:3273",
+        "text": "You've heard the Animals, Bob Dylan, and five finger death punch... now listen to the best!!!",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 62,
+          "completion_tokens": 2,
+          "total_tokens": 64,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2746",
+        "text": "David Blaine shit on Netflix about to make me throw up.",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 52,
+          "completion_tokens": 2,
+          "total_tokens": 54,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11333",
+        "text": "Israeli demolition of Palestinian woman's home 'a double crime' via @user #gaza #palestine #israel #BDS",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 68,
+          "completion_tokens": 2,
+          "total_tokens": 70,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:6778",
+        "text": "@user If alt-right means racial supremacists then I disavow and condemn them as well. They're no better than BLM scum.",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 2,
+          "total_tokens": 72,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2347",
+        "text": "YES! #campaignfinance reform is the underlying change that supports the effort to #draintheswamp Go…",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 2,
+          "total_tokens": 65,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2273",
+        "text": "@user that last message is for Pope Francis, he cannot answer the 4 cardinals, he knows Amoris Laetitia is of the Devil",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 69,
+          "completion_tokens": 2,
+          "total_tokens": 71,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:6234",
+        "text": "@user Gods natural fires being blamed by the nazi party of ISRAHELL on original jewish ancestors in the region. SHAME ON ZIONISTS",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 72,
+          "completion_tokens": 2,
+          "total_tokens": 74,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11761",
+        "text": "#SteveBannon is the Racist Far-Right Internet Personified — and He Ha…",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 59,
+          "completion_tokens": 2,
+          "total_tokens": 61,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2742",
+        "text": "@user @user @user @user  SAY NO TO @user   #NoToMittRomney. HELL NO!!!",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 67,
+          "completion_tokens": 2,
+          "total_tokens": 69,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8524",
+        "text": "#TheWalkingDead S7 is not very addictive.",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 51,
+          "completion_tokens": 2,
+          "total_tokens": 53,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8581",
+        "text": "(( - Pre-Persona 5 timeline!- Multiverse? We're all a big family!- Occasional Writer bluff.- Detailed as you ar…",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 2,
+          "total_tokens": 72,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8496",
+        "text": "Oh the Westworld finale is a feature-length film?Cool.**pours tall whiskey, puts on seat belt**",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 64,
+          "completion_tokens": 2,
+          "total_tokens": 66,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:4738",
+        "text": "The dumbest among us believe this baseless propaganda that has less foundation than anything Alex Jones ever put ou…",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 61,
+          "completion_tokens": 2,
+          "total_tokens": 63,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:3170",
+        "text": "@user Does New York have the death penalty? When they capture this assassin that should be his sentence.",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 61,
+          "completion_tokens": 2,
+          "total_tokens": 63,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8108",
+        "text": "Uplifting reading from @user #earth #climate #robots #unitednations #soil #extinction #trump #timetopulltogether",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 68,
+          "completion_tokens": 2,
+          "total_tokens": 70,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11692",
+        "text": "SOMEONE SEND ME STATS ON ACCIDENT RATES OF SELF DRIVING CARS BC IM LOSING IT OVER HERE. SOS HELP PLEASE, ELON MUSK HAS FORSAKEN ME.",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 78,
+          "completion_tokens": 2,
+          "total_tokens": 80,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11252",
+        "text": "@user He isn't being punished.  Sheriff allows White Supremacists to have whatever they want in jail.  \"Feel the Bern!\"",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 71,
+          "completion_tokens": 2,
+          "total_tokens": 73,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11947",
+        "text": "Thankful for my fam, the slores, house3, tswift, Grayson Allen, wine, cats, and most of all cannolis ♥️♥️#happyturkeyday",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 78,
+          "completion_tokens": 2,
+          "total_tokens": 80,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2316",
+        "text": "@user @user I'm all for it until u get to \"Nazi\". Third leg of subculture that requires amputation",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 65,
+          "completion_tokens": 2,
+          "total_tokens": 67,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:3072",
+        "text": "@user i want to go",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 46,
+          "completion_tokens": 2,
+          "total_tokens": 48,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:3594",
+        "text": "#Spurs #GoSpursGo TIM DUNCAN 1997-98 BOWMAN'S BEST ROOKIE RC #106 SPURS NBA FINALS MVP HOF! #TimDuncan #NBA",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 87,
+          "completion_tokens": 2,
+          "total_tokens": 89,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:10521",
+        "text": "PA's @user tapped to co-chair Democratic Policy & Comms Committee -- step in right direction 4 the party.",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 66,
+          "completion_tokens": 2,
+          "total_tokens": 68,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2173",
+        "text": "Problem with this is the voter suppression going on..",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 50,
+          "completion_tokens": 2,
+          "total_tokens": 52,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:9883",
+        "text": "#TexasAbortionLaw is attempt to make people face reality of #Abortion #AbortionISMurder of #HumanBeinghttps://t.co/jWdQHa0LaK",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 0,
+        "usage": {
+          "prompt_tokens": 78,
+          "completion_tokens": 2,
+          "total_tokens": 80,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:4781",
+        "text": "@user trump calls u lying ted. says your father was involved in murder of jfk.  And he has dirt on your wife. Compared her to melania.",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 74,
+          "completion_tokens": 2,
+          "total_tokens": 76,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:1523",
+        "text": "The last thing we should be doing when our climate is at such a critical turning point is making fossil fuels...",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 62,
+          "completion_tokens": 2,
+          "total_tokens": 64,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:6364",
+        "text": "Obama's dirty secret: Funded fossil fuel projects worldwide while cutting American power plants & jobs #ObamasLegacy",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 62,
+          "completion_tokens": 2,
+          "total_tokens": 64,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:9811",
+        "text": "Recap from last night's Messi masterclass in Glasgow #CelticFCB #Messi #FCBlive",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 61,
+          "completion_tokens": 2,
+          "total_tokens": 63,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:9931",
+        "text": "@user Dems have a lot of rethinking to do in order to win. Let this recount settle our minds on the distressful pres election results",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 68,
+          "completion_tokens": 2,
+          "total_tokens": 70,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:7404",
+        "text": "So thankful for #TheExorcist & #ScreamQueens so please @user #RenewTheExorcist & #RenewScreamQueens",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 69,
+          "completion_tokens": 2,
+          "total_tokens": 71,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:7521",
+        "text": "Well this is interesting. @user joins the @user foundation.  @user",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 2,
+          "total_tokens": 58,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2743",
+        "text": "Postcard stamps can add value.",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 47,
+          "completion_tokens": 2,
+          "total_tokens": 49,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:5938",
+        "text": "Here's Clinton giving her support for BLM #BlackLivesMatter #VoteGreen @user @user @user",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 62,
+          "completion_tokens": 2,
+          "total_tokens": 64,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2195",
+        "text": "@user Kyle Hendricks, should've been cy young winner, pretty amazing contract",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 2,
+          "total_tokens": 58,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:2734",
+        "text": "\"Putin only has to sit on the fence and wait until Ukraine kills itself” Yeah, or until Saakashvili & Tymoshenko do…",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 68,
+          "completion_tokens": 2,
+          "total_tokens": 70,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11619",
+        "text": "@user regarding her case being a waste to taxpayers when other murderers were not \"death penalty guarantees\" due to demographics",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 2,
+          "total_tokens": 65,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11541",
+        "text": "@user @user I learned Basket Weaving for my deplorables.And I love a good mani/pedi & couples massage with you, handsome 😘",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 72,
+          "completion_tokens": 2,
+          "total_tokens": 74,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:4315",
+        "text": "ALL NATIONS UNITE.... HUMAN BEINGS STANDING UP TOGETHER WILL FORCE THE CHANGE FROM FOSSIL FUELS TO CLEAN ENERGY...",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 0,
+        "usage": {
+          "prompt_tokens": 68,
+          "completion_tokens": 2,
+          "total_tokens": 70,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:4679",
+        "text": "#Uber and #Gautrain; how do I thank thee 👏🏽🙌🏽😄😭😭😀🎉",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 62,
+          "completion_tokens": 2,
+          "total_tokens": 64,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8939",
+        "text": "The longer this Brexit indecision drags on, could it be more & more people know deep down that the EU referendum result was the wrong one?",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 69,
+          "completion_tokens": 2,
+          "total_tokens": 71,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:6795",
+        "text": "Why is Obama in final months trying to decrease US leverage to deal with Iran violations and aggression in Trump admin? Incomprehensible",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 65,
+          "completion_tokens": 2,
+          "total_tokens": 67,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8904",
+        "text": "@user @user  SOUR GRAPES! Surprised that even Shankar sharma batting for dems- who knew it all & used it all too.KARMA.",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 74,
+          "completion_tokens": 2,
+          "total_tokens": 76,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:119",
+        "text": "@user you were elected with promise to keep #Medicaid #Medicare Paul Ryan was not elected #POTUS PLEASE do not kill w his plan",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 2,
+          "total_tokens": 72,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:5797",
+        "text": "This Comedian’s Election Silver Lining: Making Sweet Love to Mike Pence via @user",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 0,
+        "usage": {
+          "prompt_tokens": 58,
+          "completion_tokens": 2,
+          "total_tokens": 60,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:8191",
+        "text": "@user Lies. Ignore all the UNIONISTS and other leftists pushing pedophilia as a non-crime. #evil",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 64,
+          "completion_tokens": 2,
+          "total_tokens": 66,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:7723",
+        "text": "@user @user @user @user When the Dems weaponized the IRS they had to know it would circle back on them. 🐴",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 0,
+        "usage": {
+          "prompt_tokens": 68,
+          "completion_tokens": 2,
+          "total_tokens": 70,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11968",
+        "text": "why did I choose animal testing as my speech topic I am crying looking at these images 😭",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 59,
+          "completion_tokens": 2,
+          "total_tokens": 61,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11739",
+        "text": "1) re-imposition of the death penalty2) lowering the minimum age of criminality to NINE YEARS OLD. MY GOD",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 67,
+          "completion_tokens": 2,
+          "total_tokens": 69,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:3059",
+        "text": "Raids kill dozens in Syria's Idlib, UN to vote on ceasefire - Yahoo7 News",
+        "label": "Negative",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Negative",
+        "raw": "Negative",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 60,
+          "completion_tokens": 2,
+          "total_tokens": 62,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:12091",
+        "text": "Oh my god that Thanksgiving #ThisIsUs episode had me in tears 😭😭😭",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 57,
+          "completion_tokens": 2,
+          "total_tokens": 59,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:1431",
+        "text": "I liked a @user video from @user 3D Printing Fully Functional Platform Jack",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 57,
+          "completion_tokens": 2,
+          "total_tokens": 59,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:3605",
+        "text": "#Spurs #GoSpursGo 1997-98 Flair Showcase Row 3 #5 Tim Duncan RC ROOKIE NM-MT #TimDuncan #NBA",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 77,
+          "completion_tokens": 2,
+          "total_tokens": 79,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:856",
+        "text": "My top sports teams.- Toronto blue jays-Chicago bulls-Colorado rockies-Denver broncos -Chicago cubs 😊👍",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 65,
+          "completion_tokens": 2,
+          "total_tokens": 67,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:9744",
+        "text": "I liked a @user video Archie Bunker's Editorial on Gun Control",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 54,
+          "completion_tokens": 2,
+          "total_tokens": 56,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:782",
+        "text": "Westworld.Damn.There is life after Game of Thrones.",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 53,
+          "completion_tokens": 2,
+          "total_tokens": 55,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:7726",
+        "text": "Ahhhh i want this cake 😍 #bestdisneyfilm #taleasoldastime #BeautyAndTheBeast",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 64,
+          "completion_tokens": 2,
+          "total_tokens": 66,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:7867",
+        "text": "Tim Duncan still has a big presence with Spurs #gospursgo",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 54,
+          "completion_tokens": 2,
+          "total_tokens": 56,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:11391",
+        "text": "And now it's time for #ScreamQueens😈💉🏥🔪#CrazyHester ❤️",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 60,
+          "completion_tokens": 2,
+          "total_tokens": 62,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:7205",
+        "text": "Grayson Allen with five points and a really nice assist over the final 2:40 and Duke leads William & Mary 46-30 at the half.",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 74,
+          "completion_tokens": 2,
+          "total_tokens": 76,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      {
+        "id": "tweets:rounds:tweets_test:9035",
+        "text": "I can't believe this is happening. #ThankYouObama",
+        "label": "Positive",
+        "domain": "tweets",
+        "split": "tweets_test",
+        "prediction": "Positive",
+        "raw": "Positive",
+        "correct": 1,
+        "usage": {
+          "prompt_tokens": 53,
+          "completion_tokens": 2,
+          "total_tokens": 55,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      }
+    ]
+  }
+}

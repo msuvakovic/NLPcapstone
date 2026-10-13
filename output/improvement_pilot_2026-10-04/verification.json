@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "offline_checks": 90,
+  "suites": {
+    "test_improvements.py": 15,
+    "test_benchmark.py": 15,
+    "test_protocol.py": 11,
+    "test_token_caps.py": 3,
+    "test_analysis.py": 2,
+    "test_harness_reliability.py": 21,
+    "test_data_isolation.py": 10,
+    "test_tasks_and_dro.py": 8,
+    "smoke_test.py": 5
+  },
+  "python_files_parsed": [
+    "tools/prompt_bench/core.py",
+    "tools/prompt_bench/adaptive_search.py",
+    "tools/prompt_bench/fresh_data.py",
+    "tools/prompt_bench/improvement_pilot.py",
+    "tools/prompt_bench/test_improvements.py"
+  ],
+  "live_experiment_status": "complete",
+  "notes": [
+    "All listed suites returned exit code zero.",
+    "Mock transport was used for new regression tests.",
+    "Live model results are reported separately after all selections are frozen."
+  ],
+  "artifact_audit": {
+    "status": "PASS",
+    "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+    "searches": 3,
+    "fresh_examples": 592,
+    "excluded_texts": 1686,
+    "unique_final_prompts": 5,
+    "stored_predictions": 2240,
+    "cache_checks": 4560,
+    "physical_attempts": 3549,
+    "physical_cap": 4000,
+    "returned_models": {
+      "gemma4:31b": 3549
+    },
+    "new_model_requests": 0
+  },
+  "request_count": 3549,
+  "failed_api_attempts": 0
+}

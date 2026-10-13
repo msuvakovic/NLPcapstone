@@ -1,0 +1,42 @@
+{
+  "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+  "search_freeze_hash": "e1ab8a404b0ecc1047ba440c1848d5333ae65d66c883e58ab6fe7ea758a2f9db",
+  "decisions": {
+    "history_full": {
+      "accepted": false,
+      "gain": 0.0,
+      "corrected": 0,
+      "regressed": 0,
+      "p_value": 1.0,
+      "alpha": 0.016666666666666666,
+      "minimum_gain": 0.01,
+      "n": 80,
+      "raw_prompt": "Determine if the sentiment of the text is Positive or Negative. Return only the label.",
+      "selected": "Classify the sentiment of the following text as Positive or Negative."
+    },
+    "feedback_full": {
+      "accepted": false,
+      "gain": 0.0,
+      "corrected": 0,
+      "regressed": 0,
+      "p_value": 1.0,
+      "alpha": 0.016666666666666666,
+      "minimum_gain": 0.01,
+      "n": 80,
+      "raw_prompt": "Classify the sentiment of the following text as either Positive or Negative. For texts with mixed or implicit sentiment, determine the final verdict or the dominant emotional weight. Return only the label.",
+      "selected": "Classify the sentiment of the following text as Positive or Negative."
+    },
+    "feedback_racing": {
+      "accepted": false,
+      "gain": 0.0,
+      "corrected": 0,
+      "regressed": 0,
+      "p_value": 1.0,
+      "alpha": 0.016666666666666666,
+      "minimum_gain": 0.01,
+      "n": 80,
+      "raw_prompt": "Classify the sentiment of the text as Positive or Negative. Return only the label.",
+      "selected": "Classify the sentiment of the following text as Positive or Negative."
+    }
+  }
+}

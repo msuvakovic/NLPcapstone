@@ -1,0 +1,229 @@
+{
+  "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+  "data_hash": "72c66004a025049c7cbf068abc72352ddfdc38a6b3fb720a1a0c433c9fc9a5c9",
+  "data": {
+    "search_hashes": {
+      "0": "fe0de0545519e109519809e73d1b1d85aa47bf244f061e896bec173a06f4fde5",
+      "1": "8d6e8f55c69cdebd8d8dcc9badc58ee36464b8069913f2e22e0984d1129dd03f",
+      "2": "e76c5e71e225fe1bf5dffa3bcea60f4769f6423eb1f49458182489df4da8cf9b"
+    },
+    "checkpoints": {
+      "0": {
+        "0": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 0,
+            "proposal_calls": 0,
+            "logical_input_tokens": 0,
+            "logical_output_tokens": 0
+          }
+        },
+        "1": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 96,
+            "evaluation_cap": 576,
+            "proposal_calls": 1,
+            "proposal_cap": 16,
+            "logical_input_tokens": 7730,
+            "logical_output_tokens": 255
+          }
+        },
+        "2": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 128,
+            "evaluation_cap": 576,
+            "proposal_calls": 2,
+            "proposal_cap": 16,
+            "logical_input_tokens": 10836,
+            "logical_output_tokens": 359
+          }
+        },
+        "4": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 192,
+            "evaluation_cap": 576,
+            "proposal_calls": 4,
+            "proposal_cap": 16,
+            "logical_input_tokens": 18398,
+            "logical_output_tokens": 604
+          }
+        },
+        "8": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 320,
+            "evaluation_cap": 576,
+            "proposal_calls": 8,
+            "proposal_cap": 16,
+            "logical_input_tokens": 33400,
+            "logical_output_tokens": 1082
+          }
+        },
+        "16": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 576,
+            "evaluation_cap": 576,
+            "proposal_calls": 16,
+            "proposal_cap": 16,
+            "logical_input_tokens": 62454,
+            "logical_output_tokens": 2018
+          }
+        }
+      },
+      "1": {
+        "0": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 0,
+            "proposal_calls": 0,
+            "logical_input_tokens": 0,
+            "logical_output_tokens": 0
+          }
+        },
+        "1": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 96,
+            "evaluation_cap": 576,
+            "proposal_calls": 1,
+            "proposal_cap": 16,
+            "logical_input_tokens": 7991,
+            "logical_output_tokens": 263
+          }
+        },
+        "2": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 128,
+            "evaluation_cap": 576,
+            "proposal_calls": 2,
+            "proposal_cap": 16,
+            "logical_input_tokens": 10598,
+            "logical_output_tokens": 351
+          }
+        },
+        "4": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 192,
+            "evaluation_cap": 576,
+            "proposal_calls": 4,
+            "proposal_cap": 16,
+            "logical_input_tokens": 17251,
+            "logical_output_tokens": 569
+          }
+        },
+        "8": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 288,
+            "evaluation_cap": 576,
+            "proposal_calls": 8,
+            "proposal_cap": 16,
+            "logical_input_tokens": 29076,
+            "logical_output_tokens": 966
+          }
+        },
+        "16": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 544,
+            "evaluation_cap": 576,
+            "proposal_calls": 16,
+            "proposal_cap": 16,
+            "logical_input_tokens": 59788,
+            "logical_output_tokens": 1937
+          }
+        }
+      },
+      "2": {
+        "0": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 0,
+            "proposal_calls": 0,
+            "logical_input_tokens": 0,
+            "logical_output_tokens": 0
+          }
+        },
+        "1": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 96,
+            "evaluation_cap": 576,
+            "proposal_calls": 1,
+            "proposal_cap": 16,
+            "logical_input_tokens": 7525,
+            "logical_output_tokens": 249
+          }
+        },
+        "2": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 128,
+            "evaluation_cap": 576,
+            "proposal_calls": 2,
+            "proposal_cap": 16,
+            "logical_input_tokens": 10103,
+            "logical_output_tokens": 337
+          }
+        },
+        "4": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 160,
+            "evaluation_cap": 576,
+            "proposal_calls": 4,
+            "proposal_cap": 16,
+            "logical_input_tokens": 13699,
+            "logical_output_tokens": 464
+          }
+        },
+        "8": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 288,
+            "evaluation_cap": 576,
+            "proposal_calls": 8,
+            "proposal_cap": 16,
+            "logical_input_tokens": 27947,
+            "logical_output_tokens": 923
+          }
+        },
+        "16": {
+          "selected": "Classify the sentiment of the following text as Positive or Negative.",
+          "selection_accuracy": 1.0,
+          "resources": {
+            "unique_example_evaluations": 544,
+            "evaluation_cap": 576,
+            "proposal_calls": 16,
+            "proposal_cap": 16,
+            "logical_input_tokens": 60182,
+            "logical_output_tokens": 1950
+          }
+        }
+      }
+    }
+  }
+}

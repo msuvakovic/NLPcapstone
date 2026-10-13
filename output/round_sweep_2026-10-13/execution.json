@@ -1,0 +1,14 @@
+{
+  "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+  "stage": "all",
+  "last_session": {
+    "actual_calls": 1776,
+    "failed_attempts": 0,
+    "cache_hits": 160,
+    "input_tokens": 189707,
+    "output_tokens": 6033,
+    "request_seconds": 5344.868462300161
+  },
+  "total_attempts": 1776,
+  "last_session_wall_seconds": 1498.590699100052
+}

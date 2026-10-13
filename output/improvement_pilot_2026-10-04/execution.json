@@ -1,0 +1,13 @@
+{
+  "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+  "attempted_requests": 3549,
+  "cap": 4000,
+  "last_session": {
+    "actual_calls": 3549,
+    "failed_attempts": 0,
+    "cache_hits": 256,
+    "input_tokens": 320665,
+    "output_tokens": 8177,
+    "request_seconds": 9647.066680300457
+  }
+}

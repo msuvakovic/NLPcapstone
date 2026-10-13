@@ -48,12 +48,17 @@ class BudgetExceeded(RuntimeError):
 
 class Client:
     def __init__(self, cache_path, model='gemma4:31b-cloud', workers=4,
-                 endpoint='http://localhost:11434/v1', max_actual_calls=20000):
+                 endpoint='http://localhost:11434/v1', max_actual_calls=20000,
+                 persist_attempts=False):
         self.model, self.workers, self.endpoint = model, workers, endpoint.rstrip('/')
         self.max_actual_calls = max_actual_calls
         self.lock = threading.RLock()
         self.db = sqlite3.connect(cache_path, check_same_thread=False)
         self.db.execute('CREATE TABLE IF NOT EXISTS responses (key TEXT PRIMARY KEY, value TEXT NOT NULL)')
+        self.persist_attempts = persist_attempts
+        if persist_attempts:
+            self.db.execute('CREATE TABLE IF NOT EXISTS request_attempts '
+                            '(id INTEGER PRIMARY KEY, request_key TEXT NOT NULL, started REAL NOT NULL)')
         self.db.commit()
         self.stats = dict(actual_calls=0, failed_attempts=0, cache_hits=0, input_tokens=0,
                           output_tokens=0, request_seconds=0.0)
@@ -61,6 +66,32 @@ class Client:
     def snapshot(self):
         with self.lock:
             return dict(self.stats)
+
+    def attempted_requests(self):
+        """Persistent dispatch count, including retries and interrupted requests."""
+        with self.lock:
+            if self.persist_attempts:
+                return self.db.execute('SELECT COUNT(*) FROM request_attempts').fetchone()[0]
+            return self.stats['actual_calls']
+
+    def _reserve_attempt(self, key):
+        with self.lock:
+            if self.persist_attempts:
+                # Commit BEFORE dispatch; a restart cannot reset the safety cap.
+                self.db.execute('BEGIN IMMEDIATE')
+                try:
+                    used = self.db.execute('SELECT COUNT(*) FROM request_attempts').fetchone()[0]
+                    if used >= self.max_actual_calls:
+                        raise BudgetExceeded('Persistent physical-request safety cap reached')
+                    self.db.execute('INSERT INTO request_attempts(request_key,started) VALUES (?,?)',
+                                    (key, time.time()))
+                    self.db.commit()
+                except BaseException:
+                    self.db.rollback()
+                    raise
+            elif self.stats['actual_calls'] >= self.max_actual_calls:
+                raise BudgetExceeded('Global physical-request safety cap reached')
+            self.stats['actual_calls'] += 1
 
     def complete(self, prompt, *, temperature=0.0, seed=12345, max_tokens=16, cache=True):
         messages = prompt if isinstance(prompt, list) else [{'role': 'user', 'content': prompt}]
@@ -74,10 +105,7 @@ class Client:
                 return json.loads(row[0])
         last_error = None
         for attempt in range(6):
-            with self.lock:
-                if self.stats['actual_calls'] >= self.max_actual_calls:
-                    raise BudgetExceeded('Global physical-request safety cap reached')
-                self.stats['actual_calls'] += 1
+            self._reserve_attempt(key)
             start = time.perf_counter()
             req = urllib.request.Request(self.endpoint + '/chat/completions',
                     data=json.dumps(payload).encode(), headers={'Content-Type': 'application/json'})

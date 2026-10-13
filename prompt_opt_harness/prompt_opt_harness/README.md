@@ -51,8 +51,10 @@ baselines are implemented. Local GEPA and TextGrad classes are simplified
 experimental implementations, with additional experimental wrappers in
 `optimizers/`. Official GEPA 0.1.4 and an ESPO-inspired adaptation are integrated
 in the separate [controlled benchmark](../../tools/prompt_bench/README.md).
-`optimizers/dspy_adapters.py` contains integration notes/stubs, not that official
-standalone GEPA implementation.
+`optimizers/dspy_adapters.py` additionally provides optional DSPy 3.2.1
+instruction-only adapters: `DSPyGEPA`, `DSPyMIPROv2`, and `DSPyCOPRO`.
+These are separate from the local experimental classes and the standalone
+GEPA benchmark. COPRO is never reported as TextGrad.
 
 `OpenAIBackend`, `AnthropicBackend`, `GroqBackend`, `OllamaBackend` are real
 API wrappers. The harness itself (budget tracking, OOD eval, logging,
@@ -126,27 +128,82 @@ Dataset(
 )
 ```
 
-## GEPA / MIPROv2 via DSPy
+## DSPy adapters (October 7, 2026)
+
+Install the pinned optional dependency in its own virtual environment. DSPy
+3.2.1 depends on GEPA 0.0.27; the historical controlled benchmark uses GEPA
+0.1.4, so keep their environments separate. Existing baseline runs do not need
+DSPy, scikit-learn, or the embedding optimizer's dependencies.
 
 ```bash
-pip install "dspy>=3.2.1,<3.3"
+pip install -r requirements-dspy.txt
+python -B tests/test_dspy_adapters.py
 ```
 
 ```python
-import dspy
-dspy.configure(lm=dspy.LM("openai/gpt-4o-mini", api_key=...))
+from prompt_opt_harness.harness import run_experiment
+from prompt_opt_harness.llm_backends import OllamaBackend
+from prompt_opt_harness.optimizers import DSPyMIPROv2  # or DSPyGEPA / DSPyCOPRO
 
-from dspy.teleprompt import MIPROv2
-teleprompter = MIPROv2(metric=your_metric, auto="light")
-optimized = teleprompter.compile(your_dspy_module, trainset=trainset)
-
-gepa = dspy.GEPA(metric=your_metric, auto="light", reflection_lm=dspy.LM("openai/gpt-5"))
-optimized = gepa.compile(your_dspy_module, trainset=trainset, valset=devset)
+# dataset is a Dataset with disjoint source.dev, source.test and OOD examples.
+# This call makes real model requests; the tests above use an offline backend.
+result = run_experiment(
+    "DSPy-MIPROv2", DSPyMIPROv2,
+    lambda: OllamaBackend(model="gemma4:31b-cloud", temperature=0, max_tokens=16),
+    dataset, budget=300, seed=37,
+)
 ```
 
-Both need a signature/module and metric function, not just a prompt string.
-Once you have `optimized.signature.instructions` it drops into this
-harness's `evaluate()` like any other optimizer's output.
+The adapters support the harness's explicit classification `TaskSpec`, including
+sentiment and binary NLI. They do not implement the other branch's math task API.
+The base sentiment prompt remains the default; these optimizers must be selected
+explicitly.
+
+- **Request accounting:** Every proposal, task score, retry and exported-prompt
+  validation passes through the same backend. The hard search cap includes the
+  initial base score and reserves a full final validation pass. Final source/OOD
+  evaluation is counted separately by the harness. If compilation exhausts its
+  allowance, only a candidate already scored on every validation example can be
+  recovered and rescored with the reserved calls; otherwise the base is retained.
+  Partial scores never enter the candidate pool. Provider
+  errors unrelated to the cap remain visible. Tokens are the backend's local
+  estimates, not provider billing. LM copies share the budget; calls are serialized.
+- **Same inference behavior:** Task predictions use the existing exact prompt
+  formatter, inference settings and strict label parser during search and final
+  evaluation. MIPROv2's final demonstrations are disabled. Unexpected demos are
+  rejected rather than silently discarded. DSPy proposal messages are carried
+  as a role-preserving JSON conversation through the backend's text interface.
+  COPRO can propose output prefixes, but this instruction-only adaptation does
+  not apply them during search or final evaluation. It is not a full DSPy-program
+  benchmark.
+- **Source isolation:** Source development examples are split approximately
+  50/50 into train/validation, stratified by label and stable under input reordering
+  for a fixed seed. Each label needs at least two examples. Duplicate IDs/normalized
+  texts and target arguments are rejected. GEPA/MIPROv2 receive explicit disjoint
+  sets. COPRO searches only source training data, then its export is scored on
+  source validation. The final source/OOD sets remain with `run_experiment`.
+- **Selection and reproducibility:** The returned instruction is checked against
+  the base on the same source validation set; ties retain the base. This rescore
+  verifies exported behavior, not performance on a new confirmation set.
+  Metadata records both split ID lists, seeds, settings, evaluated instructions,
+  and stop reason. The public candidate pool contains only the base and a fully
+  validated exported instruction. GEPA/MIPROv2 receive the supplied optimizer seed;
+  COPRO has no optimizer-seed parameter. Provider determinism is not guaranteed.
+- **Decoding:** Inference retains the supplied backend's temperature/token cap.
+  Proposal defaults are temperature 0.7 and 2,048 output tokens, configurable on
+  the adapter constructor. DSPy may change proposal temperatures internally;
+  those overrides are honored without changing task inference settings.
+  Each backend attempt trace records the effective model, temperature and cap.
+
+The offline tests exercise the real pinned DSPy compilers with deterministic
+fake responses and blocked network access. They check budgets/retries, prompt
+and label equivalence, data boundaries, configuration propagation, and all three
+optimizers. They establish integration correctness, not a Gemma accuracy gain.
+
+Verified October 7, 2026: 21 DSPy regressions and 44 existing harness reliability,
+data-isolation, explicit-task/DRO and smoke checks passed. The pinned GEPA,
+MIPROv2 and COPRO compilers all completed offline search tests. Real-model
+performance still requires a new controlled experiment with fresh held-out data.
 
 ## Not done
 

@@ -31,8 +31,16 @@ class BudgetedBackend:
                 f'Complete operation needs {count} requests; {self.remaining} remain')
 
     def generate(self, prompt):
+        return self._generate(prompt)
+
+    def generate_configured(self, prompt, **options):
+        return self._generate(prompt, options)
+
+    def _generate(self, prompt, options=None):
         self.require_calls(1)
         scope = (self._backend.limit_calls(self.limit)
                  if hasattr(self._backend, 'limit_calls') else nullcontext())
         with scope:
+            if options is not None:
+                return self._backend.generate_configured(prompt, **options)
             return self._backend.generate(prompt)

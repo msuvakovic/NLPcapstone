@@ -1,3 +1,85 @@
+=== GEMMA4 OPTIMIZATION-ROUND PILOT | COMPLETED 2026-10-13 ===
+Tested 0, 1, 2, 4, 8 and 16 proposal attempts across three search seeds.
+All 18 checkpoint choices retained the identical base prompt. Keep base as default.
+Zero rounds is cheapest for this observed outcome; a general optimal cap remains inconclusive.
+The base scored 32/32 on source selection, so no candidate could strictly improve it.
+Tie-breaking retains base. Candidate selection scores ranged from 30/32 to 32/32.
+
+Rounds | Source confirmation accuracy | Mean logical search input+output tokens per seed
+0      | 95.31%                       | 0
+1      | 95.31%                       | 8,004
+2      | 95.31%                       | 10,861
+4      | 95.31%                       | 16,995
+8      | 95.31%                       | 31,131
+16     | 95.31%                       | 62,776
+
+Final base: source 32/32 (100%), Amazon 62/64 (96.88%), tweets 60/64 (93.75%).
+Mean OOD 95.31%; zero invalid labels. Identical prompts share exact predictions.
+Three seeds share one partition; these are not independent dataset replications.
+All checkpoint prompts froze before source confirmation; final targets never selected rounds.
+This is the custom source-feedback optimizer, not a DSPy/GEPA iteration-count comparison.
+One round includes a duplicate/rejected proposal. 48 attempts included 2 duplicates.
+Classification cap 16 tokens; proposal cap 768 tokens. Base default unchanged.
+
+1,776 real requests; zero failed attempts; 160 cache hits; 4,000 persistent attempt limit.
+189,707 input + 6,033 output = 195,740 returned tokens. No billing/speedup claim.
+288 fresh examples: 32 training / 32 selection / 64 confirmation / 32 source test,
+64 Amazon + 64 tweets. Excluded 2,278 prior normalized texts and shared eight-word spans.
+Source samples use the SST-2 training pool (minimum 12 words), since official validation
+was largely exhausted. This does not guarantee sentence-family/semantic independence.
+These percentages are not before/after comparisons with previous pilots.
+
+Validation: 123 offline checks PASS, including 12 round-pilot regressions.
+Cache replay PASS: all searches and all held-out predictions; zero new model requests.
+The standalone verifier serializes SQLite replay reads to avoid an observed concurrent-reader
+issue; live inference reads were already locked. Executing source/protocol hashes preserved.
+No real replacement was selected, so this pilot does not establish candidate overfitting.
+A synthetic regression verifies selection improvements can fail independent confirmation.
+Evidence: output/round_sweep_2026-10-13/{findings.md,report.md,summary.json,protocol.json,
+execution.json,offline_tests.json,verification.json}. Raw searches and predictions also saved.
+
+=== FRESH GEMMA4 IMPROVEMENT PILOT | STARTED 2026-10-04, COMPLETED 2026-10-05 ===
+Implementation and verification complete. No reliable OOD accuracy gain established.
+3,549 real model requests; 0 failed API attempts; 256 exact-cache hits.
+Persistent experiment-wide limit: 4,000 attempts including retries/restarts.
+Returned usage: 320,665 input + 8,177 output = 328,842 tokens; no billed-cost claim.
+
+Fresh split: 64 train / 64 selection / 80 confirmation / 64 final SST-2;
+160 final Amazon + 160 final tweets. Excluded 1,686 previously exposed normalized texts.
+One optimizer seed and one partition; all final prompts share 384 unique final examples.
+
+Method                  | Source  | Amazon | Tweets | Mean OOD | Worst OOD
+Base                    | 93.75%  | 98.75% | 94.38% | 96.56%   | 94.38%
+Human-written           | 95.31%  | 98.75% | 93.12% | 95.94%   | 93.12%
+History-only control    | 93.75%  | 98.75% | 95.00% | 96.88%   | 95.00%
+Source-example feedback | 95.31%  | 98.75% | 94.38% | 96.56%   | 94.38%
+Feedback + racing       | 93.75%  | 98.75% | 94.38% | 96.56%   | 94.38%
+
+History-only gain: +0.31 pp, one extra correct target example; paired 95% CI [0.00,+0.94] pp,
+exact one-sided paired p=0.5. Feedback fixes one target error and introduces one.
+Racing matches base final predictions. Human control has 1 invalid Neutral response, scored incorrect.
+All raw winners improve source selection 58/64 -> 59/64, but each matches base correctness on
+all 80 independent confirmation examples. The predeclared confirmation guard retains base in
+all cases; guarded variants score 96.56% mean OOD. Keep base as default.
+
+Search comparisons: 512 evaluations and at most 16 proposals per variant.
+History-only: 7 candidates, 7 full selection scores, 40,007 search tokens, 373.4 seconds.
+Feedback: 7 candidates, 7 full selection scores, 43,685 search tokens, 274.8 seconds.
+Racing: 13 candidates, 3 full selection scores, 48,104 search tokens, 345.2 seconds.
+Racing explores more candidates but uses 20.24% more search tokens than history-only.
+Timing is affected by cache reuse, execution order and provider load; no causal speedup claim.
+All variants include concise edits / 80-word limit; brevity is not a separate ablation.
+These are custom history-based component experiments, not reference OPRO/GEPA reproductions.
+
+Validation: 90 offline checks PASS. Independent artifact audit PASS: 4,560 cache-backed checks,
+2,240 stored confirmation/final prediction rows, 0 new model requests.
+All code/data/selection bindings and source-isolation checks passed; response model gemma4:31b.
+Fresh percentages must not be treated as before/after improvements over the historical 95.33% pilot.
+Evidence: output/improvement_pilot_2026-10-04/findings.md, report.md, summary.json,
+protocol.json, execution.json, verification.json, artifact_audit.json.
+Changes are local; no staging, commits or pushes in this experiment.
+Historical log preserved verbatim below and in the experiment's log_before_update.txt.
+
 === PROTOCOL, DRO AND TASK-SCHEMA FIXES | 2026-10-04 ===
 Validation: PASS. 11 protocol + 8 task/DRO + 21 reliability + 10 isolation + 15 benchmark + 5 smoke = 70 offline checks.
 No fresh model requests; no staging, commits or pushes.

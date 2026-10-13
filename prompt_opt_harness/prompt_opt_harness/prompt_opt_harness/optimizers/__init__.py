@@ -10,13 +10,27 @@ from .textgrad import TextGrad
 from .pbt import PBT
 from .reflective import ReflectiveOptimizer
 from .ensemble import EnsembleOptimizer
-from .bayesopt import CostAwareBayesOpt
-from .bayesopt_emb import EmbeddingBayesOpt
 from .oracle import OracleOPRO
 from .entropy import create_entropy_regularized_optimizer
+from .dspy_adapters import DSPyGEPA, DSPyMIPROv2, DSPyCOPRO
+
+
+def __getattr__(name):
+    # Optional Bayesian dependencies must not be required to import the harness
+    # or install only the DSPy extra. Existing explicit imports still work.
+    modules = {'CostAwareBayesOpt': '.bayesopt', 'EmbeddingBayesOpt': '.bayesopt_emb'}
+    if name not in modules:
+        raise AttributeError(name)
+    from importlib import import_module
+    value = getattr(import_module(modules[name], __name__), name)
+    globals()[name] = value
+    return value
 
 __all__ = [
     "Candidate",
+    "DSPyGEPA",
+    "DSPyMIPROv2",
+    "DSPyCOPRO",
     "Optimizer",
     "OPRO",
     "EvoPromptLite",

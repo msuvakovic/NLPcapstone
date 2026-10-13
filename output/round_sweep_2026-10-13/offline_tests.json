@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-13",
+  "status": "PASS",
+  "total_checks": 123,
+  "model_requests": 0,
+  "suites": [
+    {"path": "tools/prompt_bench/test_round_sweep.py", "checks": 12},
+    {"path": "tools/prompt_bench/test_improvements.py", "checks": 15},
+    {"path": "tools/prompt_bench/test_protocol.py", "checks": 11},
+    {"path": "tools/prompt_bench/test_benchmark.py", "checks": 15},
+    {"path": "tools/prompt_bench/test_analysis.py", "checks": 2},
+    {"path": "tools/prompt_bench/test_token_caps.py", "checks": 3},
+    {"path": "prompt_opt_harness/prompt_opt_harness/tests/test_data_isolation.py", "checks": 10},
+    {"path": "prompt_opt_harness/prompt_opt_harness/tests/test_harness_reliability.py", "checks": 21},
+    {"path": "prompt_opt_harness/prompt_opt_harness/tests/test_tasks_and_dro.py", "checks": 8},
+    {"path": "prompt_opt_harness/prompt_opt_harness/tests/smoke_test.py", "checks": 5},
+    {"path": "prompt_opt_harness/prompt_opt_harness/tests/test_dspy_adapters.py", "checks": 21}
+  ],
+  "execution": "Python 3.13 with -X utf8 -B; DSPy suite uses separate tmp/dspy_validation_env with DSPy 3.2.1",
+  "scope": "Offline control-flow regressions, including simulated selection overfitting, phase freezes, exact prediction validation, source-only allowlists and hard request limits. These checks are not model-performance evidence."
+}

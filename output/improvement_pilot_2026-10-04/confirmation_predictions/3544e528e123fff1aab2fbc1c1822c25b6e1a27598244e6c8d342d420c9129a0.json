@@ -1,0 +1,1464 @@
+{
+  "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+  "prompt_id": "3544e528e123fff1aab2fbc1c1822c25b6e1a27598244e6c8d342d420c9129a0",
+  "instruction": "Classify the sentiment of the following text as Positive or Negative.",
+  "predictions": [
+    {
+      "id": "sst2:confirmation:297",
+      "text": "travels a fascinating arc from hope and euphoria to reality and disillusionment .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 0,
+      "usage": {
+        "prompt_tokens": 54,
+        "completion_tokens": 2,
+        "total_tokens": 56,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:573",
+      "text": "lovely and poignant .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 44,
+        "completion_tokens": 2,
+        "total_tokens": 46,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:534",
+      "text": "i just loved every minute of this film .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 49,
+        "completion_tokens": 2,
+        "total_tokens": 51,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:828",
+      "text": "this is the sort of burly action flick where one coincidence pummels another , narrative necessity is a drunken roundhouse , and whatever passes for logic is a factor of the last plot device left standing .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 81,
+        "completion_tokens": 2,
+        "total_tokens": 83,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:95",
+      "text": "this riveting world war ii moral suspense story deals with the shadow side of american culture : racial prejudice in its ugly and diverse forms .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 0,
+      "usage": {
+        "prompt_tokens": 66,
+        "completion_tokens": 2,
+        "total_tokens": 68,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:829",
+      "text": "teen movies have really hit the skids .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 49,
+        "completion_tokens": 2,
+        "total_tokens": 51,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:663",
+      "text": "it will grip even viewers who are n't interested in rap , as it cuts to the heart of american society in an unnerving way .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 69,
+        "completion_tokens": 2,
+        "total_tokens": 71,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:475",
+      "text": "belongs to daniel day-lewis as much as it belongs to martin scorsese ; it 's a memorable performance in a big , brassy , disturbing , unusual and highly successful film .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 2,
+        "total_tokens": 80,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:490",
+      "text": "detox is ultimately a pointless endeavor .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 47,
+        "completion_tokens": 2,
+        "total_tokens": 49,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:316",
+      "text": "awesome creatures , breathtaking scenery , and epic battle scenes add up to another ` spectacular spectacle . '",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 59,
+        "completion_tokens": 2,
+        "total_tokens": 61,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:160",
+      "text": "uncommonly stylish but equally silly ... the picture fails to generate much suspense , nor does it ask searching enough questions to justify its pretensions .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 67,
+        "completion_tokens": 2,
+        "total_tokens": 69,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:505",
+      "text": "and that 's a big part of why we go to the movies .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 55,
+        "completion_tokens": 2,
+        "total_tokens": 57,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:344",
+      "text": "there is a fabric of complex ideas here , and feelings that profoundly deepen them .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 2,
+        "total_tokens": 58,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:202",
+      "text": "there ought to be a directing license , so that ed burns can have his revoked .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 57,
+        "completion_tokens": 2,
+        "total_tokens": 59,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:320",
+      "text": "a deep and meaningful film .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 2,
+        "total_tokens": 48,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:547",
+      "text": "the film is based on truth and yet there is something about it that feels incomplete , as if the real story starts just around the corner .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 68,
+        "completion_tokens": 2,
+        "total_tokens": 70,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:223",
+      "text": "corny , schmaltzy and predictable , but still manages to be kind of heartwarming , nonetheless .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 60,
+        "completion_tokens": 2,
+        "total_tokens": 62,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:407",
+      "text": "more whiny downer than corruscating commentary .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 52,
+        "completion_tokens": 2,
+        "total_tokens": 54,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:404",
+      "text": "zhang ... has done an amazing job of getting realistic performances from his mainly nonprofessional cast .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 59,
+        "completion_tokens": 2,
+        "total_tokens": 61,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:70",
+      "text": "for all its impressive craftsmanship , and despite an overbearing series of third-act crescendos , lily chou-chou never really builds up a head of emotional steam .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 76,
+        "completion_tokens": 2,
+        "total_tokens": 78,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:32",
+      "text": "a gorgeous , witty , seductive movie .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 48,
+        "completion_tokens": 2,
+        "total_tokens": 50,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:794",
+      "text": "it confirms fincher 's status as a film maker who artfully bends technical know-how to the service of psychological insight .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 66,
+        "completion_tokens": 2,
+        "total_tokens": 68,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:88",
+      "text": "fresnadillo 's dark and jolting images have a way of plying into your subconscious like the nightmare you had a week ago that wo n't go away .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 0,
+      "usage": {
+        "prompt_tokens": 75,
+        "completion_tokens": 2,
+        "total_tokens": 77,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:552",
+      "text": "here 's yet another studio horror franchise mucking up its storyline with glitches casual fans could correct in their sleep .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 2,
+        "total_tokens": 65,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:507",
+      "text": "the minor figures surrounding ( bobby ) ... form a gritty urban mosaic .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 55,
+        "completion_tokens": 2,
+        "total_tokens": 57,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:452",
+      "text": "it 's clear the filmmakers were n't sure where they wanted their story to go , and even more clear that they lack the skills to get us to this undetermined destination .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 76,
+        "completion_tokens": 2,
+        "total_tokens": 78,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:227",
+      "text": "as the two leads , lathan and diggs are charming and have chemistry both as friends and lovers .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 61,
+        "completion_tokens": 2,
+        "total_tokens": 63,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:695",
+      "text": "sit through this one , and you wo n't need a magic watch to stop time ; your dvd player will do it for you .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 68,
+        "completion_tokens": 2,
+        "total_tokens": 70,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:834",
+      "text": "collateral damage finally delivers the goods for schwarzenegger fans .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 51,
+        "completion_tokens": 2,
+        "total_tokens": 53,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:502",
+      "text": "deadeningly dull , mired in convoluted melodrama , nonsensical jargon and stiff-upper-lip laboriousness .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 2,
+        "total_tokens": 65,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:5",
+      "text": "although laced with humor and a few fanciful touches , the film is a refreshingly serious look at young women .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 62,
+        "completion_tokens": 2,
+        "total_tokens": 64,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:690",
+      "text": "stultifyingly , dumbfoundingly , mind-numbingly bad .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 2,
+        "total_tokens": 58,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:20",
+      "text": "pumpkin takes an admirable look at the hypocrisy of political correctness , but it does so with such an uneven tone that you never know when humor ends and tragedy begins .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 2,
+        "total_tokens": 74,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:188",
+      "text": "a misogynistic piece of filth that attempts to pass itself off as hip , young adult entertainment .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 60,
+        "completion_tokens": 2,
+        "total_tokens": 62,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:811",
+      "text": "the affectionate loopiness that once seemed congenital to demme 's perspective has a tough time emerging from between the badly dated cutesy-pie mystery scenario and the newfangled hollywood post-production effects .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 2,
+        "total_tokens": 84,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:436",
+      "text": "trite , banal , cliched , mostly inoffensive .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 52,
+        "completion_tokens": 2,
+        "total_tokens": 54,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:837",
+      "text": "will amuse and provoke adventurous adults in specialty venues .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 50,
+        "completion_tokens": 2,
+        "total_tokens": 52,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:339",
+      "text": "if you enjoy more thoughtful comedies with interesting conflicted characters ; this one is for you .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 57,
+        "completion_tokens": 2,
+        "total_tokens": 59,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:410",
+      "text": "what distinguishes time of favor from countless other thrillers is its underlying concern with the consequences of words and with the complicated emotions fueling terrorist acts .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 68,
+        "completion_tokens": 2,
+        "total_tokens": 70,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:212",
+      "text": "the entire movie is about a boring , sad man being boring and sad .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 55,
+        "completion_tokens": 2,
+        "total_tokens": 57,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:217",
+      "text": "once ( kim ) begins to overplay the shock tactics and bait-and-tackle metaphors , you may decide it 's too high a price to pay for a shimmering picture postcard .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 2,
+        "total_tokens": 80,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:775",
+      "text": "not really bad so much as distasteful : we need kidnapping suspense dramas right now like we need doomsday thrillers .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 64,
+        "completion_tokens": 2,
+        "total_tokens": 66,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:780",
+      "text": "a grimly competent and stolid and earnest military courtroom drama .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 53,
+        "completion_tokens": 2,
+        "total_tokens": 55,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:81",
+      "text": "green might want to hang onto that ski mask , as robbery may be the only way to pay for his next project .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 64,
+        "completion_tokens": 2,
+        "total_tokens": 66,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:104",
+      "text": "it 's one of those baseball pictures where the hero is stoic , the wife is patient , the kids are as cute as all get-out and the odds against success are long enough to intimidate , but short enough to make a dream seem possible .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 2,
+        "total_tokens": 93,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:818",
+      "text": "the only excitement comes when the credits finally roll and you get to leave the theater .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 57,
+        "completion_tokens": 2,
+        "total_tokens": 59,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:181",
+      "text": "it 's a bad thing when a movie has about as much substance as its end credits blooper reel .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 62,
+        "completion_tokens": 2,
+        "total_tokens": 64,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:856",
+      "text": "in a way , the film feels like a breath of fresh air , but only to those that allow it in .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 2,
+        "total_tokens": 65,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:52",
+      "text": "mr. tsai is a very original artist in his medium , and what time is it there ?",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 60,
+        "completion_tokens": 2,
+        "total_tokens": 62,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:614",
+      "text": "against all odds in heaven and hell , it creeped me out just fine .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 0,
+      "usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 2,
+        "total_tokens": 58,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:412",
+      "text": "the movie 's accumulated force still feels like an ugly knot tightening in your stomach .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 57,
+        "completion_tokens": 2,
+        "total_tokens": 59,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:51",
+      "text": "for the most part , director anne-sophie birot 's first feature is a sensitive , extraordinarily well-acted drama .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 66,
+        "completion_tokens": 2,
+        "total_tokens": 68,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:237",
+      "text": "a by-the-numbers effort that wo n't do much to enhance the franchise .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 59,
+        "completion_tokens": 2,
+        "total_tokens": 61,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:233",
+      "text": "i 'd have to say the star and director are the big problems here .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 2,
+        "total_tokens": 58,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:583",
+      "text": "it 's just filler .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 2,
+        "total_tokens": 48,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:655",
+      "text": "birthday girl is an amusing joy ride , with some surprisingly violent moments .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 54,
+        "completion_tokens": 2,
+        "total_tokens": 56,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:156",
+      "text": "manages to transcend the sex , drugs and show-tunes plot into something far richer .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 58,
+        "completion_tokens": 2,
+        "total_tokens": 60,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:93",
+      "text": "if steven soderbergh 's ` solaris ' is a failure it is a glorious failure .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 61,
+        "completion_tokens": 2,
+        "total_tokens": 63,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:130",
+      "text": "suffers from the lack of a compelling or comprehensible narrative .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 52,
+        "completion_tokens": 2,
+        "total_tokens": 54,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:269",
+      "text": "with virtually no interesting elements for an audience to focus on , chelsea walls is a triple-espresso endurance challenge .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 2,
+        "total_tokens": 65,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:11",
+      "text": "it takes a strange kind of laziness to waste the talents of robert forster , anne meara , eugene levy , and reginald veljohnson all in the same movie .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 77,
+        "completion_tokens": 2,
+        "total_tokens": 79,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:485",
+      "text": "a literate presentation that wonderfully weaves a murderous event in 1873 with murderous rage in 2002 .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 65,
+        "completion_tokens": 2,
+        "total_tokens": 67,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:757",
+      "text": "there 's enough melodrama in this magnolia primavera to make pta proud yet director muccino 's characters are less worthy of puccini than they are of daytime television .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 76,
+        "completion_tokens": 2,
+        "total_tokens": 78,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:168",
+      "text": "manages to be sweet and wickedly satisfying at the same time .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 53,
+        "completion_tokens": 2,
+        "total_tokens": 55,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:861",
+      "text": "bennett 's naturalistic performance speaks volumes more truth than any ` reality ' show , and anybody contemplating their own drastic life changes should watch some body first .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 2,
+        "total_tokens": 74,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:477",
+      "text": "a tv style murder mystery with a few big screen moments ( including one that seems to be made for a different film altogether ) .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 66,
+        "completion_tokens": 2,
+        "total_tokens": 68,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:635",
+      "text": "or emptying rat traps .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 45,
+        "completion_tokens": 2,
+        "total_tokens": 47,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:35",
+      "text": "a sequence of ridiculous shoot - 'em - up scenes .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 52,
+        "completion_tokens": 2,
+        "total_tokens": 54,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:129",
+      "text": "it provides the grand , intelligent entertainment of a superior cast playing smart people amid a compelling plot .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 59,
+        "completion_tokens": 2,
+        "total_tokens": 61,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:256",
+      "text": "rarely has so much money delivered so little entertainment .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 50,
+        "completion_tokens": 2,
+        "total_tokens": 52,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:172",
+      "text": "it seems like i have been waiting my whole life for this movie and now i ca n't wait for the sequel .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 65,
+        "completion_tokens": 2,
+        "total_tokens": 67,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:825",
+      "text": "candid and comfortable ; a film that deftly balances action and reflection as it lets you grasp and feel the passion others have for their work .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 67,
+        "completion_tokens": 2,
+        "total_tokens": 69,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:557",
+      "text": "one of the best films of the year with its exploration of the obstacles to happiness faced by five contemporary individuals ... a psychological masterpiece .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 66,
+        "completion_tokens": 2,
+        "total_tokens": 68,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:706",
+      "text": "how do you spell cliché ?",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 46,
+        "completion_tokens": 2,
+        "total_tokens": 48,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:326",
+      "text": "a beguiling splash of pastel colors and prankish comedy from disney .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 55,
+        "completion_tokens": 2,
+        "total_tokens": 57,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:701",
+      "text": "even the finest chef ca n't make a hotdog into anything more than a hotdog , and robert de niro ca n't make this movie anything more than a trashy cop buddy comedy .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 2,
+        "total_tokens": 84,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:231",
+      "text": "martin and barbara are complex characters -- sometimes tender , sometimes angry -- and the delicate performances by sven wollter and viveka seldahl make their hopes and frustrations vivid .",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 76,
+        "completion_tokens": 2,
+        "total_tokens": 78,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:254",
+      "text": "attempts by this ensemble film to impart a message are so heavy-handed that they instead pummel the audience .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 62,
+        "completion_tokens": 2,
+        "total_tokens": 64,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:187",
+      "text": "` de niro ... is a veritable source of sincere passion that this hollywood contrivance orbits around . '",
+      "label": "Positive",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Positive",
+      "raw": "Positive",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 62,
+        "completion_tokens": 2,
+        "total_tokens": 64,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    },
+    {
+      "id": "sst2:confirmation:465",
+      "text": "shaky close-ups of turkey-on-rolls , stubbly chins , liver spots , red noses and the filmmakers new bobbed do draw easy chuckles but lead nowhere .",
+      "label": "Negative",
+      "domain": "sst2",
+      "split": "confirmation",
+      "prediction": "Negative",
+      "raw": "Negative",
+      "correct": 1,
+      "usage": {
+        "prompt_tokens": 76,
+        "completion_tokens": 2,
+        "total_tokens": 78,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      }
+    }
+  ],
+  "physical_resources": {
+    "actual_calls": 80,
+    "failed_attempts": 0,
+    "cache_hits": 0,
+    "input_tokens": 4924,
+    "output_tokens": 160,
+    "request_seconds": 211.31267540011322
+  },
+  "logical_resources": {
+    "unique_example_evaluations": 80,
+    "evaluation_cap": 80,
+    "proposal_calls": 0,
+    "proposal_cap": 16,
+    "logical_input_tokens": 4924,
+    "logical_output_tokens": 160
+  },
+  "wall_seconds": 56.290266899974085
+}

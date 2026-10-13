@@ -1,0 +1,294 @@
+{
+  "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+  "selected_cap": 0,
+  "curve": [
+    {
+      "rounds": 0,
+      "selection_accuracy": 1.0,
+      "confirmation_accuracy": 0.953125,
+      "confirmation_seed_accuracy": [
+        0.953125,
+        0.953125,
+        0.953125
+      ],
+      "delta_vs_base": 0.0,
+      "delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_search_evaluations": 0.0,
+      "mean_search_tokens": 0.0
+    },
+    {
+      "rounds": 1,
+      "selection_accuracy": 1.0,
+      "confirmation_accuracy": 0.953125,
+      "confirmation_seed_accuracy": [
+        0.953125,
+        0.953125,
+        0.953125
+      ],
+      "delta_vs_base": 0.0,
+      "delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_search_evaluations": 96.0,
+      "mean_search_tokens": 8004.333333333333
+    },
+    {
+      "rounds": 2,
+      "selection_accuracy": 1.0,
+      "confirmation_accuracy": 0.953125,
+      "confirmation_seed_accuracy": [
+        0.953125,
+        0.953125,
+        0.953125
+      ],
+      "delta_vs_base": 0.0,
+      "delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_search_evaluations": 128.0,
+      "mean_search_tokens": 10861.333333333334
+    },
+    {
+      "rounds": 4,
+      "selection_accuracy": 1.0,
+      "confirmation_accuracy": 0.953125,
+      "confirmation_seed_accuracy": [
+        0.953125,
+        0.953125,
+        0.953125
+      ],
+      "delta_vs_base": 0.0,
+      "delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_search_evaluations": 181.33333333333334,
+      "mean_search_tokens": 16995.0
+    },
+    {
+      "rounds": 8,
+      "selection_accuracy": 1.0,
+      "confirmation_accuracy": 0.953125,
+      "confirmation_seed_accuracy": [
+        0.953125,
+        0.953125,
+        0.953125
+      ],
+      "delta_vs_base": 0.0,
+      "delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_search_evaluations": 298.6666666666667,
+      "mean_search_tokens": 31131.333333333332
+    },
+    {
+      "rounds": 16,
+      "selection_accuracy": 1.0,
+      "confirmation_accuracy": 0.953125,
+      "confirmation_seed_accuracy": [
+        0.953125,
+        0.953125,
+        0.953125
+      ],
+      "delta_vs_base": 0.0,
+      "delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "mean_search_evaluations": 554.6666666666666,
+      "mean_search_tokens": 62776.333333333336
+    }
+  ],
+  "final": {
+    "base": {
+      "sst2": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 32
+      },
+      "amazon": {
+        "accuracy": 0.96875,
+        "macro_f1": 0.9687194525904204,
+        "n": 64
+      },
+      "tweets": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "ood_accuracy": 0.953125,
+      "worst_ood_accuracy": 0.9375,
+      "invalid": 0,
+      "mean_input_tokens": 84.34375,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "ood_delta": 0.0
+    },
+    "seed_0_rounds_0": {
+      "sst2": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 32
+      },
+      "amazon": {
+        "accuracy": 0.96875,
+        "macro_f1": 0.9687194525904204,
+        "n": 64
+      },
+      "tweets": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "ood_accuracy": 0.953125,
+      "worst_ood_accuracy": 0.9375,
+      "invalid": 0,
+      "mean_input_tokens": 84.34375,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "ood_delta": 0.0
+    },
+    "seed_0_rounds_16": {
+      "sst2": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 32
+      },
+      "amazon": {
+        "accuracy": 0.96875,
+        "macro_f1": 0.9687194525904204,
+        "n": 64
+      },
+      "tweets": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "ood_accuracy": 0.953125,
+      "worst_ood_accuracy": 0.9375,
+      "invalid": 0,
+      "mean_input_tokens": 84.34375,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "ood_delta": 0.0
+    },
+    "seed_1_rounds_0": {
+      "sst2": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 32
+      },
+      "amazon": {
+        "accuracy": 0.96875,
+        "macro_f1": 0.9687194525904204,
+        "n": 64
+      },
+      "tweets": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "ood_accuracy": 0.953125,
+      "worst_ood_accuracy": 0.9375,
+      "invalid": 0,
+      "mean_input_tokens": 84.34375,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "ood_delta": 0.0
+    },
+    "seed_1_rounds_16": {
+      "sst2": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 32
+      },
+      "amazon": {
+        "accuracy": 0.96875,
+        "macro_f1": 0.9687194525904204,
+        "n": 64
+      },
+      "tweets": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "ood_accuracy": 0.953125,
+      "worst_ood_accuracy": 0.9375,
+      "invalid": 0,
+      "mean_input_tokens": 84.34375,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "ood_delta": 0.0
+    },
+    "seed_2_rounds_0": {
+      "sst2": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 32
+      },
+      "amazon": {
+        "accuracy": 0.96875,
+        "macro_f1": 0.9687194525904204,
+        "n": 64
+      },
+      "tweets": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "ood_accuracy": 0.953125,
+      "worst_ood_accuracy": 0.9375,
+      "invalid": 0,
+      "mean_input_tokens": 84.34375,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "ood_delta": 0.0
+    },
+    "seed_2_rounds_16": {
+      "sst2": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "n": 32
+      },
+      "amazon": {
+        "accuracy": 0.96875,
+        "macro_f1": 0.9687194525904204,
+        "n": 64
+      },
+      "tweets": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "ood_accuracy": 0.953125,
+      "worst_ood_accuracy": 0.9375,
+      "invalid": 0,
+      "mean_input_tokens": 84.34375,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "ood_delta": 0.0
+    }
+  },
+  "default": "Classify the sentiment of the following text as Positive or Negative.",
+  "conclusion_scope": "exploratory one-partition custom-search pilot"
+}

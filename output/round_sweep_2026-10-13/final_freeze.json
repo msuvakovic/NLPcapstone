@@ -1,0 +1,16 @@
+{
+  "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+  "data_hash": "d6f0803f8db01371122540fc93d69794222e7f364f4e033e460ebb3082bc1649",
+  "data": {
+    "arms": {
+      "base": "Classify the sentiment of the following text as Positive or Negative.",
+      "seed_0_rounds_0": "Classify the sentiment of the following text as Positive or Negative.",
+      "seed_0_rounds_16": "Classify the sentiment of the following text as Positive or Negative.",
+      "seed_1_rounds_0": "Classify the sentiment of the following text as Positive or Negative.",
+      "seed_1_rounds_16": "Classify the sentiment of the following text as Positive or Negative.",
+      "seed_2_rounds_0": "Classify the sentiment of the following text as Positive or Negative.",
+      "seed_2_rounds_16": "Classify the sentiment of the following text as Positive or Negative."
+    },
+    "selection_hash": "dc2c809c06d6474c1cdf42faa2a9fb8c4772ca662e8f17f97c413d02d410bf85"
+  }
+}

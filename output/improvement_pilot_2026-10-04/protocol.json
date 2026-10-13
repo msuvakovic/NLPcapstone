@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "experiment": "source-feedback-racing-confirmation",
+  "model": "gemma4:31b-cloud",
+  "endpoint": "http://localhost:11434/v1",
+  "workers": 4,
+  "seeds": [
+    0
+  ],
+  "variants": [
+    "history_full",
+    "feedback_full",
+    "feedback_racing"
+  ],
+  "evaluation_cap": 512,
+  "proposal_cap": 16,
+  "max_persistent_attempts": 4000,
+  "sizes": {
+    "train": 64,
+    "validation": 64,
+    "confirmation": 80,
+    "source_test": 64,
+    "target_test": 160
+  },
+  "split_hash": "b612216571ef4cc615967a17bb6454f7eb9e01a81d9cb8a2ec10b9f38545727d",
+  "exclusion_hash": "42e41accd65cd717990cd7980d7cc0188f87343c14c6329b81bd42d3276550a2",
+  "split_seed": 1042026,
+  "decoding": {
+    "temperature": 0.0,
+    "seed": 12345,
+    "max_tokens": 16
+  },
+  "proposal_decoding": {
+    "temperature": 0.7,
+    "max_tokens": 768,
+    "words": 80
+  },
+  "confirmation": {
+    "alpha": 0.05,
+    "minimum_gain": 0.01,
+    "comparisons": 3
+  },
+  "python": "3.13.3",
+  "numpy": "2.3.4",
+  "code": {
+    "core.py": "d28c5f5bae3ea06ac621651b7df309dbf43c91ec2fa9d6ab0de7813c7d426103",
+    "data.py": "20962442fb0c530ec0e170cf404638644943e0d3807da500ea4065c273af145e",
+    "protocol.py": "d6b2029914a0cf581fe489e5b2806651f219cf680e3f03daaa531738485be815",
+    "fresh_data.py": "69e2932f10dd82bb5b48a82e6f26bf50ea20d08b9185f82e33056c8b0ed8769f",
+    "adaptive_search.py": "41d5331cedba976661c8ccee6f359158745e5ec3ada674b8aea0ba4e78c2e52f",
+    "improvement_pilot.py": "a915d69e11ab3b65df0db8b67fc54e5bc9dce15d084326b6bcf69a9a8e9c5acb"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+  "selections": {
+    "history_full": "Determine if the sentiment of the text is Positive or Negative. Return only the label.",
+    "feedback_full": "Classify the sentiment of the following text as either Positive or Negative. For texts with mixed or implicit sentiment, determine the final verdict or the dominant emotional weight. Return only the label.",
+    "feedback_racing": "Classify the sentiment of the text as Positive or Negative. Return only the label."
+  },
+  "search_hashes": {
+    "history_full": "c422fa40acbb0f356a199be99217cc2185c202bdc83ac7f1e953d1f684a99515",
+    "feedback_full": "3e931340c0bdbb8fa2e10ec7a8cc9274771867c4531508183fe05ee6f7010a40",
+    "feedback_racing": "b6b257cdda8260a80a14feeaf53f3771beb5e5bfac59e6999974a4135fcf8e9e"
+  }
+}

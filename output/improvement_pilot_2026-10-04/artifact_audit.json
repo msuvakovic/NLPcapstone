@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+  "searches": 3,
+  "fresh_examples": 592,
+  "excluded_texts": 1686,
+  "unique_final_prompts": 5,
+  "stored_predictions": 2240,
+  "cache_checks": 4560,
+  "physical_attempts": 3549,
+  "physical_cap": 4000,
+  "returned_models": {
+    "gemma4:31b": 3549
+  },
+  "new_model_requests": 0
+}
