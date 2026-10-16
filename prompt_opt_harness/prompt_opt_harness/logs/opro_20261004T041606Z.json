@@ -1,0 +1,1293 @@
+{
+  "name": "OPRO",
+  "best_instruction": "Classify the sentiment of the following text as Positive or Negative.",
+  "dev_score": 0.9666666666666667,
+  "source_test_acc": 0.9666666666666667,
+  "ood_accs": {
+    "amazon": 0.9,
+    "tweets": 0.9666666666666667
+  },
+  "ood_gap": 0.033333333333333326,
+  "worst_case_acc": 0.9,
+  "variance": 0.0011111111111111107,
+  "api_calls": 180,
+  "wall_time": 35.37092467900129,
+  "prompt_chars": 69,
+  "prompt_words": 11,
+  "input_tokens": 11903,
+  "output_tokens": 180,
+  "candidate_pool": [
+    {
+      "instruction": "Classify the sentiment of the following text as Positive or Negative.",
+      "dev_score": 0.9666666666666667
+    }
+  ],
+  "per_call_traces": [
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: harrison 's flowers puts its heart in the right place , but its brains are in no particular place at all .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1985208859996419,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: this flick is about as cool and crowd-pleasing as a documentary can get .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1511444929992649,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: a movie that successfully crushes a best selling novel into a timeframe that mandates that you avoid the godzilla sized soda .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2813808959999733,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: and that leaves a hole in the center of the salton sea .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.28571078599998145,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: a simple , but gritty and well-acted ensemble drama that encompasses a potent metaphor for a country still dealing with its fascist past .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2229466329999923,
+      "input_tokens": 51,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the magic of the film lies not in the mysterious spring but in the richness of its performances .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16575262900005328,
+      "input_tokens": 44,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: combining quick-cut editing and a blaring heavy metal much of the time , beck seems to be under the illusion that he 's shooting the latest system of a down video .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2113546979999228,
+      "input_tokens": 60,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: seldom has a movie so closely matched the spirit of a man and his work .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14338289700026507,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: burns never really harnesses to full effect the energetic cast .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2120340640003633,
+      "input_tokens": 37,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: nelson 's brutally unsentimental approach ... sucks the humanity from the film , leaving behind an horrific but weirdly unemotional spectacle .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.14600626599985844,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: yakusho and shimizu ... create engaging characterizations in imamura 's lively and enjoyable cultural mix .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16996570900028019,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the weight of the piece , the unerring professionalism of the chilly production , and the fascination embedded in the lurid topic prove recommendation enough .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.15579033700032596,
+      "input_tokens": 53,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: wince-inducing dialogue , thrift-shop costumes , prosthetic makeup by silly putty and kmart blue-light-special effects all conspire to test trekkie loyalty .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18671269100013888,
+      "input_tokens": 59,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: if your taste runs to ` difficult ' films you absolutely ca n't miss it .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19628971899965109,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the quality of the art combined with the humor and intelligence of the script allow the filmmakers to present the biblical message of forgiveness without it ever becoming preachy or syrupy .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19730024700038484,
+      "input_tokens": 59,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: it ca n't decide if it wants to be a mystery/thriller , a romance or a comedy .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.22391529900050955,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: a very well-made , funny and entertaining picture .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.12138096800026688,
+      "input_tokens": 35,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: overall very good for what it 's trying to do .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1588242679999894,
+      "input_tokens": 37,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: you will emerge with a clearer view of how the gears of justice grind on and the death report comes to share airtime alongside the farm report .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2523616549997314,
+      "input_tokens": 54,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: a romantic comedy enriched by a sharp eye for manners and mores .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1368659600002502,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: while the resident evil games may have set new standards for thrills , suspense , and gore for video games , the movie really only succeeds in the third of these .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19047984699955123,
+      "input_tokens": 58,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the words , ` frankly , my dear , i do n't give a damn , ' have never been more appropriate .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2190948549996392,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: while it 's genuinely cool to hear characters talk about early rap records ( sugar hill gang , etc. ) , the constant referencing of hip-hop arcana can alienate even the savviest audiences .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.32350012000006245,
+      "input_tokens": 66,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: i 'm just too bored to care .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1309222370000498,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: though perry and hurley make inspiring efforts to breathe life into the disjointed , haphazard script by jay scherick and david ronn , neither the actors nor director reginald hudlin can make it more than fitfully entertaining .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2087260200005403,
+      "input_tokens": 76,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: do not see this film .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.115435554999749,
+      "input_tokens": 31,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: his comedy premises are often hackneyed or just plain crude , calculated to provoke shocked laughter , without following up on a deeper level .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18116610000015498,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: there 's not enough here to justify the almost two hours .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1335539660003633,
+      "input_tokens": 38,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: stealing harvard is evidence that the farrelly bros. -- peter and bobby -- and their brand of screen comedy are wheezing to an end , along with green 's half-hearted movie career .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18673151099937968,
+      "input_tokens": 68,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: that 's a cheat .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17432595099944592,
+      "input_tokens": 31,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I was looking to order this product but after reading the reviews there was a change of mind. A 6 pack would have been OK for the price but almost $50.00 for one Garnier is ridiculous. Is this price correct????\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.16838778799956344,
+      "input_tokens": 74,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The book is beautifully illustrated with full color photos that are exceptional in quality. I think it would have been helpful to show how some of the earrings are actually worn, either on a mannequin head or a real person. One other feature I found inconvenient was the location of the descriptive text , which is clear at the back of the book, instead of under or in back of each illustration. The reader has to keep flipping back and forth between the full-sized photo in front and the text at the\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.3281295130000217,
+      "input_tokens": 126,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Save your money. It is awful and boring and a shame developers even wasted their time on it.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17968289000054938,
+      "input_tokens": 45,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This book was disappointing, it only give a sample of Bible prophecy. Plus most of these studies of the are messianic. Also the author spend too much time give references to other Biblical authors - which is not needed. If you are a beginning Bible student this would be okay for you.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24113648399998056,
+      "input_tokens": 84,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I really enjoyed this story as I have others of Ingrid's. The story and the characters remain the meat of the book, instead of incidental 'buy me' sex scenes as so many sci-fi writers (or their publishers) seem to feel are required. There are some good twists to the well-worn setting of a post-apocalyptic world (e.g. the mutations being part of purposeful experiments as opposed to random consequences of the nuclear winter) as well as very interesting character development and story line. However\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16359809299956396,
+      "input_tokens": 129,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This looks like a fun game with a really reasonable price. Problem is, on my iMac running 10.6.8, the game does not start! Even worse, my requests for help, on their website as suggested, and by email, go ignored. I printed the manual as suggested... no help. I went to their forums as suggested... they were in a language I don't understand. On one help page, someone complains about this issue, and is told to use a wired mouse... no help there, as I'm using a wired mouse. It seems that the hardes\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.16666618500039476,
+      "input_tokens": 146,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This set is a box of useless trash. Amazon, you shouldn't allow this sub-quality crap on your site. It is bad for business.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.13894424499994784,
+      "input_tokens": 54,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I am new to networking and wanted to learn more about security and hacking. I have been especially interested in exploring the hacking world and learning a few neat tricks. This book has made me aware of the methods a hacker uses, and has allowed me to experiment with these methods as well. I found the book to be very valuable for beginner and beyond, but i am now looking for a book that goes even more in depth...if possible.if you want to learn more about hacking and security... buy it! If you \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.12301760900027148,
+      "input_tokens": 129,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I will not go into any details in this first review, but one very important oversight by the editors was the overlooking of the errors in factual information such as dates, names, etc. If a teacher were to use this book in a history class the students would be subject to a wealth of misinformation.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1189745910005513,
+      "input_tokens": 85,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Any Crowes fan must have a copy of this!! I have both VHS and DVD!!! Kind of funny seeing the boys back in the day.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18088174800050183,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I had a hard time putting the arcade up. I was not pleased with the product, because 3 people was trying to put the game up. We called and called and Toys R us said tha we could not return it, due to fact that we didn't have a reciept. My son was very dissapointed, because that toy was at the top of his Christmas List. We have been advocate toy buyers from Toy's R us for over 20 years. And several times I have been displeased with the service and some of the product sold by the Lansing, IL store\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1600154770003428,
+      "input_tokens": 145,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The story's setting takes place in mideavltimes when king Arthur was king. The main charters are king Arthur,Guenever,Gawian,and Lanccalot.I had A report due and my teacher told me that this was A good book to reed.the story is about king Aurthur and his adventuer's with the knights of the round table. It also tells you about how it was to be A knight at the round table.I think it was A good book overall. The book was A good book because it told you about all the knights and what it took to be A\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2959682700002304,
+      "input_tokens": 147,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I am not referring to the CD but the review by Herbert S. Philbrick. This guy has heard one track on a radio program and he puts in a 3 star place holder? People make buying desicions based on these reviews. Herbert S. Philbrick needs a dose of responsibility....\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19079524900007527,
+      "input_tokens": 84,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: If you must hear Bette doing standards go see the movie For The Boys and buy the soundtrack, but this cd is just in bad taste. This is almost as bad as Barry Manilow's Sinatra tribute cd. Midler sings a dozen of clooney's biggest hits and makes them all into trendy pop tunes adding hip hip, and tyechno dance beats, and in so many ways is disrespecting the memory of a laegendary woman. I'm sure bette wishes she could take this back, but it's too late. This cd is not worth hearing once, let alone \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.13822089899986167,
+      "input_tokens": 146,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the title cut is still a Bumping track that will throw your head out of wack in a good way. who took the funk is a banger as well. dug the vocals and overall instrumentation on this set. Grooves are solid on here and Instant Funk is a Band that is slept on.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19117269199978182,
+      "input_tokens": 86,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The rules were interpreted - the initial game played. Will probably never play again. You are crossing arms with your opponent to place the drawn tile at the head of their column. It's messy and screws up response times.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20405334499992023,
+      "input_tokens": 69,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: It's been years since I had a hand-vac, so I spent a lot of time researching the ones available. I decided on this one after reading the reviews, it appeared to be the best candidate for what I needed. Unfortunately, it hasn't been worth the purchase AT ALL! The opening is so small, that anything larger or longer than a cheerio is impossible to pick up. The design of the internal components make it even harder to just keep the debris inside the canister! To top it all off, the device only stays \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1453925010000603,
+      "input_tokens": 135,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Loved it. The characters are evolving with each book and I am really beginning to care what happens to them.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1396646699995472,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I love these things, if only I'd stop dropping them because they are hard to find. They are the only needle threaders that work on my serger and they are thin enough to slide into the needle easily. I've collected a lot of similar items but threw them all out.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19173147699984838,
+      "input_tokens": 83,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: It's so nice to have \"eggs\" available whenever you need them. I like to spontaneously bake things, and in the past have been bummed out to find that I've run out of eggs. These dried egg whites keep indefinitely in your pantry, so you never have to go without \"eggs\" again. They are also handy when you create your own pancake or waffle mix in bulk or gift giving. Bob's Red Mill brand is always excellent and I've never been dissappointed.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18050706499980151,
+      "input_tokens": 127,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Being desperate for ideas as to what to make my 13 year old son who is on a Candida Diet, I thought I had found a gold mine on discovering this book. I was disappointed, however, when I checked with my naturopath regarding the safety of vegetable glycerin, and was told that it could cause diarrhea and/or dehydration, and he suggested that I look for an alternative sweetener. I have had some success using Ms. Burton's recipes substituting stevia. But thanks for trying, Ms. Burton, for so many of \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3621878880003351,
+      "input_tokens": 139,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I ordered a book on March 14 for a birthday present. Today is April 16 and I still have not received the book. I have contacted the dealer twice, but the dealer did not respond to either email. I have also filed a claim because my credit card was charged for the book. If you actually want to buy something at Amazon, do not attempt to buy from Vertex. The worst dealer ever!!Zero stars!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.16104258399991522,
+      "input_tokens": 111,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Good for value!!Its been a month to using it.It works well-Goood!!but it takes time to heat up.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19178462700074306,
+      "input_tokens": 51,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This tub was such a disappointment. First, it is VERY difficult to use with an infant. My daughter continued to slide down off of the sling because it did not support her. Second, it leaked after the second use. We tried placing a towel under the tub but the towel was completely soaked after about 5 minutes. By the third time the water was gushing out. Also, it is way too big to fit in your standard sinks. I think this is a waste of money and would not recommend this item to anyone. The only rea\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.10803069099983986,
+      "input_tokens": 137,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I found this book to be a waste of time and money. The main focus of the book seemed to be how inadequate the Snubby is for self-defense and I like Snubby revolvers. The author missed or minimized most of the good reasons to carry a revolver other than that they can be lite in weight.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.22084340599940333,
+      "input_tokens": 88,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This review is mainly to warn all of the poor video quality I experenced with the VHS tape by the studio: 'Diamond Entertainment'. The video started out playing so dark I had to set my TV's brightness controls up all the way just to see anything. It also had poor tracing and just overall poor film quality. The DVD version is probably a better bet. I've seen the movie before on 'Mean Guns 20 Movie Pack - DVD' and there the movie looked pretty good. The Movie itself was not bad when seen with a ni\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.290360380000493,
+      "input_tokens": 136,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Prospective buyers, beware!I did a lot of research, and finally settled on the Creative Zen Vision:M. I was certainly impressed when it arrived, it is handsome and the player itself is easy to figure out, with gorgeous sample photos and videos to admire as I installed the software.When I finally plugged the ZVM into my PC, an alert came up, \"Device malfunction, not recognized.\" Since then, I've spent 12+ hours researching the internet, downloading fixes, firmware updates, driver updates, etc., t\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3226313629993456,
+      "input_tokens": 131,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Although the concept of this book is a great idea I just couldn't get into all that much. It got boring and monotonous quick.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20511796299979324,
+      "input_tokens": 54,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: With the caliber of musicians playing on this album, I expected a hard hitting original. Instead we get re-arranged covers and lots of \"filler\" salsa. No surprises here. The classic salsa albums are worth your cash but if you are curious, you'll play this one once.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21586674099944503,
+      "input_tokens": 84,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I have tried making my way through this book many times. But I cannot get past the author's incessesant penchant for the mayan calendar. I did not find any use in going through code snippets (which are very hard to read, they are screenshots in small font)that taught me how to manipulate dates (leap years, mayan calendars etc.) I found this approach extremely boring. Infusing text with an occasionally comment of marginal wit, does not make it entertaining.The only redeeming portion of this book \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.12078286399992066,
+      "input_tokens": 130,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: .@TheRealTnisha @user @user Argued w/a lot of \"swing-state\" Bernie voters who sd their protest vote wouldnt elect Trump\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.45169049499963876,
+      "input_tokens": 58,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Message @user maybE a snakey little strut, biblically with stick but can b trusted\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2393413010004224,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user I hope I white pilled you a bit enjoy Christmas in England the third world awaits the liberals hope they're as welcoming \ud83d\ude02\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3975103940001645,
+      "input_tokens": 54,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user @user your not nasty your a born loser, you forgot, 4Americans are dead, NOT with there families!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19301165599972592,
+      "input_tokens": 53,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Just watched #FantasticBeasts and I traveled back to my teenage years! @user Thank you! #Beijing\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.13776793599936354,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This #FlickFriday prepare to be bewitched by #FantasticBeasts...\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14734785499967984,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user dude I just saw you on a rooftop in a David Blaine special where he's doing magic for you guys. Is that guy wild or what?\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.21150796900019486,
+      "input_tokens": 57,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user @user @user Let's call them what they are...White Supremacists/Nazis.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19781339000019216,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The Surprise review: the best euthanasia rom-com of the year via @user\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19166831500024273,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: But I'm learning. And really trying. And taking a lot of deep breaths everyday. I love him so much & I know I'm the best mama for him \u2764\ufe0f\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.154947739999443,
+      "input_tokens": 62,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user Brilliant actor! U R a talent that's been missing from Tv for quite some time #ThisIsUs #Emmys2016\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.17928745599965623,
+      "input_tokens": 54,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user You will fit in with steve bannon and all of trumps true patriots. !\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1522580000000744,
+      "input_tokens": 46,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I had a dream about #Richonne last night \ud83d\ude0a | #Michonne #RickGrimes #OTP #TWD #TheWalkingDead\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2107857540004261,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: And the Obama's know the lyrics. YESSSSSSSS #ThankYouObama\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.13548465999974724,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: #TrumpTransitionTeam#Chaotic#disorganizedSlow on - Uptickahhh..#MSM#Pollsters#Polls#usatodayI thinkU are\u2026\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.22850085200025205,
+      "input_tokens": 61,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Drones and robots make solar panels more efficienthttps://t.co/PpFj9y8SVz\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18269981100002042,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user one what? too bad we base the win off of electoral college votes. Therefore she won nothing\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18999860399981117,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Excuse my language but \ud83d\ude44\ud83d\ude44\ud83d\ude44\ud83d\ude44\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18917135699939536,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Noah fence but I'm sick of people telling me what I should or shouldn't be eating e.g vegetarianism\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17925712500073132,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Cameron Crazie in Duke's halftime contest wearing a No. 3 Duke jersey with \"ALLEN\" on the back. Hope Grayson's making something off that.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.3016167799996765,
+      "input_tokens": 60,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: haghtag-MyFAMILYWEIR my stepgrandma facial features=FBI Director Comey(Jap decendent)=bothR Jap SPIES. W appointed Comey=DUMMY or INSIDIOUS?\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2173352209993027,
+      "input_tokens": 66,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Mission Unstoppable! From Drone Strikes To Prison Torture CIA Runs US Forein Policy!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1741698380001253,
+      "input_tokens": 44,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user will provide federal funds to have an agency like Blackwater be contracted to hire public school teachrs\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3110128979997171,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user when has #hamas stopped being a terrorist organization? It makes sense they spew hatred and fear.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20885342899964598,
+      "input_tokens": 50,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: You idiots would make Kim Jong-un jealous with your delusions. Also Harrison Ford never endorsed that orange dipshi\u2026\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.13297048099957465,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: 4. Babette, 3. Miss Patty, 2. Richard, 1. LANE!!! #GilmoreGirlsTop4\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1786363410001286,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user So they seem to assume same posture as hardline rightists re:minorities: This bloc will never change, they're not really American\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18710465300046053,
+      "input_tokens": 56,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Happy #NationalFastFoodDay. \ud83c\udf54\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14269386199975997,
+      "input_tokens": 36,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: 5. I'm still not mad I'm not dating zac Efron\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2998874180002531,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The Big Bang blew up Ben Carson's brain\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20873480899990682,
+      "input_tokens": 35,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the film tries too hard to be funny and tries too hard to be hip .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.16296436799984804,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the structure the film takes may find matt damon and ben affleck once again looking for residuals as this officially completes a good will hunting trilogy that was never planned .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21345061299962254,
+      "input_tokens": 58,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: altogether , this is successful as a film , while at the same time being a most touching reconsideration of the familiar masterpiece .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.17241576600008557,
+      "input_tokens": 50,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: this is a winning ensemble comedy that shows canadians can put gentle laughs and equally gentle sentiments on the button , just as easily as their counterparts anywhere else in the world .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14917916800004605,
+      "input_tokens": 59,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: it 's like watching a nightmare made flesh .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1377422249997835,
+      "input_tokens": 35,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: without ever becoming didactic , director carlos carrera expertly weaves this novelistic story of entangled interrelationships and complex morality .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16840721599965036,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: one long string of cliches .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17040267100037454,
+      "input_tokens": 32,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: it 's hampered by a lifetime-channel kind of plot and a lead actress who is out of her depth .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1604692499995508,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the longer the movie goes , the worse it gets , but it 's actually pretty good in the first few minutes .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2151720159999968,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: it 's a cookie-cutter movie , a cut-and-paste job .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.14042381399940496,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: it offers little beyond the momentary joys of pretty and weightless intellectual entertainment .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.23886725600004866,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the film makes a fatal mistake : it asks us to care about a young man whose only apparent virtue is that he is not quite as unpleasant as some of the people in his life .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20649121299993567,
+      "input_tokens": 62,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: for all the writhing and wailing , tears , rage and opium overdoses , there 's no sense of actual passion being washed away in love 's dissolution .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20423740600017481,
+      "input_tokens": 61,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: expect the same-old , lame-old slasher nonsense , just with different scenery .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17841990899978555,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: sacrifices the value of its wealth of archival foot-age with its less-than-objective stance .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.16885125000044354,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the film is powerful , accessible and funny .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14499314700060495,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the inspirational screenplay by mike rich covers a lot of ground , perhaps too much , but ties things together , neatly , by the end .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18836355100029323,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: this is a good script , good dialogue , funny even for adults .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1641564860001381,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: ... plays like somebody spliced random moments of a chris rock routine into what is otherwise a cliche-riddled but self-serious spy thriller .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2099064770000041,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: involves two mysteries -- one it gives away and the other featuring such badly drawn characters that its outcome hardly matters .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19800935100010975,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the result is a gaudy bag of stale candy , something from a halloween that died .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17696335899927362,
+      "input_tokens": 45,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: if the movie succeeds in instilling a wary sense of ` there but for the grace of god , ' it is far too self-conscious to draw you deeply into its world .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18479265499991016,
+      "input_tokens": 60,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: an operatic , sprawling picture that 's entertainingly acted , magnificently shot and gripping enough to sustain most of its 170-minute length .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19667067099999258,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: the fly-on-the-wall method used to document rural french school life is a refreshing departure from the now more prevalent technique of the docu-makers being a visible part of their work .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18078508600046916,
+      "input_tokens": 61,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: you wo n't like roger , but you will quickly recognize him .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.23979610200058232,
+      "input_tokens": 40,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: director of photography benoit delhomme shot the movie in delicious colors , and the costumes and sets are grand .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1751801760001399,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: very bad .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.10547181199945044,
+      "input_tokens": 28,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: at the very least , if you do n't know anything about derrida when you walk into the theater , you wo n't know much more when you leave .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.16930972299996938,
+      "input_tokens": 59,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: a difficult , absorbing film that manages to convey more substance despite its repetitions and inconsistencies than do most films than are far more pointed and clear .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1722448450000229,
+      "input_tokens": 53,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: not since japanese filmmaker akira kurosawa 's ran have the savagery of combat and the specter of death been visualized with such operatic grandeur .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19702314299956925,
+      "input_tokens": 60,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The product works fine. I ordered the more exprensive one after I read reviews from others on Amazon. My husband likes the presser. It does a good job pressing his pants. However, it was damaged in the box when we received it. We decided it was too much trouble to send it back. The box was torn and the presser had a chuck knocked out of it.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3579664760000014,
+      "input_tokens": 104,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This book is so useless that I feel compelled to write a review to warn others to stay away from this book. A good tutorial should inspire the user on what he/she can do with the product. This book leads you to believe that without talent, the only thing you can do with Illustrator is to draw circles and squares. The book is a disservice to both the reader and to Adobe Illustrator.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.12776713400035078,
+      "input_tokens": 105,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The authors attempt an ambitious goal of covering many SOA topics - but their resulting text come across as scattered - vague - and lacking a coherent and practical application.Thomas Erl's books are much better written - and have a coherent approch to buliding a solid body of knowledge.For a manager / salesperson wanting a broad overview of SOA - they might be better served by reading Service Oriented Architecture For DummiesService Oriented Architecture For Dummies (For Dummies (Computer/Tech)\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17936432600072294,
+      "input_tokens": 124,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I ordered this product and did recieve then a couple months later it broke. Now Ive done everything I was told to do by by shipping back for a replacement and nothing. They wont return Emails i havent received the replacement part.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21830500699979893,
+      "input_tokens": 72,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I hated this movie. It was so silly. The girl made the cult look more stupid than they already were. Come on? She was from the future??? I can't stop laughing. Maybe, I missed something. I don't think I did. When it first started, I said to myself: What am I watching this for? I thought it was stupid, stupid and then more stupid. I kept watching, trying to make sense of it, but to no avail. I didn't want to waste my $1.00 rental fee.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1508314100001371,
+      "input_tokens": 135,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Product was easy to use to assemble.Product supported my weight (180 lb) and was easy to take down. I usually do not have time to work out and this product is great for quick pull up workout.Did notice some scuff marks around the door frame but no damage otherwise.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19287090399939189,
+      "input_tokens": 82,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: 1.Music-I don't like it,but too overplayed for this CD-2/5 stars2.Most Girls-I listen a lot when gets boring-4/5 stars3.Bent-Good rock tune-5/5 stars4.Everything You Want-I like Vertical Horizon,this song is bad-1/5 stars5.Deep Inside Of You-Good punk tune-5/5 stars6.Pinch Me-Great pop tune-5/5 stars7.The Way You Love Me-An ultimate love song,but little annoying-3.5/5 stars8.Here With Me-One of my favorites-5/5 stars9.He Wasn't Man Enough For Me-Good song,but too overplayed-4/5 stars10.What A Gi\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2666759269995964,
+      "input_tokens": 179,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The other plastic garages and service stations that we have purchased in the past were made so poorly, but this one has really stood the test of time with two kids under the age of five.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.23720146300001943,
+      "input_tokens": 64,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Nirvana only got popular after cobain killed himself? Obviously you're an idiot. Nirvana got mega-popular after \"Smells like teen spirit\" was debuted on MTV, and remained popular up until he killed himself. (at which time there was a spike in popularity, yes, but they were popular before).also some of kurt's lyrics are touching if you don't go in with such a bias.Of course I agree with you that Soundgarden sounds nothing like Nirvana, and I generally like soundgarden's music better.I also agree \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24626790900038031,
+      "input_tokens": 138,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Tracy knows how to get you on your feet and dancing! This is an amazing effort from Tracy Young, a must have for everyone!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1604285390003497,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: What matters is using the cable with the highest capability your gear will support (HDMI, DVI, component), and using a decent quality shielded cable. But don't waste your money on \"features\" that won't affect the performance of the cable.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.22899597400009952,
+      "input_tokens": 77,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I've used this camera for 6 years. Last year I started getting intermittant \"Remove the Cassette\" messages. I wish I had captured the outstanding three recorded tapes onto my PC then. Instead I recorded another 45 minutes. Now, the error message is solid, no matter which tape I use.My experience with Canon in the past has taught me not to waste the time or the money to bother having this repaired. (I spent about $700 having my previous Canon Camcorder repaired. It worked a few weeks and died aga\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.16605640000034327,
+      "input_tokens": 136,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: We make so many awesome things with this dehydrator, including beef jerky, dried bananas, strawberries, apples and we also made fruit roll-ups!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14238340799965954,
+      "input_tokens": 56,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I was on a plane trying to read this and instead picked up the airline magazine. I typically enjoy books about Irish families but this one didn't develop characters that I could become interested in. After half way through the book, I just gave up. I normally have a hard time not finishing a book but I didn't regret it. The style just wasn't for me.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21549153700016177,
+      "input_tokens": 100,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: i bought FDM-07157 under the cabinet LCD TV in 2006 (DEC). from CIRCUIT CITY who did nothing when the screen went black in april 07. polaroid has the worst customer service i have ever dealt with. cant return it cant fix it. total waste of money!!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1310162270001456,
+      "input_tokens": 88,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Let Me Call You Sweetheart, by Mary Higgins Clark, read by Bess Armstrong. A convoluted and seemingly implausible tale. Not MHC's best by a long shot, but may have lost a lot in the abridgement, which is pretty awful. Too many characters (and too many of them lawyers!) and the setting jumps between New York or New Jersey -- never quite sure. Finally, Bess Armstrong has a smooth, lovely voice, and excellent pronunciation. But it's kinda like listening to the voice mail lady read you a story, hard\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3010059549997095,
+      "input_tokens": 140,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I've been using this product for 3 months. It seems to be pretty accurate with my cycle. I gave it 4 stars because they are a little pricey. You must use the monitor along with this which is very expensive too.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.32156254399978934,
+      "input_tokens": 73,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I liked the book because it is from a true story and the story is fantastic. However, I disliked the book because it has a pattern of Ruth and James and Ruth and James and so on. Finally, I liked the book because it shows you how tough a woman can be in facing her life.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.23444544399990264,
+      "input_tokens": 86,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I luv Johanna Lindsey books but this was not good at all.I don't think she was awake when she wrote this. I'm just sad bought\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.22579816200050118,
+      "input_tokens": 57,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: This second CD of his really helped him boost his career and helped to uplift the spirit of the 1990s. Songs like \"All the Things Your Man Won't Do\", \"No One Else Comes Close\", and \"The Love Scene\" help to bring out his depth in R&B as a singer and performer. Personally, the song \"Good Girls\" describes how I felt for most of my life, including the period that the album came out, so as a whole, I give it 4 stars, and it's definitely worth the time and money spent.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1546087870001429,
+      "input_tokens": 139,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Ignore Kavity Killer's one-star review; I don't know what his/her problem is with good ol' Lyle. If you have the slightest interest in Lyle, this disk is a great start. It's about as solid as they come, with a nice mix of upbeat and haunting tunes. Pontiac is my favorite of all of Lyle's disks, with Joshua Judges Ruth being a close second. Try it . . . you'll like it.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1712645870002234,
+      "input_tokens": 118,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I bought this dvd for my wife because she wanted a short, effective workout. Right at the bat, Jillian set the bar high at level 1. It's a continuous cardio, strengthen and abs workout for 20 minutes with 5 minutes of warmup and cool down. My wife saw results within a week. She gave the dvd to her mother so now she's workout on Amazon instant video that came with the dvd purchase. I know this workout works because my sister-in-law shed 10 pounds within 1.5 month and she looks great! Good luck on\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1470249120002336,
+      "input_tokens": 142,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: It was a nice series. I have read Snelling before and enjoyed her books. Her family connection in the series worked well.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.17554231800022535,
+      "input_tokens": 51,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Just a heads up. Two of the songs on 1000 Fires are Babble tunes. If you are a Babble fan, then you probably want to check this out....\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.21175602999937837,
+      "input_tokens": 61,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: My five year old loves his voice changer. In fact everyone in the house plays with it. I like how you can use multiple switches to make even more that 10 different effects. Fun, but if you have a headache or are bothered by noise then do not buy this! haha\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.3020530919993689,
+      "input_tokens": 83,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I was overall disappointed with this product, did not see the results and I used it as the label stated. Ended up having to buy another product\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.14444073300001037,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Very outstanding book, helped a ton of things that are just \"assumed\" elsewhere(datasheets, app notes and the like). While it's heavily based in math the book is presented in a very clear way where the math not at the forefront.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.20285448499998893,
+      "input_tokens": 75,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Although it rarely advances too deeply into the lives of the two-hundred individuals featured and I did find a typo or two and the occasional miscued date, the facts presented are always interesting and significant to whom these people were and why they deserve to be remembered today. A very good, informative, light read for a wide audience. Never slow-moving, not over anyone's head, and should prove educational for nearly any reader. Nicely illustrated; well-chosen selection of a cross section \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.13672496800063527,
+      "input_tokens": 123,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I originally had my Xbox 360 hooked up through component but my HDTV only has space for one component connection and I needed to hook up my cable box to it so I decided to purchase the VGA cable. I have an Olevia 232T and I think the image is clearer and brighter through the VGA cable than through component. I know some people complain about \"wash-out\" but I felt the image was much more vibrant and vivid through VGA. If you think the image is too bright, you can always turn down the brightness i\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2975615300001664,
+      "input_tokens": 135,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I have been using a terrible hole puncher at school for the past ten years. (hole guide shifting after every punch, a deluge of holes raining upon the classroom floor, fractured palms, etc.) After rejecting the new gold punch, I went on-line to find one that would work. Carl works. If you need some holes punched, I'm the guy to see. This punch smoothly and efficaciously handles 40 sheets - maybe more - with an ease that makes me teary-eyed. Buy it and eat the bill.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16820338499928766,
+      "input_tokens": 133,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user & now @user @user and others are conveniently selling out all of Europe to China by allowing them access to Ukraine.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17744865100030438,
+      "input_tokens": 51,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: If we had democracy, maybe we'd respect it. Russians, Comey, media all anti-democracy. #NotMyPresElect\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.15362918000028003,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Microsoft has invented a reprogrammable chip that may accelerate the speed and flexibility of deep learning and AI\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1396332780004741,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The latest The Daily Library! Thanks to @user #nbawards #libraries\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.13576360099978046,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: In \"Missing the Mark: Gun Control is Not the Cure for What Ails the U.S. Mental Health System,\" it says that many shooters are mentally ill.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3426735950006332,
+      "input_tokens": 58,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user These mother**kers know how to protest -Trump inauguration will be the same\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18048886300039158,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Makes me so proud to be an American!Finally!  Alleluia #TrumpPence #KarenRocks! @user\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.15848301500045636,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Zionist Organization Tells Howard Dean \"Apologize For Disgracefully Calling Steve Bannon a Nazi\"\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2811157810001532,
+      "input_tokens": 45,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user I would rather be required to have a gun then Obama care, and paying the Medicaid and housing for illegals.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19721157399999356,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Iraqi militias claim to have isolated IS-controlled #Mosul #MosulOffensive\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16190412899959483,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Everybody has a story. What made them who they are in this very moment. That's what I love about #ThisIsUs. \ud83d\udc96@NBCThisisUs\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18302629200024967,
+      "input_tokens": 60,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Fox & Friends 11\\25\\16: An Inquiry Already ? Dems Push Gao To Investigate Trump Transition: via @user\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.25342921999981627,
+      "input_tokens": 53,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: when is the other castro turn?? and maduro?? and all the fcking dictators??\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.15137054300066666,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Third and this is key here. Earning money is bad because alt-energy but OK because fossil fuels? Your entire point\u2026\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2543330970001989,
+      "input_tokens": 50,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: .@TurnbullMalcolm A $1Billion loan of tax payers $$$ to lock ourselves into fossil fuels for 30+ years while we\u2019re in a deficit. Great work.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2786729529998411,
+      "input_tokens": 63,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: ICYMI: Poutine won our #NationalFastFoodDay poll! How many times did @user vote?\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.3308327989998361,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user Depressing how many people deluded that Supreme Court are deciding whether Brexit referendum is overturned\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2080208319994199,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user This is great news. For a Mexican effort to build a parallel wall on their side of the border too.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1896990499999447,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user good thing donnie trump's coming to take them bad hombres out of here.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14224693799951638,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: TPP, ignoring Standing Rock, and urging Hillary to concede when there was election shenanigans (thousands of padded votes). #Obamagivesup\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20212133000040922,
+      "input_tokens": 57,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: The future of #connectedcars is upon us:  via @user #IIoT #carbots\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14693090099990513,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user idk I find hiding in the woods & walking dogs v inspiring & relatable guys #StillWithHer\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16576303700003336,
+      "input_tokens": 51,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: \u2018Greatest living poet\u2019 Bob Dylan wins Nobel literature\u00a0prize\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.15152232400032517,
+      "input_tokens": 40,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user nobody is saying to go cold turkey on fossil fuels. Just saying to expedite alternatives. Simple minded people make straw men\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21540539600027842,
+      "input_tokens": 52,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: I love Manchester. Everyone knows that - I have said it many ti... #CristianoRonaldo #citations\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1373870919996989,
+      "input_tokens": 51,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Loved your article on #thepool @user especially the \"what can you do\" section\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.17072632200051885,
+      "input_tokens": 45,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Blame the identity apostles \u2013 they led us down this path to #Populism\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2512910750001538,
+      "input_tokens": 44,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: @user @user are you an idiot or a moron? US only country with embargo against Cuba. All of world recognizes China. clown\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19137535100071545,
+      "input_tokens": 54,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Fine, I guess I'll tolerate Steve Bannon's appointment, but only if he legally changes his name to Race Baiter Ginsburg\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17767496299984487,
+      "input_tokens": 53,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.\n\nText: Dear Electoral College. You can't, seriously.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17288023800028895,
+      "input_tokens": 35,
+      "output_tokens": 1
+    }
+  ],
+  "latency": {
+    "p50": 0.18302629200024967,
+    "p90": 0.290360380000493,
+    "p99": 0.3975103940001645
+  },
+  "tokenizer": "cl100k_base"
+}

@@ -8,6 +8,7 @@ class GEPA(Optimizer):
     name = "GEPA"
 
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
+        rnd = random.Random(self.seed)
         best_candidate = Candidate(instruction=task_desc, dev_score=self._dev_score(task_desc, dev_examples))
         self.history.append(best_candidate)
 
@@ -23,7 +24,7 @@ class GEPA(Optimizer):
                 break
 
             # Pick a random failure to reflect on
-            failed_ex, prediction, _ = random.choice(failures)
+            failed_ex, prediction, _ = rnd.choice(failures)
 
             reflection_prompt = REFLECTION_TEMPLATE.format(
                 instruction=best_candidate.instruction,

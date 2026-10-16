@@ -24,6 +24,7 @@ class OPRO(Optimizer):
         return cand
 
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
+        rnd = random.Random(self.seed)
         seed = self._eval_candidate(task_desc, dev_examples, ood_examples)
         self.history.append(seed)
 
@@ -49,7 +50,7 @@ class OPRO(Optimizer):
                 if self.backend.stats.calls >= self.budget:
                     break
                 # Diversify mutation operators
-                meta_template = random.choice(OPRO_META_TEMPLATES)
+                meta_template = rnd.choice(OPRO_META_TEMPLATES)
                 meta_prompt = meta_template.format(history_block=history_block)
                 
                 new_instruction = self.backend.generate(meta_prompt).strip()

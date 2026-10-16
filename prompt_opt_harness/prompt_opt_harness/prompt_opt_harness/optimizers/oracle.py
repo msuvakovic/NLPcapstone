@@ -5,6 +5,7 @@ from .opro import OPRO
 
 class OracleOPRO(OPRO):
     name = "Oracle-OPRO"
+    uses_ood_test = True  # upper bound: intentionally sees the OOD test sets
     
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
         # Combine all data (source + all OOD domains) into one massive dev set

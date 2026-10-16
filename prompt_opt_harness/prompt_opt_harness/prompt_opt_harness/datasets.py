@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
 
 from .prompts import BASE_INSTRUCTION
@@ -24,15 +24,17 @@ class DomainSplit:
 class Dataset:
     source_domain: str
     source: DomainSplit
-    ood: Dict[str, List[Example]]
+    ood: Dict[str, List[Example]]  # held-out OOD test sets, only used for final reporting
     base_instruction: str = BASE_INSTRUCTION
+    # OOD validation sets optimizers may look at; disjoint from `ood`
+    ood_val: Dict[str, List[Example]] = field(default_factory=dict)
 
     def lookup(self) -> Dict[str, Tuple[str, str]]:
         # text -> (label, domain), used by MockBackend to grade answers
         table: Dict[str, Tuple[str, str]] = {}
         for ex in self.source.dev + self.source.test:
             table[ex.text] = (ex.label, ex.domain)
-        for examples in self.ood.values():
+        for examples in list(self.ood.values()) + list(self.ood_val.values()):
             for ex in examples:
                 table[ex.text] = (ex.label, ex.domain)
         return table
@@ -85,8 +87,23 @@ def load_demo_dataset() -> Dataset:
         ("so disappointed with this restaurant, food was bad", "Negative"),
     ])
 
+    amazon_val = _mk("amzval", "amazon", [
+        ("Sturdy blender that crushes ice easily, very happy with it.", "Positive"),
+        ("The keyboard feels great and the keys are nice and quiet.", "Positive"),
+        ("Charger stopped working after a week, complete waste of money.", "Negative"),
+        ("The zipper broke the first time I used this backpack.", "Negative"),
+    ])
+
+    tweets_val = _mk("twval", "tweets", [
+        ("just finished my run and feeling fantastic", "Positive"),
+        ("best coffee in town, totally made my morning", "Positive"),
+        ("stuck in traffic for two hours, this is the worst", "Negative"),
+        ("my package got lost again, so annoyed right now", "Negative"),
+    ])
+
     return Dataset(
         source_domain=source_domain,
         source=DomainSplit(dev=movie_dev, test=movie_test),
         ood={"amazon": amazon, "tweets": tweets},
+        ood_val={"amazon": amazon_val, "tweets": tweets_val},
     )

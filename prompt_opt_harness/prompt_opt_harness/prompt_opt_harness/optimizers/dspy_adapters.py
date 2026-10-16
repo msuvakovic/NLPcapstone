@@ -24,3 +24,4 @@ class DSPyOptimizerAdapter(Optimizer):
 
     def optimize(self, task_desc: str, dev_examples) -> Candidate:
         raise NotImplementedError("wire up dspy.Signature/Module + metric fn, see module comment")
+    

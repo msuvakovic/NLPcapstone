@@ -1,0 +1,873 @@
+{
+  "name": "Zero-shot",
+  "best_instruction": "",
+  "dev_score": 0.9,
+  "source_test_acc": 0.9666666666666667,
+  "ood_accs": {
+    "amazon": 0.9,
+    "tweets": 0.9666666666666667
+  },
+  "ood_gap": 0.033333333333333326,
+  "worst_case_acc": 0.9,
+  "variance": 0.0011111111111111107,
+  "api_calls": 120,
+  "wall_time": 27.66088263599886,
+  "prompt_chars": 0,
+  "prompt_words": 0,
+  "input_tokens": 5786,
+  "output_tokens": 120,
+  "candidate_pool": [
+    {
+      "instruction": "",
+      "dev_score": 0.9
+    }
+  ],
+  "per_call_traces": [
+    {
+      "prompt": "Text: harrison 's flowers puts its heart in the right place , but its brains are in no particular place at all .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3416704490000484,
+      "input_tokens": 36,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: this flick is about as cool and crowd-pleasing as a documentary can get .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2188133170002402,
+      "input_tokens": 29,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: a movie that successfully crushes a best selling novel into a timeframe that mandates that you avoid the godzilla sized soda .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.28080963699994754,
+      "input_tokens": 36,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: and that leaves a hole in the center of the salton sea .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3404822599995896,
+      "input_tokens": 26,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: a simple , but gritty and well-acted ensemble drama that encompasses a potent metaphor for a country still dealing with its fascist past .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.22655404299985094,
+      "input_tokens": 38,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the magic of the film lies not in the mysterious spring but in the richness of its performances .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.13648735999959172,
+      "input_tokens": 31,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: combining quick-cut editing and a blaring heavy metal much of the time , beck seems to be under the illusion that he 's shooting the latest system of a down video .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24444051299997227,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: seldom has a movie so closely matched the spirit of a man and his work .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19721740000022692,
+      "input_tokens": 28,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: burns never really harnesses to full effect the energetic cast .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19351793400073802,
+      "input_tokens": 24,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: nelson 's brutally unsentimental approach ... sucks the humanity from the film , leaving behind an horrific but weirdly unemotional spectacle .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18066223099958734,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: yakusho and shimizu ... create engaging characterizations in imamura 's lively and enjoyable cultural mix .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2108293599994795,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the weight of the piece , the unerring professionalism of the chilly production , and the fascination embedded in the lurid topic prove recommendation enough .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.28132362100041064,
+      "input_tokens": 40,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: wince-inducing dialogue , thrift-shop costumes , prosthetic makeup by silly putty and kmart blue-light-special effects all conspire to test trekkie loyalty .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2172809359999519,
+      "input_tokens": 46,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: if your taste runs to ` difficult ' films you absolutely ca n't miss it .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.23618819399962376,
+      "input_tokens": 29,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the quality of the art combined with the humor and intelligence of the script allow the filmmakers to present the biblical message of forgiveness without it ever becoming preachy or syrupy .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18737220000002708,
+      "input_tokens": 46,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: it ca n't decide if it wants to be a mystery/thriller , a romance or a comedy .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.4796526290001566,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: a very well-made , funny and entertaining picture .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19005654899956426,
+      "input_tokens": 22,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: overall very good for what it 's trying to do .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.17238730000008218,
+      "input_tokens": 24,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: you will emerge with a clearer view of how the gears of justice grind on and the death report comes to share airtime alongside the farm report .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.31773772399992595,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: a romantic comedy enriched by a sharp eye for manners and mores .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.20722583300084807,
+      "input_tokens": 26,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: while the resident evil games may have set new standards for thrills , suspense , and gore for video games , the movie really only succeeds in the third of these .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20988339199993788,
+      "input_tokens": 45,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the words , ` frankly , my dear , i do n't give a damn , ' have never been more appropriate .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.19838135900045017,
+      "input_tokens": 36,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: while it 's genuinely cool to hear characters talk about early rap records ( sugar hill gang , etc. ) , the constant referencing of hip-hop arcana can alienate even the savviest audiences .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24434085200027766,
+      "input_tokens": 53,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: i 'm just too bored to care .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2311316959994656,
+      "input_tokens": 21,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: though perry and hurley make inspiring efforts to breathe life into the disjointed , haphazard script by jay scherick and david ronn , neither the actors nor director reginald hudlin can make it more than fitfully entertaining .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.25016733499978727,
+      "input_tokens": 63,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: do not see this film .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21403778300009435,
+      "input_tokens": 18,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: his comedy premises are often hackneyed or just plain crude , calculated to provoke shocked laughter , without following up on a deeper level .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.14598567899975023,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: there 's not enough here to justify the almost two hours .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1593682960001388,
+      "input_tokens": 25,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: stealing harvard is evidence that the farrelly bros. -- peter and bobby -- and their brand of screen comedy are wheezing to an end , along with green 's half-hearted movie career .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2093734489999406,
+      "input_tokens": 55,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: that 's a cheat .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1837098120004157,
+      "input_tokens": 18,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the film tries too hard to be funny and tries too hard to be hip .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.167358604000583,
+      "input_tokens": 28,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the structure the film takes may find matt damon and ben affleck once again looking for residuals as this officially completes a good will hunting trilogy that was never planned .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24372729700007767,
+      "input_tokens": 45,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: altogether , this is successful as a film , while at the same time being a most touching reconsideration of the familiar masterpiece .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18434576599975117,
+      "input_tokens": 37,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: this is a winning ensemble comedy that shows canadians can put gentle laughs and equally gentle sentiments on the button , just as easily as their counterparts anywhere else in the world .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1833458299997801,
+      "input_tokens": 46,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: it 's like watching a nightmare made flesh .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1562789330000669,
+      "input_tokens": 22,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: without ever becoming didactic , director carlos carrera expertly weaves this novelistic story of entangled interrelationships and complex morality .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18504928199945425,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: one long string of cliches .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1913398179995056,
+      "input_tokens": 19,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: it 's hampered by a lifetime-channel kind of plot and a lead actress who is out of her depth .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1483312959999239,
+      "input_tokens": 35,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the longer the movie goes , the worse it gets , but it 's actually pretty good in the first few minutes .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2284820260001652,
+      "input_tokens": 36,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: it 's a cookie-cutter movie , a cut-and-paste job .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.151624449999872,
+      "input_tokens": 28,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: it offers little beyond the momentary joys of pretty and weightless intellectual entertainment .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1391846689994054,
+      "input_tokens": 28,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the film makes a fatal mistake : it asks us to care about a young man whose only apparent virtue is that he is not quite as unpleasant as some of the people in his life .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.18192936900049972,
+      "input_tokens": 49,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: for all the writhing and wailing , tears , rage and opium overdoses , there 's no sense of actual passion being washed away in love 's dissolution .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.22152106599969557,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: expect the same-old , lame-old slasher nonsense , just with different scenery .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.15357935300016834,
+      "input_tokens": 28,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: sacrifices the value of its wealth of archival foot-age with its less-than-objective stance .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.23613936199944874,
+      "input_tokens": 30,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the film is powerful , accessible and funny .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16855554199992184,
+      "input_tokens": 21,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the inspirational screenplay by mike rich covers a lot of ground , perhaps too much , but ties things together , neatly , by the end .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19142440799987526,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: this is a good script , good dialogue , funny even for adults .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.13532238100015093,
+      "input_tokens": 26,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: ... plays like somebody spliced random moments of a chris rock routine into what is otherwise a cliche-riddled but self-serious spy thriller .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20314447300006577,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: involves two mysteries -- one it gives away and the other featuring such badly drawn characters that its outcome hardly matters .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3195644080005877,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the result is a gaudy bag of stale candy , something from a halloween that died .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.15464386099938565,
+      "input_tokens": 32,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: if the movie succeeds in instilling a wary sense of ` there but for the grace of god , ' it is far too self-conscious to draw you deeply into its world .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21028016499985824,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: an operatic , sprawling picture that 's entertainingly acted , magnificently shot and gripping enough to sustain most of its 170-minute length .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16285217099994043,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: the fly-on-the-wall method used to document rural french school life is a refreshing departure from the now more prevalent technique of the docu-makers being a visible part of their work .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19078271300077176,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: you wo n't like roger , but you will quickly recognize him .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2486942639998233,
+      "input_tokens": 27,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: director of photography benoit delhomme shot the movie in delicious colors , and the costumes and sets are grand .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.15921806499954982,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: very bad .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2121126980000554,
+      "input_tokens": 15,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: at the very least , if you do n't know anything about derrida when you walk into the theater , you wo n't know much more when you leave .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1982917780005664,
+      "input_tokens": 46,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: a difficult , absorbing film that manages to convey more substance despite its repetitions and inconsistencies than do most films than are far more pointed and clear .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.30292221600029734,
+      "input_tokens": 40,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: not since japanese filmmaker akira kurosawa 's ran have the savagery of combat and the specter of death been visualized with such operatic grandeur .\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2246933890000946,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: The product works fine. I ordered the more exprensive one after I read reviews from others on Amazon. My husband likes the presser. It does a good job pressing his pants. However, it was damaged in the box when we received it. We decided it was too much trouble to send it back. The box was torn and the presser had a chuck knocked out of it.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.4397134979999464,
+      "input_tokens": 91,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: This book is so useless that I feel compelled to write a review to warn others to stay away from this book. A good tutorial should inspire the user on what he/she can do with the product. This book leads you to believe that without talent, the only thing you can do with Illustrator is to draw circles and squares. The book is a disservice to both the reader and to Adobe Illustrator.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.12062581500049419,
+      "input_tokens": 92,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: The authors attempt an ambitious goal of covering many SOA topics - but their resulting text come across as scattered - vague - and lacking a coherent and practical application.Thomas Erl's books are much better written - and have a coherent approch to buliding a solid body of knowledge.For a manager / salesperson wanting a broad overview of SOA - they might be better served by reading Service Oriented Architecture For DummiesService Oriented Architecture For Dummies (For Dummies (Computer/Tech)\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.27476581200062355,
+      "input_tokens": 111,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I ordered this product and did recieve then a couple months later it broke. Now Ive done everything I was told to do by by shipping back for a replacement and nothing. They wont return Emails i havent received the replacement part.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.17614653700002236,
+      "input_tokens": 59,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I hated this movie. It was so silly. The girl made the cult look more stupid than they already were. Come on? She was from the future??? I can't stop laughing. Maybe, I missed something. I don't think I did. When it first started, I said to myself: What am I watching this for? I thought it was stupid, stupid and then more stupid. I kept watching, trying to make sense of it, but to no avail. I didn't want to waste my $1.00 rental fee.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.23295244899964018,
+      "input_tokens": 122,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Product was easy to use to assemble.Product supported my weight (180 lb) and was easy to take down. I usually do not have time to work out and this product is great for quick pull up workout.Did notice some scuff marks around the door frame but no damage otherwise.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16929162699943845,
+      "input_tokens": 69,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: 1.Music-I don't like it,but too overplayed for this CD-2/5 stars2.Most Girls-I listen a lot when gets boring-4/5 stars3.Bent-Good rock tune-5/5 stars4.Everything You Want-I like Vertical Horizon,this song is bad-1/5 stars5.Deep Inside Of You-Good punk tune-5/5 stars6.Pinch Me-Great pop tune-5/5 stars7.The Way You Love Me-An ultimate love song,but little annoying-3.5/5 stars8.Here With Me-One of my favorites-5/5 stars9.He Wasn't Man Enough For Me-Good song,but too overplayed-4/5 stars10.What A Gi\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.8140417109998452,
+      "input_tokens": 166,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: The other plastic garages and service stations that we have purchased in the past were made so poorly, but this one has really stood the test of time with two kids under the age of five.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2638429629996608,
+      "input_tokens": 51,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Nirvana only got popular after cobain killed himself? Obviously you're an idiot. Nirvana got mega-popular after \"Smells like teen spirit\" was debuted on MTV, and remained popular up until he killed himself. (at which time there was a spike in popularity, yes, but they were popular before).also some of kurt's lyrics are touching if you don't go in with such a bias.Of course I agree with you that Soundgarden sounds nothing like Nirvana, and I generally like soundgarden's music better.I also agree \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.4033341340000334,
+      "input_tokens": 125,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Tracy knows how to get you on your feet and dancing! This is an amazing effort from Tracy Young, a must have for everyone!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.17819914199935738,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: What matters is using the cable with the highest capability your gear will support (HDMI, DVI, component), and using a decent quality shielded cable. But don't waste your money on \"features\" that won't affect the performance of the cable.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.27252960500027257,
+      "input_tokens": 64,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I've used this camera for 6 years. Last year I started getting intermittant \"Remove the Cassette\" messages. I wish I had captured the outstanding three recorded tapes onto my PC then. Instead I recorded another 45 minutes. Now, the error message is solid, no matter which tape I use.My experience with Canon in the past has taught me not to waste the time or the money to bother having this repaired. (I spent about $700 having my previous Canon Camcorder repaired. It worked a few weeks and died aga\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.27766484299991134,
+      "input_tokens": 123,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: We make so many awesome things with this dehydrator, including beef jerky, dried bananas, strawberries, apples and we also made fruit roll-ups!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14039098800003558,
+      "input_tokens": 43,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I was on a plane trying to read this and instead picked up the airline magazine. I typically enjoy books about Irish families but this one didn't develop characters that I could become interested in. After half way through the book, I just gave up. I normally have a hard time not finishing a book but I didn't regret it. The style just wasn't for me.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.22968640499948378,
+      "input_tokens": 87,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: i bought FDM-07157 under the cabinet LCD TV in 2006 (DEC). from CIRCUIT CITY who did nothing when the screen went black in april 07. polaroid has the worst customer service i have ever dealt with. cant return it cant fix it. total waste of money!!\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2035588649996498,
+      "input_tokens": 75,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Let Me Call You Sweetheart, by Mary Higgins Clark, read by Bess Armstrong. A convoluted and seemingly implausible tale. Not MHC's best by a long shot, but may have lost a lot in the abridgement, which is pretty awful. Too many characters (and too many of them lawyers!) and the setting jumps between New York or New Jersey -- never quite sure. Finally, Bess Armstrong has a smooth, lovely voice, and excellent pronunciation. But it's kinda like listening to the voice mail lady read you a story, hard\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3603805819993795,
+      "input_tokens": 127,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I've been using this product for 3 months. It seems to be pretty accurate with my cycle. I gave it 4 stars because they are a little pricey. You must use the monitor along with this which is very expensive too.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.22131830400030594,
+      "input_tokens": 60,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I liked the book because it is from a true story and the story is fantastic. However, I disliked the book because it has a pattern of Ruth and James and Ruth and James and so on. Finally, I liked the book because it shows you how tough a woman can be in facing her life.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2603675669997756,
+      "input_tokens": 73,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I luv Johanna Lindsey books but this was not good at all.I don't think she was awake when she wrote this. I'm just sad bought\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1831111970004713,
+      "input_tokens": 44,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: This second CD of his really helped him boost his career and helped to uplift the spirit of the 1990s. Songs like \"All the Things Your Man Won't Do\", \"No One Else Comes Close\", and \"The Love Scene\" help to bring out his depth in R&B as a singer and performer. Personally, the song \"Good Girls\" describes how I felt for most of my life, including the period that the album came out, so as a whole, I give it 4 stars, and it's definitely worth the time and money spent.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.15488829300011275,
+      "input_tokens": 126,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Ignore Kavity Killer's one-star review; I don't know what his/her problem is with good ol' Lyle. If you have the slightest interest in Lyle, this disk is a great start. It's about as solid as they come, with a nice mix of upbeat and haunting tunes. Pontiac is my favorite of all of Lyle's disks, with Joshua Judges Ruth being a close second. Try it . . . you'll like it.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.23569865800072876,
+      "input_tokens": 105,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I bought this dvd for my wife because she wanted a short, effective workout. Right at the bat, Jillian set the bar high at level 1. It's a continuous cardio, strengthen and abs workout for 20 minutes with 5 minutes of warmup and cool down. My wife saw results within a week. She gave the dvd to her mother so now she's workout on Amazon instant video that came with the dvd purchase. I know this workout works because my sister-in-law shed 10 pounds within 1.5 month and she looks great! Good luck on\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1257668010002817,
+      "input_tokens": 129,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: It was a nice series. I have read Snelling before and enjoyed her books. Her family connection in the series worked well.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16092761599975347,
+      "input_tokens": 38,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Just a heads up. Two of the songs on 1000 Fires are Babble tunes. If you are a Babble fan, then you probably want to check this out....\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.21034759400026815,
+      "input_tokens": 48,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: My five year old loves his voice changer. In fact everyone in the house plays with it. I like how you can use multiple switches to make even more that 10 different effects. Fun, but if you have a headache or are bothered by noise then do not buy this! haha\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2205053379993842,
+      "input_tokens": 70,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I was overall disappointed with this product, did not see the results and I used it as the label stated. Ended up having to buy another product\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1501787779998267,
+      "input_tokens": 42,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Very outstanding book, helped a ton of things that are just \"assumed\" elsewhere(datasheets, app notes and the like). While it's heavily based in math the book is presented in a very clear way where the math not at the forefront.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.21717510399957973,
+      "input_tokens": 62,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Although it rarely advances too deeply into the lives of the two-hundred individuals featured and I did find a typo or two and the occasional miscued date, the facts presented are always interesting and significant to whom these people were and why they deserve to be remembered today. A very good, informative, light read for a wide audience. Never slow-moving, not over anyone's head, and should prove educational for nearly any reader. Nicely illustrated; well-chosen selection of a cross section \nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2335978230003093,
+      "input_tokens": 110,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I originally had my Xbox 360 hooked up through component but my HDTV only has space for one component connection and I needed to hook up my cable box to it so I decided to purchase the VGA cable. I have an Olevia 232T and I think the image is clearer and brighter through the VGA cable than through component. I know some people complain about \"wash-out\" but I felt the image was much more vibrant and vivid through VGA. If you think the image is too bright, you can always turn down the brightness i\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.2890449250007805,
+      "input_tokens": 122,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I have been using a terrible hole puncher at school for the past ten years. (hole guide shifting after every punch, a deluge of holes raining upon the classroom floor, fractured palms, etc.) After rejecting the new gold punch, I went on-line to find one that would work. Carl works. If you need some holes punched, I'm the guy to see. This punch smoothly and efficaciously handles 40 sheets - maybe more - with an ease that makes me teary-eyed. Buy it and eat the bill.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.43871272900014446,
+      "input_tokens": 120,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user & now @user @user and others are conveniently selling out all of Europe to China by allowing them access to Ukraine.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2061702740002147,
+      "input_tokens": 38,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: If we had democracy, maybe we'd respect it. Russians, Comey, media all anti-democracy. #NotMyPresElect\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.14517539200005558,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Microsoft has invented a reprogrammable chip that may accelerate the speed and flexibility of deep learning and AI\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18801504199927876,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: The latest The Daily Library! Thanks to @user #nbawards #libraries\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16046366299997317,
+      "input_tokens": 29,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: In \"Missing the Mark: Gun Control is Not the Cure for What Ails the U.S. Mental Health System,\" it says that many shooters are mentally ill.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.3113376759993116,
+      "input_tokens": 45,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user These mother**kers know how to protest -Trump inauguration will be the same\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.21140732200001366,
+      "input_tokens": 30,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Makes me so proud to be an American!Finally!  Alleluia #TrumpPence #KarenRocks! @user\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.18288369499987311,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Zionist Organization Tells Howard Dean \"Apologize For Disgracefully Calling Steve Bannon a Nazi\"\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2053968279997207,
+      "input_tokens": 32,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user @user I would rather be required to have a gun then Obama care, and paying the Medicaid and housing for illegals.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1934254809993945,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Iraqi militias claim to have isolated IS-controlled #Mosul #MosulOffensive\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.19755007100047806,
+      "input_tokens": 29,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Everybody has a story. What made them who they are in this very moment. That's what I love about #ThisIsUs. \ud83d\udc96@NBCThisisUs\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.14824054399923625,
+      "input_tokens": 47,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Fox & Friends 11\\25\\16: An Inquiry Already ? Dems Push Gao To Investigate Trump Transition: via @user\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2749938420001854,
+      "input_tokens": 40,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: when is the other castro turn?? and maduro?? and all the fcking dictators??\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24729571199986822,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Third and this is key here. Earning money is bad because alt-energy but OK because fossil fuels? Your entire point\u2026\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.33192981499996677,
+      "input_tokens": 37,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: .@TurnbullMalcolm A $1Billion loan of tax payers $$$ to lock ourselves into fossil fuels for 30+ years while we\u2019re in a deficit. Great work.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.245553669000401,
+      "input_tokens": 50,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: ICYMI: Poutine won our #NationalFastFoodDay poll! How many times did @user vote?\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.8089741210005741,
+      "input_tokens": 35,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user @user Depressing how many people deluded that Supreme Court are deciding whether Brexit referendum is overturned\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.20830095900055312,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user This is great news. For a Mexican effort to build a parallel wall on their side of the border too.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.3131606790002479,
+      "input_tokens": 36,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user good thing donnie trump's coming to take them bad hombres out of here.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1988947100007863,
+      "input_tokens": 30,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: TPP, ignoring Standing Rock, and urging Hillary to concede when there was election shenanigans (thousands of padded votes). #Obamagivesup\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24667367799975182,
+      "input_tokens": 44,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: The future of #connectedcars is upon us:  via @user #IIoT #carbots\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.13404991199968208,
+      "input_tokens": 34,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user @user idk I find hiding in the woods & walking dogs v inspiring & relatable guys #StillWithHer\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1767914109996127,
+      "input_tokens": 38,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: \u2018Greatest living poet\u2019 Bob Dylan wins Nobel literature\u00a0prize\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.16436963099931745,
+      "input_tokens": 27,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user nobody is saying to go cold turkey on fossil fuels. Just saying to expedite alternatives. Simple minded people make straw men\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2978286570005366,
+      "input_tokens": 39,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: I love Manchester. Everyone knows that - I have said it many ti... #CristianoRonaldo #citations\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.3532324890002201,
+      "input_tokens": 38,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Loved your article on #thepool @user especially the \"what can you do\" section\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Positive",
+      "elapsed": 0.1490767599998435,
+      "input_tokens": 32,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Blame the identity apostles \u2013 they led us down this path to #Populism\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.24846783999964828,
+      "input_tokens": 31,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: @user @user are you an idiot or a moron? US only country with embargo against Cuba. All of world recognizes China. clown\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.1829488660005154,
+      "input_tokens": 41,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Fine, I guess I'll tolerate Steve Bannon's appointment, but only if he legally changes his name to Race Baiter Ginsburg\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.286191453000356,
+      "input_tokens": 40,
+      "output_tokens": 1
+    },
+    {
+      "prompt": "Text: Dear Electoral College. You can't, seriously.\nAnswer with exactly one word: Positive or Negative.",
+      "response": "Negative",
+      "elapsed": 0.2214879450002627,
+      "input_tokens": 22,
+      "output_tokens": 1
+    }
+  ],
+  "latency": {
+    "p50": 0.20988339199993788,
+    "p90": 0.3195644080005877,
+    "p99": 0.8089741210005741
+  },
+  "tokenizer": "cl100k_base"
+}

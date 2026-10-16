@@ -25,6 +25,7 @@ def save_run(result: RunResult, log_dir: str = "logs") -> str:
         "wall_time_sec": result.wall_time,
         "prompt_chars": result.prompt_chars,
         "prompt_words": result.prompt_words,
+        "seed": result.seed,
         "candidate_pool": [{"instruction": i, "dev_score": s} for i, s in result.candidate_pool],
     }
     # include tokens if present

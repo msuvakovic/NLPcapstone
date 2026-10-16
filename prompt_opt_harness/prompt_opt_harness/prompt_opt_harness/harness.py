@@ -64,10 +64,13 @@ def run_experiment(
     backend = backend_factory()
     optimizer = optimizer_cls(backend, budget=budget, seed=seed)
 
+    # Optimizers only get the OOD validation split; dataset.ood is held out for
+    # reporting below. Oracle baselines opt in to the test split explicitly.
+    ood_for_search = dataset.ood if optimizer.uses_ood_test else dataset.ood_val
     best = optimizer.optimize(
-        dataset.base_instruction, 
+        dataset.base_instruction,
         dataset.source.dev,
-        ood_examples=dataset.ood
+        ood_examples=ood_for_search,
     )
     
     # Use eval_backend if provided (cross-model transfer testing)

@@ -69,6 +69,8 @@ def evaluate(backend, instruction: str, examples) -> float:
 
 class Optimizer:
     name = "base"
+    # True only for oracle upper bounds that deliberately optimize on the OOD test sets
+    uses_ood_test = False
 
     def __init__(self, backend, budget: int, seed: int = 0):
         self.backend = backend
