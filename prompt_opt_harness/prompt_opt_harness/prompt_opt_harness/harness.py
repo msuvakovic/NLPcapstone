@@ -21,6 +21,9 @@ class RunResult:
     variance: float
     api_calls: int
     wall_time: float
+    seed: int = 0
+    input_tokens: int = 0
+    output_tokens: int = 0
     candidate_pool: List[Tuple[str, float]] = field(default_factory=list)
 
 
@@ -53,6 +56,9 @@ def run_experiment(
         variance=cross_domain_variance(ood_values),
         api_calls=backend.stats.calls,
         wall_time=backend.stats.wall_time,
+        seed=seed,
+        input_tokens=backend.stats.input_tokens,
+        output_tokens=backend.stats.output_tokens,
         candidate_pool=[(c.instruction, c.dev_score) for c in optimizer.history],
     )
 

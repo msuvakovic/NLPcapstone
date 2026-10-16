@@ -15,6 +15,7 @@ def save_run(result: RunResult, log_dir: str = "logs") -> str:
 
     payload = {
         "name": result.name,
+        "seed": result.seed,
         "best_instruction": result.best_instruction,
         "dev_score": result.dev_score,
         "source_test_acc": result.source_test_acc,
@@ -24,6 +25,10 @@ def save_run(result: RunResult, log_dir: str = "logs") -> str:
         "variance": result.variance,
         "api_calls": result.api_calls,
         "wall_time_sec": result.wall_time,
+        "input_tokens": result.input_tokens,
+        "output_tokens": result.output_tokens,
+        # whitespace-split word counts from LLMCallStats, not tokenizer/API usage counts
+        "token_count_method": "whitespace_split",
         "candidate_pool": [{"instruction": i, "dev_score": s} for i, s in result.candidate_pool],
     }
     with open(path, "w") as f:
