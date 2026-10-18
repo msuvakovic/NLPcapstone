@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Callable, Dict, List, Tuple, Type
 
-from .datasets import Dataset
+from .datasets import Dataset, validate_dataset
 from .metrics import cost_normalized_gain, cross_domain_variance, ood_gap, worst_case_accuracy
 from .optimizers.base import Optimizer, evaluate
 from .llm_backends import BudgetedBackend
@@ -25,6 +25,13 @@ class RunResult:
     optimization_budget: int
     optimizer_budget_exhausted: bool
     wall_time: float
+    seed: int = 0
+    approx_input_words: int = 0
+    approx_output_words: int = 0
+    usage_count_method: str = "whitespace_split_approximation"
+    evaluation_protocol: str = "source-dev-search-heldout-source-and-ood-v1"
+    valid: bool = True
+    stop_reason: str = "completed"
     candidate_pool: List[Tuple[str, float]] = field(default_factory=list)
 
 
@@ -37,6 +44,7 @@ def run_experiment(
     seed: int = 0,
     task: Task = SENTIMENT_TASK,
 ) -> RunResult:
+    validate_dataset(dataset)
     backend = backend_factory()
     optimization_backend = BudgetedBackend(backend, budget=budget)
     optimizer = optimizer_cls(optimization_backend, budget=budget, seed=seed, task=task)
@@ -48,6 +56,13 @@ def run_experiment(
     source_test_acc = evaluate(backend, best.instruction, dataset.source.test, task=task)
     ood_accs = {domain: evaluate(backend, best.instruction, examples, task=task) for domain, examples in dataset.ood.items()}
     ood_values = list(ood_accs.values())
+
+    optimizer_budget_exhausted = getattr(optimizer, "budget_exhausted", False)
+    stop_reason = getattr(
+        optimizer,
+        "stop_reason",
+        "budget_exhausted_fallback" if optimizer_budget_exhausted else "completed",
+    )
 
     return RunResult(
         name=name,
@@ -61,8 +76,13 @@ def run_experiment(
         api_calls=backend.stats.calls,
         optimization_calls=optimization_calls,
         optimization_budget=budget,
-        optimizer_budget_exhausted=getattr(optimizer, "budget_exhausted", False),
+        optimizer_budget_exhausted=optimizer_budget_exhausted,
         wall_time=backend.stats.wall_time,
+        seed=seed,
+        approx_input_words=getattr(backend.stats, "input_tokens", 0),
+        approx_output_words=getattr(backend.stats, "output_tokens", 0),
+        valid=not optimizer_budget_exhausted,
+        stop_reason=stop_reason,
         candidate_pool=[(c.instruction, c.dev_score) for c in optimizer.history],
     )
 

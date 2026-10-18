@@ -5,7 +5,7 @@ import argparse
 from prompt_opt_harness.harness import run_experiment
 from prompt_opt_harness.llm_backends import GroqBackend, OllamaBackend
 from prompt_opt_harness.logger import save_run
-from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, OPRO, ZeroShotBaseline, GEPA, MIPROv2, TextGrad
+from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, OPRO, RandomSearch, ZeroShotBaseline, GEPA, MIPROv2, TextGrad
 from prompt_opt_harness.real_datasets import load_real_dataset
 from prompt_opt_harness.report import build_report
 
@@ -34,8 +34,9 @@ def main() -> None:
         return OllamaBackend(model=model) if args.backend == "ollama" else GroqBackend(model=model)
 
     methods = [
-        ("Zero-shot", ZeroShotBaseline, 1),
-        ("Human-written", HumanWrittenBaseline, 1),
+        ("Zero-shot", ZeroShotBaseline, len(dataset.source.dev)),
+        ("Human-written", HumanWrittenBaseline, len(dataset.source.dev)),
+        ("Random-search", RandomSearch, args.budget),
         ("OPRO", OPRO, args.budget),
         ("EvoPrompt-lite", EvoPromptLite, args.budget),
         ("GEPA", GEPA, args.budget),

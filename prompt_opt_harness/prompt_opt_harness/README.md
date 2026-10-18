@@ -3,6 +3,90 @@
 Implements the harness from the capstone proposal: dataset loader, optimizer
 wrapper, OOD evaluator, logger/reporter.
 
+## Capstone completion status: October 18, 2026
+
+The slide deck defines three main deliverables: a unified optimizer API,
+reproducible logs and costs, and a report with concrete recommendations. It asks
+Q1–Q3 about OOD gaps, robustness, and factors affecting generalization; simple
+OOD-improvement procedures, cross-model transfer, and code/formal tasks are
+stretch work.
+
+The core deliverables are now complete. The repository contains the shared
+harness, fixed-budget optimizer wrappers, source/OOD evaluation, tested leakage
+guards, reproducible artifacts, cost accounting, and a generated final evidence
+report. The full machine-readable bundle is under
+[`capstone_results/controlled_sentiment/`](../../capstone_results/controlled_sentiment/):
+
+- [`report.md`](../../capstone_results/controlled_sentiment/report.md): final
+  Q1–Q3 analysis, recommendations, and limitations;
+- [`summary.json`](../../capstone_results/controlled_sentiment/summary.json):
+  consolidated measured results;
+- [`protocol.json`](../../capstone_results/controlled_sentiment/protocol.json):
+  experiment roles and inclusion rules;
+- [`source_manifest.json`](../../capstone_results/controlled_sentiment/source_manifest.json):
+  source paths, commits, and SHA-256 hashes;
+- [`requirements.json`](../../capstone_results/controlled_sentiment/requirements.json):
+  slide-deck completion checklist.
+
+Rebuild the report with:
+
+```bash
+python3 tools/build_capstone_report.py
+```
+
+Run that command from the repository root. The test suite verifies that the
+committed report and summary still match the source artifacts.
+
+### Main controlled sentiment evidence
+
+The strongest Q1/Q2 result uses a frozen, source-only Gemma 4 31B sentiment
+benchmark: three OPRO search seeds, 64 source-training and 64 source-validation
+examples, and 300 final examples each from SST-2, Amazon, and binary tweet
+sentiment. Every seed retained the unchanged base instruction.
+
+| Selected prompt | SST-2 | Amazon | Tweets | Mean OOD | Worst OOD | Source−OOD gap |
+| :-- | --: | --: | --: | --: | --: | --: |
+| Base prompt / corrected OPRO | 95.67% | 95.00% | 95.67% | 95.33% | 95.00% | +0.33 pp |
+
+The three seeds are search replications, not independent final-test
+replications: because they selected the same prompt, they share the same frozen
+final predictions. Each search used 512 logical candidate/example evaluations;
+proposal counts were 14, 10, and 8. Logical search-token totals were 37,119,
+36,753, and 35,710 respectively.
+
+A separate fresh simple-procedure pilot observed at most a **+0.31 percentage
+point** mean-OOD gain for an unguarded rewrite, with a paired 95% interval of
+**[0.00, +0.94] points**. None of the candidate replacements improved an
+independent 80-example source confirmation set, so the predeclared guard kept
+the base prompt in every arm. That pilot used 3,549 requests and 328,842 returned
+input-plus-output tokens.
+
+### Optimization cost and Q3
+
+A three-seed round sweep tested 0, 1, 2, 4, 8, and 16 optimization rounds. Every
+checkpoint selected the same base prompt and produced the same 95.31% mean OOD
+accuracy in its separate final set. Mean logical search tokens per seed rose
+from 0 at zero rounds to 62,776 at 16 rounds. In this pilot, additional search
+increased cost without changing the selected instruction; this is not a
+universal optimal-round result.
+
+### Concrete recommendation
+
+Use a strong fixed prompt and a human-written prompt as mandatory controls.
+Replace them only when a source-only confirmation split establishes a gain;
+retain the base prompt on ties or unconfirmed improvements. Always report target
+transfer and search cost separately from development accuracy. Random Search is
+now implemented as a compute-matched control for future live matrices.
+
+### Consolidation scope
+
+No new model calls were made while producing the final consolidated report. The
+current environment had GPUs but no local model weights/server, no provider API
+credentials, and no installed real-data/DSPy packages. The report therefore
+consolidates existing measured real-model artifacts with explicit Git
+provenance rather than substituting mock-backend results. Cross-model transfer
+and code/formal tasks remain optional stretch work.
+
 ## Pilot results: Qwen 2.5 7B, October 9, 2026
 
 Executed locally via Ollama on **one NVIDIA GB300**, sequentially, with
@@ -139,6 +223,28 @@ not a standalone standard-library-only entry point:
 ```bash
 PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q tests/smoke_test.py
 ```
+
+The core suite skips DSPy-specific checks when DSPy is not installed. With
+DSPy available, those checks run under the same command.
+
+## Protocol guards and random-search control
+
+`run_experiment()` validates every dataset before constructing a backend. It
+rejects empty required splits, duplicate IDs, normalized duplicate text across
+source/OOD splits, malformed examples and examples assigned to the wrong
+domain. This prevents accidental search/evaluation leakage before any model
+request is sent.
+
+`RandomSearch` is an APE-style control that proposes independent rewrites of
+the original instruction without seeing scores, failures or prior candidates.
+It uses the same hard request budget as OPRO and EvoPrompt-lite and only starts
+a candidate when the remaining budget can pay for both its proposal and full
+development-set evaluation.
+
+New run artifacts record the random seed, protocol version, validity and stop
+reason. The current backend usage counters split text on whitespace, so logs
+label them as `approx_input_words` and `approx_output_words`; exact token fields
+remain null rather than presenting those estimates as provider token usage.
 
 ## What's actually built
 

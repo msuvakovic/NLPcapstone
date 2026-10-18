@@ -1,0 +1,16 @@
+{
+  "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+  "passed": true,
+  "model_calls": 0,
+  "attempted_requests": 1776,
+  "cached_responses": 1776,
+  "attempts_without_cached_success": 0,
+  "returned_models": [
+    "gemma4:31b"
+  ],
+  "input_tokens": 189707,
+  "output_tokens": 6033,
+  "checks": "all three searches, every confirmation/final prediction, frozen selection, cap, report",
+  "replay_workers": 1,
+  "verifier_hash": "4e8e6095d2a45628038f86fe2ba9cfb2ef27f7cf56d54b749d2f4e77e5a0c786"
+}

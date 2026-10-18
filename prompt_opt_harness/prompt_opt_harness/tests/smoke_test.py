@@ -2,6 +2,8 @@ import sys
 import copy
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from prompt_opt_harness.datasets import load_demo_dataset
@@ -137,6 +139,7 @@ def test_evolutionary_optimizers_reserve_full_candidate_evaluation():
 
 
 def test_dspy_optimizers_obey_hard_call_budget():
+    pytest.importorskip("dspy")
     from prompt_opt_harness.optimizers import GEPA, MIPROv2
 
     dataset = load_demo_dataset()

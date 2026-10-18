@@ -1,0 +1,867 @@
+{
+  "controlled_sentiment": {
+    "opro": {
+      "amazon_accuracy": 0.95,
+      "mean_ood_accuracy": 0.9533333333333334,
+      "model": "gemma4:31b-cloud",
+      "ood_gap": 0.0033333333333332993,
+      "ood_variance": 1.1111111111111254e-05,
+      "prompt": "Classify the sentiment of the following text as Positive or Negative.",
+      "replay_transport": {
+        "actual_calls": 0,
+        "cache_hits": 4268,
+        "failed_attempts": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "request_seconds": 0.0
+      },
+      "same_prompt_all_seeds": true,
+      "search_seeds": [
+        0,
+        1,
+        2
+      ],
+      "searches": [
+        {
+          "cache_hits": 376,
+          "failed_attempts": 0,
+          "logical_example_evaluations": 512,
+          "logical_input_tokens": 35895,
+          "logical_output_tokens": 1224,
+          "physical_calls": 150,
+          "physical_input_tokens": 10363,
+          "physical_output_tokens": 332,
+          "proposal_calls": 14,
+          "seed": 0,
+          "selected_prompt": "Classify the sentiment of the following text as Positive or Negative.",
+          "source_validation_accuracy": 0.96875,
+          "wall_time_sec": 144.41130829999747
+        },
+        {
+          "cache_hits": 192,
+          "failed_attempts": 1,
+          "logical_example_evaluations": 512,
+          "logical_input_tokens": 35563,
+          "logical_output_tokens": 1190,
+          "physical_calls": 331,
+          "physical_input_tokens": 23378,
+          "physical_output_tokens": 806,
+          "proposal_calls": 10,
+          "seed": 1,
+          "selected_prompt": "Classify the sentiment of the following text as Positive or Negative.",
+          "source_validation_accuracy": 0.96875,
+          "wall_time_sec": 323.57462549999764
+        },
+        {
+          "cache_hits": 192,
+          "failed_attempts": 4,
+          "logical_example_evaluations": 512,
+          "logical_input_tokens": 34552,
+          "logical_output_tokens": 1158,
+          "physical_calls": 332,
+          "physical_input_tokens": 22367,
+          "physical_output_tokens": 774,
+          "proposal_calls": 8,
+          "seed": 2,
+          "selected_prompt": "Classify the sentiment of the following text as Positive or Negative.",
+          "source_validation_accuracy": 0.96875,
+          "wall_time_sec": 426.45263980000163
+        }
+      ],
+      "shared_final_predictions": true,
+      "source_test_accuracy": 0.9566666666666667,
+      "source_validation_accuracy": 0.96875,
+      "tweets_accuracy": 0.9566666666666667,
+      "worst_ood_accuracy": 0.95
+    },
+    "round_sweep": {
+      "conclusion_scope": "exploratory one-partition custom-search pilot",
+      "curve": [
+        {
+          "confirmation_accuracy": 0.953125,
+          "confirmation_seed_accuracy": [
+            0.953125,
+            0.953125,
+            0.953125
+          ],
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "delta_vs_base": 0.0,
+          "mean_search_evaluations": 0.0,
+          "mean_search_tokens": 0.0,
+          "rounds": 0,
+          "selection_accuracy": 1.0
+        },
+        {
+          "confirmation_accuracy": 0.953125,
+          "confirmation_seed_accuracy": [
+            0.953125,
+            0.953125,
+            0.953125
+          ],
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "delta_vs_base": 0.0,
+          "mean_search_evaluations": 96.0,
+          "mean_search_tokens": 8004.333333333333,
+          "rounds": 1,
+          "selection_accuracy": 1.0
+        },
+        {
+          "confirmation_accuracy": 0.953125,
+          "confirmation_seed_accuracy": [
+            0.953125,
+            0.953125,
+            0.953125
+          ],
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "delta_vs_base": 0.0,
+          "mean_search_evaluations": 128.0,
+          "mean_search_tokens": 10861.333333333334,
+          "rounds": 2,
+          "selection_accuracy": 1.0
+        },
+        {
+          "confirmation_accuracy": 0.953125,
+          "confirmation_seed_accuracy": [
+            0.953125,
+            0.953125,
+            0.953125
+          ],
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "delta_vs_base": 0.0,
+          "mean_search_evaluations": 181.33333333333334,
+          "mean_search_tokens": 16995.0,
+          "rounds": 4,
+          "selection_accuracy": 1.0
+        },
+        {
+          "confirmation_accuracy": 0.953125,
+          "confirmation_seed_accuracy": [
+            0.953125,
+            0.953125,
+            0.953125
+          ],
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "delta_vs_base": 0.0,
+          "mean_search_evaluations": 298.6666666666667,
+          "mean_search_tokens": 31131.333333333332,
+          "rounds": 8,
+          "selection_accuracy": 1.0
+        },
+        {
+          "confirmation_accuracy": 0.953125,
+          "confirmation_seed_accuracy": [
+            0.953125,
+            0.953125,
+            0.953125
+          ],
+          "delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "delta_vs_base": 0.0,
+          "mean_search_evaluations": 554.6666666666666,
+          "mean_search_tokens": 62776.333333333336,
+          "rounds": 16,
+          "selection_accuracy": 1.0
+        }
+      ],
+      "default_prompt": "Classify the sentiment of the following text as Positive or Negative.",
+      "execution": {
+        "last_session": {
+          "actual_calls": 1776,
+          "cache_hits": 160,
+          "failed_attempts": 0,
+          "input_tokens": 189707,
+          "output_tokens": 6033,
+          "request_seconds": 5344.868462300161
+        },
+        "last_session_wall_seconds": 1498.590699100052,
+        "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+        "stage": "all",
+        "total_attempts": 1776
+      },
+      "final": {
+        "base": {
+          "amazon": {
+            "accuracy": 0.96875,
+            "macro_f1": 0.9687194525904204,
+            "n": 64
+          },
+          "invalid": 0,
+          "mean_input_tokens": 84.34375,
+          "ood_accuracy": 0.953125,
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "sst2": {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "n": 32
+          },
+          "tweets": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9375,
+            "n": 64
+          },
+          "worst_ood_accuracy": 0.9375
+        },
+        "seed_0_rounds_0": {
+          "amazon": {
+            "accuracy": 0.96875,
+            "macro_f1": 0.9687194525904204,
+            "n": 64
+          },
+          "invalid": 0,
+          "mean_input_tokens": 84.34375,
+          "ood_accuracy": 0.953125,
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "sst2": {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "n": 32
+          },
+          "tweets": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9375,
+            "n": 64
+          },
+          "worst_ood_accuracy": 0.9375
+        },
+        "seed_0_rounds_16": {
+          "amazon": {
+            "accuracy": 0.96875,
+            "macro_f1": 0.9687194525904204,
+            "n": 64
+          },
+          "invalid": 0,
+          "mean_input_tokens": 84.34375,
+          "ood_accuracy": 0.953125,
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "sst2": {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "n": 32
+          },
+          "tweets": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9375,
+            "n": 64
+          },
+          "worst_ood_accuracy": 0.9375
+        },
+        "seed_1_rounds_0": {
+          "amazon": {
+            "accuracy": 0.96875,
+            "macro_f1": 0.9687194525904204,
+            "n": 64
+          },
+          "invalid": 0,
+          "mean_input_tokens": 84.34375,
+          "ood_accuracy": 0.953125,
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "sst2": {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "n": 32
+          },
+          "tweets": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9375,
+            "n": 64
+          },
+          "worst_ood_accuracy": 0.9375
+        },
+        "seed_1_rounds_16": {
+          "amazon": {
+            "accuracy": 0.96875,
+            "macro_f1": 0.9687194525904204,
+            "n": 64
+          },
+          "invalid": 0,
+          "mean_input_tokens": 84.34375,
+          "ood_accuracy": 0.953125,
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "sst2": {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "n": 32
+          },
+          "tweets": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9375,
+            "n": 64
+          },
+          "worst_ood_accuracy": 0.9375
+        },
+        "seed_2_rounds_0": {
+          "amazon": {
+            "accuracy": 0.96875,
+            "macro_f1": 0.9687194525904204,
+            "n": 64
+          },
+          "invalid": 0,
+          "mean_input_tokens": 84.34375,
+          "ood_accuracy": 0.953125,
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "sst2": {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "n": 32
+          },
+          "tweets": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9375,
+            "n": 64
+          },
+          "worst_ood_accuracy": 0.9375
+        },
+        "seed_2_rounds_16": {
+          "amazon": {
+            "accuracy": 0.96875,
+            "macro_f1": 0.9687194525904204,
+            "n": 64
+          },
+          "invalid": 0,
+          "mean_input_tokens": 84.34375,
+          "ood_accuracy": 0.953125,
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "sst2": {
+            "accuracy": 1.0,
+            "macro_f1": 1.0,
+            "n": 32
+          },
+          "tweets": {
+            "accuracy": 0.9375,
+            "macro_f1": 0.9375,
+            "n": 64
+          },
+          "worst_ood_accuracy": 0.9375
+        }
+      },
+      "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+      "selected_cap": 0,
+      "verification": {
+        "attempted_requests": 1776,
+        "attempts_without_cached_success": 0,
+        "cached_responses": 1776,
+        "checks": "all three searches, every confirmation/final prediction, frozen selection, cap, report",
+        "input_tokens": 189707,
+        "model_calls": 0,
+        "output_tokens": 6033,
+        "passed": true,
+        "protocol_hash": "2de6998471bf8b5d201a837208fe283d328316eca0da6c80ae77d48de6b3aab8",
+        "replay_workers": 1,
+        "returned_models": [
+          "gemma4:31b"
+        ],
+        "verifier_hash": "4e8e6095d2a45628038f86fe2ba9cfb2ef27f7cf56d54b749d2f4e77e5a0c786"
+      }
+    },
+    "simple_procedures": {
+      "confirmation": {
+        "feedback_full": {
+          "accepted": false,
+          "alpha": 0.016666666666666666,
+          "corrected": 0,
+          "gain": 0.0,
+          "minimum_gain": 0.01,
+          "n": 80,
+          "p_value": 1.0,
+          "raw_prompt": "Classify the sentiment of the following text as either Positive or Negative. For texts with mixed or implicit sentiment, determine the final verdict or the dominant emotional weight. Return only the label.",
+          "regressed": 0,
+          "selected": "Classify the sentiment of the following text as Positive or Negative."
+        },
+        "feedback_racing": {
+          "accepted": false,
+          "alpha": 0.016666666666666666,
+          "corrected": 0,
+          "gain": 0.0,
+          "minimum_gain": 0.01,
+          "n": 80,
+          "p_value": 1.0,
+          "raw_prompt": "Classify the sentiment of the text as Positive or Negative. Return only the label.",
+          "regressed": 0,
+          "selected": "Classify the sentiment of the following text as Positive or Negative."
+        },
+        "history_full": {
+          "accepted": false,
+          "alpha": 0.016666666666666666,
+          "corrected": 0,
+          "gain": 0.0,
+          "minimum_gain": 0.01,
+          "n": 80,
+          "p_value": 1.0,
+          "raw_prompt": "Determine if the sentiment of the text is Positive or Negative. Return only the label.",
+          "regressed": 0,
+          "selected": "Classify the sentiment of the following text as Positive or Negative."
+        }
+      },
+      "execution": {
+        "attempted_requests": 3549,
+        "cap": 4000,
+        "last_session": {
+          "actual_calls": 3549,
+          "cache_hits": 256,
+          "failed_attempts": 0,
+          "input_tokens": 320665,
+          "output_tokens": 8177,
+          "request_seconds": 9647.066680300457
+        },
+        "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711"
+      },
+      "methods": [
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 0,
+          "mean_input_tokens": 87.91666666666667,
+          "mean_ood_accuracy": 0.965625,
+          "method": "base",
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "ood_gap": -0.028124999999999956,
+          "ood_variance": 0.00047851562500000145,
+          "prompt_words": 11,
+          "source_accuracy": 0.9375,
+          "tweets_accuracy": 0.94375,
+          "worst_ood_accuracy": 0.94375
+        },
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 1,
+          "mean_input_tokens": 101.91666666666667,
+          "mean_ood_accuracy": 0.9593750000000001,
+          "method": "human",
+          "ood_delta": -0.006249999999999867,
+          "ood_delta_ci95": [
+            -0.015625,
+            0.0
+          ],
+          "ood_gap": -0.006250000000000089,
+          "ood_variance": 0.0007910156250000006,
+          "prompt_words": 24,
+          "source_accuracy": 0.953125,
+          "tweets_accuracy": 0.93125,
+          "worst_ood_accuracy": 0.93125
+        },
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 0,
+          "mean_input_tokens": 91.91666666666667,
+          "mean_ood_accuracy": 0.96875,
+          "method": "history_full",
+          "ood_delta": 0.0031250000000000444,
+          "ood_delta_ci95": [
+            0.0,
+            0.009375
+          ],
+          "ood_gap": -0.03125,
+          "ood_variance": 0.00035156250000000167,
+          "prompt_words": 15,
+          "source_accuracy": 0.9375,
+          "tweets_accuracy": 0.95,
+          "worst_ood_accuracy": 0.95
+        },
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 0,
+          "mean_input_tokens": 87.91666666666667,
+          "mean_ood_accuracy": 0.965625,
+          "method": "history_full+guard",
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "ood_gap": -0.028124999999999956,
+          "ood_variance": 0.00047851562500000145,
+          "prompt_words": 11,
+          "source_accuracy": 0.9375,
+          "tweets_accuracy": 0.94375,
+          "worst_ood_accuracy": 0.94375
+        },
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 0,
+          "mean_input_tokens": 111.91666666666667,
+          "mean_ood_accuracy": 0.965625,
+          "method": "feedback_full",
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            -0.009375,
+            0.009375
+          ],
+          "ood_gap": -0.012499999999999956,
+          "ood_variance": 0.00047851562500000145,
+          "prompt_words": 32,
+          "source_accuracy": 0.953125,
+          "tweets_accuracy": 0.94375,
+          "worst_ood_accuracy": 0.94375
+        },
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 0,
+          "mean_input_tokens": 87.91666666666667,
+          "mean_ood_accuracy": 0.965625,
+          "method": "feedback_full+guard",
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "ood_gap": -0.028124999999999956,
+          "ood_variance": 0.00047851562500000145,
+          "prompt_words": 11,
+          "source_accuracy": 0.9375,
+          "tweets_accuracy": 0.94375,
+          "worst_ood_accuracy": 0.94375
+        },
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 0,
+          "mean_input_tokens": 91.91666666666667,
+          "mean_ood_accuracy": 0.965625,
+          "method": "feedback_racing",
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "ood_gap": -0.028124999999999956,
+          "ood_variance": 0.00047851562500000145,
+          "prompt_words": 14,
+          "source_accuracy": 0.9375,
+          "tweets_accuracy": 0.94375,
+          "worst_ood_accuracy": 0.94375
+        },
+        {
+          "amazon_accuracy": 0.9875,
+          "invalid_predictions": 0,
+          "mean_input_tokens": 87.91666666666667,
+          "mean_ood_accuracy": 0.965625,
+          "method": "feedback_racing+guard",
+          "ood_delta": 0.0,
+          "ood_delta_ci95": [
+            0.0,
+            0.0
+          ],
+          "ood_gap": -0.028124999999999956,
+          "ood_variance": 0.00047851562500000145,
+          "prompt_words": 11,
+          "source_accuracy": 0.9375,
+          "tweets_accuracy": 0.94375,
+          "worst_ood_accuracy": 0.94375
+        }
+      ],
+      "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+      "searches": {
+        "feedback_full": {
+          "evaluation_cap": 512,
+          "logical_input_tokens": 42372,
+          "logical_output_tokens": 1313,
+          "physical_resources": {
+            "actual_calls": 391,
+            "cache_hits": 128,
+            "failed_attempts": 0,
+            "input_tokens": 34551,
+            "output_tokens": 1057,
+            "request_seconds": 1006.8469097996713
+          },
+          "proposal_calls": 7,
+          "proposal_cap": 16,
+          "unique_example_evaluations": 512,
+          "wall_seconds": 274.8407298999955
+        },
+        "feedback_racing": {
+          "evaluation_cap": 512,
+          "logical_input_tokens": 46471,
+          "logical_output_tokens": 1633,
+          "physical_resources": {
+            "actual_calls": 399,
+            "cache_hits": 128,
+            "failed_attempts": 0,
+            "input_tokens": 38650,
+            "output_tokens": 1377,
+            "request_seconds": 1177.7522112003644
+          },
+          "proposal_calls": 15,
+          "proposal_cap": 16,
+          "unique_example_evaluations": 512,
+          "wall_seconds": 345.21283590001985
+        },
+        "history_full": {
+          "evaluation_cap": 512,
+          "logical_input_tokens": 38744,
+          "logical_output_tokens": 1263,
+          "physical_resources": {
+            "actual_calls": 519,
+            "cache_hits": 0,
+            "failed_attempts": 0,
+            "input_tokens": 38744,
+            "output_tokens": 1263,
+            "request_seconds": 1398.3030822001747
+          },
+          "proposal_calls": 7,
+          "proposal_cap": 16,
+          "unique_example_evaluations": 512,
+          "wall_seconds": 373.42066380003234
+        }
+      },
+      "verification": {
+        "artifact_audit": {
+          "cache_checks": 4560,
+          "excluded_texts": 1686,
+          "fresh_examples": 592,
+          "new_model_requests": 0,
+          "physical_attempts": 3549,
+          "physical_cap": 4000,
+          "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+          "returned_models": {
+            "gemma4:31b": 3549
+          },
+          "searches": 3,
+          "status": "PASS",
+          "stored_predictions": 2240,
+          "unique_final_prompts": 5
+        },
+        "failed_api_attempts": 0,
+        "live_experiment_status": "complete",
+        "notes": [
+          "All listed suites returned exit code zero.",
+          "Mock transport was used for new regression tests.",
+          "Live model results are reported separately after all selections are frozen."
+        ],
+        "offline_checks": 90,
+        "python_files_parsed": [
+          "tools/prompt_bench/core.py",
+          "tools/prompt_bench/adaptive_search.py",
+          "tools/prompt_bench/fresh_data.py",
+          "tools/prompt_bench/improvement_pilot.py",
+          "tools/prompt_bench/test_improvements.py"
+        ],
+        "request_count": 3549,
+        "status": "PASS",
+        "suites": {
+          "smoke_test.py": 5,
+          "test_analysis.py": 2,
+          "test_benchmark.py": 15,
+          "test_data_isolation.py": 10,
+          "test_harness_reliability.py": 21,
+          "test_improvements.py": 15,
+          "test_protocol.py": 11,
+          "test_tasks_and_dro.py": 8,
+          "test_token_caps.py": 3
+        }
+      }
+    }
+  },
+  "generated_date": "2026-10-18",
+  "provenance": {
+    "apinero_base_commit": "0af8f3eee7b7ed952486c9e7ab63287becd7090f",
+    "controlled_sentiment_source_branch": "origin/albert",
+    "controlled_sentiment_source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "new_model_calls_during_consolidation": 0
+  },
+  "reasoning_pilot": {
+    "examples_per_split": 30,
+    "methods": [
+      {
+        "artifact": "prompt_opt_harness/prompt_opt_harness/logs/zero-shot_20261009T004302Z.json",
+        "dev_accuracy": 0.9333333333333333,
+        "evaluation_calls": 60,
+        "instruction": "",
+        "method": "Zero-shot",
+        "ood_accuracy": 0.8666666666666667,
+        "ood_gap": 0.0,
+        "ood_variance": 0.0,
+        "optimization_budget": 30,
+        "optimization_calls": 30,
+        "source_test_accuracy": 0.8666666666666667,
+        "total_calls": 90,
+        "wall_time_sec": 97.77910834737122,
+        "worst_ood_accuracy": 0.8666666666666667
+      },
+      {
+        "artifact": "prompt_opt_harness/prompt_opt_harness/logs/human-written_20261009T004415Z.json",
+        "dev_accuracy": 0.9666666666666667,
+        "evaluation_calls": 60,
+        "instruction": "Solve the word problem step by step, showing your work. On the final line, write the answer in the exact form: Answer: <number>",
+        "method": "Human-written",
+        "ood_accuracy": 0.9333333333333333,
+        "ood_gap": -0.06666666666666665,
+        "ood_variance": 0.0,
+        "optimization_budget": 30,
+        "optimization_calls": 30,
+        "source_test_accuracy": 0.8666666666666667,
+        "total_calls": 90,
+        "wall_time_sec": 72.9616649276577,
+        "worst_ood_accuracy": 0.9333333333333333
+      },
+      {
+        "artifact": "prompt_opt_harness/prompt_opt_harness/logs/opro_20261009T004949Z.json",
+        "dev_accuracy": 0.9666666666666667,
+        "evaluation_calls": 60,
+        "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+        "method": "OPRO",
+        "ood_accuracy": 0.9,
+        "ood_gap": 0.0,
+        "ood_variance": 0.0,
+        "optimization_budget": 300,
+        "optimization_calls": 278,
+        "source_test_accuracy": 0.9,
+        "total_calls": 338,
+        "wall_time_sec": 334.18033239012584,
+        "worst_ood_accuracy": 0.9
+      },
+      {
+        "artifact": "prompt_opt_harness/prompt_opt_harness/logs/evoprompt-lite_20261009T005506Z.json",
+        "dev_accuracy": 0.9666666666666667,
+        "evaluation_calls": 60,
+        "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>",
+        "method": "EvoPrompt-lite",
+        "ood_accuracy": 0.8666666666666667,
+        "ood_gap": 0.033333333333333326,
+        "ood_variance": 0.0,
+        "optimization_budget": 300,
+        "optimization_calls": 278,
+        "source_test_accuracy": 0.9,
+        "total_calls": 338,
+        "wall_time_sec": 317.0918627185747,
+        "worst_ood_accuracy": 0.8666666666666667
+      },
+      {
+        "artifact": "prompt_opt_harness/prompt_opt_harness/logs/gepa_20261009T010718Z.json",
+        "dev_accuracy": 0.9333333333333333,
+        "evaluation_calls": 60,
+        "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+        "method": "GEPA",
+        "ood_accuracy": 0.9,
+        "ood_gap": -0.033333333333333326,
+        "ood_variance": 0.0,
+        "optimization_budget": 300,
+        "optimization_calls": 102,
+        "source_test_accuracy": 0.8666666666666667,
+        "total_calls": 162,
+        "wall_time_sec": 132.97510897601023,
+        "worst_ood_accuracy": 0.9
+      },
+      {
+        "artifact": "prompt_opt_harness/prompt_opt_harness/logs/miprov2_20261009T010937Z.json",
+        "dev_accuracy": 0.9333333333333333,
+        "evaluation_calls": 60,
+        "instruction": "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>\n\nGiven the input, generate the final output.",
+        "method": "MIPROv2",
+        "ood_accuracy": 0.9,
+        "ood_gap": -0.06666666666666665,
+        "ood_variance": 0.0,
+        "optimization_budget": 300,
+        "optimization_calls": 86,
+        "source_test_accuracy": 0.8333333333333334,
+        "total_calls": 146,
+        "wall_time_sec": 113.33490583766252,
+        "worst_ood_accuracy": 0.9
+      }
+    ],
+    "model": "qwen2.5:7b",
+    "ood_domains": [
+      "SVAMP"
+    ],
+    "seed": 42,
+    "source_domain": "GSM8K"
+  },
+  "requirements": [
+    {
+      "evidence": "Shared Optimizer/Candidate interface and common harness across fixed prompts, Random Search, OPRO, EvoPrompt-lite, and DSPy adapters.",
+      "requirement": "Unified API for prompt optimizers",
+      "status": "met"
+    },
+    {
+      "evidence": "BudgetedBackend enforces request caps; controlled sentiment searches use frozen source-only train/validation data and explicit evaluation/proposal caps.",
+      "requirement": "Optimize on a source development split under a fixed budget",
+      "status": "met"
+    },
+    {
+      "evidence": "Sentiment evaluates SST-2, Amazon, and tweets; reasoning evaluates GSM8K and SVAMP.",
+      "requirement": "Evaluate the same selected prompt on source test and OOD targets",
+      "status": "met"
+    },
+    {
+      "evidence": "Committed protocols, seeds, frozen selections, request/token accounting, verification records, and selected run logs.",
+      "requirement": "Reproducible logs and costs",
+      "status": "met"
+    },
+    {
+      "evidence": "Controlled OPRO, simple-procedure sentiment pilot, and six-method Qwen reasoning pilot report source/OOD scores and gaps.",
+      "requirement": "Q1: quantify OOD gaps across optimizer settings",
+      "status": "met_with_pilot_scope"
+    },
+    {
+      "evidence": "Two sentiment OOD domains support worst-case and cross-domain variance; the one-domain reasoning pilot cannot inform variance.",
+      "requirement": "Q2: compare variance and worst-case OOD robustness",
+      "status": "met_for_sentiment"
+    },
+    {
+      "evidence": "Optimizer/search procedure, prompt length, and optimization-round cost are analyzed; broad causal conclusions require more models and partitions.",
+      "requirement": "Q3: identify factors affecting generalization",
+      "status": "partially_met"
+    },
+    {
+      "evidence": "Generated capstone report and README summary provide scoped recommendations, limitations, and reproducible provenance.",
+      "requirement": "Concrete recommendations and report",
+      "status": "met"
+    },
+    {
+      "evidence": "Exploratory branch work exists, but it is excluded from the main conclusions.",
+      "requirement": "Cross-model transfer",
+      "status": "stretch_not_required"
+    },
+    {
+      "evidence": "Not implemented; the deck explicitly labels this stretch work.",
+      "requirement": "Code/formal tasks",
+      "status": "stretch_not_required"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "bytes": 1019,
+    "local_path": "capstone_results/controlled_sentiment/source/output__prompt_benchmark_2026-09-29__protocol.json",
+    "sha256": "6278addac4ebbef1a3b6e4469d0a836adde269bc59b0db374355562456798839",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/prompt_benchmark_2026-09-29/protocol.json"
+  },
+  {
+    "bytes": 46637,
+    "local_path": "capstone_results/controlled_sentiment/source/output__prompt_benchmark_2026-09-29__single_opro_0__search.json",
+    "sha256": "4fc20e190814be4b0ef69a5288f467364ebe6bb5f68d6df09c85a503cced4491",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/prompt_benchmark_2026-09-29/single_opro_0/search.json"
+  },
+  {
+    "bytes": 39950,
+    "local_path": "capstone_results/controlled_sentiment/source/output__prompt_benchmark_2026-09-29__single_opro_1__search.json",
+    "sha256": "ecd35c41f81d9c0851e48276564770c1ca2d761b2335c5704113fe5d98467d6c",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/prompt_benchmark_2026-09-29/single_opro_1/search.json"
+  },
+  {
+    "bytes": 38179,
+    "local_path": "capstone_results/controlled_sentiment/source/output__prompt_benchmark_2026-09-29__single_opro_2__search.json",
+    "sha256": "50363ac2ac8c46c3c31649c9a04d5d787bbfcc2435454f42da8c4cf2e3c28f5f",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/prompt_benchmark_2026-09-29/single_opro_2/search.json"
+  },
+  {
+    "bytes": 1779,
+    "local_path": "capstone_results/controlled_sentiment/source/output__leakage_fix_2026-10-04__replay_summary.json",
+    "sha256": "4d6323eba2f0195f075657e33720881d4943e93531dbe74561c01463a7f11cc0",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/leakage_fix_2026-10-04/replay_summary.json"
+  },
+  {
+    "bytes": 179,
+    "local_path": "capstone_results/controlled_sentiment/source/output__leakage_fix_2026-10-04__validation.json",
+    "sha256": "f1e0ee3dc6141897b146b1d369bd159c2b395149afe4b6dc23b4fa701db936dd",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/leakage_fix_2026-10-04/validation.json"
+  },
+  {
+    "bytes": 8743,
+    "local_path": "capstone_results/controlled_sentiment/source/output__improvement_pilot_2026-10-04__summary.json",
+    "sha256": "aa64bad45556b0ec89b806bf025ee7875304d571599b20d106daada48576cfde",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/improvement_pilot_2026-10-04/summary.json"
+  },
+  {
+    "bytes": 1578,
+    "local_path": "capstone_results/controlled_sentiment/source/output__improvement_pilot_2026-10-04__confirmation.json",
+    "sha256": "0601af3c10c975a277e490efda19f5af14f3fb6b4aa029147b9d668c8f1569f6",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/improvement_pilot_2026-10-04/confirmation.json"
+  },
+  {
+    "bytes": 330,
+    "local_path": "capstone_results/controlled_sentiment/source/output__improvement_pilot_2026-10-04__execution.json",
+    "sha256": "be9ca0d3167e928995c067b81607ff1070c73df5878aaad8c9c1e7ebade0538b",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/improvement_pilot_2026-10-04/execution.json"
+  },
+  {
+    "bytes": 1536,
+    "local_path": "capstone_results/controlled_sentiment/source/output__improvement_pilot_2026-10-04__protocol.json",
+    "sha256": "93da2d34f780154b552f492ea70584962e4028ab2cbb2d04e764ab5e89bb2654",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/improvement_pilot_2026-10-04/protocol.json"
+  },
+  {
+    "bytes": 1326,
+    "local_path": "capstone_results/controlled_sentiment/source/output__improvement_pilot_2026-10-04__verification.json",
+    "sha256": "d80f42200602cfeb01f0393b7799d654720f1e21c41c1218aacefa53e288722e",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/improvement_pilot_2026-10-04/verification.json"
+  },
+  {
+    "bytes": 6357,
+    "local_path": "capstone_results/controlled_sentiment/source/output__round_sweep_2026-10-13__summary.json",
+    "sha256": "a260ef0bec7fcd0e124f84d52afc06e32aec93a489293ed9e8529cd3a2a0c390",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/round_sweep_2026-10-13/summary.json"
+  },
+  {
+    "bytes": 379,
+    "local_path": "capstone_results/controlled_sentiment/source/output__round_sweep_2026-10-13__execution.json",
+    "sha256": "66e0f9107fbbcef0e082cbe33504b5100fc57e08c87c7b1a52e0f123db7a767b",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/round_sweep_2026-10-13/execution.json"
+  },
+  {
+    "bytes": 2066,
+    "local_path": "capstone_results/controlled_sentiment/source/output__round_sweep_2026-10-13__protocol.json",
+    "sha256": "1f4cc8c63c9f35cc31264a4c1380d98425fe888856e66cd61c7b7983fc6d4a68",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/round_sweep_2026-10-13/protocol.json"
+  },
+  {
+    "bytes": 533,
+    "local_path": "capstone_results/controlled_sentiment/source/output__round_sweep_2026-10-13__verification.json",
+    "sha256": "8291a2d995143738d5829ca2390640b3fc61b824ce2113ef6d1f93c49f85cd0e",
+    "source_branch": "origin/albert",
+    "source_commit": "98a911810a5defcbd772af22035ed46b08274560",
+    "source_path": "output/round_sweep_2026-10-13/verification.json"
+  }
+]

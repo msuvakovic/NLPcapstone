@@ -39,3 +39,23 @@ MUTATION_TEMPLATE = """Slightly modify the following instruction for a {task_nam
 task to try to improve it:
 Instruction: {parent}
 Respond with only the new candidate instruction, nothing else."""
+
+
+RANDOM_SEARCH_TEMPLATES = [
+    """Rewrite the following instruction for a {task_name} task in your own words.
+Keep the task and required output format unchanged.
+Instruction: {instruction}
+Variant: {variant}
+Respond with only the rewritten instruction, nothing else.""",
+    """Write a more concise version of the following instruction for a {task_name} task.
+Keep the task and required output format unchanged.
+Instruction: {instruction}
+Variant: {variant}
+Respond with only the new instruction, nothing else.""",
+    """Write a more detailed version of the following instruction for a {task_name} task.
+Add generally useful guidance without referring to any examples or scores.
+Keep the task and required output format unchanged.
+Instruction: {instruction}
+Variant: {variant}
+Respond with only the new instruction, nothing else.""",
+]

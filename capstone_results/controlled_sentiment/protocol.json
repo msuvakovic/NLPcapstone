@@ -1,0 +1,79 @@
+{
+  "consolidation_environment": {
+    "new_model_calls": 0,
+    "reason": "No local model server or weights and no provider API credentials were available."
+  },
+  "generated_date": "2026-10-18",
+  "inclusion_rules": [
+    "Use only measured real-model artifacts with documented provenance.",
+    "Exclude mock-backend accuracy from research conclusions.",
+    "Exclude incomplete final evaluations and invalid/fallback runs.",
+    "Separate controlled experiments rather than pool incompatible percentages.",
+    "State when identical selected prompts share final predictions across seeds."
+  ],
+  "primary_evidence": {
+    "controlled_sentiment_opro": {
+      "domains": [
+        "sst2",
+        "amazon",
+        "tweets"
+      ],
+      "final_examples_per_domain": 300,
+      "model": "gemma4:31b-cloud",
+      "proposal_cap": 16,
+      "role": "main Q1/Q2 evidence",
+      "search_evaluation_cap": 512,
+      "search_seeds": [
+        0,
+        1,
+        2
+      ],
+      "source_train_n": 64,
+      "source_validation_n": 64
+    },
+    "reasoning_pilot": {
+      "domains": [
+        "gsm8k",
+        "svamp"
+      ],
+      "examples_per_split": 30,
+      "model": "qwen2.5:7b",
+      "role": "secondary cross-task consistency check",
+      "seed": 42
+    },
+    "round_sweep": {
+      "model": "gemma4:31b-cloud",
+      "role": "Q3 cost-versus-round evidence",
+      "round_caps": [
+        0,
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "search_seeds": [
+        0,
+        1,
+        2
+      ]
+    },
+    "simple_procedures": {
+      "model": "gemma4:31b-cloud",
+      "ood_examples_per_domain": 160,
+      "role": "Q3/Q4 component-ablation evidence",
+      "search_seed_count": 1,
+      "source_confirmation_n": 80,
+      "source_selection_n": 64,
+      "source_test_n": 64,
+      "source_train_n": 64
+    }
+  },
+  "research_questions": {
+    "q1": "How large is the OOD gap across optimizer settings?",
+    "q2": "Which prompts look robust by worst-case accuracy and cross-domain variance?",
+    "q3": "Which measured factors affect generalization?",
+    "q4": "Stretch: can simple source-only procedures improve OOD performance?"
+  },
+  "version": "capstone-evidence-consolidation-v1"
+}

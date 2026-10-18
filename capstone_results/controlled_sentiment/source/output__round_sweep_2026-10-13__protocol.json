@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "experiment": "source-feedback-round-prefix-sweep",
+  "model": "gemma4:31b-cloud",
+  "endpoint": "http://localhost:11434/v1",
+  "workers": 4,
+  "caps": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "max_persistent_attempts": 4000,
+  "sizes": {
+    "train": 32,
+    "validation": 32,
+    "confirmation": 64,
+    "source_test": 32,
+    "amazon_test": 64,
+    "tweets_test": 64
+  },
+  "split_hash": "5be5cb6af74b9113eb2640cb28f02d30e7ad978b69020365dd5432f3bc5b42f3",
+  "exclusion_hash": "018bcaeb4552dd050794bc03ee29c4cff39454ebc5e3e4a62d4bb2969fdeafda",
+  "classification": {
+    "max_tokens": 16,
+    "temperature": 0,
+    "seed": 12345
+  },
+  "proposal": {
+    "max_tokens": 768,
+    "temperature": 0.7,
+    "words": 80,
+    "seed": "1000*seed+round"
+  },
+  "selection": "smallest cap within 1 percentage point of best mean source confirmation accuracy",
+  "selection_margin": 0.01,
+  "final_arms": "base, selected cap per seed, 16 rounds per seed",
+  "default_policy": "retain base; this small pilot is exploratory, not a noninferiority proof",
+  "source_pool": "SST-2 official training pool, minimum 12 words; not official validation",
+  "overlap_rule": "case/whitespace-normalized exact text or any shared contiguous 8-word span",
+  "python": "3.13.3",
+  "numpy": "2.3.4",
+  "code": {
+    "core.py": "d28c5f5bae3ea06ac621651b7df309dbf43c91ec2fa9d6ab0de7813c7d426103",
+    "data.py": "20962442fb0c530ec0e170cf404638644943e0d3807da500ea4065c273af145e",
+    "protocol.py": "d6b2029914a0cf581fe489e5b2806651f219cf680e3f03daaa531738485be815",
+    "fresh_data.py": "69e2932f10dd82bb5b48a82e6f26bf50ea20d08b9185f82e33056c8b0ed8769f",
+    "adaptive_search.py": "41d5331cedba976661c8ccee6f359158745e5ec3ada674b8aea0ba4e78c2e52f",
+    "improvement_pilot.py": "a915d69e11ab3b65df0db8b67fc54e5bc9dce15d084326b6bcf69a9a8e9c5acb",
+    "round_data.py": "5188fe3134318f2cd6a19a270516e2c71eb998a313cd336e43b77b569f81e992",
+    "round_sweep.py": "937b19139c2cc1ba44f8ad6767afc6aa5ed2f87a282aa7a3b21944a99a71127d"
+  }
+}

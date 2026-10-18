@@ -15,6 +15,7 @@ def save_run(result: RunResult, log_dir: str = "logs") -> str:
 
     payload = {
         "name": result.name,
+        "seed": result.seed,
         "best_instruction": result.best_instruction,
         "dev_score": result.dev_score,
         "source_test_acc": result.source_test_acc,
@@ -26,8 +27,17 @@ def save_run(result: RunResult, log_dir: str = "logs") -> str:
         "optimization_calls": result.optimization_calls,
         "optimization_budget": result.optimization_budget,
         "optimizer_budget_exhausted": result.optimizer_budget_exhausted,
+        "valid": result.valid,
+        "stop_reason": result.stop_reason,
+        "evaluation_protocol": result.evaluation_protocol,
         "evaluation_calls": result.api_calls - result.optimization_calls,
         "wall_time_sec": result.wall_time,
+        "input_tokens": None,
+        "output_tokens": None,
+        "usage_source": "unavailable",
+        "approx_input_words": result.approx_input_words,
+        "approx_output_words": result.approx_output_words,
+        "approx_count_method": result.usage_count_method,
         "candidate_pool": [{"instruction": i, "dev_score": s} for i, s in result.candidate_pool],
     }
     with open(path, "w") as f:

@@ -5,7 +5,7 @@ import argparse
 from prompt_opt_harness.harness import run_experiment
 from prompt_opt_harness.llm_backends import GroqBackend, OllamaBackend
 from prompt_opt_harness.logger import save_run
-from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenReasoningBaseline, OPRO, ZeroShotBaseline, GEPA, MIPROv2, TextGrad
+from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenReasoningBaseline, OPRO, RandomSearch, ZeroShotBaseline, GEPA, MIPROv2, TextGrad
 from prompt_opt_harness.real_datasets_reasoning import load_real_reasoning_dataset
 from prompt_opt_harness.report import build_report
 from prompt_opt_harness.tasks import REASONING_TASK
@@ -25,7 +25,7 @@ def parse_args():
     parser.add_argument(
         "--methods",
         nargs="+",
-        choices=["Zero-shot", "Human-written", "OPRO", "EvoPrompt-lite", "GEPA", "MIPROv2", "TextGrad"],
+        choices=["Zero-shot", "Human-written", "Random-search", "OPRO", "EvoPrompt-lite", "GEPA", "MIPROv2", "TextGrad"],
         default=None,
         help="Run only these methods; defaults to all methods available in the installed DSPy version.",
     )
@@ -45,6 +45,7 @@ def main() -> None:
     methods = [
         ("Zero-shot", ZeroShotBaseline, len(dataset.source.dev)),
         ("Human-written", HumanWrittenReasoningBaseline, len(dataset.source.dev)),
+        ("Random-search", RandomSearch, args.budget),
         ("OPRO", OPRO, args.budget),
         ("EvoPrompt-lite", EvoPromptLite, args.budget),
         ("GEPA", GEPA, args.budget),

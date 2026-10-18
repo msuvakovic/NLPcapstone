@@ -38,6 +38,60 @@ class Dataset:
         return table
 
 
+def validate_dataset(dataset: Dataset) -> None:
+    """Reject malformed or overlapping evaluation splits before model calls."""
+    if not dataset.source_domain.strip():
+        raise ValueError("source_domain must be non-empty")
+    if not dataset.source.dev:
+        raise ValueError("source.dev must contain at least one example")
+    if not dataset.source.test:
+        raise ValueError("source.test must contain at least one example")
+    if not dataset.ood:
+        raise ValueError("at least one OOD test domain is required")
+
+    splits = [
+        ("source.dev", dataset.source.dev, dataset.source_domain),
+        ("source.test", dataset.source.test, dataset.source_domain),
+    ]
+    for domain, examples in dataset.ood.items():
+        if not domain.strip():
+            raise ValueError("OOD domain names must be non-empty")
+        if not examples:
+            raise ValueError(f"ood.{domain} must contain at least one example")
+        splits.append((f"ood.{domain}", examples, domain))
+
+    seen_ids: Dict[str, str] = {}
+    seen_texts: Dict[str, str] = {}
+    for split_name, examples, expected_domain in splits:
+        for example in examples:
+            if not isinstance(example.id, str) or not example.id.strip():
+                raise ValueError(f"{split_name} contains an example with an empty ID")
+            if not isinstance(example.text, str) or not example.text.strip():
+                raise ValueError(f"{split_name} example {example.id} has empty text")
+            if not isinstance(example.label, str) or not example.label.strip():
+                raise ValueError(f"{split_name} example {example.id} has an empty label")
+            if example.domain != expected_domain:
+                raise ValueError(
+                    f"{split_name} example {example.id} has domain {example.domain!r}; "
+                    f"expected {expected_domain!r}"
+                )
+
+            normalized_id = example.id.strip()
+            normalized_text = " ".join(example.text.casefold().split())
+            if normalized_id in seen_ids:
+                raise ValueError(
+                    f"data leakage/duplicate ID: {seen_ids[normalized_id]} overlaps "
+                    f"{split_name} ({normalized_id})"
+                )
+            if normalized_text in seen_texts:
+                raise ValueError(
+                    f"data leakage/duplicate text: {seen_texts[normalized_text]} overlaps "
+                    f"{split_name} ({normalized_id})"
+                )
+            seen_ids[normalized_id] = split_name
+            seen_texts[normalized_text] = split_name
+
+
 def _mk(prefix: str, domain: str, rows: List[Tuple[str, str]]) -> List[Example]:
     return [Example(id=f"{prefix}{i}", text=text, label=label, domain=domain) for i, (text, label) in enumerate(rows)]
 

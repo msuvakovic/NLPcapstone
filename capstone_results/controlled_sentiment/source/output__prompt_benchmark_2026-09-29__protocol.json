@@ -1,0 +1,43 @@
+{
+  "model": "gemma4:31b-cloud",
+  "python": "3.13.3",
+  "gepa": "0.1.4",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "regimes": [
+    "single",
+    "multi"
+  ],
+  "methods": [
+    "opro",
+    "gepa",
+    "diagnose"
+  ],
+  "evaluation_cap": 512,
+  "proposal_cap": 16,
+  "workers": 12,
+  "source_train_n": 64,
+  "source_val_n": 64,
+  "test_per_domain": 300,
+  "decoding": {
+    "temperature": 0.0,
+    "seed": 12345,
+    "max_tokens": 16
+  },
+  "selection_rules": [
+    "mean",
+    "stable",
+    "worst_group (multi only)"
+  ],
+  "phase": "search_before_final_test",
+  "source_file_hashes": {
+    "core.py": "60262d7c7fdd0dc5489767387948cc439c326bc630e091ee48df3d9097221bd3",
+    "data.py": "cbf41238f489702a71c9a1f22c22cd1c162d545a6ad627d96ccade6872a4314c",
+    "methods.py": "6559cad53ecc9e63faee5b42a78585275e115a45e238ab0e06b48ecccb9c6683",
+    "run.py": "771f061dac7506de80a9fc6196c6193651e519d32009f60427015aab08cb7884",
+    "test_benchmark.py": "a3f1d2d2442e4167e46832a0b90e83c43c265ecc414602a1379f28b2fd53b64b"
+  }
+}

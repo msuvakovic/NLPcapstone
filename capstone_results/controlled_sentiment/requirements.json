@@ -1,0 +1,52 @@
+[
+  {
+    "requirement": "Unified API for prompt optimizers",
+    "status": "met",
+    "evidence": "Shared Optimizer/Candidate interface and common harness across fixed prompts, Random Search, OPRO, EvoPrompt-lite, and DSPy adapters."
+  },
+  {
+    "requirement": "Optimize on a source development split under a fixed budget",
+    "status": "met",
+    "evidence": "BudgetedBackend enforces request caps; controlled sentiment searches use frozen source-only train/validation data and explicit evaluation/proposal caps."
+  },
+  {
+    "requirement": "Evaluate the same selected prompt on source test and OOD targets",
+    "status": "met",
+    "evidence": "Sentiment evaluates SST-2, Amazon, and tweets; reasoning evaluates GSM8K and SVAMP."
+  },
+  {
+    "requirement": "Reproducible logs and costs",
+    "status": "met",
+    "evidence": "Committed protocols, seeds, frozen selections, request/token accounting, verification records, and selected run logs."
+  },
+  {
+    "requirement": "Q1: quantify OOD gaps across optimizer settings",
+    "status": "met_with_pilot_scope",
+    "evidence": "Controlled OPRO, simple-procedure sentiment pilot, and six-method Qwen reasoning pilot report source/OOD scores and gaps."
+  },
+  {
+    "requirement": "Q2: compare variance and worst-case OOD robustness",
+    "status": "met_for_sentiment",
+    "evidence": "Two sentiment OOD domains support worst-case and cross-domain variance; the one-domain reasoning pilot cannot inform variance."
+  },
+  {
+    "requirement": "Q3: identify factors affecting generalization",
+    "status": "partially_met",
+    "evidence": "Optimizer/search procedure, prompt length, and optimization-round cost are analyzed; broad causal conclusions require more models and partitions."
+  },
+  {
+    "requirement": "Concrete recommendations and report",
+    "status": "met",
+    "evidence": "Generated capstone report and README summary provide scoped recommendations, limitations, and reproducible provenance."
+  },
+  {
+    "requirement": "Cross-model transfer",
+    "status": "stretch_not_required",
+    "evidence": "Exploratory branch work exists, but it is excluded from the main conclusions."
+  },
+  {
+    "requirement": "Code/formal tasks",
+    "status": "stretch_not_required",
+    "evidence": "Not implemented; the deck explicitly labels this stretch work."
+  }
+]

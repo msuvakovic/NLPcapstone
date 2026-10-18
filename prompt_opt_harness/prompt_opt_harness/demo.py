@@ -4,7 +4,10 @@ from prompt_opt_harness.datasets import load_demo_dataset
 from prompt_opt_harness.harness import run_experiment
 from prompt_opt_harness.llm_backends import MockBackend
 from prompt_opt_harness.logger import save_run
-from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, OPRO, ZeroShotBaseline, GEPA, MIPROv2, TextGrad
+from prompt_opt_harness.optimizers import (
+    EvoPromptLite, HumanWrittenBaseline, OPRO, RandomSearch, ZeroShotBaseline,
+    GEPA, MIPROv2, TextGrad,
+)
 from prompt_opt_harness.report import build_report
 import os
 
@@ -24,12 +27,22 @@ def main() -> None:
     methods = [
         ("Zero-shot", ZeroShotBaseline, len(dataset.source.dev)),
         ("Human-written", HumanWrittenBaseline, len(dataset.source.dev)),
+        ("Random-search", RandomSearch, BUDGET),
         ("OPRO", OPRO, BUDGET),
         ("EvoPrompt-lite", EvoPromptLite, BUDGET),
-        ("GEPA", GEPA, BUDGET),
-        ("MIPROv2", MIPROv2, BUDGET),
-        ("TextGrad", TextGrad, BUDGET),
     ]
+
+    try:
+        import dspy
+    except ImportError:
+        dspy = None
+    if dspy is not None:
+        methods.extend([
+            ("GEPA", GEPA, BUDGET),
+            ("MIPROv2", MIPROv2, BUDGET),
+        ])
+        if hasattr(dspy.teleprompt, "TextGrad"):
+            methods.append(("TextGrad", TextGrad, BUDGET))
 
     results = []
     for name, optimizer_cls, budget in methods:

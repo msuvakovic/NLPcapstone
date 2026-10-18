@@ -1,0 +1,334 @@
+{
+  "protocol_hash": "0e38a058e93ae5b067bb9304e1c61a0652289632e244b7d61a0ad6f19b5e7711",
+  "methods": [
+    {
+      "method": "base",
+      "prompt_id": "3544e528e123fff1aab2fbc1c1822c25b6e1a27598244e6c8d342d420c9129a0",
+      "sst2": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.94375,
+        "macro_f1": 0.9436950146627565,
+        "n": 160
+      },
+      "ood_accuracy": 0.965625,
+      "worst_ood_accuracy": 0.94375,
+      "invalid": 0,
+      "mean_input_tokens": 87.91666666666667,
+      "ood_delta": 0.0,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "prompt_words": 11
+    },
+    {
+      "method": "human",
+      "prompt_id": "95031222bb053d6f2bc5f94672adb49648d77504fcb6a550856fdd0e70ed39f9",
+      "sst2": {
+        "accuracy": 0.953125,
+        "macro_f1": 0.9531135531135531,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.93125,
+        "macro_f1": 0.9340283241542093,
+        "n": 160
+      },
+      "ood_accuracy": 0.9593750000000001,
+      "worst_ood_accuracy": 0.93125,
+      "invalid": 1,
+      "mean_input_tokens": 101.91666666666667,
+      "ood_delta": -0.006249999999999867,
+      "ood_delta_ci95": [
+        -0.015625,
+        0.0
+      ],
+      "prompt_words": 24
+    },
+    {
+      "method": "history_full",
+      "prompt_id": "4fae360a91d21489edf98bb59b6bd92f7953cec3c50157b0738c96652a3376b3",
+      "sst2": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.95,
+        "macro_f1": 0.9499295884838053,
+        "n": 160
+      },
+      "ood_accuracy": 0.96875,
+      "worst_ood_accuracy": 0.95,
+      "invalid": 0,
+      "mean_input_tokens": 91.91666666666667,
+      "ood_delta": 0.0031250000000000444,
+      "ood_delta_ci95": [
+        0.0,
+        0.009375
+      ],
+      "prompt_words": 15
+    },
+    {
+      "method": "history_full+guard",
+      "prompt_id": "3544e528e123fff1aab2fbc1c1822c25b6e1a27598244e6c8d342d420c9129a0",
+      "sst2": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.94375,
+        "macro_f1": 0.9436950146627565,
+        "n": 160
+      },
+      "ood_accuracy": 0.965625,
+      "worst_ood_accuracy": 0.94375,
+      "invalid": 0,
+      "mean_input_tokens": 87.91666666666667,
+      "ood_delta": 0.0,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "prompt_words": 11
+    },
+    {
+      "method": "feedback_full",
+      "prompt_id": "96c7ccc09d1a284aa8a67fb06b514b4a2d9d8c7b5f569526726d83078024f518",
+      "sst2": {
+        "accuracy": 0.953125,
+        "macro_f1": 0.9531135531135531,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.94375,
+        "macro_f1": 0.9437302176546443,
+        "n": 160
+      },
+      "ood_accuracy": 0.965625,
+      "worst_ood_accuracy": 0.94375,
+      "invalid": 0,
+      "mean_input_tokens": 111.91666666666667,
+      "ood_delta": 0.0,
+      "ood_delta_ci95": [
+        -0.009375,
+        0.009375
+      ],
+      "prompt_words": 32
+    },
+    {
+      "method": "feedback_full+guard",
+      "prompt_id": "3544e528e123fff1aab2fbc1c1822c25b6e1a27598244e6c8d342d420c9129a0",
+      "sst2": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.94375,
+        "macro_f1": 0.9436950146627565,
+        "n": 160
+      },
+      "ood_accuracy": 0.965625,
+      "worst_ood_accuracy": 0.94375,
+      "invalid": 0,
+      "mean_input_tokens": 87.91666666666667,
+      "ood_delta": 0.0,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "prompt_words": 11
+    },
+    {
+      "method": "feedback_racing",
+      "prompt_id": "4186190e25d49ba29554dfadfab9df9412e03caf7af8ebc981e9bc80a70ab71c",
+      "sst2": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.94375,
+        "macro_f1": 0.9436950146627565,
+        "n": 160
+      },
+      "ood_accuracy": 0.965625,
+      "worst_ood_accuracy": 0.94375,
+      "invalid": 0,
+      "mean_input_tokens": 91.91666666666667,
+      "ood_delta": 0.0,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "prompt_words": 14
+    },
+    {
+      "method": "feedback_racing+guard",
+      "prompt_id": "3544e528e123fff1aab2fbc1c1822c25b6e1a27598244e6c8d342d420c9129a0",
+      "sst2": {
+        "accuracy": 0.9375,
+        "macro_f1": 0.9375,
+        "n": 64
+      },
+      "amazon": {
+        "accuracy": 0.9875,
+        "macro_f1": 0.9875,
+        "n": 160
+      },
+      "tweets": {
+        "accuracy": 0.94375,
+        "macro_f1": 0.9436950146627565,
+        "n": 160
+      },
+      "ood_accuracy": 0.965625,
+      "worst_ood_accuracy": 0.94375,
+      "invalid": 0,
+      "mean_input_tokens": 87.91666666666667,
+      "ood_delta": 0.0,
+      "ood_delta_ci95": [
+        0.0,
+        0.0
+      ],
+      "prompt_words": 11
+    }
+  ],
+  "confirmation": {
+    "history_full": {
+      "accepted": false,
+      "gain": 0.0,
+      "corrected": 0,
+      "regressed": 0,
+      "p_value": 1.0,
+      "alpha": 0.016666666666666666,
+      "minimum_gain": 0.01,
+      "n": 80,
+      "raw_prompt": "Determine if the sentiment of the text is Positive or Negative. Return only the label.",
+      "selected": "Classify the sentiment of the following text as Positive or Negative."
+    },
+    "feedback_full": {
+      "accepted": false,
+      "gain": 0.0,
+      "corrected": 0,
+      "regressed": 0,
+      "p_value": 1.0,
+      "alpha": 0.016666666666666666,
+      "minimum_gain": 0.01,
+      "n": 80,
+      "raw_prompt": "Classify the sentiment of the following text as either Positive or Negative. For texts with mixed or implicit sentiment, determine the final verdict or the dominant emotional weight. Return only the label.",
+      "selected": "Classify the sentiment of the following text as Positive or Negative."
+    },
+    "feedback_racing": {
+      "accepted": false,
+      "gain": 0.0,
+      "corrected": 0,
+      "regressed": 0,
+      "p_value": 1.0,
+      "alpha": 0.016666666666666666,
+      "minimum_gain": 0.01,
+      "n": 80,
+      "raw_prompt": "Classify the sentiment of the text as Positive or Negative. Return only the label.",
+      "selected": "Classify the sentiment of the following text as Positive or Negative."
+    }
+  },
+  "searches": {
+    "history_full": {
+      "resources": {
+        "unique_example_evaluations": 512,
+        "evaluation_cap": 512,
+        "proposal_calls": 7,
+        "proposal_cap": 16,
+        "logical_input_tokens": 38744,
+        "logical_output_tokens": 1263
+      },
+      "physical_resources": {
+        "actual_calls": 519,
+        "failed_attempts": 0,
+        "cache_hits": 0,
+        "input_tokens": 38744,
+        "output_tokens": 1263,
+        "request_seconds": 1398.3030822001747
+      },
+      "wall_seconds": 373.42066380003234
+    },
+    "feedback_full": {
+      "resources": {
+        "unique_example_evaluations": 512,
+        "evaluation_cap": 512,
+        "proposal_calls": 7,
+        "proposal_cap": 16,
+        "logical_input_tokens": 42372,
+        "logical_output_tokens": 1313
+      },
+      "physical_resources": {
+        "actual_calls": 391,
+        "failed_attempts": 0,
+        "cache_hits": 128,
+        "input_tokens": 34551,
+        "output_tokens": 1057,
+        "request_seconds": 1006.8469097996713
+      },
+      "wall_seconds": 274.8407298999955
+    },
+    "feedback_racing": {
+      "resources": {
+        "unique_example_evaluations": 512,
+        "evaluation_cap": 512,
+        "proposal_calls": 15,
+        "proposal_cap": 16,
+        "logical_input_tokens": 46471,
+        "logical_output_tokens": 1633
+      },
+      "physical_resources": {
+        "actual_calls": 399,
+        "failed_attempts": 0,
+        "cache_hits": 128,
+        "input_tokens": 38650,
+        "output_tokens": 1377,
+        "request_seconds": 1177.7522112003644
+      },
+      "wall_seconds": 345.21283590001985
+    }
+  }
+}
