@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 392" width="760" height="392" font-family="Helvetica,Arial,sans-serif" font-size="12">
+<rect width="760" height="392" fill="#ffffff"/>
+<text x="150" y="24" font-size="15" font-weight="bold" fill="#1f2328">Overfitting by method: qwen2.5:7b</text>
+<text x="150" y="42" fill="#555">Mean over seeds. The line is the change from the source test to the new dataset.</text>
+<line x1="239.9" y1="58" x2="239.9" y2="334" stroke="#e4e7eb"/>
+<text x="239.9" y="348" text-anchor="middle" fill="#666">80%</text>
+<line x1="484.9" y1="58" x2="484.9" y2="334" stroke="#e4e7eb"/>
+<text x="484.9" y="348" text-anchor="middle" fill="#666">90%</text>
+<line x1="730.0" y1="58" x2="730.0" y2="334" stroke="#e4e7eb"/>
+<text x="730.0" y="348" text-anchor="middle" fill="#666">100%</text>
+<text x="138" y="80" text-anchor="end" fill="#1f2328">Zero-shot</text>
+<line x1="419.6" y1="76" x2="346.1" y2="76" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="354.2" cy="76" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="419.6" cy="76" r="6" fill="#2f6fb0"/>
+<polygon points="346.1,69 353.1,76 346.1,83 339.1,76" fill="#d9622b"/>
+<text x="138" y="114" text-anchor="end" fill="#1f2328">Human-written</text>
+<line x1="419.6" y1="110" x2="427.7" y2="110" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="435.9" cy="110" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="419.6" cy="110" r="6" fill="#2f6fb0"/>
+<polygon points="427.7,103 434.7,110 427.7,117 420.7,110" fill="#d9622b"/>
+<text x="138" y="148" text-anchor="end" fill="#1f2328">OPRO</text>
+<line x1="452.3" y1="144" x2="386.9" y2="144" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="583.0" cy="144" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="452.3" cy="144" r="6" fill="#2f6fb0"/>
+<polygon points="386.9,137 393.9,144 386.9,151 379.9,144" fill="#d9622b"/>
+<text x="138" y="182" text-anchor="end" fill="#1f2328">EvoPrompt-lite</text>
+<line x1="386.9" y1="178" x2="395.1" y2="178" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="566.6" cy="178" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="386.9" cy="178" r="6" fill="#2f6fb0"/>
+<polygon points="395.1,171 402.1,178 395.1,185 388.1,178" fill="#d9622b"/>
+<text x="138" y="216" text-anchor="end" fill="#1f2328">GEPA-lite</text>
+<line x1="419.6" y1="212" x2="395.1" y2="212" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="583.0" cy="212" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="419.6" cy="212" r="6" fill="#2f6fb0"/>
+<polygon points="395.1,205 402.1,212 395.1,219 388.1,212" fill="#d9622b"/>
+<text x="138" y="250" text-anchor="end" fill="#1f2328">TextGrad-lite</text>
+<line x1="419.6" y1="246" x2="386.9" y2="246" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="550.3" cy="246" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="419.6" cy="246" r="6" fill="#2f6fb0"/>
+<polygon points="386.9,239 393.9,246 386.9,253 379.9,246" fill="#d9622b"/>
+<text x="138" y="284" text-anchor="end" fill="#1f2328">Random-search</text>
+<line x1="468.6" y1="280" x2="403.2" y2="280" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="566.6" cy="280" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="468.6" cy="280" r="6" fill="#2f6fb0"/>
+<polygon points="403.2,273 410.2,280 403.2,287 396.2,280" fill="#d9622b"/>
+<text x="138" y="318" text-anchor="end" fill="#1f2328">Oracle-OPRO</text>
+<line x1="435.9" y1="314" x2="435.9" y2="314" stroke="#b9bec6" stroke-width="3"/>
+<circle cx="452.3" cy="314" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<circle cx="435.9" cy="314" r="6" fill="#2f6fb0"/>
+<polygon points="435.9,307 442.9,314 435.9,321 428.9,314" fill="#d9622b"/>
+<circle cx="150" cy="372" r="5" fill="#fff" stroke="#8a8f98" stroke-width="2"/>
+<text x="162" y="376" fill="#1f2328">Dev (what the optimizer saw)</text>
+<circle cx="414" cy="372" r="6" fill="#2f6fb0"/>
+<text x="426" y="376" fill="#1f2328">Source test (same dataset)</text>
+<polygon points="662,365 669,372 662,379 655,372" fill="#d9622b"/>
+<text x="674" y="376" fill="#1f2328">New dataset</text>
+</svg>

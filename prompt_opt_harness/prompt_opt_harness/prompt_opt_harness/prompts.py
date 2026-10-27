@@ -10,6 +10,9 @@ def build_classification_prompt(instruction: str, text: str) -> str:
 REASONING_BASE_INSTRUCTION = "Solve the math word problem. Show your work, then end with a line in the exact form: Answer: <number>"
 
 
+REASONING_BARE_INSTRUCTION = "Solve the math word problem."
+
+
 def build_reasoning_prompt(instruction: str, question: str) -> str:
     header = instruction.strip()
     body = f"Question: {question}\nEnd your response with a final line in the exact form: Answer: <number>"
@@ -39,3 +42,66 @@ MUTATION_TEMPLATE = """Slightly modify the following instruction for a {task_nam
 task to try to improve it:
 Instruction: {parent}
 Respond with only the new candidate instruction, nothing else."""
+
+
+# ---- GEPA-lite, TextGrad-lite and Random-search (ideas from the team's branches) ----
+
+REFLECTION_TEMPLATE = """You are improving an instruction for a {task_name} task.
+Current instruction:
+{instruction}
+
+On the example below the model gave a wrong answer.
+{failure}
+
+In two or three sentences, say what the instruction failed to tell the model and what to add or change.
+Respond with only that explanation."""
+
+
+REFLECTIVE_MUTATION_TEMPLATE = """Rewrite the instruction below for a {task_name} task, using the feedback.
+Current instruction: {parent}
+Feedback: {reflection}
+Keep whatever already works. Respond with only the new instruction, nothing else."""
+
+
+TEXTGRAD_CRITIQUE_TEMPLATE = """You are critiquing an instruction for a {task_name} task.
+Instruction:
+{instruction}
+
+The model answered these inputs incorrectly:
+{failures_block}
+
+Write a short critique: what do these mistakes have in common, and how should the instruction change?
+Respond with only the critique."""
+
+
+TEXTGRAD_UPDATE_TEMPLATE = """Apply the critique to improve an instruction for a {task_name} task.
+Instruction: {instruction}
+Critique: {gradient}
+Respond with only the improved instruction, nothing else."""
+
+
+# Independent rewrites of the starting instruction, with no score or failure
+# feedback. The variant number keeps a temperature-0 model from returning the
+# same rewrite every time.
+RANDOM_SEARCH_TEMPLATES = [
+    """Rewrite the following instruction for a {task_name} task in your own words. Keep the task the same.
+Instruction: {instruction}
+(Variant #{variant})
+Respond with only the rewritten instruction, nothing else.""",
+    """Write a more concise version of the following instruction for a {task_name} task. Keep the task the same.
+Instruction: {instruction}
+(Variant #{variant})
+Respond with only the new instruction, nothing else.""",
+    """Write a more detailed version of the following instruction for a {task_name} task, adding guidance that would help the model get the answer right. Keep the task the same.
+Instruction: {instruction}
+(Variant #{variant})
+Respond with only the new instruction, nothing else.""",
+]
+
+
+# ---- more of the team's optimizers (PBT, Ensemble, SAPO): see optimizers/ ----
+
+PARAPHRASE_TEMPLATE = """Rewrite the following instruction for a {task_name} task in different words, \
+keeping exactly the same meaning and keeping any required answer format:
+Instruction: {instruction}
+Respond with only the rewritten instruction, nothing else."""

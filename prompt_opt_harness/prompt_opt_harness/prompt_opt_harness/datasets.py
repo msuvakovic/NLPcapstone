@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, List, Tuple
 
 from .prompts import BASE_INSTRUCTION, REASONING_BASE_INSTRUCTION
@@ -18,21 +18,26 @@ class Example:
 class DomainSplit:
     dev: List[Example]
     test: List[Example]
+    # Separate source questions for the confirmation guard. Never used to tune; empty if the loader has none.
+    confirm: List[Example] = field(default_factory=list)
 
 
 @dataclass
 class Dataset:
     source_domain: str
     source: DomainSplit
-    ood: Dict[str, List[Example]]
+    ood: Dict[str, List[Example]]  # new-dataset test questions, only ever used for the final scores
     base_instruction: str = BASE_INSTRUCTION
+    # A separate sample of the new datasets, never reported. Only oracle optimizers
+    # (tune_on_target = True) may tune on it. Empty if the loader doesn't provide one.
+    ood_val: Dict[str, List[Example]] = field(default_factory=dict)
 
     def lookup(self) -> Dict[str, Tuple[str, str]]:
         # text -> (label, domain), used by MockBackend to grade answers
         table: Dict[str, Tuple[str, str]] = {}
-        for ex in self.source.dev + self.source.test:
+        for ex in self.source.dev + self.source.test + self.source.confirm:
             table[ex.text] = (ex.label, ex.domain)
-        for examples in self.ood.values():
+        for examples in list(self.ood.values()) + list(self.ood_val.values()):
             for ex in examples:
                 table[ex.text] = (ex.label, ex.domain)
         return table
@@ -115,6 +120,13 @@ def load_demo_reasoning_dataset() -> Dataset:
         ("Jake has 9 toy cars and buys 6 more. How many toy cars does he have now?", "15"),
     ])
 
+    source_confirm = _mk("rconf", source_domain, [
+        ("Olga has 12 pens. She loses 5 pens. How many pens does she have left?", "7"),
+        ("A box holds 9 eggs and there are 4 boxes. How many eggs are there?", "36"),
+        ("Pete had 14 coins and found 8 more. How many coins does he have now?", "22"),
+        ("A tank had 40 liters and 15 liters leaked out. How many liters are left?", "25"),
+    ])
+
     svamp_style = _mk("svamp", "svamp_style", [
         ("Rahul has 8 toy cars. His friend has 5 toy cars and 2 toy trucks. How many toy cars does Rahul have?", "8"),
         ("A baker made 24 cupcakes using 3 trays. He sold 9 cupcakes. How many cupcakes are left?", "15"),
@@ -137,9 +149,23 @@ def load_demo_reasoning_dataset() -> Dataset:
         ("A train has 10 cars with 60 seats each. At the first stop, 150 passengers board. At the second stop, 3 full cars' worth of passengers (60 each) board as well. How many passengers are on the train after the second stop?", "330"),
     ])
 
+    svamp_val = _mk("svampval", "svamp_style", [
+        ("Nina has 9 stickers. Her brother has 4 stickers and 3 balloons. How many stickers does Nina have?", "9"),
+        ("A cook made 36 cookies on 4 plates and ate 6 cookies. How many cookies are left?", "30"),
+        ("Omar bought 5 bags of apples with 6 apples in each bag, plus 1 pear. How many apples did he buy?", "30"),
+        ("A pool has 3 lanes of 20 swimmers each and 2 empty lanes. How many swimmers are in the pool?", "60"),
+    ])
+    multistep_val = _mk("multival", "multistep", [
+        ("A shop had 400 items. It got 2 deliveries of 75 items each and sold 120. How many items are left?", "430"),
+        ("Lena buys 4 boxes of 6 candles. She gives 3 candles to each of 5 friends. How many candles are left?", "9"),
+        ("A cinema has 12 rows of 15 seats and closes 2 rows. How many seats are open?", "150"),
+        ("A farmer picked 6 crates of 30 pears, sold 4 crates, then gave away 20 pears. How many pears are left?", "40"),
+    ])
+
     return Dataset(
         source_domain=source_domain,
-        source=DomainSplit(dev=source_dev, test=source_test),
+        source=DomainSplit(dev=source_dev, test=source_test, confirm=source_confirm),
         ood={"svamp_style": svamp_style, "multistep": multistep},
         base_instruction=REASONING_BASE_INSTRUCTION,
+        ood_val={"svamp_style": svamp_val, "multistep": multistep_val},
     )

@@ -7,7 +7,7 @@ import random
 import re
 import time
 from dataclasses import dataclass
-from typing import Dict, List, Tuple
+from typing import Dict, List, Optional, Tuple
 
 
 @dataclass
@@ -17,10 +17,12 @@ class LLMCallStats:
     output_tokens: int = 0
     wall_time: float = 0.0
 
-    def record(self, prompt: str, response: str, elapsed: float) -> None:
+    def record(self, prompt: str, response: str, elapsed: float,
+               input_tokens: Optional[int] = None, output_tokens: Optional[int] = None) -> None:
         self.calls += 1
-        self.input_tokens += len(prompt.split())
-        self.output_tokens += len(response.split())
+        # real counts when the API reports them, word counts otherwise
+        self.input_tokens += input_tokens if input_tokens is not None else len(prompt.split())
+        self.output_tokens += output_tokens if output_tokens is not None else len(response.split())
         self.wall_time += elapsed
 
 
@@ -30,50 +32,85 @@ def _with_retries(call, max_retries: int = 5, base_delay: float = 2.0):
             return call()
         except Exception as e:
             status = getattr(e, "status_code", None) or getattr(getattr(e, "response", None), "status_code", None)
-            if status != 429 or attempt == max_retries:
+            is_timeout = "timeout" in type(e).__name__.lower()
+            if not (status == 429 or is_timeout) or attempt == max_retries:
                 raise
             delay = base_delay * (2 ** attempt)
-            print(f"Rate limited, retrying in {delay:.0f}s...")
+            reason = "Timed out" if is_timeout else "Rate limited"
+            print(f"{reason}, retrying in {delay:.0f}s...")
             time.sleep(delay)
 
 
 class LLMBackend(abc.ABC):
     def __init__(self) -> None:
         self.stats = LLMCallStats()
+        # finish_reason / token usage of the most recent call, filled in by _generate
+        self.last_meta: Dict[str, object] = {}
 
     @abc.abstractmethod
-    def _generate(self, prompt: str) -> str:
+    def _generate(self, prompt: str, temperature: Optional[float] = None, seed: Optional[int] = None) -> str:
         ...
 
-    def generate(self, prompt: str) -> str:
+    def generate(self, prompt: str, temperature: Optional[float] = None, seed: Optional[int] = None) -> str:
+        self.last_meta = {}
         start = time.perf_counter()
-        response = self._generate(prompt)
-        self.stats.record(prompt, response, time.perf_counter() - start)
+        response = self._generate(prompt, temperature=temperature, seed=seed)
+        self.stats.record(
+            prompt, response, time.perf_counter() - start,
+            input_tokens=self.last_meta.get("input_tokens"),
+            output_tokens=self.last_meta.get("output_tokens"),
+        )
         return response
+
+    def info(self) -> Dict[str, object]:
+        return {
+            "backend": type(self).__name__,
+            "model": getattr(self, "model", None),
+            "temperature": getattr(self, "temperature", None),
+            "max_tokens": getattr(self, "max_tokens", None),
+        }
+
+
+def _chat_completion(backend, prompt: str, temperature: Optional[float], seed: Optional[int]) -> str:
+    kwargs = dict(
+        model=backend.model,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=backend.temperature if temperature is None else temperature,
+        max_tokens=backend.max_tokens,
+    )
+    if seed is not None:
+        kwargs["seed"] = seed
+
+    def call():
+        resp = backend.client.chat.completions.create(**kwargs)
+        choice = resp.choices[0]
+        usage = getattr(resp, "usage", None)
+        backend.last_meta = {
+            "finish_reason": choice.finish_reason,
+            "input_tokens": getattr(usage, "prompt_tokens", None),
+            "output_tokens": getattr(usage, "completion_tokens", None),
+        }
+        return choice.message.content or ""
+    return _with_retries(call)
 
 
 class OpenAIBackend(LLMBackend):
-    def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0):
+    def __init__(self, model: str = "gpt-4o-mini", temperature: float = 0.0, max_tokens: int = 512):
         super().__init__()
         import openai
         self.client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
         self.model = model
         self.temperature = temperature
+        self.max_tokens = max_tokens  # caps runaway generation, esp. for local models with no stop token
 
-    def _generate(self, prompt: str) -> str:
-        def call():
-            resp = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": prompt}],
-                temperature=self.temperature,
-            )
-            return resp.choices[0].message.content or ""
-        return _with_retries(call)
+    def _generate(self, prompt: str, temperature: Optional[float] = None, seed: Optional[int] = None) -> str:
+        return _chat_completion(self, prompt, temperature, seed)
 
 
 class OpenAICompatibleBackend(LLMBackend):
     # works with any provider exposing an OpenAI-style /chat/completions endpoint
-    def __init__(self, model: str, base_url: str, api_key_env: str | None = None, temperature: float = 0.0):
+    def __init__(self, model: str, base_url: str, api_key_env: str | None = None,
+                 temperature: float = 0.0, max_tokens: int = 512):
         super().__init__()
         import openai
         api_key = os.environ.get(api_key_env, "not-needed") if api_key_env else "not-needed"
@@ -82,30 +119,24 @@ class OpenAICompatibleBackend(LLMBackend):
         self.client = openai.OpenAI(api_key=api_key, base_url=base_url)
         self.model = model
         self.temperature = temperature
+        self.max_tokens = max_tokens
 
-    def _generate(self, prompt: str) -> str:
-        def call():
-            resp = self.client.chat.completions.create(
-                model=self.model,
-                messages=[{"role": "user", "content": prompt}],
-                temperature=self.temperature,
-            )
-            return resp.choices[0].message.content or ""
-        return _with_retries(call)
+    def _generate(self, prompt: str, temperature: Optional[float] = None, seed: Optional[int] = None) -> str:
+        return _chat_completion(self, prompt, temperature, seed)
 
 
 class GroqBackend(OpenAICompatibleBackend):
     # free tier, no credit card. console.groq.com for a key, export GROQ_API_KEY
-    def __init__(self, model: str = "openai/gpt-oss-20b", temperature: float = 0.0):
+    def __init__(self, model: str = "openai/gpt-oss-20b", temperature: float = 0.0, max_tokens: int = 512):
         super().__init__(model=model, base_url="https://api.groq.com/openai/v1",
-                          api_key_env="GROQ_API_KEY", temperature=temperature)
+                          api_key_env="GROQ_API_KEY", temperature=temperature, max_tokens=max_tokens)
 
 
 class OllamaBackend(OpenAICompatibleBackend):
     # fully local: `ollama pull llama3.1` then `ollama serve`
-    def __init__(self, model: str = "llama3.1", temperature: float = 0.0):
+    def __init__(self, model: str = "llama3.1", temperature: float = 0.0, max_tokens: int = 512):
         super().__init__(model=model, base_url="http://localhost:11434/v1",
-                          api_key_env=None, temperature=temperature)
+                          api_key_env=None, temperature=temperature, max_tokens=max_tokens)
 
 
 class AnthropicBackend(LLMBackend):
@@ -114,15 +145,21 @@ class AnthropicBackend(LLMBackend):
         import anthropic
         self.client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
         self.model = model
+        self.temperature = None
         self.max_tokens = max_tokens
 
-    def _generate(self, prompt: str) -> str:
+    def _generate(self, prompt: str, temperature: Optional[float] = None, seed: Optional[int] = None) -> str:
+        kwargs = dict(model=self.model, max_tokens=self.max_tokens, messages=[{"role": "user", "content": prompt}])
+        if temperature is not None:
+            kwargs["temperature"] = temperature
+
         def call():
-            resp = self.client.messages.create(
-                model=self.model,
-                max_tokens=self.max_tokens,
-                messages=[{"role": "user", "content": prompt}],
-            )
+            resp = self.client.messages.create(**kwargs)
+            self.last_meta = {
+                "finish_reason": "length" if resp.stop_reason == "max_tokens" else resp.stop_reason,
+                "input_tokens": resp.usage.input_tokens,
+                "output_tokens": resp.usage.output_tokens,
+            }
             return "".join(block.text for block in resp.content if hasattr(block, "text"))
         return _with_retries(call)
 
@@ -170,7 +207,7 @@ class MockBackend(LLMBackend):
         self.lookup = lookup
         self.source_domain = source_domain
 
-    def _generate(self, prompt: str) -> str:
+    def _generate(self, prompt: str, temperature: Optional[float] = None, seed: Optional[int] = None) -> str:
         if "Answer: <number>" in prompt:
             raise NotImplementedError("MockBackend only supports the sentiment task, use GroqBackend for reasoning")
         classify_match = _CLASSIFY_TEXT_RE.search(prompt)

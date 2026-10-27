@@ -11,17 +11,17 @@ class EvoPromptLite(Optimizer):
     def optimize(self, task_desc: str, dev_examples) -> Candidate:
         population = [Candidate(instruction=task_desc)]
 
-        while len(population) < self.population_size and self.backend.stats.calls < self.budget:
+        # Build the starting population, but only add a child if the budget can also
+        # score every unscored member afterwards.
+        while len(population) < self.population_size and self._can_afford(1, len(population) + 1, dev_examples):
             mutation_prompt = MUTATION_TEMPLATE.format(task_name=self.task.name, parent=population[-1].instruction)
-            child_instruction = self.backend.generate(mutation_prompt).strip()
-            population.append(Candidate(instruction=child_instruction))
+            population.append(Candidate(instruction=self._propose(mutation_prompt)))
 
         for candidate in population:
-            if candidate.dev_score is None:
-                candidate.dev_score = self._dev_score(candidate.instruction, dev_examples)
-        self.history.extend(population)
+            candidate.dev_score = self._dev_score(candidate.instruction, dev_examples)
+            self.history.append(candidate)
 
-        while self.backend.stats.calls < self.budget:
+        while self._can_afford(1, 1, dev_examples):
             parents = sorted(population, key=lambda c: c.dev_score, reverse=True)[:2]
             if len(parents) < 2:
                 break
@@ -31,13 +31,8 @@ class EvoPromptLite(Optimizer):
                 parent_a=parents[0].instruction, score_a=parents[0].dev_score,
                 parent_b=parents[1].instruction, score_b=parents[1].dev_score,
             )
-            child_instruction = self.backend.generate(meta_prompt).strip()
-            if self.backend.stats.calls >= self.budget:
-                break
-
-            child = Candidate(child_instruction, self._dev_score(child_instruction, dev_examples))
-            self.history.append(child)
+            child = self._score(self._propose(meta_prompt), dev_examples)
             population.append(child)
             population = sorted(population, key=lambda c: c.dev_score, reverse=True)[: self.population_size]
 
-        return max(self.history, key=lambda c: c.dev_score)
+        return self._best()
