@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List, Optional, Tuple, Dict
 
-from ..prompts import build_classification_prompt
+from ..tasks import SENTIMENT_TASK, Task
 
 
 @dataclass
@@ -14,7 +14,7 @@ class Candidate:
     ood_score: Optional[float] = None
 
 
-def evaluate(backend, instruction: str, examples) -> float:
+def evaluate(backend, instruction: str, examples, task: Task = SENTIMENT_TASK) -> float:
     if not examples:
         return 0.0
     correct = 0
@@ -33,7 +33,7 @@ def evaluate(backend, instruction: str, examples) -> float:
     emb_prompts = []
     sim_threshold = 0.92
     for ex in examples:
-        prompt = build_classification_prompt(instruction, ex.text)
+        prompt = task.build_prompt(instruction, ex.text)
         if prompt in cache:
             prediction = cache[prompt]
         else:
@@ -48,13 +48,13 @@ def evaluate(backend, instruction: str, examples) -> float:
                             # reuse prediction from most similar prompt
                             prediction = cache[emb_prompts[best_idx]]
                             cache[prompt] = prediction
-                            if prediction.startswith(ex.label.lower()[:3]):
+                            if task.is_correct(prediction, ex.label):
                                 correct += 1
                             continue
                 except Exception:
                     # fall back to exact dedupe
                     pass
-            prediction = backend.generate(prompt).strip().lower()
+            prediction = backend.generate(prompt)
             cache[prompt] = prediction
             if embedder is not None:
                 try:
@@ -62,7 +62,7 @@ def evaluate(backend, instruction: str, examples) -> float:
                     emb_prompts.append(prompt)
                 except Exception:
                     pass
-        if prediction.startswith(ex.label.lower()[:3]):
+        if task.is_correct(prediction, ex.label):
             correct += 1
     return correct / len(examples)
 
@@ -72,10 +72,11 @@ class Optimizer:
     # True only for oracle upper bounds that deliberately optimize on the OOD test sets
     uses_ood_test = False
 
-    def __init__(self, backend, budget: int, seed: int = 0):
+    def __init__(self, backend, budget: int, seed: int = 0, task: Task = SENTIMENT_TASK):
         self.backend = backend
         self.budget = budget  # max LLM calls for this run
         self.seed = seed
+        self.task = task
         self.history: List[Candidate] = []
 
     def ood_rank_score(self, dev_score: float, ood_accs: dict | list | tuple) -> float:
@@ -96,12 +97,12 @@ class Optimizer:
         return (1.0 - progress) * dev_score + progress * ood_score
 
     def _dev_score(self, instruction: str, dev_examples) -> float:
-        return evaluate(self.backend, instruction, dev_examples)
+        return evaluate(self.backend, instruction, dev_examples, task=self.task)
 
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
         raise NotImplementedError
 
-def evaluate_per_example(backend, instruction: str, examples) -> List[Tuple[object, str, bool]]:
+def evaluate_per_example(backend, instruction: str, examples, task: Task = SENTIMENT_TASK) -> List[Tuple[object, str, bool]]:
     if not examples:
         return []
     results = []
@@ -119,7 +120,7 @@ def evaluate_per_example(backend, instruction: str, examples) -> List[Tuple[obje
     emb_prompts = []
     sim_threshold = 0.92
     for ex in examples:
-        prompt = build_classification_prompt(instruction, ex.text)
+        prompt = task.build_prompt(instruction, ex.text)
         if prompt in cache:
             prediction = cache[prompt]
         else:
@@ -132,12 +133,12 @@ def evaluate_per_example(backend, instruction: str, examples) -> List[Tuple[obje
                         if sims[best_idx] >= sim_threshold:
                             prediction = cache[emb_prompts[best_idx]]
                             cache[prompt] = prediction
-                            is_correct = prediction.startswith(ex.label.lower()[:3])
+                            is_correct = task.is_correct(prediction, ex.label)
                             results.append((ex, prediction, is_correct))
                             continue
                 except Exception:
                     pass
-            prediction = backend.generate(prompt).strip().lower()
+            prediction = backend.generate(prompt).strip()
             cache[prompt] = prediction
             if embedder is not None:
                 try:
@@ -145,6 +146,6 @@ def evaluate_per_example(backend, instruction: str, examples) -> List[Tuple[obje
                     emb_prompts.append(prompt)
                 except Exception:
                     pass
-        is_correct = prediction.startswith(ex.label.lower()[:3])
+        is_correct = task.is_correct(prediction, ex.label)
         results.append((ex, prediction, is_correct))
     return results

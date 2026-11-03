@@ -6,6 +6,7 @@ from typing import Callable, Dict, List, Tuple, Type, Optional
 from .datasets import Dataset
 from .metrics import cost_normalized_gain, cross_domain_variance, ood_gap, worst_case_accuracy
 from .optimizers.base import Optimizer, evaluate
+from .tasks import SENTIMENT_TASK, Task
 
 
 @dataclass
@@ -60,9 +61,10 @@ def run_experiment(
     budget: int,
     seed: int = 0,
     eval_backend_factory: Optional[Callable[[], object]] = None,
+    task: Task = SENTIMENT_TASK,
 ) -> RunResult:
     backend = backend_factory()
-    optimizer = optimizer_cls(backend, budget=budget, seed=seed)
+    optimizer = optimizer_cls(backend, budget=budget, seed=seed, task=task)
 
     # Optimizers only get the OOD validation split; dataset.ood is held out for
     # reporting below. Oracle baselines opt in to the test split explicitly.
@@ -76,8 +78,8 @@ def run_experiment(
     # Use eval_backend if provided (cross-model transfer testing)
     eval_backend = eval_backend_factory() if eval_backend_factory else backend
 
-    source_test_acc = evaluate(eval_backend, best.instruction, dataset.source.test)
-    ood_accs = {domain: evaluate(eval_backend, best.instruction, examples) for domain, examples in dataset.ood.items()}
+    source_test_acc = evaluate(eval_backend, best.instruction, dataset.source.test, task=task)
+    ood_accs = {domain: evaluate(eval_backend, best.instruction, examples, task=task) for domain, examples in dataset.ood.items()}
     ood_values = list(ood_accs.values())
 
     return RunResult(

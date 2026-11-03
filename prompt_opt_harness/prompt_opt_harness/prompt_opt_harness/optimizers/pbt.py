@@ -28,7 +28,7 @@ class PBT(Optimizer):
         # Fill population
         while len(population) < self.population_size and self.backend.stats.calls < self.budget:
             parent = rnd.choice(population)
-            mutation_prompt = MUTATION_TEMPLATE.format(parent=parent.instruction)
+            mutation_prompt = MUTATION_TEMPLATE.format(task_name=self.task.name, parent=parent.instruction)
             child_instruction = self.backend.generate(mutation_prompt).strip()
             population.append(Candidate(instruction=child_instruction))
 
@@ -44,10 +44,10 @@ class PBT(Optimizer):
             parents = sorted(population, key=lambda c: c.dev_score, reverse=True)
             if len(parents) >= 2 and rnd.random() < 0.6:
                 a, b = parents[0], parents[1]
-                prompt = CROSSOVER_TEMPLATE.format(parent_a=a.instruction, score_a=a.dev_score, parent_b=b.instruction, score_b=b.dev_score)
+                prompt = CROSSOVER_TEMPLATE.format(task_name=self.task.name, parent_a=a.instruction, score_a=a.dev_score, parent_b=b.instruction, score_b=b.dev_score)
             else:
                 parent = rnd.choice(parents)
-                prompt = MUTATION_TEMPLATE.format(parent=parent.instruction)
+                prompt = MUTATION_TEMPLATE.format(task_name=self.task.name, parent=parent.instruction)
 
             child_inst = self.backend.generate(prompt).strip()
             if self.backend.stats.calls >= self.budget:
@@ -67,7 +67,7 @@ class PBT(Optimizer):
                 new_pop = top_half.copy()
                 while len(new_pop) < self.population_size and self.backend.stats.calls < self.budget:
                     parent = rnd.choice(top_half)
-                    mutation_prompt = MUTATION_TEMPLATE.format(parent=parent.instruction)
+                    mutation_prompt = MUTATION_TEMPLATE.format(task_name=self.task.name, parent=parent.instruction)
                     child_instruction = self.backend.generate(mutation_prompt).strip()
                     if self.backend.stats.calls >= self.budget:
                         break

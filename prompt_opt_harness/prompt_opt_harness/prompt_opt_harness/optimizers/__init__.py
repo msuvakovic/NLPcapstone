@@ -1,7 +1,7 @@
 from .base import Candidate, Optimizer
 from .opro import OPRO
 from .evoprompt import EvoPromptLite
-from .baselines import ZeroShotBaseline, HumanWrittenBaseline
+from .baselines import ZeroShotBaseline, HumanWrittenBaseline, HumanWrittenReasoningBaseline
 from .gepa import GEPA
 from .dro import create_dro_optimizer
 from .regularized import create_regularized_optimizer
@@ -21,6 +21,7 @@ __all__ = [
     "EvoPromptLite",
     "ZeroShotBaseline",
     "HumanWrittenBaseline",
+    "HumanWrittenReasoningBaseline",
     "GEPA",
     "create_dro_optimizer",
     "create_regularized_optimizer",

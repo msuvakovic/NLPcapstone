@@ -16,7 +16,7 @@ def create_dro_optimizer(base_optimizer_cls: Type[Optimizer], num_splits: int = 
                 return 0.0
             
             # Evaluate all examples
-            per_example_results = evaluate_per_example(self.backend, instruction, dev_examples)
+            per_example_results = evaluate_per_example(self.backend, instruction, dev_examples, task=self.task)
             
             # Create random splits (bootstrapping without replacement for simplicity)
             split_size = max(1, int(len(dev_examples) * split_ratio))

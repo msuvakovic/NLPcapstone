@@ -51,7 +51,7 @@ class OPRO(Optimizer):
                     break
                 # Diversify mutation operators
                 meta_template = rnd.choice(OPRO_META_TEMPLATES)
-                meta_prompt = meta_template.format(history_block=history_block)
+                meta_prompt = meta_template.format(task_name=self.task.name, history_block=history_block)
                 
                 new_instruction = self.backend.generate(meta_prompt).strip()
                 candidates_this_step.append(new_instruction)

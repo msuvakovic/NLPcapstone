@@ -8,7 +8,7 @@ from prompt_opt_harness.optimizers import EvoPromptLite, HumanWrittenBaseline, O
 from prompt_opt_harness.report import build_report
 
 MODEL = "openai/gpt-oss-20b"
-BUDGET = 40
+BUDGET = 180
 SEED = 42
 
 
