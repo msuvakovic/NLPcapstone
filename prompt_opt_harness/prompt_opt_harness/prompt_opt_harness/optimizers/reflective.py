@@ -33,12 +33,13 @@ class ReflectiveOptimizer(Optimizer):
                 break
 
             ex, prediction, is_correct = rnd.choice(failures)
-            reflection_prompt = REFLECTION_TEMPLATE.format(instruction=current.instruction, text=ex.text, label=ex.label, prediction=prediction)
+            reflection_prompt = REFLECTION_TEMPLATE.format(task_name=self.task.name, instruction=current.instruction, text=ex.text, label=ex.label, prediction=prediction)
+
             reflection = self.backend.generate(reflection_prompt).strip()
             if self.backend.stats.calls >= self.budget:
                 break
 
-            child_prompt = REFLECTIVE_MUTATION_TEMPLATE.format(parent=current.instruction, reflection=reflection)
+            child_prompt = REFLECTIVE_MUTATION_TEMPLATE.format(task_name=self.task.name, parent=current.instruction, reflection=reflection)
             new_instruction = self.backend.generate(child_prompt).strip()
             if self.backend.stats.calls >= self.budget:
                 break

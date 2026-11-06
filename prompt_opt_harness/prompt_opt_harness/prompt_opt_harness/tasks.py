@@ -7,6 +7,7 @@ from typing import Callable, Optional
 from .prompts import (
     BASE_INSTRUCTION, build_classification_prompt,
     REASONING_BASE_INSTRUCTION, build_reasoning_prompt,
+    NLI_BASE_INSTRUCTION, build_nli_prompt
 )
 
 
@@ -48,6 +49,17 @@ def _reasoning_correct(response: str, label: str) -> bool:
     return abs(predicted - gold) < 1e-6
 
 
+def _nli_correct(response: str, label: str) -> bool:
+    text = response.strip().lower()
+    if text.startswith("answer:"):
+        text = text[len("answer:"):].strip()
+    words = text.split()
+    if not words:
+        return False
+    first = words[0].strip(".,:;!\"'*")
+    return first.startswith(label.lower()[:3])
+
+
 SENTIMENT_TASK = Task(
     name="sentiment classification",
     base_instruction=BASE_INSTRUCTION,
@@ -60,4 +72,11 @@ REASONING_TASK = Task(
     base_instruction=REASONING_BASE_INSTRUCTION,
     build_prompt=build_reasoning_prompt,
     is_correct=_reasoning_correct,
+)
+
+NLI_TASK = Task(
+    name="natural language inference",
+    base_instruction=NLI_BASE_INSTRUCTION,
+    build_prompt=build_nli_prompt,
+    is_correct=_nli_correct,
 )

@@ -1,7 +1,20 @@
-# The offline demo (demo.py, tests/smoke_test.py) uses only the standard library.
-# Uncomment what you need once you switch to a real backend or add a real optimizer:
 
-# openai>=1.0          # OpenAIBackend
-# anthropic>=0.40       # AnthropicBackend
-# dspy>=3.2.1,<3.3      # GEPA / MIPROv2, per optimizers/dspy_adapters.py
-# dspy[optuna]>=3.2.1,<3.3  # MIPROv2's Bayesian search backend
+# Core: datasets, scoring, embedding dedupe, BayesOpt
+datasets>=4.0
+numpy>=2.0
+scikit-learn>=1.5
+sentence-transformers>=5.0
+
+# LLM backends (GroqBackend/OllamaBackend go through the openai client)
+openai>=1.0
+anthropic>=0.40         # only for AnthropicBackend
+tiktoken>=0.7           # real token counts; falls back to word counts without it
+
+# Analysis / plots
+pandas>=2.0
+matplotlib>=3.8         # scripts/plot_results.py
+
+# DSPy optimizers (GEPA / MIPROv2), per optimizers/dspy_adapters.py
+# dspy>=3.2.1,<3.3
+# dspy[optuna]>=3.2.1,<3.3
+

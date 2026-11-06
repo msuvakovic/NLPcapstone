@@ -27,6 +27,7 @@ class GEPA(Optimizer):
             failed_ex, prediction, _ = rnd.choice(failures)
 
             reflection_prompt = REFLECTION_TEMPLATE.format(
+                task_name=self.task.name,
                 instruction=best_candidate.instruction,
                 text=failed_ex.text,
                 label=failed_ex.label,
@@ -37,6 +38,7 @@ class GEPA(Optimizer):
                 break
 
             mutation_prompt = REFLECTIVE_MUTATION_TEMPLATE.format(
+                task_name=self.task.name,
                 parent=best_candidate.instruction,
                 reflection=reflection,
             )

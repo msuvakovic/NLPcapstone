@@ -31,3 +31,10 @@ class HumanWrittenReasoningBaseline(FixedPromptBaseline):
         "Solve the word problem step by step, showing your work. On the final line, "
         "write the answer in the exact form: Answer: <number>"
     )
+
+class HumanWrittenNLIBaseline(FixedPromptBaseline):
+    name = "Human-written"
+    instruction = (
+        "Read the Premise and the Hypothesis. If the Premise guarantees the Hypothesis is true, "
+        "answer Entailment. If the Premise shows the Hypothesis is false, answer Contradiction."
+    )

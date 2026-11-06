@@ -1,7 +1,7 @@
 from .base import Candidate, Optimizer
 from .opro import OPRO
 from .evoprompt import EvoPromptLite
-from .baselines import ZeroShotBaseline, HumanWrittenBaseline, HumanWrittenReasoningBaseline
+from .baselines import ZeroShotBaseline, HumanWrittenBaseline, HumanWrittenReasoningBaseline, HumanWrittenNLIBaseline
 from .gepa import GEPA
 from .dro import create_dro_optimizer
 from .regularized import create_regularized_optimizer
@@ -33,4 +33,5 @@ __all__ = [
     "CostAwareBayesOpt",
     "EmbeddingBayesOpt",
     "OracleOPRO",
+    "HumanWrittenNLIBaseline"
 ]

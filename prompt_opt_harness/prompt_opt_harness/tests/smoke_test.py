@@ -87,6 +87,18 @@ def test_reasoning_dataset_shape():
         assert ex.label.lstrip("-").isdigit()
     print("test_reasoning_dataset_shape: OK")
 
+def test_nli_task():
+    from prompt_opt_harness.tasks import NLI_TASK
+
+    assert NLI_TASK.is_correct("Entailment", "Entailment")
+    assert NLI_TASK.is_correct("**Contradiction.**", "Contradiction")
+    assert NLI_TASK.is_correct("Answer: Entailment", "Entailment")
+    assert not NLI_TASK.is_correct("Contradiction, not entailment", "Entailment")
+    assert not NLI_TASK.is_correct("", "Entailment")
+    prompt = NLI_TASK.build_prompt("Do NLI.", "Premise: A\nHypothesis: B")
+    assert prompt.endswith("Entailment or Contradiction.")
+    print("test_nli_task: OK")
+
 
 if __name__ == "__main__":
     test_metrics_math()
@@ -96,4 +108,5 @@ if __name__ == "__main__":
     test_ood_weighted_ranking_prefers_robust_prompt()
     test_reasoning_extraction()
     test_reasoning_dataset_shape()
+    test_nli_task()
     print("\nAll smoke tests passed.")

@@ -82,3 +82,43 @@ def load_real_dataset(n_per_split: int = 30, seed: int = 0) -> Dataset:
         ood={"amazon": amazon_examples, "tweets": tweet_examples},
         ood_val={"amazon": amazon_val, "tweets": tweet_val},
     )
+
+
+def load_real_nli_dataset(n_per_split=30, seed=0) -> Dataset:
+    _require_datasets_lib()
+    from datasets import load_dataset
+    from .prompts import NLI_BASE_INSTRUCTION
+
+
+    source_domain = "fiction"
+    ood_domains = ["telephone", "slate"]
+
+
+    mnli = load_dataset("nyu-mll/multi_nli", split="validation_matched")
+    mnli = mnli.filter(lambda r: r["label"] != 1)   # drop neutral -> binary
+    def _genre(name: str):
+        # one genre, shuffled, with enough rows for two disjoint slices
+        rows = mnli.filter(lambda r: r["genre"] == name).shuffle(seed=seed)
+        return rows.select(range(min(2 * n_per_split, len(rows))))
+
+    def _nli_example(row, prefix: str, i: int, domain: str) -> Example:
+        return Example(
+            id=f"{prefix}{i}",
+            text=f"Premise: {row['premise'].strip()}\nHypothesis: {row['hypothesis'].strip()}",
+            label="Entailment" if row["label"] == 0 else "Contradiction",
+            domain=domain,
+        )
+
+    ood, ood_val = {}, {}
+    for g in ood_domains:
+        rows = _genre(g)
+        ood[g] = [_nli_example(rows[i], f"{g[:3]}", i, g) for i in range(n_per_split)]
+        ood_val[g] = [_nli_example(rows[i], f"{g[:3]}val", i, g) for i in range(n_per_split, len(rows))]
+
+    return Dataset(
+        source_domain=source_domain,
+        source=DomainSplit(dev=source_dev, test=source_test),
+        ood=ood,
+        ood_val=ood_val,
+        base_instruction=NLI_BASE_INSTRUCTION,
+    )

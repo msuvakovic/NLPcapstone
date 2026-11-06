@@ -16,6 +16,13 @@ def build_reasoning_prompt(instruction: str, question: str) -> str:
     return f"{header}\n\n{body}" if header else body
 
 
+
+def build_nli_prompt(instruction: str, text: str) -> str:
+    # text is already formatted as "Premise: ...\nHypothesis: ..."
+    header = instruction.strip()
+    body = f"{text}\nAnswer with exactly one word: Entailment or Contradiction."
+    return f"{header}\n\n{body}" if header else body
+
 META_TEMPLATE = """You are improving an instruction for a {task_name} task.
 Here are previous instructions and their accuracy on a held-out dev set:
 {history_block}
@@ -40,7 +47,7 @@ task to try to improve it:
 Instruction: {parent}
 Respond with only the new candidate instruction, nothing else."""
 
-REFLECTION_TEMPLATE = """You are an expert prompt engineer. You wrote an instruction for a sentiment classification task, but it failed on some examples.
+REFLECTION_TEMPLATE = """You are an expert prompt engineer. You wrote an instruction for a {task_name} task, but it failed on some examples.
 Instruction: {instruction}
 
 Failed example:
@@ -51,7 +58,8 @@ Predicted Label: {prediction}
 Why did the instruction fail? Keep your reflection brief (1-2 sentences)."""
 
 
-REFLECTIVE_MUTATION_TEMPLATE = """You are evolving instructions for a sentiment classification task.
+REFLECTIVE_MUTATION_TEMPLATE = """You are evolving instructions for a {task_name} task.
+
 Parent Instruction: {parent}
 
 Reflection on failures:
@@ -97,3 +105,5 @@ Here are previous instructions and their scores:
 Write ONE new instruction that adds a specific reasoning step or focuses on nuances like tone and sarcasm.
 Respond with only the new candidate instruction, nothing else.""",
 ]
+
+NLI_BASE_INSTRUCTION = "Determine whether the Hypothesis is entailed by or contradicts the Premise."
