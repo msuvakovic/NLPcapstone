@@ -23,12 +23,22 @@ class OPRO(Optimizer):
         cand.ood_accs = ood_accs
         return cand
 
+    def _eval_cost(self, dev_examples, ood_examples) -> int:
+        # LLM calls needed to score one candidate (dev + every OOD validation example)
+        return len(dev_examples) + sum(len(v) for v in (ood_examples or {}).values())
+
+    def _can_afford(self, extra_calls: int) -> bool:
+        return self.backend.stats.calls + extra_calls <= self.budget
+
     def optimize(self, task_desc: str, dev_examples, ood_examples: dict = None) -> Candidate:
         rnd = random.Random(self.seed)
+        eval_cost = self._eval_cost(dev_examples, ood_examples)
         seed = self._eval_candidate(task_desc, dev_examples, ood_examples)
         self.history.append(seed)
+        seen = {seed.instruction}
 
-        while self.backend.stats.calls < self.budget:
+        # each round needs at least one meta-prompt call plus one candidate evaluation
+        while self._can_afford(1 + eval_cost):
             progress = self.backend.stats.calls / self.budget
             
             # Rank candidates using progressive widening score
@@ -47,7 +57,8 @@ class OPRO(Optimizer):
             candidates_this_step = []
             
             for _ in range(BEAM_SIZE):
-                if self.backend.stats.calls >= self.budget:
+                # only write another candidate if we can also afford to score it and the ones before it
+                if not self._can_afford(1 + eval_cost * (len(candidates_this_step) + 1)):
                     break
                 # Diversify mutation operators
                 meta_template = rnd.choice(OPRO_META_TEMPLATES)
@@ -60,8 +71,11 @@ class OPRO(Optimizer):
                 break
                 
             for new_instruction in candidates_this_step:
-                if self.backend.stats.calls >= self.budget and candidates_this_step.index(new_instruction) > 0:
+                if new_instruction in seen:  # skip duplicates instead of paying to re-score them
+                    continue
+                if not self._can_afford(eval_cost):
                     break
+                seen.add(new_instruction)
                 cand = self._eval_candidate(new_instruction, dev_examples, ood_examples)
                 self.history.append(cand)
 
