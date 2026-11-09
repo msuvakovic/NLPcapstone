@@ -108,7 +108,10 @@ def load_real_nli_dataset(n_per_split=30, seed=0) -> Dataset:
             label="Entailment" if row["label"] == 0 else "Contradiction",
             domain=domain,
         )
-
+    # source: first slice -> dev, second slice -> test
+    src = _genre(source_domain)
+    source_dev = [_nli_example(src[i], "ndev", i, source_domain) for i in range(n_per_split)]
+    source_test = [_nli_example(src[i], "ntest", i, source_domain) for i in range(n_per_split, len(src))]
     ood, ood_val = {}, {}
     for g in ood_domains:
         rows = _genre(g)
